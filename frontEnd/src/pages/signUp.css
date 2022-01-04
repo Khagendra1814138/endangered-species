@@ -1,0 +1,38 @@
+.signUpBtn{
+    background: whitesmoke;
+    height: 6vh;
+    width: 24vh;
+    padding: 6px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    border: 10px solid rosybrown;
+    cursor: pointer;
+}
+
+.registerLabel{
+    background: greenyellow;
+    height: 20px;
+    width: 97.6%;
+    padding: 6px;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    font-family: Blippo, fantasy;
+    margin: auto;
+    margin-top: 10px;
+}
+.inputBox{
+    background: royalblue;
+    height: 34px;
+    width: 97.6%;
+    padding: 6px;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+    font-family: Blippo, fantasy;
+    margin: auto;
+    border: none;
+}

@@ -1,20 +1,35 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
-    height: 80px;
+    background: rgb(35,47,62);
+    height: 84px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    border-bottom: 6px solid #37475A;
   }
   
   .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
+    height: 70px;
+    width: 80px;
+    background: none;
+    display: flex;
+
+    /* border-top: 1px solid #37475A;
+    border-left: 1px solid #37475A;
+    border-right: 1px solid #37475A;
+    border-bottom: 1px solid #37475A; */
+    /* border: 2px solid rgb(35,47,62); */
+
+    justify-content: center;
+    align-items: center;
   }
+  /* .navbar-logo:hover{
+    transition: all 0.3s ease-in-out;
+    border-top: 2px solid #1888ff;
+    border-left: 2px solid #1888ff;
+    border-right: 2px solid #1888ff;
+    border-bottom: 2px solid #1888ff;
+  } */
   
   .fa-firstdraft {
     margin-left: 0.5rem;
@@ -24,7 +39,8 @@
   .nav-menu {
     display: grid;
     grid-template-columns: repeat(5, auto);
-    grid-gap: 10px;
+    background-color: none;
+    grid-gap: 0px;
     list-style: none;
     text-align: center;
     width: 70vw;
@@ -36,6 +52,7 @@
     display: flex;
     align-items: center;
     height: 80px;
+    background-color: none;
   }
   
   .nav-links {
@@ -44,12 +61,13 @@
     padding: 0.5rem 1rem;
     display: flex;
     align-items: left;
+    font-family: 'Manrope', sans-serif;
   }
   
   .nav-links:hover {
     background-color: #1888ff;
     border-radius: 4px;
-    transition: all 0.2s ease-out;
+    transition: all 0.4s ease-out;
   }
   
   .fa-bars {

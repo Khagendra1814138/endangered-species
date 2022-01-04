@@ -1,0 +1,98 @@
+.footerNavlink{
+    height: auto;
+    width: 30%;
+    list-style-type: none;
+    background-color: none;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+.footer-nav-links{
+    color: white;
+    text-decoration: none;
+    padding: 0.3rem 1rem;
+    display: flex;
+    font-family: sans-serif;
+    font-size: 14px;
+    justify-content: center;
+}
+.footer-nav-links:hover{
+    text-decoration: underline;
+    color: orange;
+}
+.lineDown{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    background-color: #37475A;;
+}
+
+
+
+.footer-logo{
+    height: 70px;
+    width: 80px;
+    background: none;
+    display: flex;
+    
+    margin: auto;
+    /* border-left: 4px solid #37475A;
+    border-right: 4px solid #37475A;
+    border-bottom: 1px solid #37475A; */
+    justify-content: center;
+    align-items: center;
+}
+/* .footer-logo:hover{
+    transition: all 0.3s ease-in-out;
+    border-left: 4px solid #1888ff;
+    border-right: 4px solid #1888ff;
+    border-bottom: 1px solid #1888ff;
+} */
+
+.footerMainFrame{
+    background: rgb(35,47,62);
+    height: 56vh;
+    width: 100%;
+    text-align: center;
+    font-size: auto;
+    border-top: 4px solid #37475A;
+}
+.pageLinkBox{
+    height: 200px;
+    width: 800px;
+    background: none;
+    display: inline-flex;
+    margin: auto;
+    margin-top: 60px;
+    border: 1px solid #37475A;
+}
+.socialLinkBox{
+    height: auto;
+    width: 400px;
+    background: none;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.socailMediaLabel{
+    height: auto;
+    width: 300px;
+    background: none;
+    display: block;
+    margin: auto;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    color: white;
+    border-bottom: 1px solid #37475A;
+}
+.socialMediaLogo{
+    height: 40px;
+    width: 40px;
+    background: none;
+    display: inline-block;
+    margin: 10px 45px;
+}
+.socialMediaLogo:hover{
+    opacity: 0.5;
+    border-bottom: 1px solid orange;
+}

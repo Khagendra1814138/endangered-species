@@ -2,11 +2,10 @@ import React from 'react';
 import './Button.css';
 import {Link} from 'react-router-dom';
 
-export function Button (){
+export function SignUpButton (){
     return(
-        <Link to='endangeredSpecies'>
-            <button className="btn"> Sign Up
-            </button>
+        <Link exact to="./SignUp">
+            <button className="btn">Sign Up</button>
         </Link>
     )
 }

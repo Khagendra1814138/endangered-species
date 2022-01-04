@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+:root{
+    --font-family: 'Manrope', sans-serif;
+    --color-footer: rgb(35,47,62);
+    --font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+.pageMainFrame {
+    height: auto;
+    width: auto;
+    background-color: none;
+}
+
+.pageBodyFrame{
+    min-height: 90vh;
+    width: 90%;
+    margin: auto;
+    background-color: none; 
+    padding-bottom: 7vh; 
+}
+
+
+.container{
+    background-color: none;
+    height: auto;
+    width: auto;
+    margin-top: 8vh;
+}
+
+
+.box{
+    height: 280px;
+    width: 1000px;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+}
+.box2{
+    height: auto;
+    width: 1000px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    margin-top: 20px;
+}
+.box3{
+    height: 400px;
+    width: 500px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.box4{
+    height: 500px;
+    width: 1000px;
+    display: flex;
+    background-color: none;
+    margin: auto;
+    margin-top: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.mainSubHeadFrame{
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+    background-color: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.thinLine{
+    height: 1px;
+    width: 25%;
+    display: inline-block;
+    background-color: gainsboro;
+}
+.subheadLrg{
+    background: none;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    padding-left:6px;
+    padding-right: 6px;
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border-left: 2px solid gainsboro;
+    border-right: 2px solid gainsboro;
+    border-radius: 10px;
+}
+.subheadSml{
+    background: none;
+    height: auto;
+    width: auto;
+    display: inline-block;
+    padding-left:6px;
+    padding-right: 6px;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid gainsboro;
+    border-radius: 6px;
+}
+
+
+.paragpaphLrg{
+    height: 100px;
+    width: 952px;
+    padding: 6px;
+    background-color: #CEE5D0;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: 2px solid #F3F0D7;
+}
+
+
+
+
+
+
+
+.speciesMainFrame{
+    background: none;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+.speciesImageMid{
+    background: none;
+    height: 210px;
+    width: 300px;
+    display: block;
+    margin: auto;
+    border-left: 2px solid #7FC8A9;
+    border-top: 2px solid #7FC8A9;
+    border-right: 2px solid #7FC8A9;
+}
+.speciesName{
+    background: #7FC8A9;
+    height: 30px;
+    width: auto;
+    padding: 6px;
+    display: block;
+    text-align: center;
+    font-size: 19px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    color: #000;
+}
+.speciesImageLrg{
+    background: none;
+    height: 210px;
+    width: 460px;
+    display: block;
+    margin: auto;
+    border-left: 2px solid #7FC8A9;
+    border-top: 2px solid #7FC8A9;
+    border-right: 2px solid #7FC8A9;
+}

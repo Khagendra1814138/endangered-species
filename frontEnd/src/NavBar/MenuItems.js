@@ -1,23 +1,43 @@
 
 export const MenuItems = [
     {
-      title: 'Mammels',
-      path: '/',
+      title: 'Amphibians',
+      path: '/amphibians',
       cName: 'dropdown-link'
     },
     {
       title: 'Birds',
-      path: '/',
+      path: '/birds',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Artic',
+      path: '/artic',
       cName: 'dropdown-link'
     },
     {
       title: 'Aquatic',
-      path: '/',
+      path: '/aquatic',
       cName: 'dropdown-link'
     },
     {
-      title: 'Frogs',
-      path: '/',
+      title: 'Fungus',
+      path: '/fungus',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Plants',
+      path: '/plants',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Mammels',
+      path: '/mammels',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'UK',
+      path: '/endSpeciesUk',
       cName: 'dropdown-link'
     }
   ];

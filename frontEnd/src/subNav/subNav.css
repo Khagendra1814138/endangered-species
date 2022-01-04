@@ -1,0 +1,78 @@
+
+.subNavFrame{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    background-color: transparent;
+
+    justify-content: center;
+    align-items: center;
+    border-top: 10px solid #37475A;
+}
+.previousSubNav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    background-color: #657B83;
+
+    justify-content: right;
+    align-items: center;
+    text-decoration: none;
+}
+.previousSubNav:hover{
+    background-color: #9eadb3;
+}
+
+.nextSubNav{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    background-color: #678CB1;
+
+    justify-content: left;
+    align-items: center;
+    text-decoration: none;
+}
+.nextSubNav:hover{
+    background-color: #8c9eb1;
+}
+
+.logo1{
+    height: 80px;
+    width: 90px;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.txt{
+    height: 100%; 
+    width: 460px;
+    background: none;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: right;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    padding-right: 10px;
+}
+.txt2{
+    height: 100%; 
+    width: 460px;
+    background: none;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    justify-content: left;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    padding-left: 10px;
+}
