@@ -1,0 +1,56 @@
+:root{
+    --color-artic: #B1D0E0;
+    --color-artic2: #A7C4BC;
+    --color-artic3: #DFEEEA;
+    
+}
+
+
+.articLargeImage{
+    height: 462px;
+    width: 332px;
+    display: block;
+    background-color: none;
+    overflow: hidden;
+    margin: auto;
+}
+
+.articMediumImage{
+    background: none;
+    height: 213px;
+    width: 334px;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+}
+
+.articName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-artic);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.articName2{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-artic2);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.articName3{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-artic3);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

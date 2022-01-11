@@ -1,0 +1,78 @@
+:root{
+    --color-birds: #FFBF86;
+    --color-birds2: #A7C4BC;
+    --color-birds3: #DFEEEA;
+    --color-birds4: #FFF591;
+    --color-birds5: #F4DFBA;
+    
+
+}
+
+.birdLargeImage{
+    height: 462px;
+    width: 332px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+.birdMediumImage{
+    background: none;
+    height: 213px;
+    width: 334px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+.birdName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-birds);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.birdName2{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-birds2);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.birdName3{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-birds3);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.birdName4{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-birds4);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.birdName5{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-birds5);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

@@ -13,8 +13,7 @@ export const TakeAction = () => {
           
           <div className = "mainSubHeadFrame">
             <line className = "thinLine"></line>
-              <subhead className = "subheadLrg">Take larger actions</subhead>
-            <line className = "thinLine"></line>
+            <subhead className = "subheadLrg">Take larger actions</subhead>
           </div>
 
           <paragragraph className="paragpaphLrg">
@@ -23,9 +22,9 @@ export const TakeAction = () => {
 
           <box className = "box">
             <box className = "threatParagraphFrame">
-              <label className='threatTitle'>Threat Sub-Head</label>
+              <label className='threatTitle'> WWF </label>
               <paragragraph className='actionParagraph'>AMPHIBIANS</paragragraph>
-              <button className='takeActionBtn'>Go there</button>
+              <button className='takeActionBtn'>Visit WWF</button>
             </box>
             <image className='imageMedium'>Threat Image</image>
           </box>
@@ -42,22 +41,23 @@ export const TakeAction = () => {
           <line className = "largeLine"></line>
 
           <box className = "box">
-            <image className='imageMedium'>Threat Image</image>
             <box className = "threatParagraphFrame">
-              <label className='threatTitle'>Threat Sub-Head</label>
+              <label className='threatTitle'> WWF </label>
               <paragragraph className='actionParagraph'>AMPHIBIANS</paragragraph>
-              <button className='takeActionBtn'>Go there</button>
+              <button className='takeActionBtn'>Visit WWF</button>
             </box>
+            <image className='imageMedium'>Threat Image</image>
           </box>
 
           <box className = "box">
-            <image className='imageMedium'>Threat Image</image>
             <box className = "threatParagraphFrame">
               <label className='threatTitle'>Threat Sub-Head</label>
               <paragragraph className='actionParagraph'>AMPHIBIANS</paragragraph>
               <button className='takeActionBtn'>Go there</button>
             </box>
+            <image className='imageMedium'>Threat Image</image>
           </box>
+
 
         </div>
 

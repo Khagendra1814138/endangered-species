@@ -1,0 +1,307 @@
+:root{
+    --color-reptilesUk: #FFF89A;
+    --color-marineUk: #DFEEEA;
+    --color-amphibianUk: #F7D08A;
+    --color-mammelsUk: #FFC286;
+    --color-birdUk: #FED2AA;
+    --color-plantsUk: #EDD2F3;
+    --color-fungusUk: #FEE3EC;
+
+    --heightSmall: 210px;
+    --widthSmall: 310px;
+
+    --largeHeight:210px;
+    --largeWidth:490px;
+
+    --mediumWidth:478px;
+
+    --border: 4px;
+
+    --fontStyle-speciesNameLabel: 'Manrope', sans-serif;
+    --fontSize-speciesNameLabel: 22px;
+    --fontColor-speciesNameLabel: rgb(35,47,62);
+    --fontWeight-speciesNameLabel: bold;
+}
+
+
+
+.endParagpaph{
+    height: 240px;
+    width: 450px;
+    padding: 6px;
+    background-color: #CEE5D0;
+    display: flex;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 6px;
+    border: 4px solid #F3F0D7;
+}
+
+
+
+.smallReptilesImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: flex;
+    margin: auto;
+    border-left: var(--border) solid var(--color-reptilesUk);
+    border-top: var(--border) solid var(--color-reptilesUk);
+    border-right: var(--border) solid var(--color-reptilesUk);
+    overflow: hidden;
+}
+.largeReptilesImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--largeWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-reptilesUk);
+    border-top: var(--border) solid var(--color-reptilesUk);
+    border-right: var(--border) solid var(--color-reptilesUk);
+    overflow: hidden;
+}
+.reptilesNameUk{
+    background: var(--color-reptilesUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+.smallMarinesImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-marineUk);
+    border-top: var(--border) solid var(--color-marineUk);
+    border-right: var(--border) solid var(--color-marineUk);
+    overflow: hidden;
+}
+.largeMarinesImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--largeWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-marineUk);
+    border-top: var(--border) solid var(--color-marineUk);
+    border-right: var(--border) solid var(--color-marineUk);
+    overflow: hidden;
+}
+.marinesNameUk{
+    background: var(--color-marineUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+
+.smallAmphibiansImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-amphibianUk);
+    border-top: var(--border) solid var(--color-amphibianUk);
+    border-right: var(--border) solid var(--color-amphibianUk);
+    overflow: hidden;
+}
+.largeAmphibiansImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--largeWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-amphibianUk);
+    border-top: var(--border) solid var(--color-amphibianUk);
+    border-right: var(--border) solid var(--color-amphibianUk);
+    overflow: hidden;
+}
+.amphibiansNameUk{
+    background: var(--color-amphibianUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+.smallMammelsImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-mammelsUk);
+    border-top: var(--border) solid var(--color-mammelsUk);
+    border-right: var(--border) solid var(--color-mammelsUk);
+    overflow: hidden;
+}
+.largeMammelsImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--mediumWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-mammelsUk);
+    border-top: var(--border) solid var(--color-mammelsUk);
+    border-right: var(--border) solid var(--color-mammelsUk);
+    overflow: hidden;
+}
+.mammelsNameUk{
+    background: var(--color-mammelsUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+
+.smallBirdsImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-birdUk);
+    border-top: var(--border) solid var(--color-birdUk);
+    border-right: var(--border) solid var(--color-birdUk);
+    overflow: hidden;
+}
+.largeBirdsImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--mediumWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-birdUk);
+    border-top: var(--border) solid var(--color-birdUk);
+    border-right: var(--border) solid var(--color-birdUk);
+    overflow: hidden;
+}
+.birdsNameUk{
+    background: var(--color-birdUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+
+.smallPlantsImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-plantsUk);
+    border-top: var(--border) solid var(--color-plantsUk);
+    border-right: var(--border) solid var(--color-plantsUk);
+    overflow: hidden;
+}
+.largePlantsImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--mediumWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-plantsUk);
+    border-top: var(--border) solid var(--color-plantsUk);
+    border-right: var(--border) solid var(--color-plantsUk);
+    overflow: hidden;
+}
+.plantsNameUk{
+    background: var(--color-plantsUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}
+
+
+
+
+
+.smallFungusImageUk{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-fungusUk);
+    border-top: var(--border) solid var(--color-fungusUk);
+    border-right: var(--border) solid var(--color-fungusUk);
+    overflow: hidden;
+}
+.largeFungusImageUk{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--mediumWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-fungusUk);
+    border-top: var(--border) solid var(--color-fungusUk);
+    border-right: var(--border) solid var(--color-fungusUk);
+    overflow: hidden;
+}
+.fungusNameUk{
+    background: var(--color-fungusUk);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: var(--fontColor-speciesNameLabel);
+}

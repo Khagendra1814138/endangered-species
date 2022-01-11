@@ -1,0 +1,24 @@
+
+  
+  .rec-carousel-item:focus {
+    outline: skyblue;
+    display: block;
+    box-shadow: inset 0 0 5px 0px red;
+    background-color: aqua;
+  }
+
+  .mainImageFrame{
+    height: auto;
+    width: auto;
+    background-color: none;
+    margin: auto;
+  }
+
+  .largeCarouselMammelImage{
+    height: 400px;
+    width: 800px;
+    display: block;
+    background-color: none;
+    overflow: hidden;
+  }
+

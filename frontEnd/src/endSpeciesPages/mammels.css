@@ -1,0 +1,125 @@
+
+.smallMammelsImage{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid #CA965C;
+    border-left: 4px solid #CA965C;
+    border-right: 4px solid #CA965C;
+}
+
+.smallMammelsName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: #CA965C;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+
+.largeMammelsImage{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid #FFAD60;
+    border-left: 4px solid #FFAD60;
+    border-right: 4px solid #FFAD60;
+}
+
+.largeMammelsName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: #FFAD60;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+.smallRhinoImage{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid #A7C4BC;
+    border-left: 4px solid #A7C4BC;
+    border-right: 4px solid #A7C4BC;
+}
+.rhinoName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: #A7C4BC;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+
+.bigCatsImage{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid #FFC286;
+    border-left: 4px solid #FFC286;
+    border-right: 4px solid #FFC286;
+}
+
+.bigCatsName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: #FFC286;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+
+
+
+
+.primatesImage{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid gainsboro;
+    border-left: 4px solid gainsboro;
+    border-right: 4px solid gainsboro;
+}
+
+.primatesName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: gainsboro;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

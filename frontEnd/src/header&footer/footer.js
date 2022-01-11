@@ -19,21 +19,21 @@ export const Footer = () => {
             <li className='footerNavlink'>
               <Link to='/' className='footer-nav-links'> Home </Link>
               <Link to='/endangeredSpecies' className='footer-nav-links'> Endangered Species </Link>
-              <Link to='/' className='footer-nav-links'> Threats to the Species </Link>
-              <Link to='/' className='footer-nav-links'> Individual Action </Link>
-              <Link to='/' className='footer-nav-links'> Take Action </Link>
-              <Link to='/' className='footer-nav-links'> Sign Up </Link>
-              <Link to='/' className='footer-nav-links'> Endangered Species UK </Link>
+              <Link to='/causes' className='footer-nav-links'> Threats to the Species </Link>
+              <Link to='/individualAction' className='footer-nav-links'> Individual Action </Link>
+              <Link to='/takeAction' className='footer-nav-links'> Take Action </Link>
+              <Link to='/signUp' className='footer-nav-links'> Sign Up </Link>
+              <Link to='/endSpeciesUk' className='footer-nav-links'> Endangered Species UK </Link>
             </li>
             <line className = "lineDown"></line>
             <li className='footerNavlink'>
-              <Link to='/' className='footer-nav-links'> Amphibians </Link>
-              <Link to='/' className='footer-nav-links'> Birds </Link>
-              <Link to='/' className='footer-nav-links'> Artic </Link>
-              <Link to='/' className='footer-nav-links'> Aquatic </Link>
-              <Link to='/' className='footer-nav-links'> Fungi </Link>
-              <Link to='/' className='footer-nav-links'> Plants </Link>
-              <Link to='/' className='footer-nav-links'> Mammels </Link>
+              <Link to='/amphibians' className='footer-nav-links'> Amphibians </Link>
+              <Link to='/birds' className='footer-nav-links'> Birds </Link>
+              <Link to='/artic' className='footer-nav-links'> Artic </Link>
+              <Link to='/aquatic' className='footer-nav-links'> Aquatic </Link>
+              <Link to='/fungus' className='footer-nav-links'> Fungi </Link>
+              <Link to='/plants' className='footer-nav-links'> Plants </Link>
+              <Link to='/mammels' className='footer-nav-links'> Mammels </Link>
             </li>
           </box>
           <box className = "socialLinkBox">

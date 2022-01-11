@@ -76,9 +76,9 @@ export const IndividualActonSuvNav = () => {
 export const TakeActonSuvNav = () => {
     return( 
         <div className="subNavFrame">
-            <Link exact to="./takeAction" className='previousSubNav'>
+            <Link exact to="./individualAction" className='previousSubNav'>
                 <logo className='logo1'> <FaArrowLeft size="4em" color="lightBlue"/> </logo>  
-                <label className= 'txt'>  Go to Take Action</label>
+                <label className= 'txt'>  Go to Daily Individual Action</label>
             </Link>
 
             <Link exact to="./signUp" className='nextSubNav'>

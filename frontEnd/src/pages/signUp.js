@@ -15,16 +15,12 @@ export const SignUp = () => {
 
             <div className = "mainSubHeadFrame">
               <line className = "thinLine"></line>
-                <subhead className = "subheadLrg">Sign-up</subhead>
+                <subhead className = "subheadLrg">Sign-Up</subhead>
               <line className = "thinLine"></line>
             </div>
 
-            <paragragraph className="paragpaphLrg">
-              Wass awass
-            </paragragraph>
-
             <box className = "box3">
-              <box className = "threatParagraphFrame">
+              <box className = "formFrame">
                 <form>
                   <label className='registerLabel'>ENTER NAME</label>
                   <input type="text" name="name" className='inputBox'/>

@@ -1,0 +1,54 @@
+:root{
+    --color-plant: #BBDFC8;
+    --color-plant2: #FFAB76;
+    --color-plant3: #BEAEE2;
+}
+
+.plantsLargeImage{
+    height: 462px;
+    width: 332px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+.plantsMediumImage{
+    background: none;
+    height: 213px;
+    width: 334px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+.plantsName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-plant);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.plantsName2{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-plant2);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.plantsName3{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-plant3);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

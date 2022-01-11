@@ -1,0 +1,55 @@
+:root{
+    --color-amphibian: #FFB0B0;
+    --color-amphibian2: #E7FBBE;
+    --color-amphibian3: #D9D7F1;
+
+}
+
+.amphibianLargeImage{
+    height: 462px;
+    width: 332px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    overflow: hidden;
+}
+
+.amphibianMediumImage{
+    background: none;
+    height: 213px;
+    width: 334px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+}
+
+.amphibianName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-amphibian);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.amphibianName2{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-amphibian2);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}
+.amphibianName3{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-amphibian3);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+}

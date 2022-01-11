@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { SignUpButton } from './Button';
+import { SignUpButton, LogInButton } from './Button';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
@@ -55,6 +55,7 @@ function Navbar() {
           </li>
 
         </ul>
+        <LogInButton/>
         <SignUpButton/>
       </nav>
     </div>
