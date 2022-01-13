@@ -2,7 +2,8 @@
     --color-amphibian: #FFB0B0;
     --color-amphibian2: #E7FBBE;
     --color-amphibian3: #D9D7F1;
-
+    --color-darkBorder: #37475A;
+    --color-textColor: rgb(35,47,62);
 }
 
 .amphibianLargeImage{
@@ -32,6 +33,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    color: var(--color-textColor);
 }
 .amphibianName2{
     height: 36px;
@@ -42,6 +46,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    color: var(--color-textColor);
 }
 .amphibianName3{
     height: 36px;
@@ -52,4 +59,20 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    color: var(--color-textColor);
+}
+.amphibianName-Dark{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }

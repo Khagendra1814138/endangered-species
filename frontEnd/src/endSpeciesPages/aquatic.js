@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 
 import '../pages/publicMain.css';
 import './aquatic.css';
@@ -6,6 +7,7 @@ import './aquatic.css';
 import {AquaticPageSuvNav} from "../subNav/subNavigation";
 
 
+import header6 from '../images/header6.png';
 //dolphins
 import hectorsDolphins from '../images/endAquatic/dolphin/hectorsDolphins.png';
 import amazonRiverDolphin from '../images/endAquatic/dolphin/amazonRiverDolphin.png';
@@ -55,20 +57,51 @@ import humpheadWarasse from '../images/endAquatic/humpheadWarasse.png';
 import stellarSeaLion from '../images/endAquatic/stellarSeaLion.png';
 
 
+import {FaPlusSquare} from 'react-icons/fa';
+import {FaMinusSquare} from 'react-icons/fa';
 
 
 export const Aquatic = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [fontSize, setFontSize] = useState(20);
+
+  function FontSizeIncreaser(){
+    return(
+      <div className='buttonsContainer'>
+        <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
+        <div className='fontSizeDisplay'>{fontSize}</div>
+        <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
+      </div>
+    )
+  };
+
   return( 
-    <div className="pageMainFrame">
+    <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+       <FontSizeIncreaser/>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+      <div className="darkModeSwitchContainer">
+        <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
+            <div className="switch-checkbox">
+                <label className="switch">
+                  <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+                  <span className="slider round"> </span>
+                </label>
+            </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+      </div>
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
       <body className='pageBodyFrame'>
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
             <line className = "thinLine"></line>
-            <subhead className = "subheadLrg">Endangered Aquatic Animals</subhead>
+            <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Aquatic Animals</subhead>
           </div>
 
-          <paragragraph className="paragpaphLrg">
+          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Wass awass
           </paragragraph>
 
@@ -79,14 +112,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${amazonRiverDolphin})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${IrrawaddyDolphin})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -94,7 +127,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hectorsDolphins})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -102,14 +135,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${vaquita})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${yangtzeFinless})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -125,14 +158,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greatWhiteShark})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hammerhead})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -140,7 +173,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whaleShark})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -148,14 +181,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${oceanicWhitetip})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sandTiger})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -172,14 +205,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greenTurtle})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hawkbillTurtles})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -187,7 +220,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${loggerheadTurtle})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -195,14 +228,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${leatherBack})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label cclassName = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${oliveRidley})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -218,14 +251,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bowheadWhale})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${finWhale})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -233,7 +266,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${blueWhale})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -241,14 +274,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greyWhale})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${seiWhale})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -265,14 +298,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hoodedSeal})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${marineLguana})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -280,7 +313,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${galapagosPenguin})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -288,14 +321,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hawaiianMonkSeal})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${dugong})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -312,14 +345,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${atlanticSalmon})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${blueFinTuna})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -327,7 +360,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${manatees})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -335,14 +368,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sturgeon})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${europeanEel})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -358,14 +391,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caribbeanElectricRay})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${giantDevilRay})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
             
@@ -373,7 +406,7 @@ export const Aquatic = () => {
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${seaOtter})`}}></div>
                 </image>
-                <label className= "aquaticName">Species name</label>
+                <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -381,14 +414,14 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${humpheadWarasse})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${stellarSeaLion})`}}></div>
                     </image>
-                    <label className='aquaticName'>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
             </box>
           </box>

@@ -1,3 +1,41 @@
+:root{
+    --color-smallMammels: #CA965C;
+    --color-largeMammels: #FFAD60;
+    --color-rhino: #A7C4BC;
+    --color-bigCats: #FFC286;
+    --color-primates: gainsboro;
+
+    --color-darkBorder: #37475A;
+    --color-textColor: rgb(35,47,62);
+}
+
+
+.mammelsSmallImage-Dark{
+    background: none;
+    height: 210px;
+    width: 470px;
+    display: block;
+    margin: auto;
+    overflow: hidden;
+    border-top: 4px solid var(--color-darkBorder);
+    border-left: 4px solid var(--color-darkBorder);
+    border-right: 4px solid var(--color-darkBorder);
+}
+
+.mammelsName-Dark{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
 
 .smallMammelsImage{
     background: none;
@@ -6,20 +44,23 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid #CA965C;
-    border-left: 4px solid #CA965C;
-    border-right: 4px solid #CA965C;
+    border-top: 4px solid var(--color-smallMammels);
+    border-left: 4px solid var(--color-smallMammels);
+    border-right: 4px solid var(--color-smallMammels);
 }
 
 .smallMammelsName{
     height: 36px;
     width: auto;
     display: block;
-    background-color: #CA965C;
+    background-color: var(--color-smallMammels);
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -32,20 +73,23 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid #FFAD60;
-    border-left: 4px solid #FFAD60;
-    border-right: 4px solid #FFAD60;
+    border-top: 4px solid var(--color-largeMammels);
+    border-left: 4px solid var(--color-largeMammels);
+    border-right: 4px solid var(--color-largeMammels);
 }
 
 .largeMammelsName{
     height: 36px;
     width: auto;
     display: block;
-    background-color: #FFAD60;
+    background-color: var(--color-largeMammels);
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -57,19 +101,22 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid #A7C4BC;
-    border-left: 4px solid #A7C4BC;
-    border-right: 4px solid #A7C4BC;
+    border-top: 4px solid var(--color-rhino);
+    border-left: 4px solid var(--color-rhino);;
+    border-right: 4px solid var(--color-rhino);;
 }
 .rhinoName{
     height: 36px;
     width: auto;
     display: block;
-    background-color: #A7C4BC;
+    background-color: var(--color-rhino);;
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -82,20 +129,23 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid #FFC286;
-    border-left: 4px solid #FFC286;
-    border-right: 4px solid #FFC286;
+    border-top: 4px solid var(--color-bigCats);
+    border-left: 4px solid var(--color-bigCats);
+    border-right: 4px solid var(--color-bigCats);
 }
 
 .bigCatsName{
     height: 36px;
     width: auto;
     display: block;
-    background-color: #FFC286;
+    background-color: var(--color-bigCats);
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -108,18 +158,21 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid gainsboro;
-    border-left: 4px solid gainsboro;
-    border-right: 4px solid gainsboro;
+    border-top: 4px solid var(--color-primates);
+    border-left: 4px solid var(--color-primates);
+    border-right: 4px solid var(--color-primates);
 }
 
 .primatesName{
     height: 36px;
     width: auto;
     display: block;
-    background-color: gainsboro;
+    background-color: var(--color-primates);
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }

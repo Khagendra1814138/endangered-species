@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from "react";
 
 import '../pages/publicMain.css';
 import './artic.css';
@@ -7,7 +8,7 @@ import {ArticPageSuvNav} from "../subNav/subNavigation";
 
 
 
-
+import header6 from '../images/header6.png';
 
 //ARTIC SPECIES IMAGES
 import eskimoCurlew from '../images/endArtic/eskimoCurlew.png';
@@ -29,20 +30,50 @@ import saimaaRingedSeal from '../images/endArtic/saimaaRingedSeal.png';
 import walrus from '../images/endArtic/walrus.png';
 
 
-
+import {FaPlusSquare} from 'react-icons/fa';
+import {FaMinusSquare} from 'react-icons/fa';
 
 export const Artic = () => {
-  return( 
-    <div className="pageMainFrame">
-      <body className='pageBodyFrame'>
+  const [darkMode, setDarkMode] = useState(false);
+  const [fontSize, setFontSize] = useState(20);
 
+  function FontSizeIncreaser(){
+    return(
+      <div className='buttonsContainer'>
+        <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
+        <div className='fontSizeDisplay'>{fontSize}</div>
+        <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
+      </div>
+    )
+  };
+
+  
+  return( 
+    <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+       <FontSizeIncreaser/>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+      <div className="darkModeSwitchContainer">
+        <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
+        <div className="switch-checkbox">
+            <label className="switch">
+              <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+              <span className="slider round"> </span>
+            </label>
+        </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+    </div>
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+      <body className='pageBodyFrame'>
         <div className='container'>
           <div className = "mainSubHeadFrame">
             <line className = "thinLine"></line>
-            <subhead className = "subheadLrg">Endangered Artic Animals</subhead>
+            <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Artic Animals</subhead>
           </div>
 
-          <paragragraph className="paragpaphLrg">
+          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Wass awass
           </paragragraph>
 
@@ -53,14 +84,14 @@ export const Artic = () => {
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${articWolf})`}}></div>
                     </image>
-                    <label className='articName'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${belugaWhale})`}}></div>
                     </image>
-                    <label className='articName'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName"}>Name</label>
                 </box>
             </box>
 
@@ -68,7 +99,7 @@ export const Artic = () => {
                 <image className= 'articLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${eskimoCurlew})`}}></div>
                 </image>
-                <label className= "articName">Species name</label>
+                <label className = {darkMode ? "articName-Dark" : "articName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -76,14 +107,14 @@ export const Artic = () => {
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caribouRaindeer})`}}></div>
                     </image>
-                    <label className='articName'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${lemming})`}}></div>
                     </image>
-                    <label className='articName'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName"}>Name</label>
                 </box>
             </box>
           </box>
@@ -91,21 +122,22 @@ export const Artic = () => {
 
 
 
-      <div className='container'>
-        <box className = "box4">
+        <div className='container'>
+          <line className = "largeLine"></line>
+          <box className = "box4">
             <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${muskOx})`}}></div>
                     </image>
-                    <label className='articName2'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName2"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${orca})`}}></div>
                     </image>
-                    <label className='articName2'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName2"}>Name</label>
                 </box>
             </box>
 
@@ -113,7 +145,7 @@ export const Artic = () => {
                 <image className= 'articLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${narwhal})`}}></div>
                 </image>
-                <label className= "articName2">Species name</label>
+                <label className = {darkMode ? "articName-Dark" : "articName2"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -121,14 +153,14 @@ export const Artic = () => {
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${polarBear})`}}></div>
                     </image>
-                    <label className='articName2'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName2"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${raindeers})`}}></div>
                     </image>
-                    <label className='articName2'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName2"}>Name</label>
                 </box>
             </box>
           </box>
@@ -139,20 +171,21 @@ export const Artic = () => {
 
 
         <div className='container'>
-        <box className = "box4">
+          <line className = "largeLine"></line>
+          <box className = "box4">
             <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${articFox})`}}></div>
                     </image>
-                    <label className='articName3'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName3"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${redKnot})`}}></div>
                     </image>
-                    <label className='articName3'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName3"}>Name</label>
                 </box>
             </box>
 
@@ -160,7 +193,7 @@ export const Artic = () => {
                 <image className= 'articLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${woodBison})`}}></div>
                 </image>
-                <label className= "articName3">Species name</label>
+                <label className = {darkMode ? "articName-Dark" : "articName3"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
@@ -168,14 +201,14 @@ export const Artic = () => {
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${saimaaRingedSeal})`}}></div>
                     </image>
-                    <label className='articName3'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName3"}>Name</label>
                 </box>
 
                 <box className = "MedBox">
                     <image className='articMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${walrus})`}}></div>
                     </image>
-                    <label className='articName3'>Name</label>
+                    <label className = {darkMode ? "articName-Dark" : "articName3"}>Name</label>
                 </box>
             </box>
           </box>

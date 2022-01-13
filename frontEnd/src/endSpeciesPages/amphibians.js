@@ -1,10 +1,13 @@
 import React from 'react';
+import { useState } from "react";
 
 import '../pages/publicMain.css';
 import './amphibians.css';
 
 import {AmphibianPageSuvNav} from "../subNav/subNavigation";
 
+
+import header6 from '../images/header6.png';
 
 import axolotl from '../images/endAmphibians/axolotl.png';
 import lemurLeafFrog from '../images/endAmphibians/lemurLeafFrog.png';
@@ -25,156 +28,189 @@ import slenderSalamander from '../images/endAmphibians/salamander/slenderSalaman
 import splayfootSalamanders from '../images/endAmphibians/salamander/splayfootSalamanders.png';
 
 
-
+import {FaPlusSquare} from 'react-icons/fa';
+import {FaMinusSquare} from 'react-icons/fa';
 
 export const Amphibians = () => {
+    const [darkMode, setDarkMode] = useState(false);
+    const [fontSize, setFontSize] = useState(20);
+
+    function FontSizeIncreaser(){
+      return(
+        <div className='buttonsContainer'>
+          <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
+          <div className='fontSizeDisplay'>{fontSize}</div>
+          <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
+        </div>
+      )
+    };
+
+
     return( 
-        <div className="pageMainFrame">
-          <body className='pageBodyFrame'>
-
-            <div className='container'>
-                
-                <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
-                    <subhead className = "subheadLrg">Endangered Amphibians</subhead>
+        <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+            <FontSizeIncreaser/>
+            <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+            <div className="darkModeSwitchContainer">
+                <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
+                <div className="switch-checkbox">
+                    <label className="switch">
+                        <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+                        <span className="slider round"> </span>
+                    </label>
                 </div>
-        
-
-                <paragragraph className="paragpaphLrg">
-                Wass awass
-                </paragragraph>
-
-                <box className = "box4">
-                    <box className = "largeSpeciesImgFrame">
-                        <image className= 'amphibianLargeImage'>
-                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${axolotl})`}}></div>
-                        </image>
-                        <label className= "amphibianName">Species name</label>
-                    </box>
-
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${chineseGiantSalamander})`}}></div>
-                            </image>
-                            <label className='amphibianName'>Name</label>
-                        </box>
-
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flatwoodsSalamander})`}}></div>
-                            </image>
-                            <label className='amphibianName'>Name</label>
-                        </box>
-                    </box>
-
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${slenderSalamander})`}}></div>
-                            </image>
-                            <label className='amphibianName'>Name</label>
-                        </box>
-
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${splayfootSalamanders})`}}></div>
-                            </image>
-                            <label className='amphibianName'>Name</label>
-                        </box>
-                    </box>
-                </box>
-
-            <div className='container'>
-                <box className = "box4">
-                    <box className = "largeSpeciesImgFrame">
-                        <image className= 'amphibianLargeImage'>
-                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${lemurLeafFrog})`}}></div>
-                        </image>
-                        <label className= "amphibianName2">Species name</label>
-                    </box>
-
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${AnodonthylaVallaniFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName2'>Name</label>
-                        </box>
-
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baleMountainsTreeFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName2'>Name</label>
-                        </box>
-                    </box>
-
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${corroboreeFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName2'>Name</label>
-                        </box>
-
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${duskyGopherFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName2'>Name</label>
-                        </box>
-                    </box>
-                </box>
+                <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
             </div>
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+            
+            <body className='pageBodyFrame'>
+                <div className='container'>
+                    
+                    <div className = "mainSubHeadFrame">
+                        <line className = "thinLine"></line>
+                        <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Amphibians</subhead>
+                    </div>
+            
 
+                    <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Wass awass
+                    </paragragraph>
 
+                    <box className = "box4">
+                        <box className = "largeSpeciesImgFrame">
+                            <image className= 'amphibianLargeImage'>
+                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${axolotl})`}}></div>
+                            </image>
+                            <label className= {darkMode ? "amphibianName-Dark" : "amphibianName"}>Species name</label>
+                        </box>
 
-            <div className='container'>
-                <box className = "box4">
-                    <box className = "largeSpeciesImgFrame">
-                        <image className= 'amphibianLargeImage'>
-                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${poisonDartFrog})`}}></div>
-                        </image>
-                        <label className= "amphibianName3">Species name</label>
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${chineseGiantSalamander})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName"}>Name</label>
+                            </box>
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flatwoodsSalamander})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName"}>Name</label>
+                            </box>
+                        </box>
+
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${slenderSalamander})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName"}>Name</label>
+                            </box>
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${splayfootSalamanders})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName"}>Name</label>
+                            </box>
+                        </box>
                     </box>
 
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flyingFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName3'>Name</label>
-                        </box>
-         
 
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${mantellaFrog})`}}></div>
+
+                <div className='container'>
+                    <line className = "largeLine"></line>
+                    <box className = "box4">
+                        <box className = "largeSpeciesImgFrame">
+                            <image className= 'amphibianLargeImage'>
+                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${lemurLeafFrog})`}}></div>
                             </image>
-                            <label className='amphibianName3'>Name</label>
+                            <label className= {darkMode ? "amphibianName-Dark" : "amphibianName2"}>Species name</label>
+                        </box>
+
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${AnodonthylaVallaniFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName2"}>Name</label>
+                            </box>
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baleMountainsTreeFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName2"}>Name</label>
+                            </box>
+                        </box>
+
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${corroboreeFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName2"}>Name</label>
+                            </box>
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${duskyGopherFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName2"}>Name</label>
+                            </box>
                         </box>
                     </box>
+                </div>
 
-                    <box className = "mediumSpeciesImgFrame">
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${panamanianGoldenFrog})`}}></div>
+
+
+                <div className='container'>
+                    <line className = "largeLine"></line>
+                    <box className = "box4">
+                        <box className = "largeSpeciesImgFrame">
+                            <image className= 'amphibianLargeImage'>
+                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${poisonDartFrog})`}}></div>
                             </image>
-                            <label className='amphibianName3'>Name</label>
+                            <label className= {darkMode ? "amphibianName-Dark" : "amphibianName3"}>Species name</label>
                         </box>
 
-                        <box className = "MedBox">
-                            <image className='amphibianMediumImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${variableHarlequinFrog})`}}></div>
-                            </image>
-                            <label className='amphibianName3'>Name</label>
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flyingFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName3"}>Name</label>
+                            </box>
+            
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${mantellaFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName3"}>Name</label>
+                            </box>
+                        </box>
+
+                        <box className = "mediumSpeciesImgFrame">
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${panamanianGoldenFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName3"}>Name</label>
+                            </box>
+
+                            <box className = "MedBox">
+                                <image className='amphibianMediumImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${variableHarlequinFrog})`}}></div>
+                                </image>
+                                <label className= {darkMode ? "amphibianName-Dark" : "amphibianName3"}>Name</label>
+                            </box>
                         </box>
                     </box>
-                </box>
-            </div>
+                </div>
 
-            </div>
+                </div>
 
         </body>
         <AmphibianPageSuvNav/>

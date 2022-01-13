@@ -7,9 +7,6 @@ import '../pages/publicMain.css';
 import './mammels.css';
 
 
-
-
-
 //Small mammels Images
 import pangolin from '../images/endMammels/smallMammels/pangolin.png';
 import sloth from '../images/endMammels/smallMammels/sloth.png';

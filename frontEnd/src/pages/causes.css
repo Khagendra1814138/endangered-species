@@ -1,0 +1,188 @@
+:root{
+    --color-darkBorder: #37475A;
+    --color-lightBorder: #7FC8A9;
+    --color-footer: rgb(35,47,62);
+}
+
+
+
+.imageMedium-Light{
+    height: 240px;
+    width: 300px;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    border: 4px solid var(--color-lightBorder);
+    overflow: hidden;
+    border-radius: 8px;
+}
+.imageMedium-Dark{
+    height: 240px;
+    width: 300px;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    border: 4px solid var(--color-darkBorder);
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+
+
+
+.threatParagraphFrame-Light{
+    background: none;
+    height: 240px;
+    width: 658px;
+    margin: auto;
+    margin-top: 20px;
+    border: 4px solid #F7D59C;
+    border-radius: 10px;
+}
+.threatParagraphFrame-Dark{
+    background: none;
+    height: 240px;
+    width: 658px;
+    margin: auto;
+    margin-top: 20px;
+    border: 4px solid var(--color-darkBorder);
+    border-radius: 10px;
+}
+.threatTitle-Light{
+    background: #F7D59C;
+    height: auto;
+    width: 86%;
+    padding: 4px;
+    display: flex;
+    font-size: 24px;
+    font-family: 'Manrope', sans-serif;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    top: -22px;
+    border-radius: 10px;
+    color: var(--color-footer);
+}
+.threatTitle-Dark{
+    background: var(--color-darkBorder);
+    height: auto;
+    width: 86%;
+    padding: 4px;
+    display: flex;
+    font-size: 24px;
+    font-family: 'Manrope', sans-serif;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    top: -22px;
+    border-radius: 10px;
+    color: white;
+}
+
+.paragraphMed-Light{
+    background: transparent;
+    height: 158px;
+    width: auto;
+    padding: 6px;
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border-top: 1px solid var(--color-lightBorder);
+    border-bottom: 1px solid var(--color-lightBorder);
+    margin: auto;
+    color: #000;
+}
+.paragraphMed-Dark{
+    background: transparent;
+    height: 158px;
+    width: auto;
+    padding: 6px;
+    display: block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    border-top: 1px solid var(--color-darkBorder);
+    border-bottom: 1px solid var(--color-darkBorder);
+    margin: auto;
+    color: white;
+}
+
+
+.actionParagraph-Light{
+    background: transparent;
+    height: 152px;
+    width: auto;
+    padding: 6px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: #000;
+    border-top: 1px solid green;
+    border-bottom: 1px solid green;
+
+}
+.actionParagraph-Dark{
+    background: transparent;
+    height: 152px;
+    width: auto;
+    padding: 6px;
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-top: 1px solid var(--color-darkBorder);
+    border-bottom: 1px solid var(--color-darkBorder);
+}
+
+
+
+.takeActionBtn-Light{
+    background: #1888ff;
+    height: 46px;
+    width: 200px;
+    padding: 6px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 18px;
+    text-align: center;
+    font-size: 20px;
+    border: 4px solid #ddb164;
+    cursor: pointer;
+    color: white;
+}
+.takeActionBtn-Light:hover{
+    background: rgb(35,47,62);
+    transition: 300ms ease-in-out;
+    text-decoration: underline wavy;
+}
+
+.takeActionBtn-Dark{
+    background: var(--color-footer);
+    height: 46px;
+    width: 200px;
+    padding: 6px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 18px;
+    text-align: center;
+    font-size: 20px;
+    border: 4px solid var(--color-darkBorder);
+    cursor: pointer;
+    color: white;
+}
+.takeActionBtn-Dark:hover{
+    background: #1888ff;
+    transition: 300ms ease-in-out;
+    text-decoration: underline wavy;
+}

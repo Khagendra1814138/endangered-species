@@ -2,6 +2,8 @@
     --color-plant: #BBDFC8;
     --color-plant2: #FFAB76;
     --color-plant3: #BEAEE2;
+    --color-darkBorder: #37475A;
+    --color-textColor: rgb(35,47,62);
 }
 
 .plantsLargeImage{
@@ -31,6 +33,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 .plantsName2{
     height: 36px;
@@ -41,6 +46,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 .plantsName3{
     height: 36px;
@@ -51,4 +59,20 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+.plantsName-Dark{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }

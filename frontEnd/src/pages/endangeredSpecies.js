@@ -8,6 +8,8 @@ import './darkmodeFunction.css';
 
 import {EndangeredSpeciesSuvNav} from "../subNav/subNavigation";
 
+import header2 from '../images/header2.png';
+
 import amphibian from '../images/amphibian.jpg';
 import artic from '../images/artic.jpg';
 import birds from '../images/birds.jpg';
@@ -22,6 +24,7 @@ export const EndangeredSpecies = () => {
 
   return( 
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header2})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">

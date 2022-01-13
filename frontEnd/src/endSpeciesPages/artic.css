@@ -2,6 +2,8 @@
     --color-artic: #B1D0E0;
     --color-artic2: #A7C4BC;
     --color-artic3: #DFEEEA;
+    --color-darkBorder: #37475A;
+    --color-textColor: rgb(35,47,62);
     
 }
 
@@ -33,6 +35,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 .articName2{
     height: 36px;
@@ -43,6 +48,9 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 .articName3{
     height: 36px;
@@ -53,4 +61,20 @@
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+.articName-Dark{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }

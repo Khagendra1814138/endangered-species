@@ -21,11 +21,13 @@
     --fontSize-speciesNameLabel: 22px;
     --fontColor-speciesNameLabel: rgb(35,47,62);
     --fontWeight-speciesNameLabel: bold;
+
+    --color-darkBorder: #37475A;
 }
 
 
 
-.endParagpaph{
+/* .endParagpaph{
     height: 240px;
     width: 450px;
     padding: 6px;
@@ -35,7 +37,56 @@
     font-family: 'Roboto', sans-serif;
     border-radius: 6px;
     border: 4px solid #F3F0D7;
+} */
+.smallImageUk-Dark{
+    background: none;
+    height: var(--heightSmall);
+    width: var(--widthSmall);
+    display: flex;
+    margin: auto;
+    border-left: var(--border) solid var(--color-darkBorder);
+    border-top: var(--border) solid var(--color-darkBorder);
+    border-right: var(--border) solid var(--color-darkBorder);
+    overflow: hidden;
 }
+.mediumImageUk-Dark{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--mediumWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-darkBorder);
+    border-top: var(--border) solid var(--color-darkBorder);
+    border-right: var(--border) solid var(--color-darkBorder);
+    overflow: hidden;
+}
+.largeImageUk-Dark{
+    background: none;
+    height: var(--largeHeight);
+    width: var(--largeWidth);
+    display: block;
+    margin: auto;
+    border-left: var(--border) solid var(--color-darkBorder);
+    border-top: var(--border) solid var(--color-darkBorder);
+    border-right: var(--border) solid var(--color-darkBorder);
+    overflow: hidden;
+}
+.nameUk-Dark{
+    background: var(--color-darkBorder);
+    height: auto;
+    width: auto;
+    padding: 4px;
+    display: block;
+    text-align: center;
+    font-size: var(--fontSize-speciesNameLabel);
+    font-family: var(--fontStyle-speciesNameLabel);
+    font-weight: var(--fontWeight-speciesNameLabel);
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
+
 
 
 
@@ -72,6 +123,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -110,6 +163,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -149,6 +204,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -187,6 +244,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -226,6 +285,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -265,6 +326,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
 
 
@@ -304,4 +367,6 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }

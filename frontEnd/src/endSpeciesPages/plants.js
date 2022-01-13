@@ -1,9 +1,11 @@
 import React from 'react';
+import { useState } from "react";
 
 import '../pages/publicMain.css';
 import './plants.css';
 
 import {PlantPageSuvNav} from "../subNav/subNavigation";
+import header6 from '../images/header6.png';
 
 //cycades
 import middelburgCycad from '../images/endPlant/Cycad/middelburgCycad.png';
@@ -27,23 +29,53 @@ import Rafflesia from '../images/endPlant/strangePlants/Rafflesia.png';
 import taccaChantrieri from '../images/endPlant/strangePlants/taccaChantrieri.png';
 
 
-
+import {FaPlusSquare} from 'react-icons/fa';
+import {FaMinusSquare} from 'react-icons/fa';
 
 
 export const Plants = () => {
+  const [darkMode, setDarkMode] = useState(false);
+  const [fontSize, setFontSize] = useState(20);
+
+  function FontSizeIncreaser(){
+    return(
+      <div className='buttonsContainer'>
+        <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
+        <div className='fontSizeDisplay'>{fontSize}</div>
+        <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
+      </div>
+    )
+  };
+
   return( 
-    <div className="pageMainFrame">
+    <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+      <FontSizeIncreaser/>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+      <div className="darkModeSwitchContainer">
+        <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
+            <div className="switch-checkbox">
+                <label className="switch">
+                  <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
+                  <span className="slider round"> </span>
+                </label>
+            </div>
+        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
+      </div>
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
       <body className='pageBodyFrame'>
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
             <line className = "thinLine"></line>
-            <subhead className = "subheadLrg">Endangered Plant Species</subhead>
+            <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Plant Species</subhead>
           </div>
 
-          <paragragraph className="paragpaphLrg">
-            Wass awass
-          </paragragraph>
+            <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
 
 
           <box className = "box4">
@@ -52,14 +84,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${encephalartosLatifrons})`}}></div>
                 </image>
-                <label className='plantsName'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${lillieCycad})`}}></div>
                 </image>
-                <label className='plantsName'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName"}>Name</label>
               </box>
             </box>
 
@@ -68,14 +100,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${palmaCorcho})`}}></div>
                 </image>
-                <label className='plantsName'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${vendaCycad})`}}></div>
                 </image>
-                <label className='plantsName'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName"}>Name</label>
               </box>
             </box>
 
@@ -83,7 +115,7 @@ export const Plants = () => {
               <image className= 'plantsLargeImage'>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${middelburgCycad})`}}></div>
               </image>
-              <label className= "plantsName">Species name</label>
+              <label className = {darkMode ? "plantsName-Dark" : "plantsName"}>Species name</label>
             </box>
           </box>
         </div>
@@ -99,14 +131,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${corkTree})`}}></div>
                 </image>
-                <label className='plantsName2'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName2"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${dragonTree})`}}></div>
                 </image>
-                <label className='plantsName2'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName2"}>Name</label>
               </box>
             </box>
 
@@ -115,14 +147,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${monkeyTree})`}}></div>
                 </image>
-                <label className='plantsName2'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName2"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${quiverTree})`}}></div>
                 </image>
-                <label className='plantsName2'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName2"}>Name</label>
               </box>
             </box>
 
@@ -130,7 +162,7 @@ export const Plants = () => {
               <image className= 'plantsLargeImage'>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baobabTree})`}}></div>
               </image>
-              <label className= "plantsName2">Species name</label>
+              <label className = {darkMode ? "plantsName-Dark" : "plantsName2"}>Species name</label>
             </box>
           </box>
         </div>
@@ -145,14 +177,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${euphorbiaObesa})`}}></div>
                 </image>
-                <label className='plantsName3'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flyingVenusTrap})`}}></div>
                 </image>
-                <label className='plantsName3'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Name</label>
               </box>
             </box>
 
@@ -161,14 +193,14 @@ export const Plants = () => {
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${Rafflesia})`}}></div>
                 </image>
-                <label className='plantsName3'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Name</label>
               </box>
 
               <box className = "MedBox">
                 <image className='plantsMediumImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${taccaChantrieri})`}}></div>
                 </image>
-                <label className='plantsName3'>Name</label>
+                <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Name</label>
               </box>
             </box>
 
@@ -176,7 +208,7 @@ export const Plants = () => {
               <image className= 'plantsLargeImage'>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${titanArum})`}}></div>
               </image>
-              <label className= "plantsName3">Species name</label>
+              <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Species name</label>
             </box>
           </box>
         </div>

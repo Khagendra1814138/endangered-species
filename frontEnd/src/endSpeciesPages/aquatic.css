@@ -1,3 +1,8 @@
+:root{
+    --color-darkBorder: #37475A;
+    --color-textColor: rgb(35,47,62);
+}
+
 .aquaticLargeImage{
     height: 462px;
     width: 332px;
@@ -20,9 +25,25 @@
     height: 36px;
     width: auto;
     display: block;
-    background-color: blue;
+    background-color: lightblue;
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     font-size: 24px;
     text-align: center;
+    color: var(--color-textColor);
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+.aquaticName-Dark{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
 }
