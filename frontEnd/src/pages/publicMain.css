@@ -38,7 +38,7 @@
 
 .pageBodyFrame{
     height: auto;
-    width: 90%;
+    width: auto;
     margin: auto;
     background-color: none; 
     padding-bottom: 20vh; 
@@ -49,7 +49,17 @@
     background-color: none;
     height: auto;
     width: auto;
-    margin-top: 8vh;
+    margin: auto;
+    padding-top: 2vh;
+    padding-bottom: 6vh;
+}
+.container2{
+    background-color: #E2F6F7;
+    height: auto;
+    width: auto;
+    margin: auto;
+    padding-top: 2vh;
+    padding-bottom: 6vh;
 }
 
 .landingImageBox {
@@ -77,12 +87,24 @@
 
 .box{
     height: auto;
-    width: 1000px;
+    width: 1020px;
     background-color: none;
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
+    padding: 20px;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
 }
+.box-noshadow{
+    height: auto;
+    width: auto;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+}
+
 .box2{
     height: auto;
     width: 1000px;
@@ -105,22 +127,25 @@
     height: auto;
     width: 1000px;
     display: flex;
-    background-color: none;
+    background-color: rebeccapurple;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     align-items: center;
     justify-content: center;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228)
 }
 
 
 .mainSubHeadFrame{
-    height: 80px;
+    height: 10px;
     width: 100%;
-    margin-top: 20px;
+    margin-top: 80px;
     background-color: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
 }
 .thinLine{
     height: 1px;
@@ -149,7 +174,6 @@
     border-radius: 10px;
     color: rgb(35,47,62);
     text-shadow:  1px 1px 1px rgb(35,47,62);
-    position: absolute;
 }
 .subheadLrgDrk{
     background-color: var(--color-darkBackground);
@@ -168,7 +192,6 @@
     border-radius: 10px;
     color: white;
     text-shadow:  1px 1px 1px white;
-    position: absolute;
 }
 
 
@@ -190,7 +213,6 @@
     border-radius: 6px;
     color: rgb(35,47,62);
     text-shadow:  1px 1px 1px rgb(35,47,62);
-    position: absolute;
 }
 .subheadSmlDrk{
     background-color: var(--color-darkBackground);
@@ -208,39 +230,38 @@
     border-radius: 6px;
     color: white;
     text-shadow:  1px 1px 1px white;
-    position: absolute;
 }
 
 
 
 .paragraphContainer{
     height: auto;
-    width: 976px;
+    width: auto;
     background-color: transparent;
     display: block;
     margin: auto;
 }
 .paragpaphLrg-Light{
-    min-height: 100px;
-    width: 976px;
+    min-height: auto;
+    width: 1020px;
     padding: 6px;
     background-color: #CEE5D0;
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     font-family: var(--font-paragraphStyle);
     border-radius: 6px;
     border: 2px solid #F3F0D7;
     color: var(--color-footer);
 }
 .paragpaphLrg-Dark{
-    height: 100px;
-    width: 976px;
+    min-height: 100px;
+    width: 1020px;
     padding: 6px;
     background-color: transparent;
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 40px;
     font-family: var(--font-paragraphStyle);
     border-radius: 6px;
     border: 2px solid var(--color-darkBorder);
@@ -258,8 +279,6 @@
     position: fixed;
     bottom: 40px;
     right: 120px;
-    align-items: center;
-    justify-content: center;
 }
 .paraButton{
     height: auto;
@@ -328,22 +347,130 @@
     justify-content: center;
     align-items: center;
 }
-.MedBox{
-    height: auto;
-    width: auto;
-    background: none;
-}
+
 
 
 
 .extinctSpeciesImage{
     height: 100%;
     width: 100%;
-    filter: brightness(80%);
     display: block;
 }
 .extinctSpeciesImage:hover{
     transition: ease-in-out 0.5s;
     transform: scale(1.07);
-    filter: brightness(100%);
+    filter: brightness(50%);
+}
+
+
+
+
+.videoFrame{
+    height: 600px;
+    width: auto;
+    background-color: #E2F6F7;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoFrame-White{
+    height: 600px;
+    width: auto;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+.videoFrame-Dark{
+    height: 600px;
+    width: auto;
+    background-color: none;
+    display: flex;
+    margin: auto;
+    margin-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+.video{
+    height: auto;
+    width: auto;
+    display: block;
+    background: var(--color-lightBorder);
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.video-Dark{
+    height: auto;
+    width: auto;
+    display: block;
+    background: var(--color-darkBorder);
+    padding: 4px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+.video-Discription{
+    height: auto;
+    width: auto;
+    display: block;
+    background: none;
+    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: var(--font-paragraphStyle);
+    color: white;
+    text-align: center;
+}
+
+
+/* ------------------------------------------------------------//Artist-Credit-Overlay-Effect//------------------------------------------------------------ */
+.speciesCardContainer {
+    position: relative;
+    display: inline-block;
+    height: auto;
+    width:  auto;
+}
+
+.photograpgerName {
+    color: var(--color-textColor);
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
+    font-weight: bold;
+    width: 100%;
+}
+.overlay {
+    position: absolute;
+    opacity: 0;
+    transition: .3s ease;
+}
+.speciesCardContainer:hover .overlay{
+    opacity: 1;
+}
+
+.overlayLeft{
+    height: 24px;
+    width: 0;
+    top: 100px;
+    left:0;
+    background-color: gainsboro;
+    text-align: center;
+}
+
+.speciesCardContainer:hover .overlayLeft{
+    width: 100%;
 }

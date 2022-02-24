@@ -5,7 +5,6 @@ import './signUp.css';
 
 import {SignUpSuvNav} from "../subNav/subNavigation";
 
-
 export const SignUp = () => {
   return( 
       <div className="pageMainFrame">
@@ -14,9 +13,7 @@ export const SignUp = () => {
           <div className='container'>
 
             <div className = "mainSubHeadFrame">
-              <line className = "thinLine"></line>
                 <subhead className = "subheadLrg">Sign-Up</subhead>
-              <line className = "thinLine"></line>
             </div>
 
             <box className = "box3">
@@ -32,7 +29,7 @@ export const SignUp = () => {
                   <input type="text" name="email" className='inputBox'/>
                 </form>   
               </box>
-              <input type="submit" value="SIGN UP" className='signUpBtn'/>
+              <input type="submit" value="SIGN UP" className='signUpBtn' />
             </box>
 
           </div>

@@ -1,10 +1,13 @@
 
-  
-  .rec-carousel-item:focus {
-    outline: skyblue;
-    display: block;
-    box-shadow: inset 0 0 5px 0px red;
-    background-color: aqua;
+  .carouselFrame{
+    height: auto;
+    width: 56%;
+    margin: auto;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: none;
+    border-radius: 10px;
+    display: flex;
   }
 
   .mainImageFrame{
@@ -20,5 +23,8 @@
     display: block;
     background-color: none;
     overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: inherit;
   }
 

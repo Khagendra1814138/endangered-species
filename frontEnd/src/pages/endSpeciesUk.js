@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './endSpeciesUk.css';
 
 import {UkPageSuvNav} from "../subNav/subNavigation";
-import header6 from '../images/header6.png';
+import headerUk from '../images/headerUk.png';
 
 //Reptiles
 import adderViper from '../images/endSpeciesUk/reptiles/adderViper.png';
@@ -74,7 +75,7 @@ export const EndnageredSpeciesUk = () => {
     return( 
         <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
             <FontSizeIncreaser/>
-            <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+            <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerUk})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
             <div className="darkModeSwitchContainer">
@@ -92,7 +93,6 @@ export const EndnageredSpeciesUk = () => {
             <body className='pageBodyFrame'>
                 <div className='container'>
                     <div className = "mainSubHeadFrame">
-                        <line className = "thinLine"></line>
                         <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Species in the UK</subhead>
                     </div>
 
@@ -101,7 +101,6 @@ export const EndnageredSpeciesUk = () => {
                     </paragragraph>
                  
                     <div className = "mainSubHeadFrame">
-                        <line className = "thinLine"></line>
                         <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>R e p t i l e s</subhead>
                     </div>
 
@@ -140,11 +139,21 @@ export const EndnageredSpeciesUk = () => {
                     </paragragraph>
                 </div>
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
+                </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
 
 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
                     <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>M a r i n e s</subhead>
                 </div>
                 <box className = "box">
@@ -186,7 +195,6 @@ export const EndnageredSpeciesUk = () => {
 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
                     <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>A m p h i b i a n s</subhead>
                 </div>
 
@@ -225,11 +233,20 @@ export const EndnageredSpeciesUk = () => {
                 </paragragraph>
             </div>
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+            <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                <line className = "thinLine"></line>
+                <div className= {darkMode ? "video-Dark" : "video"}>
+                    <paragragraph className="video-Discription">A video about the Endangered Red Squirrel.</paragragraph>
+                    <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=vRmPQGq88Kk"/>
+                </div> 
+                <line className = "thinLine"></line> 
+            </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
                     <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>M a m m e l s</subhead>
                 </div>
 
@@ -279,9 +296,7 @@ export const EndnageredSpeciesUk = () => {
                 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
-                        <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>B i r d s</subhead>
-                    <line className = "thinLine"></line>
+                    <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>B i r d s</subhead>
                 </div>
 
                 <box className = "box">
@@ -324,15 +339,23 @@ export const EndnageredSpeciesUk = () => {
                     Wass awass
                 </paragragraph>
             </div>
-       
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+            <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                <line className = "thinLine"></line>
+                <div className= {darkMode ? "video-Dark" : "video"}>
+                    <paragragraph className="video-Discription">A video about the Western Capercaillie.</paragragraph>
+                    <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=XtU7zmXRe_A"/>
+                </div> 
+                <line className = "thinLine"></line> 
+            </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}       
 
 
 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
-                        <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>P l a n t s</subhead>
-                    <line className = "thinLine"></line>
+                    <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>P l a n t s</subhead>
                 </div>
 
                 <box className = "box">
@@ -380,9 +403,7 @@ export const EndnageredSpeciesUk = () => {
 
             <div className='container'>
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
-                        <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>F u n g u s</subhead>
-                    <line className = "thinLine"></line>
+                    <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>F u n g u s</subhead>
                 </div>
                 
                 <box className = "box">
@@ -425,6 +446,18 @@ export const EndnageredSpeciesUk = () => {
                     Wass awass
                 </paragragraph>
             </div>
+
+            
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+            <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                <line className = "thinLine"></line>
+                <div className= {darkMode ? "video-Dark" : "video"}>
+                    <paragragraph className="video-Discription">A video about saving the Endnagered UK Water Vole.</paragragraph>
+                    <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=qCzUrWw_Nk8"/>
+                </div> 
+                <line className = "thinLine"></line> 
+            </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
                 
             </body>
             <UkPageSuvNav/>

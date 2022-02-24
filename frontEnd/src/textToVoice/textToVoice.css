@@ -1,0 +1,48 @@
+.textToVoiceBtn{
+    height: auto;
+    width: auto;
+    border: 4px solid #37475A;
+    background-color: #37475A;
+    display: flex;
+    margin: auto;
+    margin-top: 6px;
+    margin-left: 70.6%;
+    border-radius: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.textToVoiceBtn:hover{
+    cursor: pointer;
+    border: 4px dashed orange;
+    transition: 200ms ease-in-out;
+}
+
+
+
+.paraBtnIcon{
+    height: auto;
+    width:  auto;
+    display: inline-flex;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: -4px;
+
+}
+.paraBtnLabel{
+    height: auto;
+    width:  auto;
+    display: inline-flex;
+    background-color: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin: auto;
+    margin-left: 4px;
+    font-weight: bold;
+    font-family: var(--font-family);
+    color: white;
+}

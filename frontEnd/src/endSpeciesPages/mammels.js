@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './mammels.css';
@@ -17,7 +18,7 @@ import {PrimatesCarousel} from "./mammelsCarousel";
 import {FaPlusSquare} from 'react-icons/fa';
 import {FaMinusSquare} from 'react-icons/fa';
 
-import header6 from '../images/header6.png';
+import headerMammels from '../images/headerMammels.png';
 
 //Small Mammels
 import fruitBat from '../images/endMammels/smallMammels/fruitBat.png';
@@ -57,7 +58,7 @@ export const Mammels = () => {
   return( 
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
       <FontSizeIncreaser/>
-      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerMammels})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">
@@ -77,7 +78,6 @@ export const Mammels = () => {
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Mammels</subhead>
           </div>
 
@@ -86,7 +86,6 @@ export const Mammels = () => {
           </paragragraph>
 
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>S m a l l - M a m m e l s</subhead>
           </div>
 
@@ -110,14 +109,22 @@ export const Mammels = () => {
           <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Wass awass
           </paragragraph>
-        </div>  
+        </div> 
 
-       
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Pangolins.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=DqC3ieJJlFM"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>L a r g e - M a m m e l s</subhead>
           </div>
 
@@ -149,7 +156,6 @@ export const Mammels = () => {
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>R h i n o c e r o s</subhead>
           </div>
 
@@ -175,6 +181,16 @@ export const Mammels = () => {
           </paragragraph>
         </div>
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about two Northern White Rhino.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q8eh58Z249o"/>
+            </div>
+            <line className = "thinLine"></line>  
+        </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
 
@@ -182,7 +198,6 @@ export const Mammels = () => {
       <div className='container'>
 
         <div className = "mainSubHeadFrame">
-          <line className = "thinLine"></line>
           <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>B i g - C a t s</subhead>
         </div>
 
@@ -213,7 +228,6 @@ export const Mammels = () => {
       <div className='container'>  
 
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>P r i m a t e s</subhead>
           </div>
 
@@ -238,6 +252,17 @@ export const Mammels = () => {
             Wass awass
           </paragragraph>
         </div>
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Amur Leopard.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dXAmEDFFero"/>
+            </div> 
+           <line className = "thinLine"></line> 
+        </div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
       </body>
       <MammelsPageSuvNav/>

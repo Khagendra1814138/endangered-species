@@ -45,7 +45,6 @@ export const EndangeredSpecies = () => {
       <body className='pageBodyFrame'>
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Species</subhead>
           </div>
 

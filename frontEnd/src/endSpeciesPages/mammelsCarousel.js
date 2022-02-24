@@ -44,7 +44,7 @@ const breakPoints = [
 
 export const SmallMammelsCarousel = () => {
   return (
-    <div>
+    <div className="carouselFrame">
       <Carousel breakPoints={breakPoints}>
         <Item>
           <box className="mainImageFrame">
@@ -81,7 +81,7 @@ export const SmallMammelsCarousel = () => {
 //Large Mammels Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const LargeMammelsCarousel = () => {
   return (
-    <div>
+    <div className="carouselFrame">
       <Carousel breakPoints={breakPoints}>
         <Item>
           <box className="mainImageFrame">
@@ -137,7 +137,7 @@ export const LargeMammelsCarousel = () => {
 //Rhino Cards/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const RhinosCarousel = () => {
   return (
-    <div>
+    <div className="carouselFrame">
       <Carousel breakPoints={breakPoints}>
         <Item>
           <box className="mainImageFrame">
@@ -174,7 +174,7 @@ export const RhinosCarousel = () => {
 //Big Cats Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const BigCatsCarousel = () => {
   return (
-    <div>
+    <div className="carouselFrame">
       <Carousel breakPoints={breakPoints}>
         <Item>
           <box className="mainImageFrame">
@@ -212,7 +212,7 @@ export const BigCatsCarousel = () => {
 //Primates Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export const PrimatesCarousel = () => {
   return (
-    <div>
+    <div className="carouselFrame">
       <Carousel breakPoints={breakPoints}>
         <Item>
           <box className="mainImageFrame">

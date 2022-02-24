@@ -2,6 +2,7 @@
     height: auto;
     width: auto;
     margin: auto;
+    margin-top: 8vh;
     background: none;
     display: block;
     padding: 20px;
@@ -26,6 +27,7 @@
 .signUpBtn:hover{
     background: rgb(35,47,62);
     transition: 300ms ease-in-out;
+    text-decoration: underline dashed;
 }
 
 

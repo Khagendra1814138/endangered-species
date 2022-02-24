@@ -54,6 +54,10 @@ function Navbar() {
             <Link to='/takeAction'className='nav-links'>Take Action</Link>
           </li>
 
+          <li className='nav-item'>
+            <Link to='/quiz'className='nav-links'>Quiz</Link>
+          </li>
+
         </ul>
         <LogInButton/>
         <SignUpButton/>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './aquatic.css';
@@ -7,7 +8,7 @@ import './aquatic.css';
 import {AquaticPageSuvNav} from "../subNav/subNavigation";
 
 
-import header6 from '../images/header6.png';
+import headerAquatic from '../images/headerAquatic.png';
 //dolphins
 import hectorsDolphins from '../images/endAquatic/dolphin/hectorsDolphins.png';
 import amazonRiverDolphin from '../images/endAquatic/dolphin/amazonRiverDolphin.png';
@@ -78,7 +79,7 @@ export const Aquatic = () => {
   return( 
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
        <FontSizeIncreaser/>
-      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerAquatic})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">
@@ -97,7 +98,6 @@ export const Aquatic = () => {
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Aquatic Animals</subhead>
           </div>
 
@@ -106,16 +106,20 @@ export const Aquatic = () => {
           </paragragraph>
 
 
+
           <box className = "box4">
             <box className = "mediumSpeciesImgFrame">
-                <box className = "MedBox">
+                <box className = "speciesCardContainer">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${amazonRiverDolphin})`}}></div>
                     </image>
+                    <div class="overlay  overlayLeft">
+                      <label class="photograpgerName">Photo by Your Mum</label>
+                    </div>
                     <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
-                <box className = "MedBox">
+                <box className = "containerx">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${IrrawaddyDolphin})`}}></div>
                     </image>
@@ -123,22 +127,27 @@ export const Aquatic = () => {
                 </box>
             </box>
             
-            <box className = "largeSpeciesImgFrame">
+            <box className = "speciesCardContainer">
                 <image className= 'aquaticLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hectorsDolphins})`}}></div>
                 </image>
+
+                <div class="overlay  overlayLeft">
+                  <label class="photograpgerName">Photograph by Your Mum</label>
+                </div>
+                
                 <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Species name</label>
             </box>
 
             <box className = "mediumSpeciesImgFrame">
-                <box className = "MedBox">
+                <box className = "containerx">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${vaquita})`}}></div>
                     </image>
                     <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
                 </box>
 
-                <box className = "MedBox">
+                <box className = "containerx">
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${yangtzeFinless})`}}></div>
                     </image>
@@ -146,6 +155,15 @@ export const Aquatic = () => {
                 </box>
             </box>
           </box>
+        </div>
+
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about the Amazon river dolphins.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Yty9Zf8ie2g"/>
+            </div> 
+            <line className = "thinLine"></line> 
         </div>
 
 
@@ -228,7 +246,7 @@ export const Aquatic = () => {
                     <image className='aquaticMediumImage'>
                       <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${leatherBack})`}}></div>
                     </image>
-                    <label cclassName = {darkMode ? "aquaticName-Dark" : "aquaticName"}>Name</label>
+                    <label className = {darkMode ? "aquaticName-Dark" : "aquaticName"}>wasa</label>
                 </box>
 
                 <box className = "MedBox">
@@ -239,6 +257,15 @@ export const Aquatic = () => {
                 </box>
             </box>
           </box>
+        </div>
+
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about the Whale Sharks.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=E9tpPWK7sag"/>
+            </div> 
+            <line className = "thinLine"></line> 
         </div>
 
 
@@ -334,6 +361,15 @@ export const Aquatic = () => {
           </box>
         </div>
 
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Sea Turtles.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=5Rmv3nliwCs"/>
+           </div> 
+           <line className = "thinLine"></line> 
+        </div>
+
 
 
 
@@ -427,7 +463,14 @@ export const Aquatic = () => {
           </box>
         </div>
 
-
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video of Giant Manta Ray.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dCfBQfBiovA"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div>
 
 
       </body>

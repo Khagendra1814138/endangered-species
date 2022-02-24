@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './fungus.css';
 
 import {FungiPageSuvNav} from "../subNav/subNavigation";
-import header6 from '../images/header6.png';
+import headerFungus from '../images/headerFungus.png';
 
 //fungus
 import barbiePagoda from '../images/endFungus/barbiePagoda.png';
@@ -46,7 +47,7 @@ export const Fungus = () => {
     return( 
       <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
         <FontSizeIncreaser/>
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+        <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerFungus})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
         <div className="darkModeSwitchContainer">
@@ -65,7 +66,6 @@ export const Fungus = () => {
 
           <div className='container'>
             <div className = "mainSubHeadFrame">
-              <line className = "thinLine"></line>
               <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Fungus Species</subhead>
             </div>
         
@@ -116,6 +116,15 @@ export const Fungus = () => {
             </box>
           </div>
 
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about why Fungus are Important.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=BlcKBKJ8uro"/>
+              </div> 
+              <line className = "thinLine"></line> 
+          </div>
+
 
 
 
@@ -163,6 +172,15 @@ export const Fungus = () => {
             </box>
           </div>
 
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about Mycelium Fungus</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=cApVVuuqLFY"/>
+              </div>
+              <line className = "thinLine"></line>  
+          </div>
+
 
 
 
@@ -208,6 +226,16 @@ export const Fungus = () => {
                 <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Species name</label>
               </box>
             </box>
+          </div>
+
+
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about Killer Fungus.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=ROQrbWkV4HI"/>
+              </div> 
+              <line className = "thinLine"></line> 
           </div>
 
 

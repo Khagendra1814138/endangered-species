@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './artic.css';
@@ -8,7 +9,7 @@ import {ArticPageSuvNav} from "../subNav/subNavigation";
 
 
 
-import header6 from '../images/header6.png';
+import headerArtic from '../images/headerArtic.png';
 
 //ARTIC SPECIES IMAGES
 import eskimoCurlew from '../images/endArtic/eskimoCurlew.png';
@@ -51,7 +52,7 @@ export const Artic = () => {
   return( 
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
        <FontSizeIncreaser/>
-      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerArtic})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">
@@ -69,7 +70,6 @@ export const Artic = () => {
       <body className='pageBodyFrame'>
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Artic Animals</subhead>
           </div>
 
@@ -120,10 +120,18 @@ export const Artic = () => {
           </box>
         </div>
 
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about Beluga Whale.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=iZ808Z-2uFI"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div>
+
 
 
         <div className='container'>
-          <line className = "largeLine"></line>
           <box className = "box4">
             <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
@@ -166,12 +174,18 @@ export const Artic = () => {
           </box>
         </div>
 
-
-
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video of Orca Hunting.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=9TLg-YlDog0"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div>
+        
 
 
         <div className='container'>
-          <line className = "largeLine"></line>
           <box className = "box4">
             <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
@@ -212,6 +226,15 @@ export const Artic = () => {
                 </box>
             </box>
           </box>
+        </div>
+
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video of Polar Bear Hunting.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=zNO0kxTClYo"/>
+            </div> 
+            <line className = "thinLine"></line> 
         </div>
 
       </body>

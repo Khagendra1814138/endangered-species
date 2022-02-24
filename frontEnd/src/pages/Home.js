@@ -1,5 +1,6 @@
 import React from 'react';
-import { useState } from "react";
+import { useState, Component, withRouter } from "react";
+import ReactPlayer from 'react-player';
 
 import './publicMain.css';
 import './Home.css';
@@ -10,6 +11,8 @@ import {FaMinusSquare} from 'react-icons/fa';
 
 import {HomeSuvNav} from "../subNav/subNavigation";
 
+//Text To Voices
+import {HomeParagraphOneVoice} from "../textToVoice/paragraphs";
 
 import headerImg from '../images/headerImg.png';
 import splendedFrog from '../images/extinctSpecies/splendedFrog.jpg';
@@ -29,7 +32,24 @@ import ecosystemService from '../images/ecosystemService.png';
 // https://www.fws.gov/nativeamerican/pdf/why-save-endangered-species.pdf
 // https://www.endangered.org/importance-of-the-endangered-species-act/
 
-export const Home = () => {
+// class Banana extends Component {
+
+// componentDidMount(){
+//   fetch("http://localhost:3000/questions/")
+//     .then (rest => rest.json())
+//     .then (ans => {
+//     this.setState({
+//         isLoaded: true,
+//         items: ans,
+//       })
+//     console.log(ans[1].question)
+//     });
+// }
+
+// render(){
+  export const Home = () => {
+    
+
   const [darkMode, setDarkMode] = useState(false);
   const [fontSize, setFontSize] = useState(20);
 
@@ -43,18 +63,24 @@ export const Home = () => {
     )
   };
 
+//   <p1 key={items.id}>
+//   {items[1].question} 
+// </p1>
+
 
   return (
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
       <FontSizeIncreaser/>
-      <box className = "landingImageBox" style={{ backgroundImage: `url(${headerImg})`}}></box>
+      <box className = "landingImageBox" style={{ backgroundImage: `url(${headerImg})`}}>
+        <h1>40,000+ Species are in danger of extinction!</h1>
+      </box>
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">
           <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
             <div className="switch-checkbox">
-              <label className="switch">
-                <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                <span className="slider round"> </span>
+              <label className="switch"> 
+                <input type="checkbox" onChange={() => setDarkMode(!darkMode)} /> 
+                <span className="slider round" > </span>
               </label>
             </div>
           <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
@@ -64,10 +90,34 @@ export const Home = () => {
 
       <body className='pageBodyFrame'>
         <div className='container'>
+
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
+            <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>What are Endangered Species?</subhead>
+          </div>
+
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video guide on what are Endangered Species.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=6tjDCZrGnxc"/>
+              </div>
+              <line className = "thinLine"></line> 
+          </div>
+
+        </div>
+
+        <div className='container'>
+          <div className = "mainSubHeadFrame">
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Extinct Species!</subhead>
           </div>
+          <box className="paragraphContainer">
+            <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Did you know that over 900+ species of plants and animals are already extinct.
+              And more than 80 species are now considered as extinct in the wild!
+            </paragragraph>
+            <HomeParagraphOneVoice/>
+          </box>
+        
     
           <box className = "box">
             <box className = "speciesMainFrame">
@@ -107,18 +157,22 @@ export const Home = () => {
               <label className= {darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>Name</label>
             </box>
           </box>
-          
-       
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-          </paragragraph>
-      
-      
+
+
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video of extinct species.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s"/>
+            </div> 
+            <line className = "thinLine"></line>
+          </div>
         </div>
+
+     
       
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Why protect these species?</subhead>
           </div>
 
@@ -127,7 +181,7 @@ export const Home = () => {
               <image className= {darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${agriculture})`}}></div> 
               </image>
-              <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+              <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                 There are insects and other animals species that prey on certain crop and rice paddy pests. Cetrian plants species contain natural-toxins,
                 which can repel harmful insects. These are called “biological controls,” and are a safe, effective,
                 and less expensive alternative to synthetic chemicals.
@@ -139,7 +193,7 @@ export const Home = () => {
               <image className= {darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${futureGeneration})`}}></div> 
               </image>
-              <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+              <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                 People get a lot of pleasure out of seeing and interacting with animals species. 
                 so species that go extinct now are no longer around for us or future generations to see and enjoy.
                 They can only learn about them in books and on the internet.  And, that is heartbreaking.
@@ -152,7 +206,7 @@ export const Home = () => {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${medical})`}}></div> 
               </image>
      
-                <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                   Over 50% of the 150 most prescribed medicines were originally derived from a plant or other natural product. 
                   The cures for many diseases may eventually come from plants, therefore,
                   we must protect all species before they are lost forever from nature’s medicine cabinet.
@@ -168,7 +222,7 @@ export const Home = () => {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${balanceEco})`}}></div> 
               </image>
                
-                <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                   Animals and plant species are the key foundation of a Healthy ecosystems. 
                   When a species becomes endangered, then it indicates that the ecosystem is slowly falling apart. 
                   Healthy ecosystem ensures that human beings have access to clean air and water, and fertile land for agriculture. 
@@ -182,7 +236,7 @@ export const Home = () => {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${research})`}}></div> 
               </image>
      
-                <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                   Many individual species are uniquely important as indicators of
                   environmental quality. Such as, freshwater fishes are indication of a healthy water.
                   So if a ntive species starts to rapidly decline, then its a sign of threat/danger,
@@ -197,7 +251,7 @@ export const Home = () => {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${ecosystemService})`}}></div> 
               </image>
       
-                <paragragraph className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                <paragragraph style={{fontSize: `${fontSize}px`}} className= {darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
                   This include air & water purification, detoxification and decomposition of wastes,
                   climate regulation, regeneration of soil fertility, and the production and maintenance of biological diversity.
                   Phytoremediation is an example of the ecosystem services provided by plants.
@@ -207,10 +261,23 @@ export const Home = () => {
             </box>
           </box>
 
+          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s"/>
+            </div> 
+            <line className = "thinLine"></line>
+          </div>
         </div>
+
       </body>
       <HomeSuvNav/>
     </div>
   );
 }
+// }
+
+// export const Home = withRouter(Banana);
+
   

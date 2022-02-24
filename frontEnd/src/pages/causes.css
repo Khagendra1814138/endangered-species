@@ -1,7 +1,9 @@
 :root{
     --color-darkBorder: #37475A;
     --color-lightBorder: #7FC8A9;
-    --color-footer: rgb(35,47,62);
+    --color-footer: white;
+    /* --color-footer: rgb(35,47,62); */
+    /* #7FC8A9 */
 }
 
 
@@ -15,7 +17,7 @@
     margin-top: 20px;
     border: 4px solid var(--color-lightBorder);
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 .imageMedium-Dark{
     height: 240px;
@@ -26,7 +28,7 @@
     margin-top: 20px;
     border: 4px solid var(--color-darkBorder);
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 4px;
 }
 
 
@@ -34,24 +36,28 @@
 
 .threatParagraphFrame-Light{
     background: none;
-    height: 240px;
+    min-height: 240px;
     width: 658px;
     margin: auto;
     margin-top: 20px;
-    border: 4px solid #F7D59C;
+    border: 4px solid #007B6B;
     border-radius: 10px;
+    padding-bottom: 20px;
+    position: relative;
 }
 .threatParagraphFrame-Dark{
     background: none;
-    height: 240px;
+    min-height: 240px;
     width: 658px;
     margin: auto;
     margin-top: 20px;
     border: 4px solid var(--color-darkBorder);
     border-radius: 10px;
+    padding-bottom: 20px;
+    position: relative;
 }
 .threatTitle-Light{
-    background: #F7D59C;
+    background: #003357;
     height: auto;
     width: 86%;
     padding: 4px;
@@ -60,11 +66,10 @@
     font-family: 'Manrope', sans-serif;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin: auto;
-    top: -22px;
+    margin-top: -22px;
     border-radius: 10px;
-    color: var(--color-footer);
+    color: white;
 }
 .threatTitle-Dark{
     background: var(--color-darkBorder);
@@ -76,89 +81,93 @@
     font-family: 'Manrope', sans-serif;
     align-items: center;
     justify-content: center;
-    position: relative;
     margin: auto;
-    top: -22px;
+    margin-top: -22px;
     border-radius: 10px;
     color: white;
 }
 
 .paragraphMed-Light{
-    background: transparent;
-    height: 158px;
+    background-color: transparent;
+    min-height: 152px;
     width: auto;
     padding: 6px;
     display: block;
-    text-align: center;
+
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    border-top: 1px solid var(--color-lightBorder);
-    border-bottom: 1px solid var(--color-lightBorder);
+    /* border-top: 1px solid var(--color-lightBorder);
+    border-bottom: 1px solid var(--color-lightBorder); */
     margin: auto;
+    margin-top: 20px;
     color: #000;
 }
 .paragraphMed-Dark{
     background: transparent;
-    height: 158px;
+    height: 152px;
     width: auto;
     padding: 6px;
     display: block;
-    text-align: center;
+    
     font-family: 'Roboto', sans-serif;
     font-size: 18px;
-    border-top: 1px solid var(--color-darkBorder);
-    border-bottom: 1px solid var(--color-darkBorder);
+    /* border-top: 1px solid var(--color-darkBorder);
+    border-bottom: 1px solid var(--color-darkBorder); */
     margin: auto;
+    margin-top: 20px;
     color: white;
 }
 
 
 .actionParagraph-Light{
-    background: transparent;
-    height: 152px;
+    background-color: transparent;
+    min-height: 152px;
     width: auto;
     padding: 6px;
     display: block;
-    text-align: center;
     font-size: 16px;
     margin: auto;
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     color: #000;
-    border-top: 1px solid green;
-    border-bottom: 1px solid green;
-
+    /* border-top: 1px solid green;
+    border-bottom: 1px solid green; */
 }
 .actionParagraph-Dark{
     background: transparent;
-    height: 152px;
+    min-height: 152px;
     width: auto;
     padding: 6px;
     display: block;
-    text-align: center;
     font-size: 16px;
     margin: auto;
+    margin-top: 10px;
     font-family: 'Roboto', sans-serif;
     color: white;
-    border-top: 1px solid var(--color-darkBorder);
-    border-bottom: 1px solid var(--color-darkBorder);
+    /* border-top: 1px solid var(--color-darkBorder);
+    border-bottom: 1px solid var(--color-darkBorder); */
 }
 
 
 
 .takeActionBtn-Light{
     background: #1888ff;
-    height: 46px;
+    height: 50px;
     width: 200px;
     padding: 6px;
     display: block;
     margin: auto;
-    position: relative;
-    top: 18px;
+    position: absolute;
+    left: 36.5%;
+    bottom: -25px;
     text-align: center;
     font-size: 20px;
-    border: 4px solid #ddb164;
+    font-family: 'Manrope', sans-serif;
+    border: 6px solid #003357;
     cursor: pointer;
     color: white;
+    text-decoration: none;
+ 
 }
 .takeActionBtn-Light:hover{
     background: rgb(35,47,62);
@@ -168,21 +177,27 @@
 
 .takeActionBtn-Dark{
     background: var(--color-footer);
-    height: 46px;
+    height: 50px;
     width: 200px;
     padding: 6px;
     display: block;
     margin: auto;
-    position: relative;
-    top: 18px;
+    position: absolute;
+    left: 36.5%;
+    bottom: -26.5px;
     text-align: center;
     font-size: 20px;
-    border: 4px solid var(--color-darkBorder);
+    font-family: 'Manrope', sans-serif;
+    border: 6px solid var(--color-darkBorder);
     cursor: pointer;
     color: white;
+    text-decoration: none;
 }
 .takeActionBtn-Dark:hover{
     background: #1888ff;
     transition: 300ms ease-in-out;
     text-decoration: underline wavy;
 }
+
+
+

@@ -17,4 +17,6 @@
   .btn:hover {
     color: white;
     background-color: var(--primary);
+    border: 4px dotted white;
+    text-decoration: underline wavy;
   }

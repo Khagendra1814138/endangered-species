@@ -12,13 +12,11 @@ export const LogInPage = () => {
             <div className='container'>
 
                 <div className = "mainSubHeadFrame">
-                    <line className = "thinLine"></line>
-                        <subhead className = "subheadLrg">Log-In</subhead>
-                    <line className = "thinLine"></line>
+                    <subhead className = "subheadLrg">Log-In</subhead>
                 </div>
 
                 <box className = "box3">
-                    <box className = "formFrame">
+                    <box className = "LoginformFrame">
                         <form>
                             <label className='registerLabel'>NAME</label>
                             <input type="text" name="name" className='inputBox'/>

@@ -5,6 +5,12 @@
     --color-textColor: rgb(35,47,62);
     --font-paragraphStyle:'Rubik', sans-serif;
 }
+h1{
+    font-size: 60px;
+    font-family: var(--font-paragraphStyle);
+    color: white;
+    display: block;
+}
 
 .extSpeciesImageLrgLight{
     background: none;
@@ -37,8 +43,8 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 .extSpeciesImageMidDark{
     background: transparent;
@@ -47,8 +53,8 @@
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .extinctSpeciesName-Light{
@@ -85,7 +91,7 @@
 }
 
 .verySmallPara-Light{
-    min-height: 200px;
+    min-height: 320px;
     width: 310px;
     padding: 6px;
     display: block;
@@ -99,7 +105,7 @@
     padding-bottom: 20px;
 }
 .verySmallPara-Dark{
-    min-height: 200px;
+    min-height: 320px;
     width: 310px;
     padding: 6px;
     display: block;
@@ -119,6 +125,7 @@
     height: auto;
     width: 92%;
     margin: auto;
+    margin-top: -18px;
     padding: 4px;
     display: block;
     text-align: center;
@@ -126,9 +133,6 @@
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     color: #000;
-    position: relative;
-    top: -18px;
-    right: -0px;
 }
 .whyProtectLabel-Dark{
     background: var(--color-darkBorder);
@@ -142,9 +146,6 @@
     font-family: 'Manrope', sans-serif;
     font-weight: bold;
     color: white;
-    position: relative;
-    top: -18px;
-    right: -0px;
 }
 
 .largeLine{
@@ -152,7 +153,8 @@
     width: 100%;
     background-color: gainsboro;
     display: flex;
-    margin-top: 20px;
+    margin-top: 40px;
+ 
 }
 
 .linedown{
@@ -161,5 +163,4 @@
     background-color: gainsboro;
     display: flex;
 }
-
 

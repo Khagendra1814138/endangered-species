@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './amphibians.css';
@@ -7,7 +8,7 @@ import './amphibians.css';
 import {AmphibianPageSuvNav} from "../subNav/subNavigation";
 
 
-import header6 from '../images/header6.png';
+import headerAmphibian from '../images/headerAmphibian.png';
 
 import axolotl from '../images/endAmphibians/axolotl.png';
 import lemurLeafFrog from '../images/endAmphibians/lemurLeafFrog.png';
@@ -49,7 +50,7 @@ export const Amphibians = () => {
     return( 
         <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
             <FontSizeIncreaser/>
-            <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+            <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerAmphibian})`}}></box>
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
             <div className="darkModeSwitchContainer">
                 <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
@@ -67,15 +68,14 @@ export const Amphibians = () => {
                 <div className='container'>
                     
                     <div className = "mainSubHeadFrame">
-                        <line className = "thinLine"></line>
                         <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Amphibians</subhead>
                     </div>
             
-
                     <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                         Wass awass
                     </paragragraph>
 
+                <div className='container'>
                     <box className = "box4">
                         <box className = "largeSpeciesImgFrame">
                             <image className= 'amphibianLargeImage'>
@@ -116,11 +116,18 @@ export const Amphibians = () => {
                             </box>
                         </box>
                     </box>
-
+                </div>
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Axolotel.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=lL87xhk63FM"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
+                </div>
 
 
                 <div className='container'>
-                    <line className = "largeLine"></line>
                     <box className = "box4">
                         <box className = "largeSpeciesImgFrame">
                             <image className= 'amphibianLargeImage'>
@@ -163,10 +170,17 @@ export const Amphibians = () => {
                     </box>
                 </div>
 
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Endangered Frogs Species.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uja_QE4cZV0"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
+                </div>
 
 
                 <div className='container'>
-                    <line className = "largeLine"></line>
                     <box className = "box4">
                         <box className = "largeSpeciesImgFrame">
                             <image className= 'amphibianLargeImage'>
@@ -209,8 +223,17 @@ export const Amphibians = () => {
                         </box>
                     </box>
                 </div>
-
+                
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Gliding Leaf Frogs.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=tf1bytsDDho"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
                 </div>
+
+            </div>
 
         </body>
         <AmphibianPageSuvNav/>

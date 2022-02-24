@@ -1,0 +1,188 @@
+:root{
+  --font-family: 'Manrope', sans-serif;
+  --color-footer: rgb(35,47,62);
+  --font-paragraphStyle:'Rubik', sans-serif;
+
+
+  --color-darkBorder: #37475A;
+  --color-lightBorder: #7FC8A9;
+  --color-darkBackground: #1a1919;
+
+}
+
+.QuizPagecontainer{
+  background-color: none;
+  height: auto;
+  width: auto;
+  margin: auto;
+  padding-bottom: 4vh;
+}
+.quizIcon{
+  height: 200px;
+  width: auto;
+  background-color: #1a1919;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.quizFrame{
+  height:  auto;
+  width: auto;
+  background-color: none;
+  display: block;
+  padding: 20px;
+  margin: auto;
+}
+
+.QuizBox{
+  height: 640px;
+  width: 1020px;
+  background-color: none;
+  display: flex;
+  margin: auto;
+  margin-top: 6vh;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+}
+  .scoreDisplayFrame {
+    display: flex;
+    font-size: 44px;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bolder;
+  }
+  
+  /* QUESTION/TIMER/LEFT SECTION */
+  .question-frame {
+    width: 100%;
+    background-color: transparent;
+    display: block;
+  }
+  
+  .question-count {
+    height: 80px;
+    width: 500px;
+    margin: auto;
+    background-color: azure;
+    text-align: center;
+    font-family: 'Rubik', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 50px;
+    display: flex;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+  }
+  .leftFrame {
+    height: 50px;
+    width: 150px;
+    font-size: 36px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    display: inline flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background-color: none;
+    color: rgb(35,47,62);
+  }
+  .timer-count{
+    height: 100px;
+    width: 100px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+    margin-top: -10px;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+  }
+  
+  .question-text {
+    height: 140px;
+    margin-top: -10px;
+    background-color: lightblue;
+    padding: 6px;
+    padding-top: 40px;
+    text-align: center;
+    font-family: var(--font-family);
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    color: rgb(35,47,62);
+  }
+  
+  .timer-text {
+    background: rgb(230, 153, 12);
+    padding: 15px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border: 5px solid rgb(255, 189, 67);
+    border-radius: 15px;
+    text-align: center;
+  }
+  
+  /* ANSWERS/RIGHT SECTION */
+  .answer-frame {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: azure;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 20px;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+  }
+  
+  .quizButton {
+    width: 900px;
+    height: auto;
+    font-family: 'Rubik', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #234668;
+    border-radius: 20px;
+    display: flex;
+    padding: 10px;
+    padding-left: 20px;
+    justify-content: center;
+    align-items: center;
+    /* border: 6px solid  #234668;; */
+    border: none;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .quizButton:hover {
+    background-color: #555e7d;
+    text-decoration: underline wavy;
+  }
+  
+  .correct {
+    background-color: #2f922f;
+  }
+  
+  .incorrect {
+    background-color: #ff3333;
+  }
+  
+  
+  .quizButton:focus {
+    outline: none;
+  }
+
+  .resrartButton{
+    height: 100px;
+    width: 200px;
+    display: solid;
+    background-color: #1a1919;
+  }
+  

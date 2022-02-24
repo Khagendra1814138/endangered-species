@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './birds.css';
 
 import {BirdsPageSuvNav} from "../subNav/subNavigation";
-import header6 from '../images/header6.png';
+import headerBirds from '../images/headerBirds.png';
 
 //BIG BIRDS
 import greatCurassow from '../images/endBirds/bigBirds/greatCurassow.png';
@@ -63,7 +64,7 @@ export const Birds = () => {
     return( 
         <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
             <FontSizeIncreaser/>
-            <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+            <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerBirds})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
             <div className="darkModeSwitchContainer">
@@ -81,7 +82,6 @@ export const Birds = () => {
             <body className='pageBodyFrame'>
                 <div className='container'>
                     <div className = "mainSubHeadFrame">
-                        <line className = "thinLine"></line>
                         <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Birds Species</subhead>
                     </div>
 
@@ -131,6 +131,14 @@ export const Birds = () => {
                     </box>
                 </div>
 
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
+                </div>
 
                 <div className='container'>
                     <box className = "box4">
@@ -219,6 +227,15 @@ export const Birds = () => {
                             </box>
                         </box>
                     </box>
+                </div>
+
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
                 </div>
 
 
@@ -311,6 +328,15 @@ export const Birds = () => {
                             </box>
                         </box>
                     </box>
+                </div>
+
+                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                    <line className = "thinLine"></line>
+                    <div className= {darkMode ? "video-Dark" : "video"}>
+                        <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
+                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
+                    </div> 
+                    <line className = "thinLine"></line> 
                 </div>
 
 

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {FaArrowCircleUp} from 'react-icons/fa';
+import {FaArrowUp} from 'react-icons/fa';
 import './backToTop.css';
 
 
@@ -26,7 +26,10 @@ export const ScrollToTopArrow = () =>{
   };
 
   return (
-        <FaArrowCircleUp id="scrollTop" onClick={scrollTop} style={{color: "#1888ff", display: showScroll ? 'flex' : 'none'}}/>
+    <button className= "scrollTop" onClick={scrollTop} style={{color: "orange", display: showScroll ? 'flex' : 'none'}} >
+      <FaArrowUp size="3em" color="orange"/>
+    </button>
+    
   );
 }
 

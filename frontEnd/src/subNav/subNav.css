@@ -22,7 +22,7 @@
     text-decoration: none;
 }
 .previousSubNav:hover{
-    background-color: #9eadb3;
+    background: black;
 }
 
 .nextSubNav{
@@ -36,16 +36,17 @@
     text-decoration: none;
 }
 .nextSubNav:hover{
-    background-color: #8c9eb1;
+    background-color: #1a1919;
 }
 
 .logo1{
-    height: 80px;
-    width: 90px;
+    height: auto;
+    width: auto;
     background: none;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 
 .txt{
@@ -62,6 +63,11 @@
     color: white;
     padding-right: 10px;
 }
+
+.txt:hover{
+    text-decoration: underline wavy;
+}
+
 .txt2{
     height: 100%; 
     width: 460px;
@@ -75,4 +81,7 @@
     cursor: pointer;
     color: white;
     padding-left: 10px;
+}
+.txt2:hover{
+    text-decoration: underline wavy;
 }

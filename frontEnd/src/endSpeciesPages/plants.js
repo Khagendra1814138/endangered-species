@@ -1,11 +1,12 @@
 import React from 'react';
 import { useState } from "react";
+import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
 import './plants.css';
 
 import {PlantPageSuvNav} from "../subNav/subNavigation";
-import header6 from '../images/header6.png';
+import headerPlants from '../images/headerPlants.png';
 
 //cycades
 import middelburgCycad from '../images/endPlant/Cycad/middelburgCycad.png';
@@ -50,7 +51,7 @@ export const Plants = () => {
   return( 
     <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
       <FontSizeIncreaser/>
-      <box className = "landingImageBox2" style={{ backgroundImage: `url(${header6})`}}></box>
+      <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerPlants})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
       <div className="darkModeSwitchContainer">
@@ -69,13 +70,13 @@ export const Plants = () => {
 
         <div className='container'>
           <div className = "mainSubHeadFrame">
-            <line className = "thinLine"></line>
             <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Plant Species</subhead>
           </div>
 
-            <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              Wass awass
-            </paragragraph>
+          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            Did you know that more than 15 Billions of plants are chopped down each year! And a single tree can absorbe up to
+            48 Pounds of carbon dioxide (Co2) every year, making them the best natural carbon scrubber machine. 
+          </paragragraph>
 
 
           <box className = "box4">
@@ -120,7 +121,14 @@ export const Plants = () => {
           </box>
         </div>
 
-
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Cycads Plants.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=VtziMzq-nnk"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div>
 
 
         
@@ -167,6 +175,15 @@ export const Plants = () => {
           </box>
         </div>
 
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Dragon Trees.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=tyJU4e5Tyjo"/>
+            </div> 
+            <line className = "thinLine"></line> 
+        </div>
+
 
 
 
@@ -211,6 +228,15 @@ export const Plants = () => {
               <label className = {darkMode ? "plantsName-Dark" : "plantsName3"}>Species name</label>
             </box>
           </box>
+        </div>
+
+        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <line className = "thinLine"></line>
+            <div className= {darkMode ? "video-Dark" : "video"}>
+              <paragragraph className="video-Discription">A video about Rafflesia Flower.</paragragraph>
+              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=YxIpl38rsMo"/>
+            </div> 
+            <line className = "thinLine"></line> 
         </div>
 
 
