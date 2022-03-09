@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { Component } from "react";
 import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
@@ -43,305 +43,556 @@ import forestOwlet from '../images/endBirds/owl/forestOwlet.png';
 import snowyOwl from '../images/endBirds/owl/snowyOwl.png';
 import spottedOwl from '../images/endBirds/owl/spottedOwl.png';
 
-import {FaPlusSquare} from 'react-icons/fa';
-import {FaMinusSquare} from 'react-icons/fa';
+import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
+import DarkModeFunction from '../darkMode/darkMode';
 
-export const Birds = () => {
-    const [darkMode, setDarkMode] = useState(false);
-    const [fontSize, setFontSize] = useState(20);
+export class Birds extends Component {
+  
+    constructor(props) {
+      super(props);
+      this.state = {
+        darkMode: false,
+        fontSize: 18,
+        endangeredBirdsItems: [],
+      };
+    }
 
-    function FontSizeIncreaser(){
-      return(
-        <div className='buttonsContainer'>
-          <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
-          <div className='fontSizeDisplay'>{fontSize}</div>
-          <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
-        </div>
-      )
-    };
+    
+    componentDidMount(){
+        fetch("http://localhost:5000/api/birdSpecies")
+        .then (rest => rest.json())
+        .then (endangeredBirdsRecords => {
+        this.setState({
+            isLoaded: true,
+            endangeredBirdsItems: endangeredBirdsRecords,
+          })
+        console.log(endangeredBirdsRecords)
+        });
+    }
+  
+    render(){
 
+        return( 
+            <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
 
-    return( 
-        <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
-            <FontSizeIncreaser/>
-            <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerBirds})`}}></box>
-
-{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
-            <div className="darkModeSwitchContainer">
-                <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
-                    <div className="switch-checkbox">
-                        <label className="switch">
-                            <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                            <span className="slider round"> </span>
-                        </label>
-                    </div>
-                <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
-            </div>
+{/* //////////////////////////////////////////////////////FontSizeFunction////////////////////////////////////////////////////// */}
+            <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-            <body className='pageBodyFrame'>
-                <div className='container'>
-                    <div className = "mainSubHeadFrame">
-                        <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Birds Species</subhead>
+                <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerBirds})`}}></box>
+
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+                <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+                <body className='pageBodyFrame'>
+                    <div className='container'>
+                        <div className = "mainSubHeadFrame">
+                            <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Birds Species</subhead>
+                        </div>
+
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            The IUCH states that 13% of birds are endangered with extinction.
+                            You may not know but the bird species are one of the most important animals to the environment.
+                            Birds plays important role in the functioning of the worlds ecosystem, which can directly impact human health, 
+                            food production and the economy as well as millions of other species.
+                        </paragragraph>
+                        {/* https://www.birdlife.org/news/2019/01/04/why-we-need-birds-far-more-than-they-need-us/# */}
+
+                        <box className = "box4">
+                            <box className = "largeSpeciesImgFrame">
+                                <box className = "speciesCardContainer">
+                                    <image className= 'birdLargeImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greatCurassow})`}}></div>
+                                    </image>
+                                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ondrej Prosický</label></div>
+
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[3].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+                            </box>
+
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bengalFlorican})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Nikita Khamparia</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[2].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${californiaCondor})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ken Bohn</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[1].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+                            </box>
+
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                    <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${giantIbis})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[0].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whoopingCrane})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Derek Hameister</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[4].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+                            </box>
+                        </box>
                     </div>
 
-                    <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                        <line className = "thinLine"></line>
+                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                            <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
+                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
+                        </div> 
+                        <line className = "thinLine"></line> 
+                    </div>
+
+                    
+                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Pest Control:
+                        <br></br>
+                        <br></br>
+                        One of the best natural pest controllers are birds as their diet mainly consists of bugs and insects.
+                        This can be very benifical to agriculture around the world. Recent study shown that birds eats 400-500 million tons of insects per year.
+                        In china, 2/3 of House Swift birds diet consists of agricultural pests.
+                        In forests accross America, Evening Grosbeak are the main birds that controls Spruce Budworm outbrakes.
                     </paragragraph>
 
-                    <box className = "box4">
-                        <box className = "largeSpeciesImgFrame">
-                            <image className= 'birdLargeImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greatCurassow})`}}></div>
-                            </image>
-                            <label className={darkMode ? "birdName-Dark" : "birdName"}>Species name</label>
-                        </box>
+                    <div className='container'>
+                        <box className = "box4">
+                            <box className = "largeSpeciesImgFrame">
+                                <box className = "speciesCardContainer">
+                                    <image className= 'birdLargeImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${kagu})`}}></div>
+                                    </image>
+                                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Dave Irving</label></div>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bengalFlorican})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName"}>Name</label>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[10].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
                             </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${californiaCondor})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName"}>Name</label>
-                            </box>
-                        </box>
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${frigatebird})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Peter Cavanagh</label></div>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${giantIbis})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName"}>Name</label>
-                            </box>
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[11].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whoopingCrane})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName"}>Name</label>
-                            </box>
-                        </box>
-                    </box>
-                </div>
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fruitDove})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Mat Gilfedder</label></div>
 
-                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {darkMode ? "video-Dark" : "video"}>
-                        <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
-                </div>
-
-                <div className='container'>
-                    <box className = "box4">
-                        <box className = "largeSpeciesImgFrame">
-                            <image className= 'birdLargeImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${kagu})`}}></div>
-                            </image>
-                            <label className={darkMode ? "birdName-Dark" : "birdName2"}>Species name</label>
-                        </box>
-
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${frigatebird})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName2"}>Name</label>
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[13].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
                             </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fruitDove})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName2"}>Name</label>
-                            </box>
-                        </box>
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greyParrot})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by World Animal Protection</label></div>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greyParrot})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName2"}>Name</label>
-                            </box>
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[14].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${puffin})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName2"}>Name</label>
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${puffin})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[12].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
                             </box>
                         </box>
-                    </box>
-                </div>
+                    </div>
 
 
 
 
-                <div className='container'>
-                    <box className = "box4">
-                        <box className = "largeSpeciesImgFrame">
-                            <image className= 'birdLargeImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baldEagle})`}}></div>
-                            </image>
-                            <label className={darkMode ? "birdName-Dark" : "birdName3"}>Species name</label>
-                        </box>
-
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${peregrineFalcon})`}}></div>
+                    <div className='container'>
+                        <box className = "box4">
+                            <box className = "largeSpeciesImgFrame">
+                                <image className= 'birdLargeImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baldEagle})`}}></div>
                                 </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName3"}>Name</label>
+                                <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
+                                    {this.state.endangeredBirdsItems.length > 0 && (
+                                        <div>
+                                            {this.state.endangeredBirdsItems[17].name}
+                                        </div>
+                                    )}
+                                </label>
                             </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${philippineEagle})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName3"}>Name</label>
-                            </box>
-                        </box>
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${peregrineFalcon})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[16].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteBackedVultures})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName3"}>Name</label>
-                            </box>
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${philippineEagle})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Alain Pascua</label></div>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whitetailedEagle})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName3"}>Name</label>
-                            </box>
-                        </box>
-                    </box>
-                </div>
-
-                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {darkMode ? "video-Dark" : "video"}>
-                        <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
-                </div>
-
-
-
-
-                <div className='container'>
-                    <box className = "box4">
-                        <box className = "largeSpeciesImgFrame">
-                            <image className= 'birdLargeImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${resplendentQuetzal})`}}></div>
-                            </image>
-                            <label className={darkMode ? "birdName-Dark" : "birdName4"}>Species name</label>
-                        </box>
-
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hornbill})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName4"}>Name</label>
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[15].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
                             </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hyacinthMacaw})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName4"}>Name</label>
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                    <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteBackedVultures})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[19].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whitetailedEagle})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[18].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
                             </box>
                         </box>
+                    </div>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${kakapo})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName4"}>Name</label>
+                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                        <line className = "thinLine"></line>
+                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                            <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
+                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
+                        </div> 
+                        <line className = "thinLine"></line> 
+                    </div>
+                    
+                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Pollinators:
+                        <br></br>
+                        <br></br>
+                        Not only bees and butterflies, but birds are also great pollinators. For example, hummingbirds and honeyeaters birds makes big contribution, espically in high altitudes or hot climates area.
+                        Quarter of Salivia species in South Africa are pollinated by birds. Not only plants but bird pollinators also benifit us directly.
+                        Around 5% of plants that are used for medicines or foods are pollinated by birds.
+                        
+                    </paragragraph>
+
+
+
+
+                    <div className='container'>
+                        <box className = "box4">
+                            <box className = "largeSpeciesImgFrame">
+                                <box className = "speciesCardContainer">
+                                    <image className= 'birdLargeImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${resplendentQuetzal})`}}></div>
+                                    </image>
+                                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Shutterstock</label></div>
+
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[24].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
                             </box>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${toucan})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName4"}>Name</label>
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hornbill})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[21].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hyacinthMacaw})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[22].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+                            </box>
+
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${kakapo})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Megan Leslie</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[20].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${toucan})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Gettyimage</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[23].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
                             </box>
                         </box>
-                    </box>
-                </div>
+                    </div>
 
 
 
 
-                <div className='container'>
-                    <box className = "box4">
-                        <box className = "largeSpeciesImgFrame">
-                            <image className= 'birdLargeImage'>
-                                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${snowyOwl})`}}></div>
-                            </image>
-                            <label className={darkMode ? "birdName-Dark" : "birdName5"}>Species name</label>
+                    <div className='container'>
+                        <box className = "box4">
+                            <box className = "largeSpeciesImgFrame">
+                                <image className= 'birdLargeImage'>
+                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${snowyOwl})`}}></div>
+                                </image>
+                                <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
+                                    {this.state.endangeredBirdsItems.length > 0 && (
+                                        <div>
+                                            {this.state.endangeredBirdsItems[8].name}
+                                        </div>
+                                    )}
+                                </label>
+                            </box>
+
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${barnOwl})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Zahoor Salmi</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[9].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <image className='birdMediumImage'>
+                                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caledonianOwletNightjar})`}}></div>
+                                    </image>
+                                    <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
+                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                            <div>
+                                                {this.state.endangeredBirdsItems[5].name}
+                                            </div>
+                                        )}
+                                    </label>
+                                </box>
+                            </box>
+
+                            <box className = "mediumSpeciesImgFrame">
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${forestOwlet})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Rahul Kumar</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[6].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+
+                                <box className = "amphibianSpeciesMainFrame">
+                                    <box className = "speciesCardContainer">
+                                        <image className='birdMediumImage'>
+                                            <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${spottedOwl})`}}></div>
+                                        </image>
+                                        <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Sylvia Hunt</label></div>
+
+                                        <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
+                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                                <div>
+                                                    {this.state.endangeredBirdsItems[7].name}
+                                                </div>
+                                            )}
+                                        </label>
+                                    </box>
+                                </box>
+                            </box>
                         </box>
+                    </div>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${barnOwl})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName5"}>Name</label>
-                            </box>
+                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+                        <line className = "thinLine"></line>
+                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                            <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
+                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
+                        </div> 
+                        <line className = "thinLine"></line> 
+                    </div>
 
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caledonianOwletNightjar})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName5"}>Name</label>
-                            </box>
-                        </box>
+                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Spread seeds, helps coral reef and cleans nature:
+                        <br></br>
+                        <br></br>
+                        Plants seed are one of the main food source for birds. When birds travel, they take the eaten seed with them and spreads them through their droppings.
+                        Bringing plants back to perhaps destroyed ecosystem, and even carry plants acrross the ocean to new land.
+                        Vultures are the best and most efficent scavengers that takes care of the dead animals, preventing the spread of diseases like rabies and tuberculosis.
+                        Seabirds plays an important role in cycling nutrients and helping to fertilise marine ecosystems such as coral reefs.
+                    </paragragraph>
 
-                        <box className = "mediumSpeciesImgFrame">
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${forestOwlet})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName5"}>Name</label>
-                            </box>
-
-                            <box className = "amphibianSpeciesMainFrame">
-                                <image className='birdMediumImage'>
-                                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${spottedOwl})`}}></div>
-                                </image>
-                                <label className={darkMode ? "birdName-Dark" : "birdName5"}>Name</label>
-                            </box>
-                        </box>
-                    </box>
-                </div>
-
-                <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {darkMode ? "video-Dark" : "video"}>
-                        <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
-                </div>
-
-
-        </body>
-        <BirdsPageSuvNav/>
-      </div>
-    );
+            </body>
+            <BirdsPageSuvNav/>
+        </div>
+        );
+    }
 }

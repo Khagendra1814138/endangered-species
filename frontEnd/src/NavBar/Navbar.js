@@ -58,6 +58,10 @@ function Navbar() {
             <Link to='/quiz'className='nav-links'>Quiz</Link>
           </li>
 
+          <li className='nav-item'>
+            <Link to='/worldMap'className='nav-links'>Map</Link>
+          </li>
+
         </ul>
         <LogInButton/>
         <SignUpButton/>

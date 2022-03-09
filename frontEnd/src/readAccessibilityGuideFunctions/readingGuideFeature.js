@@ -18,7 +18,7 @@ export const ReadingGuideFeature = () => {
       if(mainCursor?.current){
         mainCursor.current.style.transform = `translate3d(${mouseX -
         mainCursor.current.clientWidth / 2}px, ${mouseY -
-        mainCursor.current.clientHeight / 0.260}px, 0)`;
+        mainCursor.current.clientHeight / 0.230}px, 0)`;
       }
     }
 

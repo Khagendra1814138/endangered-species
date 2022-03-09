@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
+import { Component } from "react";
 import Item from "./carouselStyle";
 import "./mammelsCarousel.css";
 
@@ -42,214 +43,369 @@ const breakPoints = [
   {itemsToShow: 1},
 ];
 
-export const SmallMammelsCarousel = () => {
-  return (
-    <div className="carouselFrame">
-      <Carousel breakPoints={breakPoints}>
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${pangolin})`}}></div>
-            </image>
-            <label className='smallMammelsName'>Name</label>
-          </box>
-        </Item>
+export class SmallMammelsCarousel extends Component {
 
-        <Item>
-          <box className="mainImageFrame">
+  constructor(props) {
+      super(props);
+      this.state = {
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
+
+    return (
+      <div className="carouselFrame">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <box className="mainImageFrame">
               <image className="largeCarouselMammelImage">
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sloth})`}}></div>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${pangolin})`}}></div>
               </image>
-              <label className='smallMammelsName'>Name</label>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[3].name} </div>)}
+              </label>
             </box>
-        </Item>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${slowLoris})`}}></div>
-            </image>
-            <label className='smallMammelsName'>Name</label>
-          </box>
-        </Item>
-      </Carousel>
-    </div>
-  );
+          <Item>
+            <box className="mainImageFrame">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sloth})`}}></div>
+                </image>
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[1].name} </div>)}
+                </label>
+              </box>
+          </Item>
+
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${slowLoris})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[4].name} </div>)}
+              </label>
+            </box>
+          </Item>
+        </Carousel>
+      </div>
+    );
+  }
 }
+
 
 
 //Large Mammels Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const LargeMammelsCarousel = () => {
-  return (
-    <div className="carouselFrame">
-      <Carousel breakPoints={breakPoints}>
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${asianElephant})`}}></div>
-            </image>
-            <label className='largeMammelsName'>Name</label>
-          </box>
-        </Item>
+export class LargeMammelsCarousel extends Component {
 
-        <Item>
-          <box className="mainImageFrame">
+  constructor(props) {
+      super(props);
+      this.state = {
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
+    return (
+      <div className="carouselFrame">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <box className="mainImageFrame">
               <image className="largeCarouselMammelImage">
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${africanElephant})`}}></div>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${asianElephant})`}}></div>
               </image>
-              <label className='largeMammelsName'>Name</label>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[5].name} </div>)}
+              </label>
             </box>
-        </Item>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${grevysZebra})`}}></div>
-            </image>
-            <label className='largeMammelsName'>Name</label>
-          </box>
-        </Item>
+          <Item>
+            <box className="mainImageFrame">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${africanElephant})`}}></div>
+                </image>
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[6].name} </div>)}
+                </label>
+              </box>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${muskDeer})`}}></div>
-            </image>
-            <label className='largeMammelsName'>Name</label>
-          </box>
-        </Item>
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${grevysZebra})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[14].name} </div>)}
+              </label>
+            </box>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${redFox})`}}></div>
-            </image>
-            <label className='largeMammelsName'>Name</label>
-          </box>
-        </Item>
-      </Carousel>
-    </div>
-  );
+          <Item>
+            <box className="mainImageFrame">
+              <box className = "speciesCardContainer">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${muskDeer})`}}></div>
+                </image>
+                <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Natalia Bubochkina</label></div>
+
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[15].name} </div>)}
+                </label>
+              </box>
+            </box>
+          </Item>
+
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${redFox})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[16].name} </div>)}
+              </label>
+            </box>
+          </Item>
+        </Carousel>
+      </div>
+    );
+  }
 }
 
 
 
-//Rhino Cards/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const RhinosCarousel = () => {
-  return (
-    <div className="carouselFrame">
-      <Carousel breakPoints={breakPoints}>
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${blackRhino})`}}></div>
-            </image>
-            <label className='rhinoName'>Name</label>
-          </box>
-        </Item>
+  //Rhino Cards/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+export class RhinosCarousel extends Component {
 
-        <Item>
-          <box className="mainImageFrame">
+  constructor(props) {
+      super(props);
+      this.state = {
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
+
+    return (
+      <div className="carouselFrame">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <box className="mainImageFrame">
               <image className="largeCarouselMammelImage">
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greatOneHorned})`}}></div>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${blackRhino})`}}></div>
               </image>
-              <label className='rhinoName'>Name</label>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[8].name} </div>)}
+              </label>
             </box>
-        </Item>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteRhino})`}}></div>
-            </image>
-            <label className='rhinoName'>Name</label>
-          </box>
-        </Item>
-      </Carousel>
-    </div>
-  );
+          <Item>
+            <box className="mainImageFrame">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greatOneHorned})`}}></div>
+                </image>
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[11].name} </div>)}
+                </label>
+              </box>
+          </Item>
+
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteRhino})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[7].name} </div>)}
+              </label>
+            </box>
+          </Item>
+        </Carousel>
+      </div>
+    );
+  }
 }
 
 
 //Big Cats Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const BigCatsCarousel = () => {
-  return (
-    <div className="carouselFrame">
-      <Carousel breakPoints={breakPoints}>
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${amurLeopard})`}}></div>
-            </image>
-            <label className='bigCatsName'>Name</label>
-          </box>
-        </Item>
+export class BigCatsCarousel extends Component {
 
-        <Item>
-          <box className="mainImageFrame">
+  constructor(props) {
+      super(props);
+      this.state = {
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
+
+    return (
+      <div className="carouselFrame">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <box className="mainImageFrame">
               <image className="largeCarouselMammelImage">
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${cloudedLeopard})`}}></div>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${amurLeopard})`}}></div>
               </image>
-              <label className='bigCatsName'>Name</label>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[20].name} </div>)}
+              </label>
             </box>
-        </Item>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${jaguar})`}}></div>
-            </image>
-            <label className='bigCatsName'>Name</label>
-          </box>
-        </Item>
-      </Carousel>
-    </div>
-  );
+          <Item>
+            <box className="mainImageFrame">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${cloudedLeopard})`}}></div>
+                </image>
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[21].name} </div>)}
+                </label>
+              </box>
+          </Item>
+
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${jaguar})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[18].name} </div>)}
+              </label>
+            </box>
+          </Item>
+        </Carousel>
+      </div>
+    );
+  }
 }
 
 
 
 //Primates Cards//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-export const PrimatesCarousel = () => {
-  return (
-    <div className="carouselFrame">
-      <Carousel breakPoints={breakPoints}>
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bonobo})`}}></div>
-            </image>
-            <label className='primatesName'>Name</label>
-          </box>
-        </Item>
 
-        <Item>
-          <box className="mainImageFrame">
+export class PrimatesCarousel extends Component {
+
+  constructor(props) {
+      super(props);
+      this.state = {
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
+    return (
+      <div className="carouselFrame">
+        <Carousel breakPoints={breakPoints}>
+          <Item>
+            <box className="mainImageFrame">
               <image className="largeCarouselMammelImage">
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${chimpanzee})`}}></div>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bonobo})`}}></div>
               </image>
-              <label className='primatesName'>Name</label>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[26].name} </div>)}
+              </label>
             </box>
-        </Item>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${gorrila})`}}></div>
-            </image>
-            <label className='primatesName'>Name</label>
-          </box>
-        </Item>
+          <Item>
+            <box className="mainImageFrame">
+                <image className="largeCarouselMammelImage">
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${chimpanzee})`}}></div>
+                </image>
+                <label className='mammelsCarouselName'>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[24].name} </div>)}
+                </label>
+              </box>
+          </Item>
 
-        <Item>
-          <box className="mainImageFrame">
-            <image className="largeCarouselMammelImage">
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${orangutan})`}}></div>
-            </image>
-            <label className='primatesName'>Name</label>
-          </box>
-        </Item>
-      </Carousel>
-    </div>
-  );
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${gorrila})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[23].name} </div>)}
+              </label>
+            </box>
+          </Item>
+
+          <Item>
+            <box className="mainImageFrame">
+              <image className="largeCarouselMammelImage">
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${orangutan})`}}></div>
+              </image>
+              <label className='mammelsCarouselName'>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[22].name} </div>)}
+              </label>
+            </box>
+          </Item>
+        </Carousel>
+      </div>
+    );
+  }
 }

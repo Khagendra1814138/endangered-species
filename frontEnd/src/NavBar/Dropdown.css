@@ -1,28 +1,31 @@
 .dropdown-menu {
-    background-color: none;
-    width: auto;
-    height: auto;
+    background-color: #37475A;
+    width: 100%;
+    height: 80px;
     position: absolute;
     top: 84px;
-    left: 50vh;
+    left: 0vh;
     list-style: none;
     text-align: start;
     display: flex;
     align-items: center;
-    
+    justify-content: center;
   }
   
   .dropdown-menu box {
     background: #37475A;
     cursor: pointer;
-    width: 150px;
+    width: 160px;
     height: 55px;
     text-align: center;
-    border-top: 1px solid #37475A;
+    /* border-top: 1px solid #5cabff;
+    border-bottom: 1px solid #5cabff; */
+    margin: auto;
     }
   
   .dropdown-menu box:hover {
     background: #5cabff;
+    border-radius: 10px;
     /* border-left: 2px solid white;
     border-right: 2px solid white; */
     text-decoration: underline wavy;

@@ -2,11 +2,14 @@ import React from 'react';
 
 import './publicMain.css';
 import './logIn.css';
-// import {TakeActonSuvNav} from "../subNav/subNavigation";
+
+import {RiLoginBoxFill} from 'react-icons/ri';
+
+import {SignInSuvNav} from "../subNav/subNavigation";
 
 export const LogInPage = () => {
     return( 
-      <div className="pageMainFrame">
+        <div className="pageMainFrame">
         <body className='pageBodyFrame'>
                 
             <div className='container'>
@@ -19,17 +22,22 @@ export const LogInPage = () => {
                     <box className = "LoginformFrame">
                         <form>
                             <label className='registerLabel'>NAME</label>
-                            <input type="text" name="name" className='inputBox'/>
+                            <input type="text" name="name" className='inputBox' placeholder='Enter your name'/>
 
                             <label className='registerLabel'>PASSWORD</label>
-                            <input type="text" name="password" className='inputBox'/>
+                            <input type="text" name="password" className='inputBox' placeholder='Enter your password'/>
                         </form>   
                     </box>
-                    <input type="submit" value="LOG IN" className='signUpBtn'/>
+                    
+                    <button type="submit" value="LOG IN" className='signUp-In-Btn'>
+                        <box className="restartButtonIcon"><RiLoginBoxFill size="2em" color="white"/></box>
+                        <label className='restartButtonLabel'>Log-In</label>
+                    </button>
                 </box>
             </div>
-  
+
         </body>
-      </div>
+        <SignInSuvNav/>
+        </div>
     );
-  }
+}

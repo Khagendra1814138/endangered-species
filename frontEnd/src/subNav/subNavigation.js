@@ -81,6 +81,38 @@ export const TakeActonSuvNav = () => {
                 <label className= 'txt'>  Go to Daily Individual Action</label>
             </Link>
 
+            <Link exact to="./quiz" className='nextSubNav'>
+                <label className= 'txt2'> Go to Quiz Page</label>
+                <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
+            </Link>
+        </div>
+    );
+}
+
+export const QuizSuvNav = () => {
+    return( 
+        <div className="subNavFrame">
+            <Link exact to="./takeAction" className='previousSubNav'>
+                <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
+                <label className= 'txt'>  Go to Take Action</label>
+            </Link>
+
+            <Link exact to="./login" className='nextSubNav'>
+                <label className= 'txt2'> Go to Sign-in</label>
+                <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
+            </Link>
+        </div>
+    );
+}
+
+export const SignInSuvNav = () => {
+    return( 
+        <div className="subNavFrame">
+            <Link exact to="./quiz" className='previousSubNav'>
+                <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
+                <label className= 'txt'>  Go to Quiz Page</label>
+            </Link>
+
             <Link exact to="./signUp" className='nextSubNav'>
                 <label className= 'txt2'> Go to Sign-up</label>
                 <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
@@ -92,9 +124,9 @@ export const TakeActonSuvNav = () => {
 export const SignUpSuvNav = () => {
     return( 
         <div className="subNavFrame">
-            <Link exact to="./takeAction" className='previousSubNav'>
+            <Link exact to="./login" className='previousSubNav'>
                 <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
-                <label className= 'txt'>  Go to Take Action</label>
+                <label className= 'txt'>  Go to Sign-in Page</label>
             </Link>
 
             <Link exact to="./" className='nextSubNav'>

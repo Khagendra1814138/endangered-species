@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { Component } from "react";
 import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
@@ -14,9 +14,6 @@ import {LargeMammelsCarousel} from "./mammelsCarousel";
 import {RhinosCarousel} from "./mammelsCarousel";
 import {BigCatsCarousel} from "./mammelsCarousel";
 import {PrimatesCarousel} from "./mammelsCarousel";
-
-import {FaPlusSquare} from 'react-icons/fa';
-import {FaMinusSquare} from 'react-icons/fa';
 
 import headerMammels from '../images/headerMammels.png';
 
@@ -40,232 +37,264 @@ import tiger from '../images/endMammels/bigCats/tiger.png';
 import gibbons from '../images/endMammels/primates/gibbons.png';
 import spiderMonkey from '../images/endMammels/primates/spiderMonkey.png';
 
+import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
+import DarkModeFunction from '../darkMode/darkMode';
 
-export const Mammels = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [fontSize, setFontSize] = useState(20);
+export class Mammels extends Component {
 
-  function FontSizeIncreaser(){
-    return(
-      <div className='buttonsContainer'>
-        <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
-        <div className='fontSizeDisplay'>{fontSize}</div>
-        <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
-      </div>
-    )
-  };
+  constructor(props) {
+      super(props);
+      this.state = {
+      darkMode: false,
+      fontSize: 18,
+      endangeredMammelsItems: [],
+      };
+  }
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/mammelsSpecies")
+      .then (rest => rest.json())
+      .then (endangeredMammelsRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredMammelsItems: endangeredMammelsRecords,
+          })
+      console.log(endangeredMammelsRecords)
+      });
+  }
+  
+  render(){
 
-  return( 
-    <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
-      <FontSizeIncreaser/>
-      <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerMammels})`}}></box>
+    return( 
+      <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
 
-{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
-      <div className="darkModeSwitchContainer">
-        <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
-            <div className="switch-checkbox">
-                <label className="switch">
-                <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                <span className="slider round"> </span>
-                </label>
-            </div>
-        <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
-      </div>
+{/* //////////////////////////////////////////////////////FontSizeFunction////////////////////////////////////////////////////// */}
+<FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
+        <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerMammels})`}}></box>
 
-      <body className='pageBodyFrame'>
+{/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
+<DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-        <div className='container'>
-          <div className = "mainSubHeadFrame">
-            <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Mammels</subhead>
-          </div>
+        <body className='pageBodyFrame'>
 
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-          </paragragraph>
-
-          <div className = "mainSubHeadFrame">
-            <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>S m a l l - M a m m e l s</subhead>
-          </div>
-
-          <box className = "box">
-            <box className = "speciesMainFrame"> 
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "smallMammelsImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fruitBat})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "smallMammelsName"}>Name</label>
-            </box>
-
-            <box className = "speciesMainFrame"> 
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "smallMammelsImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${tasmanianDevil})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "smallMammelsName"}>Name</label>
-            </box>
-          </box>
-        
-          <SmallMammelsCarousel/>
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-          </paragragraph>
-        </div> 
-
-{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-            <line className = "thinLine"></line>
-            <div className= {darkMode ? "video-Dark" : "video"}>
-              <paragragraph className="video-Discription">A video about Pangolins.</paragragraph>
-              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=DqC3ieJJlFM"/>
-            </div> 
-            <line className = "thinLine"></line> 
-        </div> 
-{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-
-        <div className='container'>
-          <div className = "mainSubHeadFrame">
-            <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>L a r g e - M a m m e l s</subhead>
-          </div>
-
-          <box className = "box">
-            <box className = "speciesMainFrame">
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "largeMammelsImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${panda})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "largeMammelsName"}>Name</label>
-            </box>
-
-            <box className = "speciesMainFrame"> 
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "largeMammelsImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${redPanda})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "largeMammelsName"}>Name</label>
-            </box>
-          </box>
-
-          <LargeMammelsCarousel/>
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-          </paragragraph>
-        </div>
-
-
-
-
-
-        <div className='container'>
-          <div className = "mainSubHeadFrame">
-            <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>R h i n o c e r o s</subhead>
-          </div>
-
-          <box className = "box">
-            <box className = "speciesMainFrame">
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "smallRhinoImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${javanRhino})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "rhinoName"}>Name</label>
-            </box>
-
-            <box className = "speciesMainFrame"> 
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "smallRhinoImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sumatranRhino})`}}></div>
-              </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "rhinoName"}>Name</label>
-            </box>
-          </box>
-
-          <RhinosCarousel/>
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-          </paragragraph>
-        </div>
-
-{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-            <line className = "thinLine"></line>
-            <div className= {darkMode ? "video-Dark" : "video"}>
-              <paragragraph className="video-Discription">A video about two Northern White Rhino.</paragragraph>
-              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q8eh58Z249o"/>
+          <div className='container'>
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Mammels</subhead>
             </div>
-            <line className = "thinLine"></line>  
-        </div> 
-{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
+
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>S m a l l - M a m m e l s</subhead>
+            </div>
+
+            <box className = "box">
+              <box className = "speciesMainFrame"> 
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "smallMammelsImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fruitBat})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "smallMammelsName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[2].name} </div>)}
+                </label>
+              </box>
+
+              <box className = "speciesMainFrame"> 
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "smallMammelsImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${tasmanianDevil})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "smallMammelsName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[0].name} </div>)}
+                </label>
+              </box>
+            </box>
+          
+            <SmallMammelsCarousel/>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
+          </div> 
+
+  {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about Pangolins.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=DqC3ieJJlFM"/>
+              </div> 
+              <line className = "thinLine"></line> 
+          </div> 
+  {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>L a r g e - M a m m e l s</subhead>
+            </div>
+
+            <box className = "box">
+              <box className = "speciesMainFrame">
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "largeMammelsImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${panda})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "largeMammelsName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[12].name} </div>)}
+                </label>
+              </box>
+
+              <box className = "speciesMainFrame"> 
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "largeMammelsImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${redPanda})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "largeMammelsName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[13].name} </div>)}
+                </label>
+              </box>
+            </box>
+
+            <LargeMammelsCarousel/>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
+          </div>
 
 
 
 
-      <div className='container'>
 
-        <div className = "mainSubHeadFrame">
-          <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>B i g - C a t s</subhead>
-        </div>
+          <div className='container'>
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>R h i n o c e r o s</subhead>
+            </div>
 
-        <box className = "box">
-          <box className = "speciesMainFrame">
-            <image className = {darkMode ? "mammelsSmallImage-Dark" : "bigCatsImage"}>
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${snowLeopard})`}}></div>
-            </image>
-            <label className = {darkMode ? "mammelsName-Dark" : "bigCatsName"}>Name</label>
-          </box>
+            <box className = "box">
+              <box className = "speciesMainFrame">
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "smallRhinoImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${javanRhino})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "rhinoName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[10].name} </div>)}
+                </label>
+              </box>
 
-          <box className = "speciesMainFrame"> 
-            <image className = {darkMode ? "mammelsSmallImage-Dark" : "bigCatsImage"}>
-              <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${tiger})`}}></div>
-            </image>
-            <label className = {darkMode ? "mammelsName-Dark" : "bigCatsName"}>Name</label>
-          </box>
-        </box>
-        
-        <BigCatsCarousel/>
-        <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
-        </paragragraph>
-      </div>
-        
+              <box className = "speciesMainFrame"> 
+                <box className = "speciesCardContainer">
+                  <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "smallRhinoImage"}>
+                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${sumatranRhino})`}}></div>
+                  </image>
+                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Bill Konstant</label></div>
+
+                  <label className = {this.state.darkMode ? "mammelsName-Dark" : "rhinoName"}>
+                    {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[9].name} </div>)}
+                  </label>
+                </box>
+              </box>
+            </box>
+
+            <RhinosCarousel/>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
+          </div>
+
+  {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about two Northern White Rhino.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q8eh58Z249o"/>
+              </div>
+              <line className = "thinLine"></line>  
+          </div> 
+  {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
-      <div className='container'>  
+
+
+        <div className='container'>
 
           <div className = "mainSubHeadFrame">
-            <subhead className = {darkMode ? "subheadSmlDrk" : "subheadSml"}>P r i m a t e s</subhead>
+            <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>B i g - C a t s</subhead>
           </div>
 
           <box className = "box">
             <box className = "speciesMainFrame">
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "primatesImage"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${spiderMonkey})`}}></div>
+              <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "bigCatsImage"}>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${snowLeopard})`}}></div>
               </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "primatesName"}>Name</label>
+              <label className = {this.state.darkMode ? "mammelsName-Dark" : "bigCatsName"}>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[19].name} </div>)}
+              </label>
             </box>
 
             <box className = "speciesMainFrame"> 
-              <image className = {darkMode ? "mammelsSmallImage-Dark" : "primatesImage"}> 
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${gibbons})`}}></div>
+              <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "bigCatsImage"}>
+                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${tiger})`}}></div>
               </image>
-              <label className = {darkMode ? "mammelsName-Dark" : "primatesName"}>Name</label>
+              <label className = {this.state.darkMode ? "mammelsName-Dark" : "bigCatsName"}>
+                {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[17].name} </div>)}
+              </label>
             </box>
           </box>
-
-          <PrimatesCarousel/>
-          <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Wass awass
+          
+          <BigCatsCarousel/>
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
           </paragragraph>
         </div>
+          
 
-{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
-            <line className = "thinLine"></line>
-            <div className= {darkMode ? "video-Dark" : "video"}>
-              <paragragraph className="video-Discription">A video about Amur Leopard.</paragragraph>
-              <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dXAmEDFFero"/>
-            </div> 
-           <line className = "thinLine"></line> 
-        </div> 
-{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-      </body>
-      <MammelsPageSuvNav/>
-    </div>
-  );
+        <div className='container'>  
+
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>P r i m a t e s</subhead>
+            </div>
+
+            <box className = "box">
+              <box className = "speciesMainFrame">
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "primatesImage"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${spiderMonkey})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "primatesName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[25].name} </div>)}
+                </label>
+              </box>
+
+              <box className = "speciesMainFrame"> 
+                <image className = {this.state.darkMode ? "mammelsSmallImage-Dark" : "primatesImage"}> 
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${gibbons})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "mammelsName-Dark" : "primatesName"}>
+                  {this.state.endangeredMammelsItems.length > 0 && (<div> {this.state.endangeredMammelsItems[27].name} </div>)}
+                </label>
+              </box>
+            </box>
+
+            <PrimatesCarousel/>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Wass awass
+            </paragragraph>
+          </div>
+
+  {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+              <line className = "thinLine"></line>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <paragragraph className="video-Discription">A video about Amur Leopard.</paragragraph>
+                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dXAmEDFFero"/>
+              </div> 
+            <line className = "thinLine"></line> 
+          </div> 
+  {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+        </body>
+        <MammelsPageSuvNav/>
+      </div>
+    );
+  }
 }

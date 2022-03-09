@@ -21,9 +21,10 @@ export const LargeCursorFeature = () => {
         const mouseY = clientY;
   
         if(mainCursor?.current){
-          mainCursor.current.style.transform = `translate3d(${mouseX -
-          mainCursor.current.clientWidth / 6}px, ${mouseY -
-          mainCursor.current.clientHeight / 0.8}px, 0)`;
+          mainCursor.current.style.transform = `translate3d(
+            ${mouseX - mainCursor.current.clientWidth / 6}px, 
+            ${mouseY - mainCursor.current.clientHeight / 0.8}px, 
+          0)`;
         }
       }
   

@@ -1,0 +1,15 @@
+.WorldMapContainer{
+    background-color: lightblue;
+    height: 800px;
+    width: 1200px;
+    margin: auto;
+    margin-top: 50px;
+    overflow: hidden;
+}
+h1{
+    margin: auto;
+    text-align: center;
+    background-color: black;
+    margin-top: 50px;
+    width: auto;
+}

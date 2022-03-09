@@ -37,7 +37,7 @@
 }
 
 .QuizBox{
-  height: 640px;
+  height: 740px;
   width: 1020px;
   background-color: none;
   display: flex;
@@ -66,7 +66,7 @@
     height: 80px;
     width: 500px;
     margin: auto;
-    background-color: azure;
+    background-color: #C7E2E2;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
@@ -133,7 +133,7 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    background-color: azure;
+    background-color: #C7E2E2;
     margin: auto;
     margin-top: 40px;
     border-radius: 20px;
@@ -162,7 +162,13 @@
     margin-bottom: 10px;
   }
   .quizButton:hover {
-    background-color: #555e7d;
+    background: repeating-linear-gradient(
+    45deg,
+    #222,
+    #222 10px,
+    #000 10px,
+    #000 20px
+  );
     text-decoration: underline wavy;
   }
   
@@ -179,10 +185,77 @@
     outline: none;
   }
 
-  .resrartButton{
-    height: 100px;
+.restartButton{
+  background: #1888ff;
+  height: 80px;
+  width: 220px;
+  display: flex;
+  margin: auto;
+  margin-top: 30px;
+  font-size: 26px;
+  font-family: 'Manrope', sans-serif;
+  border: 10px solid #003357;
+  /* border: none; */
+  border-radius: 50px;
+  cursor: pointer;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+}
+.restartButton:hover{
+  background: black;
+  transition: 300ms ease-in-out;
+  text-decoration: underline wavy;
+  cursor: pointer;
+}
+.restartButtonIcon{
+  height: auto;
+  width:  auto;
+  display: inline-flex;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.restartButtonLabel{
+  height: auto;
+  width:  auto;
+  display: inline-flex;
+  background-color: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  margin: auto;
+  margin-left: -4px;
+  font-weight: bold;
+  font-family: var(--font-family);
+}
+.restartButtonLabel:hover{
+ cursor: pointer;
+}
+/* .takeActionBtn-Dark{
+    background: var(--color-footer);
+    height: 50px;
     width: 200px;
-    display: solid;
-    background-color: #1a1919;
-  }
+    padding: 6px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 36.5%;
+    bottom: -26.5px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Manrope', sans-serif;
+    border: 6px solid var(--color-darkBorder);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+.takeActionBtn-Dark:hover{
+    background: #1888ff;
+    transition: 300ms ease-in-out;
+    text-decoration: underline wavy;
+} */
   

@@ -139,6 +139,7 @@ h1{
     height: auto;
     width: 92%;
     margin: auto;
+    margin-top: -18px;
     padding: 4px;
     display: block;
     text-align: center;

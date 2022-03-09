@@ -6,7 +6,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 20px;
     /* border-bottom: 6px solid #37475A; */
   }
   
@@ -40,7 +40,7 @@
   
   .nav-menu {
     display: grid;
-    grid-template-columns: repeat(6, auto);
+    grid-template-columns: repeat(7, auto);
     background-color: none;
     grid-gap: 0px;
     list-style: none;

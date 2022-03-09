@@ -26,6 +26,7 @@
   span {
     font-size: 40px;
     display: inline-flex;
+    font-family: 'Manrope', sans-serif;
   }
   
   .dark-modeFrame {
@@ -43,7 +44,7 @@
   }
   
   .darkModeSwitchContainer {
-    height: auto;
+    height: 100%;
     width: auto;
     padding-left: 10px;
     padding-right: 10px;
@@ -52,6 +53,12 @@
     align-items: center;
     background: rgb(35,47,62);
     border-bottom: 6px solid #37475A;
+  }
+  .darmodeLabel{
+    font-size: 24px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   .switch {

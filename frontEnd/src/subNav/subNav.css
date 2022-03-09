@@ -22,7 +22,13 @@
     text-decoration: none;
 }
 .previousSubNav:hover{
-    background: black;
+    background: repeating-linear-gradient(
+        90deg,
+        #222,
+        #222 10px,
+        #000 10px,
+        #000 20px
+    );
 }
 
 .nextSubNav{
@@ -36,7 +42,13 @@
     text-decoration: none;
 }
 .nextSubNav:hover{
-    background-color: #1a1919;
+    background: repeating-linear-gradient(
+        45deg,
+        #222,
+        #222 10px,
+        #000 10px,
+        #000 20px
+    );
 }
 
 .logo1{

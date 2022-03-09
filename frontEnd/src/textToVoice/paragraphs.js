@@ -30,7 +30,7 @@ export const HomeParagraphOneVoice = () => {
 //C A U S E S P A G E
 export const CausesPageParagraphVoice = () => {
     // const [text, setText] = useState
-    const [world] = useState
+    const [text] = useState
     (
     "Wildlife in our planet is under threat from all sides, from facing down habitat loss and the impact of climate change. Some" + 
     "of the biggest threats that the endangered species faces includes illegal wildlife trade, habitat destruction, invasive species, pollution, and climate change."
@@ -41,7 +41,7 @@ export const CausesPageParagraphVoice = () => {
     return (
         <div>
             {/* <textarea value={text} onChange={(event) => setText(event.target.value)}/> */}
-            <button className="textToVoiceBtn" onClick={() => speak({ world, voice:voices[2] })}>
+            <button className="textToVoiceBtn" onClick={() => speak({ text, voice:voices[2] })}>
                 <div className="paraBtnIcon"><AiFillSound size="3em" color="orange"/></div>
                 <div className="paraBtnLabel">Voice</div>
             </button>

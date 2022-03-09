@@ -4,13 +4,16 @@ import { useState } from "react";
 import './quiz.css';
 import './publicMain.css';
 
+import {QuizSuvNav} from "../subNav/subNavigation";
+
 import {BsBookHalf} from 'react-icons/bs';
+import {RiRestartFill} from 'react-icons/ri';
 
 
 export const QuizPage = () => {
 	const refreshPage = ()=>{
 		window.location.reload();
-	 }
+	}
 
 	const questions = [
 		{
@@ -168,11 +171,15 @@ export const QuizPage = () => {
 								</div>
 							</>
 						)}
-						<button className="resrartButton" onClick={refreshPage}>Restart</button>
+						<button className="restartButton" onClick={refreshPage}> 
+							<box className="restartButtonIcon"><RiRestartFill size="2em" color="white"/></box>
+							<label className='restartButtonLabel'>Restart</label>
+						</button>
 					</box>
 				</box>
 			</div>
 		</body>
+		<QuizSuvNav/>
 	</div>
 
 	);

@@ -164,15 +164,23 @@
     font-size: 20px;
     font-family: 'Manrope', sans-serif;
     border: 6px solid #003357;
+    border-radius: 50px;
     cursor: pointer;
     color: white;
     text-decoration: none;
- 
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
 }
 .takeActionBtn-Light:hover{
-    background: rgb(35,47,62);
+    background: repeating-linear-gradient(
+    45deg,
+    #003357,
+    #003357 10px,
+    #000 10px,
+    #000 20px
+    );
     transition: 300ms ease-in-out;
     text-decoration: underline wavy;
+    /* border: 6px solid #1888ff; */
 }
 
 .takeActionBtn-Dark{
@@ -189,14 +197,22 @@
     font-size: 20px;
     font-family: 'Manrope', sans-serif;
     border: 6px solid var(--color-darkBorder);
+    border-radius: 50px;
     cursor: pointer;
     color: white;
     text-decoration: none;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
 }
 .takeActionBtn-Dark:hover{
-    background: #1888ff;
     transition: 300ms ease-in-out;
     text-decoration: underline wavy;
+    background: repeating-linear-gradient(
+        45deg,
+        #003357,
+        #003357 10px,
+        #1888ff 10px,
+        #1888ff 20px
+        );
 }
 
 

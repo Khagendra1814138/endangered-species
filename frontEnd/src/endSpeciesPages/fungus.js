@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from "react";
+import { Component } from "react";
 import ReactPlayer from 'react-player';
 
 import '../pages/publicMain.css';
@@ -27,49 +27,56 @@ import phylloporusPelletieri from '../images/endFungus/phylloporusPelletieri.png
 import tulostomaNiveum from '../images/endFungus/tulostomaNiveum.png';
 import whiteFerula from '../images/endFungus/whiteFerula.png';
 
-import {FaPlusSquare} from 'react-icons/fa';
-import {FaMinusSquare} from 'react-icons/fa';
+import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
+import DarkModeFunction from '../darkMode/darkMode';
 
-export const Fungus = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [fontSize, setFontSize] = useState(20);
+export class Fungus extends Component {
+  
+  constructor(props) {
+    super(props);
+    this.state = {
+      darkMode: false,
+      fontSize: 18,
+      endangeredFungusItems: [],
+    };
+  }
 
-  function FontSizeIncreaser(){
-    return(
-      <div className='buttonsContainer'>
-        <button className="paraButton" onClick={() => setFontSize(fontSize + 2)}><FaPlusSquare size="3em" color="orange"/></button>
-        <div className='fontSizeDisplay'>{fontSize}</div>
-        <button className="paraButton" onClick={() => setFontSize(fontSize - 2)}><FaMinusSquare size="3em" color="orange"/></button>
-      </div>
-    )
-  };
+  
+  componentDidMount(){
+      fetch("http://localhost:5000/api/fungiSpecies")
+      .then (rest => rest.json())
+      .then (endangeredFungusRecords => {
+      this.setState({
+          isLoaded: true,
+          endangeredFungusItems: endangeredFungusRecords,
+        })
+      console.log(endangeredFungusRecords)
+      });
+  }
 
+  render(){
+    
     return( 
-      <div className={darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
-        <FontSizeIncreaser/>
+      <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
+
+{/* //////////////////////////////////////////////////////FontSizeFunction////////////////////////////////////////////////////// */}
+<FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
         <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerFungus})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
-        <div className="darkModeSwitchContainer">
-          <span style={{ color: darkMode ? "grey" : "orange" }}>☀︎</span>  
-              <div className="switch-checkbox">
-                  <label className="switch">
-                    <input type="checkbox" onChange={() => setDarkMode(!darkMode)} />
-                    <span className="slider round"> </span>
-                  </label>
-              </div>
-          <span style={{ color: darkMode ? "#c96dfd" : "grey" }}>☽</span>
-        </div>
+<DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <body className='pageBodyFrame'>
 
           <div className='container'>
             <div className = "mainSubHeadFrame">
-              <subhead className = {darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Fungus Species</subhead>
+              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Fungus Species</subhead>
             </div>
         
-            <paragragraph style={{fontSize: `${fontSize}px`}} className = {darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               Wass awass
             </paragragraph>
 
@@ -77,33 +84,55 @@ export const Fungus = () => {
             <box className = "box4">
               <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${armillariaEctypa})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <box className = "speciesCardContainer">
+                      <image className='fungusMediumImage'>
+                        <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${armillariaEctypa})`}}></div>
+                      </image>
+                      <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Pärismaalane</label></div>
+                      
+                      <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName"}>
+                        {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[6].name} </div>)}
+                      </label>
+                    </box>
+                  </box>
                 </box>
 
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${boletopsisNothofagi})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${boletopsisNothofagi})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Jerry A. Cooper</label></div>
+                    
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[5].name} </div>)}
+                    </label>
+                  </box>
                 </box>
               </box>
 
               <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${boletusLoyo})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${boletusLoyo})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Felix Duran</label></div>
+
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[3].name} </div>)}
+                    </label>
+                  </box>
                 </box>
 
                 <box className = "MedBox">
                   <image className='fungusMediumImage'>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caterpillarFungus})`}}></div>
                   </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName"}>Name</label>
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[7].name} </div>)}
+                  </label>
                 </box>
               </box>
 
@@ -111,14 +140,16 @@ export const Fungus = () => {
                 <image className= 'fungusLargeImage'>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${barbiePagoda})`}}></div>
                 </image>
-                <label className = {darkMode ? "fungusName-Dark" : "fungusName"}>Species name</label>
+                <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName"}>
+                  {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[1].name} </div>)}
+                </label>
               </box>
             </box>
           </div>
 
-          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
-              <div className= {darkMode ? "video-Dark" : "video"}>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                 <paragragraph className="video-Discription">A video about why Fungus are Important.</paragragraph>
                 <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=BlcKBKJ8uro"/>
               </div> 
@@ -136,14 +167,22 @@ export const Fungus = () => {
                   <image className='fungusMediumImage'>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${cystodermaCarpaticum})`}}></div>
                   </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName2"}>Name</label>
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName2"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[14].name} </div>)}
+                  </label>
                 </box>
 
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${destuntziaRubra})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName2"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${destuntziaRubra})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Noah Siegel</label></div>
+
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName2"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[2].name} </div>)}
+                    </label>
+                  </box>
                 </box>
               </box>
 
@@ -152,29 +191,43 @@ export const Fungus = () => {
                   <image className='fungusMediumImage'>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${entolomaBloxamii})`}}></div>
                   </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName2"}>Name</label>
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName2"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[10].name} </div>)}
+                  </label>
                 </box>
 
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${entolomaRavinense})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName2"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${entolomaRavinense})`}}></div>
+                    </image>                 
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by David Catcheside</label></div>
+
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName2"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[4].name} </div>)}
+                    </label>
+                  </box>
                 </box>
               </box>
 
               <box className = "largeSpeciesImgFrame">
-                <image className= 'fungusLargeImage'>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bovistaPaludosa})`}}></div>
-                </image>
-                <label className = {darkMode ? "fungusName-Dark" : "fungusName2"}>Species name</label>
+                <box className = "speciesCardContainer">
+                  <image className= 'fungusLargeImage'>
+                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${bovistaPaludosa})`}}></div>
+                  </image>
+                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Grażyna Domian</label></div>
+
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName2"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[11].name} </div>)}
+                  </label>
+                </box>
               </box>
             </box>
           </div>
 
-          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
-              <div className= {darkMode ? "video-Dark" : "video"}>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                 <paragragraph className="video-Discription">A video about Mycelium Fungus</paragragraph>
                 <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=cApVVuuqLFY"/>
               </div>
@@ -192,14 +245,22 @@ export const Fungus = () => {
                   <image className='fungusMediumImage'>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${greenCageFungus})`}}></div>
                   </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Name</label>
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName3"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[12].name} </div>)}
+                  </label>
                 </box>
 
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${phylloporusPelletieri})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${phylloporusPelletieri})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Malcolm Storey</label></div>
+
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName3"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[9].name} </div>)}
+                    </label>
+                  </box>
                 </box>
               </box>
 
@@ -208,30 +269,44 @@ export const Fungus = () => {
                   <image className='fungusMediumImage'>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${tulostomaNiveum})`}}></div>
                   </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Name</label>
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName3"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[8].name} </div>)}
+                  </label>
                 </box>
 
                 <box className = "MedBox">
-                  <image className='fungusMediumImage'>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteFerula})`}}></div>
-                  </image>
-                  <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Name</label>
+                  <box className = "speciesCardContainer">
+                    <image className='fungusMediumImage'>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteFerula})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Giuseppe Venturella</label></div>
+
+                    <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName3"}>
+                      {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[0].name} </div>)}
+                    </label>
+                  </box>
                 </box>
               </box>
 
               <box className = "largeSpeciesImgFrame">
-                <image className= 'fungusLargeImage'>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hygrocybeBoothii})`}}></div>
-                </image>
-                <label className = {darkMode ? "fungusName-Dark" : "fungusName3"}>Species name</label>
+                <box className = "speciesCardContainer">
+                  <image className= 'fungusLargeImage'>
+                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hygrocybeBoothii})`}}></div>
+                  </image>              
+                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ken Beath</label></div>
+                  
+                  <label className = {this.state.darkMode ? "fungusName-Dark" : "fungusName3"}>
+                    {this.state.endangeredFungusItems.length > 0 && (<div> {this.state.endangeredFungusItems[13].name} </div>)}
+                  </label>
+                </box>
               </box>
             </box>
           </div>
 
 
-          <div className= {darkMode ? "videoFrame-Dark" : "videoFrame"}>
+          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
-              <div className= {darkMode ? "video-Dark" : "video"}>
+              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                 <paragragraph className="video-Discription">A video about Killer Fungus.</paragragraph>
                 <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=ROQrbWkV4HI"/>
               </div> 
@@ -244,4 +319,5 @@ export const Fungus = () => {
         <FungiPageSuvNav/>
       </div>
     );
+  }
 }

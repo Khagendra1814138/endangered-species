@@ -13,6 +13,7 @@ import { LogInPage } from './pages/logIn';
 import { SignUp } from './pages/signUp';
 import { EndnageredSpeciesUk } from './pages/endSpeciesUk';
 import { QuizPage } from './pages/quiz';
+import { WorldMap } from './endSpeciesWorldMap/worldMap';
 
 
 import { Amphibians } from './endSpeciesPages/amphibians';
@@ -26,15 +27,18 @@ import { Plants } from './endSpeciesPages/plants';
 import {ScrollToTopArrow} from "./backToTopFunction/backToTop";
 import {Footer} from "./header&footer/footer";
 
-import {ReadingGuideFeature} from "./reading/readingGuideFeature";
+import {ReadingGuideFeature} from "./readAccessibilityGuideFunctions/readingGuideFeature";
 
-import {ReadingMaskFeature} from "./reading/readingMaskFeature";
+import {ReadingMaskFeature} from "./readAccessibilityGuideFunctions/readingMaskFeature";
 
-import {LargeCursorFeature} from "./reading/largeCursorFeature";
+import {LargeCursorFeature} from "./readAccessibilityGuideFunctions/largeCursorFeature";
+
+import {SocialShareFunction} from "./socialMediaShareFunction/socialShare";
 
 function App() {
   return (
     <BrowserRouter>
+      <SocialShareFunction/>
       <ScrollToTopArrow/>
       <Navbar/>
       <ReadingMaskFeature/>
@@ -50,6 +54,7 @@ function App() {
           <Route path="/signUp" render={() => <SignUp/>}/>
           <Route path="/endSpeciesUk" render={() => <EndnageredSpeciesUk/>}/>
           <Route path="/quiz" render={() => <QuizPage/>}/>
+          <Route path="/worldMap" render={() => <WorldMap/>}/>
 
           <Route path="/amphibians" render={() => <Amphibians/>}/>
           <Route path="/aquatic" render={() => <Aquatic/>}/>

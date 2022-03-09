@@ -28,3 +28,17 @@
     position: inherit;
   }
 
+  .mammelsCarouselName{
+    height: 36px;
+    width: auto;
+    display: block;
+    background-color: #37475A;
+    font-family: 'Manrope', sans-serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+}
+
