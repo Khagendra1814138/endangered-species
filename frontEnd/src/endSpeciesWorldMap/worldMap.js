@@ -53,7 +53,7 @@ export const WorldMap = () => {
       <div className="pageMainFrameLight">
         <body className='pageBodyFrame'>
 
-          <h1>View Endangered Species around the World</h1>
+          <h2>View Endangered Species around the World</h2>
           <ReactTooltip>
             {content}
           </ReactTooltip>

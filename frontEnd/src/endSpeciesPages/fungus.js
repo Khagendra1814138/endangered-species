@@ -77,8 +77,20 @@ export class Fungus extends Component {
             </div>
         
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              Wass awass
+              Fungi are one of the most important species in our planet. They may not look that useful but fungi have a crucial role to keep our planet ecosystem balanced and are essential for circle of life.
+              Also, they provide food, medicine, textiles/materials, recycles waste, cleans deadly chemicals and can even control pests and be used as a bio fuel. 
+              Furthermore, scientists are still researching and finding countless potential solutions, which can be benifical to humans.
+              <br></br>
+              <br></br>
+              Provides food:
+              <br></br>
+              Fungi provides sources of food for us human everyday and event to other animals species in the form of mushrooms.
+              Not only mushrooms, but fungi are found and used in many food and drink products.
+              For example, they are found in foods like cheese, beer, wine, cakes, bread, soyabean product and many more.
             </paragragraph>
+            {/* http://www.countrysideinfo.co.uk/fungi/importce.htm */}
+
+            {/* https://courses.lumenlearning.com/boundless-biology/chapter/importance-of-fungi-in-human-life/ */}
 
 
             <box className = "box4">
@@ -157,7 +169,21 @@ export class Fungus extends Component {
           </div>
 
 
-
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              Medicine & Pest control:
+              <br></br>
+              Fungi are found in many medicine that treats human and animal diseases because they naturally produce antibiotics to kill or inhibit the growth of bacteria.
+              Some medicines and drugs that are made of fungi are Penicillian, Paclitaxel (treat cancer), and other medicine that treats Malaria, diabetes... the lists goes on.
+              Some gungi like the Chinese caterpillar fungus, which parasitise insects, can be benifical to farmers for controlling insect pests.
+              <br></br>
+              <br></br>
+              Recycle & Plant growth:
+              <br></br>
+              Fungi are the best natural recyclers. When you see a food starting to mold, it is the fungi that is slowely reclycing those waste foods.
+              They are resposible for breaking down organic matters and releasing carbon, oxygen, nitrogen, and phosphorus into the soil and the atmosphere.
+              Fungi are vitally important for the groth of plants and farm land because of the mycorrhizal relationship between fungi and plant roots.
+              Around 80–90% of trees and grasses would not survive without fungi.
+          </paragragraph>
 
         
           <div className='container'>
@@ -228,7 +254,7 @@ export class Fungus extends Component {
           <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
               <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Mycelium Fungus</paragragraph>
+                <paragragraph className="video-Discription">A video about how Mycelium Fungus can replace plastic in the future.</paragragraph>
                 <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=cApVVuuqLFY"/>
               </div>
               <line className = "thinLine"></line>  
@@ -236,6 +262,21 @@ export class Fungus extends Component {
 
 
 
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              The future of Fungi:
+              <br></br>
+              Researchers and company are already creating materials using fungi to make products.
+              For example, building materials like fungus bricks to build houses, which are more portable, durable and have better compression properties than fibre board.
+              Also, fungus building materials are flame retardant, which means it slows the groth of fire.
+              Furthermore, mycelium products are biodegradable, thus reducing pollution on our planet.
+              <br></br>
+              <br></br>
+              Water Filter:
+              <br></br>
+              Mushrooms are being tested and researched by scientists for their ability to filter water chemical and pathogens. 
+              Meaning, clean water can benifit millions of people around the world who do not have access to fresh water, which can then can prevent waterborne illnesses like typhoid, cholera, dysentery, gastroenteritis, and hepatitis.
+
+          </paragragraph>
 
 
           <div className='container'>
@@ -307,7 +348,7 @@ export class Fungus extends Component {
           <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
               <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Killer Fungus.</paragragraph>
+                <paragragraph className="video-Discription">A video about how Killer Fungus can control pests.</paragragraph>
                 <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=ROQrbWkV4HI"/>
               </div> 
               <line className = "thinLine"></line> 

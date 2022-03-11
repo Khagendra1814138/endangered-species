@@ -104,7 +104,14 @@ export class EndnageredSpeciesUk extends Component {
                         </div>
 
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                            Wass awass
+                            {/* https://www.mammal.org.uk/2020/07/one-quarter-of-native-mammals-now-at-risk-of-extinction-in-britain/ */}
+                            It is estimated that one quarter of native mammals are now at risk of extinction in Britain. 
+                            The first official Red List for British Mammals, shows that 11 of 47 mammels native to Britian are classified as being risk of extinction.
+                            And 5 futher species are classified as "near threatened", which mean they will become endangered if action are not taken.
+                            The Red List of Britain most endangered birds has increased to 70 species out of 245 bird species.
+                            <br></br>
+                            <br></br>
+                            Not all the species listed below are endangered and its a mix of both endangered and nearly threatened species.
                         </paragragraph>
                     
                         <div className = "mainSubHeadFrame">
@@ -162,7 +169,7 @@ export class EndnageredSpeciesUk extends Component {
                         </box>
 
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                            Wass awass
+                            These are the list of reptiles species in the Uk that are listed as nearly threatened, vulnerable or are endangered. 
                         </paragragraph>
                     </div>
 
@@ -234,7 +241,7 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of marine species in the Uk that are listed as nearly threatened, vulnerable or are endangered. 
                     </paragragraph>
                 </div>
 
@@ -292,7 +299,7 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of amphibians species in the Uk that are listed as nearly threatened, vulnerable or are endangered. 
                     </paragragraph>
                 </div>
 
@@ -376,7 +383,8 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
                 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of mammels species in the Uk that are listed as vulnerable, endangered or critically endangered.
+                        For example, the wildcat and the greater mouse-eared bat is listed as critically endangered. And the beaver, red squirrel and the water vole is listed as endangered.
                     </paragragraph>
                 </div>
     
@@ -455,7 +463,7 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of birds species in the Uk that are listed as nearly threatened, vulnerable, endangered or critically endangered. 
                     </paragragraph>
                 </div>
 
@@ -532,7 +540,7 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of plants species in the Uk that are listed as vulnerable, endangered or critically endangered.
                     </paragragraph>
                 </div>
 
@@ -598,7 +606,7 @@ export class EndnageredSpeciesUk extends Component {
                     </box>
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Wass awass
+                        These are the list of fungus species in the Uk that are listed as nearly threatened, vulnerable or endangered.
                     </paragragraph>
                 </div>
 

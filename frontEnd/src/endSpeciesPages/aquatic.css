@@ -3,6 +3,15 @@
     --color-textColor: rgb(35,47,62);
 }
 
+.aquaticLongImage{
+    height: 300px;
+    width: 1000px;
+    display: block;
+    background-color: none;
+    margin: auto;
+    overflow: hidden;
+}
+
 .aquaticLargeImage{
     height: 462px;
     width: 332px;

@@ -92,7 +92,7 @@ export class Birds extends Component {
                         </div>
 
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                            The IUCH states that 13% of birds are endangered with extinction.
+                            The IUCN states that 13% of birds are endangered with extinction.
                             You may not know but the bird species are one of the most important animals to the environment.
                             Birds plays important role in the functioning of the worlds ecosystem, which can directly impact human health, 
                             food production and the economy as well as millions of other species.

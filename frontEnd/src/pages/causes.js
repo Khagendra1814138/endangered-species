@@ -25,8 +25,17 @@ import DarkModeFunction from '../darkMode/darkMode';
 
 
 //Text To Voices
-import {CausesPageParagraphVoice} from "../textToVoice/paragraphs";
-import {CausesPagePlasticPollutionVoice} from "../textToVoice/paragraphs";
+import {CausesPageParagraphVoice} from "../textToVoice/causesPageVoice";
+import {PlasticPollutionVoice} from "../textToVoice/causesPageVoice";
+import {ChemicalPollutionVoice} from "../textToVoice/causesPageVoice";
+import {InfrastructuresParagraphVoice} from "../textToVoice/causesPageVoice";
+import {ClimateChangeParagraphVoice} from "../textToVoice/causesPageVoice";
+import {IllegalTradingParagraphVoice} from "../textToVoice/causesPageVoice";
+import {HabitatDistructionParagraphVoice} from "../textToVoice/causesPageVoice";
+import {InvasiveSpeciesParagraphVoice} from "../textToVoice/causesPageVoice";
+import {OverFishingParagraphVoice} from "../textToVoice/causesPageVoice";
+import {DiseaseParagraphVoice} from "../textToVoice/causesPageVoice";
+import {OilGasDevelopmentParagraphVoice} from "../textToVoice/causesPageVoice";
 
 
 export class Causes extends Component {
@@ -86,7 +95,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
-            <CausesPagePlasticPollutionVoice/>
+            <PlasticPollutionVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -111,13 +120,14 @@ export class Causes extends Component {
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>C h e m i c a l - P o l l u t i o n</label>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "paragraphMed-Dark" : "paragraphMed-Light"}>
                   Chemical pollutents enters our water from Pestiside chemicals used by the farmers, industrial activities and our home. 
-                  Chemical pollution in river waters can lower fertility, damage to the immune systems or cause deformities, 
+                  Chemical pollution in river waters can lower the aquatic species fertility, damage to the immune systems or cause deformities, 
                   tumours and even death in any aquatic species that is exposed to it. 
                   Not just animals but humans can also suffer some of these effects when our drinking water becomes polluted.
                   {/* https://blog.cwf-fcf.org/index.php/en/threats-chemical-pollution/ */}
                 </paragragraph>
               </box>
             </box>
+            <ChemicalPollutionVoice/>
 
             <line className = "largeLine"></line>
 
@@ -131,12 +141,13 @@ export class Causes extends Component {
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>I n f r a s t r u c t u r e 's</label>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "paragraphMed-Dark" : "paragraphMed-Light"}>
-                  Bulding of infrastructures, such as road can alter ecological conditions, cut through natural habitats, which can lead to reduce populations of many wildlife species.
+                  Building of infrastructures, such as road can alter ecological conditions, cut through natural habitats, which can lead to reduce populations of many wildlife species.
                   For example, building a roads through the Amazon forest can destroy habitat or cut off the migration route for endangered species.
                   Building of dams on the rivers can cut off fresh water from species that are already struggling through drouts and can stop native fishes species from migrating and breeding.
                 </paragragraph>
               </box>
             </box>
+            <InfrastructuresParagraphVoice/>
             
             <line className = "largeLine"></line>
 
@@ -154,6 +165,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <ClimateChangeParagraphVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -177,14 +189,15 @@ export class Causes extends Component {
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>i l l e g a l - T r a d i n g</label>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "paragraphMed-Dark" : "paragraphMed-Light"}>
-                Did you know that the illegal wildlife trade is the fourth largest criminal industry in the world, 
-                after drugs, arms, and human trafficking. It is estimated that it runs into billions of dollars.
-                Poaching of Elephant for ivory and Tigers for their skins and bones are the most common examples.
-                Also, hunting for pangoling scales and meat is also another example common in Asia.
-                There are countless other species that are similarly overexploited, from marine turtles to timber trees.
+                  Did you know that the illegal wildlife trade is the fourth largest criminal industry in the world, 
+                  after drugs, arms, and human trafficking. It is estimated that it runs into billions of dollars.
+                  Poaching of Elephant for ivory and Tigers for their skins and bones are the most common examples.
+                  Also, hunting for pangoling scales and meat is another example common in Asia.
+                  There are countless other species that are similarly overexploited, from marine turtles to timber trees and many more.
                 </paragragraph>
               </box>
             </box>
+            <IllegalTradingParagraphVoice/>
 
             
             <line className = "largeLine"></line>
@@ -208,6 +221,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <HabitatDistructionParagraphVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -234,6 +248,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <InvasiveSpeciesParagraphVoice/>
 
             <line className = "largeLine"></line>
 
@@ -253,6 +268,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <OverFishingParagraphVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -283,6 +299,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <DiseaseParagraphVoice/>
 
             <line className = "largeLine"></line>
 
@@ -301,6 +318,7 @@ export class Causes extends Component {
                 </paragragraph>
               </box>
             </box>
+            <OilGasDevelopmentParagraphVoice/>
 
           </div>
         

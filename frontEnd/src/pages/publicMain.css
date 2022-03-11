@@ -93,8 +93,12 @@
     margin: auto;
     margin-top: 40px;
     padding: 20px;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    box-shadow: -5px -5px 5px rgb(94, 104, 121, .228), 8px 8px 8px rgba(94, 104, 121, .228);
 }
+/* .box:hover{
+    box-shadow: none;
+    transition: 0.5s ease-in-out;
+} */
 .box-noshadow{
     height: auto;
     width: auto;
@@ -127,7 +131,7 @@
     height: auto;
     width: 1000px;
     display: flex;
-    background-color: rebeccapurple;
+    background-color: none;
     margin: auto;
     margin-top: 40px;
     align-items: center;

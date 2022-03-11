@@ -24,6 +24,16 @@ import DarkModeFunction from '../darkMode/darkMode';
 
 //Text To Voices
 import {IndividualActionParagraph} from "../textToVoice/individualActionPageVoice";
+import {ShareInformationParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {PurchasingHabitParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {RecycleReuseDisposeParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {SupportOrganisationParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {ReduceDairyMeatProductsParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {SmartTransportParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {ReduceEnergyConsumptionParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {KeepGardenHealthyParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {UseYourVoiceParagraphVoice} from "../textToVoice/individualActionPageVoice";
+import {TravelCompassionatlyParagraphVoice} from "../textToVoice/individualActionPageVoice";
 
 export class IndividualAction extends Component {
   
@@ -90,6 +100,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${share})`}}></div>
               </image>
             </box>
+            <ShareInformationParagraphVoice/>
 
 
             <line className = "largeLine"></line>
@@ -111,6 +122,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${shopping})`}}></div>
               </image>
             </box>
+            <PurchasingHabitParagraphVoice/>
             
 
             <line className = "largeLine"></line>
@@ -121,7 +133,7 @@ export class IndividualAction extends Component {
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>R e c y c l e - R e u s e - D i s p o s e</label>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "paragraphMed-Dark" : "paragraphMed-Light"}>
                   Buy less plastic products. Always take your bags to the store, reuse containers and plastic bags and carefully dispose of any lightweight plastics. 
-                  animals gets tangled in these products, end up in the ocean consumed by small fish and it can kill off beneficial microorganisms.
+                  Animals gets tangled in these products, end up in the ocean consumed by small fish and it can kill off beneficial microorganisms.
                   Always recycle plastics, paper, metal cans and glass. When taking your trash out, make sure that the bag is sealed safely so the
                   dangerous compounds like bleach, batteries, pesticides, and other chemical are disposed properly at a specialized facility. 
                 </paragragraph>
@@ -131,6 +143,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${recycle})`}}></div>
               </image>
             </box>
+            <RecycleReuseDisposeParagraphVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -159,6 +172,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${supportOrganisation})`}}></div>
               </image>
             </box>
+            <SupportOrganisationParagraphVoice/>
 
             
             <line className = "largeLine"></line>
@@ -180,6 +194,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${healthyEating})`}}></div>
               </image>
             </box>
+            <ReduceDairyMeatProductsParagraphVoice/>
 
             
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
@@ -204,7 +219,6 @@ export class IndividualAction extends Component {
                   Even better if you travel by walking or riding bicycle as it can benifit your health as well.
                   If you are driving then make sure that you are driving smart instead of wasting gas. Like go for a regular check-up of your car to make sure it does not consume extra fuel.
                   If you can, switch your fossil fuel car to electric powered car.
-                  
                 </paragragraph>
               </box>
 
@@ -212,6 +226,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${publicTransport})`}}></div>
               </image>
             </box>
+            <SmartTransportParagraphVoice/>
 
             
             <line className = "largeLine"></line>
@@ -232,6 +247,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${electricity})`}}></div>
               </image>
             </box>
+            <ReduceEnergyConsumptionParagraphVoice/>
 
             
             <line className = "largeLine"></line>
@@ -252,6 +268,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${healthyGarden})`}}></div>
               </image>
             </box>
+            <KeepGardenHealthyParagraphVoice/>
 
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
               <line className = "thinLine"></line>
@@ -280,6 +297,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${voice})`}}></div>
               </image>
             </box>
+            <UseYourVoiceParagraphVoice/>
 
             
             <line className = "largeLine"></line>
@@ -290,7 +308,7 @@ export class IndividualAction extends Component {
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>T r a v e l - C o m p a s s i o n a t e l y</label>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "paragraphMed-Dark" : "paragraphMed-Light"}>
                   Sometimes when we travel, we dont realize that the souvenirs or oranament we are buying are under threat. 
-                  So always avoid supporting the illegal markets. For example, dont buy tortoise-shell, ivory, and corals or other illegal related souvenirs.
+                  So, always avoid supporting the illegal markets. For example, dont buy tortoise-shell, ivory, and corals or other illegal related souvenirs.
                   Also, dont participate in activities that exploits endangered/threatned species.
                   For example, animal selfie, trophy hunting or animal rides.
                 </paragragraph>
@@ -300,6 +318,7 @@ export class IndividualAction extends Component {
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${travel})`}}></div>
               </image>
             </box>
+            <TravelCompassionatlyParagraphVoice/>
             
           </div>
         </body>
