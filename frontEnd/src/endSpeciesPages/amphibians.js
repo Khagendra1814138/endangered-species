@@ -32,6 +32,13 @@ import splayfootSalamanders from '../images/endAmphibians/salamander/splayfootSa
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
 
+
+//Text To Voices
+import {AmphibianPara1Voice} from "../textToVoice/endAmphibianPageVoice";
+import {AmphibianPara2Voice} from "../textToVoice/endAmphibianPageVoice";
+import {AmphibianPara3Voice} from "../textToVoice/endAmphibianPageVoice";
+import {AmphibianPara4Voice} from "../textToVoice/endAmphibianPageVoice";
+
 export class Amphibians extends Component {
   
     constructor(props) {
@@ -89,6 +96,7 @@ export class Amphibians extends Component {
                             Apmhibians species mainly eats insects pests, which can benifit Agriculture around the world.
                             They eat insects like musquitos, helping to reduce the spread of diseases like malaria.
                         </paragragraph>
+                        <AmphibianPara1Voice/>
                         {/* https://www.durrell.org/wildlife/amphibian-blog/eight-reasons-amphibians-are-amazing#:~:text=1.,spread%20of%20disease%2C%20including%20malaria. */}
 
                     <div className='container'>
@@ -189,8 +197,9 @@ export class Amphibians extends Component {
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                        Amphibians have moist, permeable skin, which makes them vulnerable to drought and toxic substances, 
                        meaning they can be used as an indicator of the ecosystem health. For example, the health of important ecosystems such as forests and wetlands.
-                       Amphibians skin contains different types of peptides, whcih can perhaps offer possible medical cures for many varities of human diseases.
+                       Amphibians skin contains different types of peptides, which can perhaps offer possible medical cures for many varities of human diseases.
                     </paragragraph>
+                    <AmphibianPara2Voice/>
 
 
                     <div className='container'>
@@ -297,6 +306,7 @@ export class Amphibians extends Component {
                         even to block deadly disease like HIV transmission and treat anti-biotic resistant bacterial strains.
                         Therefore, as this special species starts to disappear, so do the potential treatments and cures to human diseases.
                     </paragragraph>
+                    <AmphibianPara3Voice/>
 
 
                     <div className='container'>
@@ -403,7 +413,7 @@ export class Amphibians extends Component {
                         One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
                         This ablility is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
                     </paragragraph>
-
+                    <AmphibianPara4Voice/>
                 </div>
 
             </body>

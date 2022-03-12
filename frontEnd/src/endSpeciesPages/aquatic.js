@@ -63,6 +63,13 @@ import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrea
 import DarkModeFunction from '../darkMode/darkMode';
 
 
+//Text To Voices
+import {AquaticPara1Voice} from "../textToVoice/endAquaticVoice";
+import {AquaticPara2Voice} from "../textToVoice/endAquaticVoice";
+import {AquaticPara3Voice} from "../textToVoice/endAquaticVoice";
+import {AquaticPara4Voice} from "../textToVoice/endAquaticVoice";
+import {AquaticPara5Voice} from "../textToVoice/endAquaticVoice";
+
 
 export class Aquatic extends Component {
 
@@ -114,10 +121,11 @@ export class Aquatic extends Component {
             https://www.weforum.org/agenda/2019/08/here-are-5-reasons-why-the-ocean-is-so-important/*/}
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               The IUCN red list states that 37% of sharks and rays, 33% of coral reefs, 28% of Crustaceans and many more marine species are endangered with extinction.
-              This is mainly because of human activities like overfishing, plastic pollution, climate change and ocean noise by ships, oil/gas industry and militery sonar. 
+              This is mainly because of human activities like overfishing, plastic pollution, climate change and ocean noise by ships, oil/gas industry and military sonar. 
               Loss of species are dangereous because it is a sign showing that the ocean ecosystem is unbalanced.
               So, saving the ocean species are important because it provides food, medicine, jobs and helps to keeps our planet balanced.
             </paragragraph>
+            <AquaticPara1Voice/>
 
             <box className = "box4">
               <box className = "mediumSpeciesImgFrame">
@@ -271,19 +279,11 @@ export class Aquatic extends Component {
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Helps climate change:
             <br></br>
+            <br></br>
             Ocean species are vital for human being because it balances earth temperature and as they obsorve Co2 from the atmosphere and traps/absorve the earth heat under water, reducing earth temperature.
             The Ocean is a house for many tiny plant-like organisms and they provides 50-85% of our planet Oxygen and therefore, we must protect the marine species at all cost.
-            <br></br>
-            <br></br>
-            Provides Medicine:
-            <br></br>
-            Did you know that the ocean species provides medicine to treat cancer, arthritis, Alzheimer's deisease, and heart disease.
-            For example, the antiviral drugs Ara-A and AZT and the anticancer agent Ara-C, were developed from extracts of sponges found on a Caribbean reef.
-            Even now the NOAA scientists have been collecting and researching on sponges, corals, and other marine organisms to create new medicines.
-            For example, horseshoe crabs, seaweeds and marine bacteria have also been found to have useful medical properties.
-            
-            
           </paragragraph>
+          <AquaticPara2Voice/>
 
 
           <div className='container'>
@@ -428,22 +428,16 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Provides foods and ingredients:
-            <br></br>
-            Today, marine animals are the main source of protein for billions of people worldwide, and this demand is expected to increase even more.
-            Not only sea food but ocean also provides many different ingredients that are used on our foods like soyamilk and peanutbutter.
+            Provides Medicine:
             <br></br>
             <br></br>
-            Provides Jobs & Economy:
-            <br></br>
-            It is estimated that Fisheries and aquaculture currently employs aound 56 million people. 
-            In addition, more people are employed in following activities, like handling, processing and distribution of sea foods. 
-            The ocean provides healthy economy to many countries, especially, to developing countries, 
-            which is home to more than 3 billion people who rely on the sea to support their livelihoods and families.
+            Did you know that the ocean species provides medicine to treat cancer, arthritis, Alzheimer's deisease, and heart disease.
+            For example, the antiviral drugs Ara-A and AZT and the anticancer agent Ara-C, were developed from extracts of sponges found on a Caribbean reef.
+            Even now the NOAA scientists have been collecting and researching on sponges, corals, and other marine organisms to create new medicines.
+            For example, horseshoe crabs, seaweeds and marine bacteria have also been found to have useful medical properties.
           </paragragraph>
-
+          <AquaticPara3Voice/>
 
           <div className='container'>
             <box className = "box4">
@@ -576,7 +570,14 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            Provides foods and ingredients:
+            <br></br>
+            <br></br>
+            Today, marine animals are the main source of protein for billions of people worldwide, and this demand is expected to increase even more.
+            Not only sea food but ocean also provides many different ingredients that are used on our foods like soyamilk and peanutbutter.
+          </paragragraph>
+          <AquaticPara4Voice/>
 
 
           <div className='container'>
@@ -649,6 +650,16 @@ export class Aquatic extends Component {
               <line className = "thinLine"></line> 
           </div>
 
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            Provides Jobs & Economy:
+            <br></br>
+            <br></br>
+            It is estimated that Fisheries and aquaculture currently employs aound 56 million people. 
+            In addition, more people are employed in following activities, like handling, processing and distribution of sea foods. 
+            The ocean provides healthy economy to many countries, especially, to developing countries, 
+            which is home to more than 3 billion people who rely on the sea to support their livelihoods and families.
+          </paragragraph>
+          <AquaticPara5Voice/>
 
         </body>
         <AquaticPageSuvNav/>

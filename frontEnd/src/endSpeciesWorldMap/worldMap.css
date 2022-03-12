@@ -1,11 +1,26 @@
 .WorldMapContainer{
-    background-color: lightblue;
+    background-color: rgb(153, 230, 255);
     height: 800px;
     width: 1200px;
     margin: auto;
     margin-top: 50px;
     overflow: hidden;
+    border: 6px solid rgb(35,47,62);
+    border-radius: 20px;
 }
+.geog:focus {
+    outline: none;
+    box-shadow: none;
+    
+}
+.geog{
+    background-color: rgb(153, 230, 255);
+}
+.countries{
+    background-color: aquamarine;
+    font-size: 20px;
+}
+
 h2{
     margin: auto;
     text-align: center;

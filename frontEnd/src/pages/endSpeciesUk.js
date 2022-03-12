@@ -59,6 +59,11 @@ import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrea
 import DarkModeFunction from '../darkMode/darkMode';
 
 
+//Text To Voices
+import {UkSpeciesParagraph1Voice} from "../textToVoice/endUkSpeciesPageVoice";
+import {UkSpeciesParagraph2Voice} from "../textToVoice/endUkSpeciesPageVoice";
+
+
 export class EndnageredSpeciesUk extends Component {
 
     constructor(props) {
@@ -113,6 +118,7 @@ export class EndnageredSpeciesUk extends Component {
                             <br></br>
                             Not all the species listed below are endangered and its a mix of both endangered and nearly threatened species.
                         </paragragraph>
+                        <UkSpeciesParagraph1Voice/>
                     
                         <div className = "mainSubHeadFrame">
                             <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>R e p t i l e s</subhead>
@@ -386,6 +392,7 @@ export class EndnageredSpeciesUk extends Component {
                         These are the list of mammels species in the Uk that are listed as vulnerable, endangered or critically endangered.
                         For example, the wildcat and the greater mouse-eared bat is listed as critically endangered. And the beaver, red squirrel and the water vole is listed as endangered.
                     </paragragraph>
+                    <UkSpeciesParagraph2Voice/>
                 </div>
     
 

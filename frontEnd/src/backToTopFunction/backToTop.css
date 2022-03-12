@@ -8,8 +8,8 @@
     justify-content: center;
     cursor: pointer;
     background-color: #37475A;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     border: none;
   }
  

@@ -34,6 +34,13 @@ import walrus from '../images/endArtic/walrus.png';
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
 
+
+//Text To Voices
+import {ArticParagraph1Voice} from "../textToVoice/endArticPageVoice";
+import {ArticParagraph2Voice} from "../textToVoice/endArticPageVoice";
+import {ArticParagraph3Voice} from "../textToVoice/endArticPageVoice";
+
+
 export class Artic extends Component {
   
   constructor(props) {
@@ -83,16 +90,8 @@ export class Artic extends Component {
               The Arctic region is one of the most remote place on earth and is among the most spectacularly beautiful places on our planet.
               It is estimated that around 4 millions of people lives around the artic region.
               The people of Arctic coastal communities heavily rely on a healthy ocean life as a crutical source of food and to sustain a traditional way of life.
-              <br></br>
-              <br></br>
-              The Arctic region is also a home to the animal species found nowhere else on Earth. You can find the 400-year old Greenland shark, the longest living vertebrate on the earth.
-              And Narwhals, the unicorn of the sea, and the colorful Spectacled Eider.
-              Some of the most iconic animals species in the world like the Polar bears roams around artic region looking for ringed seals.
-              <br></br>
-              <br></br>
-              The most well known marine migrations on the planet flows through the Bering Strait to reach the Arctic Ocean every year.
-              Meaning the Artic region is very rich and diverse, and the area is important to the communities who live there and the planet.
             </paragragraph>
+            <ArticParagraph1Voice/>
 
 
             <box className = "box4">
@@ -185,6 +184,13 @@ export class Artic extends Component {
           </div>
 
 
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            The Arctic region is also a home to the animal species found nowhere else on Earth. You can find the 400-year old Greenland shark, the longest living vertebrate on the earth.
+            And Narwhals, the unicorn of the sea, and the colorful Spectacled Eider.
+            Some of the most iconic animals species in the world like the Polar bears roams around artic region looking for ringed seals.
+          </paragragraph>
+          <ArticParagraph2Voice/>
+
 
           <div className='container'>
             <box className = "box4">
@@ -276,6 +282,12 @@ export class Artic extends Component {
               <line className = "thinLine"></line> 
           </div>
           
+
+          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+            The most well known marine migrations on the planet flows through the Bering Strait to reach the Arctic Ocean every year.
+            Meaning the Artic region is very rich and diverse, and the area is important to the communities who live there and the planet.
+          </paragragraph>
+          <ArticParagraph3Voice/>
 
 
           <div className='container'>

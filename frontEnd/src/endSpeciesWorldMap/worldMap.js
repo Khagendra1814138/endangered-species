@@ -28,23 +28,66 @@ export const WorldMap = () => {
     const markers = [
       {
         markerOffset: -15,
-        name: "Sau Paulo",
-        coordinates: [-58.3816, -34.6037]
+        name: "South Ameria",
+        coordinates: [-55, -10.6037]
       },
       {
         markerOffset: -15,
-        name: "Melbourn",
-        coordinates: [144.963058, -37.813629]
+        name: "Austrlia",
+        coordinates: [136, -25]
       },
       {
         markerOffset: 25,
-        name: "Dhaka",
-        coordinates: [90.3816, 23.6037]
+        name: "Asia",
+        coordinates: [90, 30]
       },
       {
         markerOffset: 25,
-        name: "San Fransisco",
-        coordinates: [-122.419418, 37.774929]
+        name: "North America",
+        coordinates: [-100, 37]
+      },
+      {
+        markerOffset: 25,
+        name: "Africa",
+        coordinates: [20, 10]
+      },
+      {
+        markerOffset: -15,
+        name: "Antarctia",
+        coordinates: [0, -70]
+      },
+      {
+        markerOffset: -15,
+        name: "Europ",
+        coordinates: [10, 50]
+      },
+
+
+
+      {
+        markerOffset: 25,
+        name: "Atlantic Ocean",
+        coordinates: [-45, 25]
+      },
+      {
+        markerOffset: 25,
+        name: "Atlantic Ocean",
+        coordinates: [-20, -25]
+      },
+      {
+        markerOffset: -15,
+        name: "Artic Ocean",
+        coordinates: [36, 80]
+      },
+      {
+        markerOffset: 25,
+        name: "Pacific Ocean",
+        coordinates: [-122, -10]
+      },
+      {
+        markerOffset: 25,
+        name: "Indian Ocean",
+        coordinates: [82, -5]
       },
     ];
  
@@ -52,38 +95,42 @@ export const WorldMap = () => {
     return (
       <div className="pageMainFrameLight">
         <body className='pageBodyFrame'>
+          <div className = "mainSubHeadFrame">
+            <subhead className = "subheadLrg"> View Endangered Species around the World</subhead>
+          </div>
 
-          <h2>View Endangered Species around the World</h2>
           <ReactTooltip>
             {content}
           </ReactTooltip>
           <div className='WorldMapContainer'>
           
             
-            <ComposableMap data-tip = "">
-
+            <ComposableMap data-tip = "" className ="geog">
               <ZoomableGroup zoom={1}>
 
-                <Geographies className = "geog"geography={geoUrl}>
+                <Geographies className ="countries" geography={geoUrl}>
                   {({ geographies }) =>
                     geographies.map(geo => <Geography key={geo.rsmKey} geography={geo}
                       
                       onMouseEnter={()=>{
                       const {NAME} = geo.properties;
                       setContent(`${NAME}`);
+                      
                     }}
 
                     onMouseLeave={()=> { 
                       setContent ("");
                     }}
+
                     style={{
-                      
                       hover:{
                         fill: "orange",
                         outline: "none",
-                        fontFamily: "system-ui",
+                        fontFamily: "cambria",
+                        fontSize: "20",
                       },
                     }}
+             
                     />
                     
                     )
@@ -94,7 +141,7 @@ export const WorldMap = () => {
                   markers.map(({name, coordinates, markerOffset}) => (
                     <Marker key={name} coordinates={coordinates}>
                       <circle r={10} fill="aF100" stroke="#fff" strokeWidth={2}/>
-                      <text textAnchor='middle' y={markerOffset} style={{fontFamily: "system-ui", fill:"#5D5A6D"}}>
+                      <text textAnchor='middle' y={markerOffset} style={{fontFamily: "system-ui", fill:"red"}}>
                         {name}
                       </text>
                     </Marker>

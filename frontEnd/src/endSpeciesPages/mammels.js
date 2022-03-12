@@ -40,6 +40,15 @@ import spiderMonkey from '../images/endMammels/primates/spiderMonkey.png';
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
 
+
+//Text To Voices
+import {MammelsParagraph1Voice} from "../textToVoice/endMammelsPageVoice";
+import {MammelsParagraph2Voice} from "../textToVoice/endMammelsPageVoice";
+import {MammelsParagraph3Voice} from "../textToVoice/endMammelsPageVoice";
+import {MammelsParagraph4Voice} from "../textToVoice/endMammelsPageVoice";
+import {MammelsParagraph5Voice} from "../textToVoice/endMammelsPageVoice";
+
+
 export class Mammels extends Component {
 
   constructor(props) {
@@ -90,12 +99,9 @@ export class Mammels extends Component {
               Animals like land mammels are important because they play cructial rule in the foodchain and losing one animal species can have disastrous impacts on the rest of the ecosystem.
               For example, tiger species population are decreasing recently and most times, tigers are an apex preditor and is at the top of the foodchain.
               When the top preditor dies off, the prey like deers will start to over populate. More herbivores mean fewer plants, fewer plants mean less food and oxygen for other species, and so on.
-              <br></br>
-              <br></br>
               {/* https://www.greenmatters.com/p/why-endangered-species-matter */}
-              Most of the mammels species are in endangered because of their habitat loss like deforestation; population growth, hunting for meat/skin and illegal wildlife trades.
-              And now, climate change is another huge issue that is started to effect the mammels species.
             </paragragraph>
+            <MammelsParagraph1Voice/>
 
             <div className = "mainSubHeadFrame">
               <subhead className = {this.state.darkMode ? "subheadSmlDrk" : "subheadSml"}>S m a l l - M a m m e l s</subhead>
@@ -123,11 +129,12 @@ export class Mammels extends Component {
           
             <SmallMammelsCarousel/>
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              Just like the other animals, small mammels like the endangered species above are also important for the ecosystem as they play their part on the foodchain as well.
+              Small mammels like the endangered species above are also important for the ecosystem as they play their part on the foodchain as well.
               Sadly, even these small mammels are endangered and faces extinction... For example, there are 8 species of pangolin and all 8 species are listed as "critically endangered" by the IUCN.
               Pangolins are the most trafficked mammels around the world, and over the past decade, 
               more than million pangolins have been illegally taken from the wild to feed demand in China and Vietnam.
             </paragragraph>
+            <MammelsParagraph2Voice/>
           </div> 
 
   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -181,6 +188,7 @@ export class Mammels extends Component {
 
               {/* https://www.wwf.org.uk/learn/fascinating-facts/elephants */}
             </paragragraph>
+            <MammelsParagraph3Voice/>
           </div>
 
 
@@ -223,6 +231,7 @@ export class Mammels extends Component {
               Similarly, to the Elephants the Rhinoceros threats are mainly illegal poachers hunting for their horn and their habitat distruction.
               Although the white and the great one-horned rhnio population increase, they are still vulnerable.
             </paragragraph>
+            <MammelsParagraph4Voice/>
           </div>
 
   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -264,11 +273,13 @@ export class Mammels extends Component {
               </label>
             </box>
           </box>
-          
           <BigCatsCarousel/>
+      
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              Wass awass
-          </paragragraph>
+              Most of the mammels species are in endangered because of their habitat loss like deforestation; population growth, hunting for meat/skin and illegal wildlife trades.
+              And now, climate change is another huge issue that is started to effect the mammels species.
+            </paragragraph>
+            <MammelsParagraph5Voice/>
         </div>
           
 

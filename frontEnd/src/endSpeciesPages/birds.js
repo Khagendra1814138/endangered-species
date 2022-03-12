@@ -46,6 +46,15 @@ import spottedOwl from '../images/endBirds/owl/spottedOwl.png';
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
 
+
+//Text To Voices
+import {BirdsPara1Voice} from "../textToVoice/endBirdsPageVoice";
+import {BirdsPara2Voice} from "../textToVoice/endBirdsPageVoice";
+import {BirdsPara3Voice} from "../textToVoice/endBirdsPageVoice";
+import {BirdsPara4Voice} from "../textToVoice/endBirdsPageVoice";
+
+
+
 export class Birds extends Component {
   
     constructor(props) {
@@ -97,6 +106,7 @@ export class Birds extends Component {
                             Birds plays important role in the functioning of the worlds ecosystem, which can directly impact human health, 
                             food production and the economy as well as millions of other species.
                         </paragragraph>
+                        <BirdsPara1Voice/>
                         {/* https://www.birdlife.org/news/2019/01/04/why-we-need-birds-far-more-than-they-need-us/# */}
 
                         <box className = "box4">
@@ -197,15 +207,6 @@ export class Birds extends Component {
                     </div>
 
                     
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Pest Control:
-                        <br></br>
-                        <br></br>
-                        One of the best natural pest controllers are birds as their diet mainly consists of bugs and insects.
-                        This can be very benifical to agriculture around the world. Recent study shown that birds eats 400-500 million tons of insects per year.
-                        In china, 2/3 of House Swift birds diet consists of agricultural pests.
-                        In forests accross America, Evening Grosbeak are the main birds that controls Spruce Budworm outbrakes.
-                    </paragragraph>
 
                     <div className='container'>
                         <box className = "box4">
@@ -296,8 +297,16 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-
-
+                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Pest Control:
+                        <br></br>
+                        <br></br>
+                        One of the best natural pest controllers are birds as their diet mainly consists of bugs and insects.
+                        This can be very benifical to agriculture around the world. Recent study shown that birds eats 400-500 million tons of insects per year.
+                        In china, 2/3 of House Swift birds diet consists of agricultural pests.
+                        In forests accross America, Evening Grosbeak are the main birds that controls Spruce Budworm outbrakes.
+                    </paragragraph>
+                    <BirdsPara2Voice/>
 
                     <div className='container'>
                         <box className = "box4">
@@ -385,17 +394,7 @@ export class Birds extends Component {
                         <line className = "thinLine"></line> 
                     </div>
                     
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Pollinators:
-                        <br></br>
-                        <br></br>
-                        Not only bees and butterflies, but birds are also great pollinators. For example, hummingbirds and honeyeaters birds makes big contribution, espically in high altitudes or hot climates area.
-                        Quarter of Salivia species in South Africa are pollinated by birds. Not only plants but bird pollinators also benifit us directly.
-                        Around 5% of plants that are used for medicines or foods are pollinated by birds.
-                        
-                    </paragragraph>
-
-
+        
 
 
                     <div className='container'>
@@ -483,8 +482,15 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-
-
+                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                        Pollinators:
+                        <br></br>
+                        <br></br>
+                        Not only bees and butterflies, but birds are also great pollinators. For example, hummingbirds and honeyeaters birds makes big contribution, espically in high altitudes or hot climates area.
+                        Quarter of Salivia species in South Africa are pollinated by birds. Not only plants but bird pollinators also benifit us directly.
+                        Around 5% of plants that are used for medicines or foods are pollinated by birds.
+                    </paragragraph>
+                    <BirdsPara3Voice/>
 
                     <div className='container'>
                         <box className = "box4">
@@ -589,6 +595,7 @@ export class Birds extends Component {
                         Vultures are the best and most efficent scavengers that takes care of the dead animals, preventing the spread of diseases like rabies and tuberculosis.
                         Seabirds plays an important role in cycling nutrients and helping to fertilise marine ecosystems such as coral reefs.
                     </paragragraph>
+                    <BirdsPara4Voice/>
 
             </body>
             <BirdsPageSuvNav/>

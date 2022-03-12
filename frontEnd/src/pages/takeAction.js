@@ -24,6 +24,12 @@ import DarkModeFunction from '../darkMode/darkMode';
 
 //Text To Voices
 import {TakeActionParaVoice} from "../textToVoice/takeActionPageVoice";
+import {WWFParaVoice} from "../textToVoice/takeActionPageVoice";
+import {IUCNParaVoice} from "../textToVoice/takeActionPageVoice";
+import {OTPParaVoice} from "../textToVoice/takeActionPageVoice";
+import {UseEcosiaParaVoice} from "../textToVoice/takeActionPageVoice";
+import {TOCParaVoice} from "../textToVoice/takeActionPageVoice";
+import {OCParaVoice} from "../textToVoice/takeActionPageVoice";
 
 export class TakeAction extends Component {
   
@@ -87,6 +93,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <WWFParaVoice/>
                     
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame-White"}>
                 <line className = "thinLine"></line>
@@ -120,6 +127,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <IUCNParaVoice/>
           </div>
 
 
@@ -142,6 +150,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <OTPParaVoice/>
           </div>
             
 
@@ -165,6 +174,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <UseEcosiaParaVoice/>
           </div>
 
           <div className='container'>
@@ -187,6 +197,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <TOCParaVoice/>
             
             <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame-White"}>
                 <line className = "thinLine"></line>
@@ -201,7 +212,7 @@ export class TakeAction extends Component {
 
           <div className={this.state.darkMode ? "container" : "container2"}>
             <box className = "box">
-            <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
+              <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${oc})`}}></div>
               </image>
               
@@ -218,6 +229,7 @@ export class TakeAction extends Component {
                 </Link>
               </box>
             </box>
+            <OCParaVoice/>
           </div>
         
         </body>
