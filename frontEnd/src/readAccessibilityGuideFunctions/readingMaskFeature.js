@@ -29,10 +29,10 @@ export const ReadingMaskFeature = () => {
       return () => {
         document.removeEventListener("mousemove", transformCursor);
       };
-    }, [])
+    });
 
     return (
-        <div className="readingMaskFrame" ref={mainCursor} >
+        <div className="readingMaskFrame" ref={mainCursor}>
             <div className="upper"></div>
             <div className="borderUpper"></div>
             <div className="borderBottom"></div>
@@ -40,16 +40,15 @@ export const ReadingMaskFeature = () => {
         </div>
     );
   };
-
   const [show,setShow]=useState(false)
   return (
       <div>{show?<div><Bla/></div>:null}
-       <button className = "readingBtn" onClick={()=>setShow(!show)} >
-        <div className="buttonIcon"><RiQrScanFill size="3em" color="orange"/></div>
+       <button className = "readingBtn" onClick={()=>setShow(!show)}>
+        <div className="buttonIcon">
+          <RiQrScanFill size="3em" color="orange"/>
+        </div>
         <div className="buttonLabel"> Read Mask</div>
        </button> 
-       
       </div>
-
   );
 };

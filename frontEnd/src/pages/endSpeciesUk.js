@@ -53,6 +53,7 @@ import boletusRegius from '../images/endSpeciesUk/fungus/boletusRegius.png';
 import clitocybeAlexandri from '../images/endSpeciesUk/fungus/clitocybeAlexandri.png';
 import geoglossumElongatum from '../images/endSpeciesUk/fungus/geoglossumElongatum.png';
 import pholiotaAstragalina from '../images/endSpeciesUk/fungus/pholiotaAstragalina.png';
+import config from '../config';
 
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
@@ -76,7 +77,7 @@ export class EndnageredSpeciesUk extends Component {
     }
     
     componentDidMount(){
-        fetch("http://localhost:5000/api/endAnimalsUk")
+        fetch(config.backendUrl + "api/endAnimalsUk")
         .then (rest => rest.json())
         .then (endangeredSpeciesUkRecords => {
         this.setState({

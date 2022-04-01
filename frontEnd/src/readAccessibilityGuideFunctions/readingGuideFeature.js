@@ -28,10 +28,10 @@ export const ReadingGuideFeature = () => {
       return () => {
         document.removeEventListener("mousemove", transformCursor);
       };
-    }, [])
+    });
 
     return(
-      <div className="readingGuideFrame" ref={mainCursor} >
+      <div className="readingGuideFrame" ref={mainCursor}>
         <div className='triangle'>
           <div className='triangle2'></div>
         </div>
@@ -39,15 +39,15 @@ export const ReadingGuideFeature = () => {
       </div>
     );
   };
-
   const [show,setShow]=useState(false)
   return (
       <div>{show?<div><Bla/></div>:null}
-        <button className = "readingBtn2" onClick={()=>setShow(!show)} >
-          <div className="buttonIcon"><FaHandPointUp size="3em" color="orange"/></div>
+        <button className = "readingBtn2" onClick={()=>setShow(!show)}>
+          <div className="buttonIcon">
+            <FaHandPointUp size="3em" color="orange"/>
+          </div>
           <div className="buttonLabel"> Read Guide</div>
         </button> 
       </div>
-
   );
 };

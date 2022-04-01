@@ -35,6 +35,12 @@ import {KeepGardenHealthyParagraphVoice} from "../textToVoice/individualActionPa
 import {UseYourVoiceParagraphVoice} from "../textToVoice/individualActionPageVoice";
 import {TravelCompassionatlyParagraphVoice} from "../textToVoice/individualActionPageVoice";
 
+
+// sources used:
+// https://www.huffpost.com/entry/12-things-we-should-all-do-to-protect-endangered-species_b_58bd9c87e4b0abcb02ce2067
+// https://www.binnysfoodandtravel.com/2020/05/15/10-ways-you-can-help-to-save-our-endangered-species/
+// https://www.adoptananimalkits.com/advocate/how-to-help-animals/params/post/1282604/10-ways-to-help-endangered-species
+
 export class IndividualAction extends Component {
   
   constructor(props) {

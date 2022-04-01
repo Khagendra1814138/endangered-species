@@ -35,6 +35,7 @@ import bonobo from '../images/endMammels/primates/bonobo.png';
 import chimpanzee from '../images/endMammels/primates/chimpanzee.png';
 import gorrila from '../images/endMammels/primates/gorrila.png';
 import orangutan from '../images/endMammels/primates/orangutan.png';
+import config from '../config';
 
 
 
@@ -53,7 +54,7 @@ export class SmallMammelsCarousel extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({
@@ -120,7 +121,7 @@ export class LargeMammelsCarousel extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({
@@ -212,7 +213,7 @@ export class RhinosCarousel extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({
@@ -278,7 +279,7 @@ export class BigCatsCarousel extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({
@@ -346,7 +347,7 @@ export class PrimatesCarousel extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({

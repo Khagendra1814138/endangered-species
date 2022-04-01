@@ -38,7 +38,11 @@ import {AmphibianPara1Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara2Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara3Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara4Voice} from "../textToVoice/endAmphibianPageVoice";
+import config from '../config';
 
+
+//Information sources
+// {/* https://www.durrell.org/wildlife/amphibian-blog/eight-reasons-amphibians-are-amazing#:~:text=1.,spread%20of%20disease%2C%20including%20malaria. */}
 export class Amphibians extends Component {
   
     constructor(props) {
@@ -51,7 +55,7 @@ export class Amphibians extends Component {
     }
 
     componentDidMount(){
-        fetch("http://localhost:5000/api/amphibianSpecies")
+        fetch(config.backendUrl + "api/amphibianSpecies")
         .then (rest => rest.json())
         .then (endangeredAmphibiansRecords => {
         this.setState({
@@ -97,7 +101,6 @@ export class Amphibians extends Component {
                             They eat insects like musquitos, helping to reduce the spread of diseases like malaria.
                         </paragragraph>
                         <AmphibianPara1Voice/>
-                        {/* https://www.durrell.org/wildlife/amphibian-blog/eight-reasons-amphibians-are-amazing#:~:text=1.,spread%20of%20disease%2C%20including%20malaria. */}
 
                     <div className='container'>
                         <box className = "box4">
@@ -411,7 +414,7 @@ export class Amphibians extends Component {
                           
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                         One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
-                        This ablility is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
+                        This ability is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
                     </paragragraph>
                     <AmphibianPara4Voice/>
                 </div>

@@ -33,6 +33,7 @@ import walrus from '../images/endArtic/walrus.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
+import config from '../config';
 
 
 //Text To Voices
@@ -54,7 +55,7 @@ export class Artic extends Component {
 
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/articSpecies")
+      fetch(config.backendUrl + "api/articSpecies")
       .then (rest => rest.json())
       .then (endangeredArticRecords => {
       this.setState({

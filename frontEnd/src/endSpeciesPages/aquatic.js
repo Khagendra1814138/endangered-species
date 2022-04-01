@@ -61,6 +61,7 @@ import stellarSeaLion from '../images/endAquatic/stellarSeaLion.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
+import config from '../config';
 
 
 //Text To Voices
@@ -84,7 +85,7 @@ export class Aquatic extends Component {
 
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/aquaticSpecies")
+      fetch(config.backendUrl + "api/aquaticSpecies")
       .then (rest => rest.json())
       .then (endangeredAquaticRecords => {
       this.setState({

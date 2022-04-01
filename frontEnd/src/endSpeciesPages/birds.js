@@ -45,6 +45,7 @@ import spottedOwl from '../images/endBirds/owl/spottedOwl.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
+import config from '../config';
 
 
 //Text To Voices
@@ -68,7 +69,7 @@ export class Birds extends Component {
 
     
     componentDidMount(){
-        fetch("http://localhost:5000/api/birdSpecies")
+        fetch(config.backendUrl + "api/birdSpecies")
         .then (rest => rest.json())
         .then (endangeredBirdsRecords => {
         this.setState({

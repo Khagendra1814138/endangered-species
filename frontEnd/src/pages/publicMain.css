@@ -257,11 +257,12 @@
     border-radius: 6px;
     border: 2px solid #F3F0D7;
     color: var(--color-footer);
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228)
 }
 .paragpaphLrg-Dark{
     min-height: auto;
     width: 1020px;
-    padding: 6px;
+    padding: 10px;
     background-color: transparent;
     display: flex;
     margin: auto;
@@ -270,6 +271,7 @@
     border-radius: 6px;
     border: 2px solid var(--color-darkBorder);
     color: white;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228)
 }
 
 

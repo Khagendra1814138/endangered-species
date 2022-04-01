@@ -6,6 +6,8 @@ import './textToVoice.css';
 
 import {AiFillSound} from 'react-icons/ai';
 
+//https://www.npmjs.com/package/react-webspeech library link
+
 export const HomeParagraphOneVoice = () => {
     // const [text, setText] = useState
     const [text] = useState

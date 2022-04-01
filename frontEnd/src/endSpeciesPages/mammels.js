@@ -39,6 +39,7 @@ import spiderMonkey from '../images/endMammels/primates/spiderMonkey.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
+import config from '../config';
 
 
 //Text To Voices
@@ -61,7 +62,7 @@ export class Mammels extends Component {
   }
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/mammelsSpecies")
+      fetch(config.backendUrl + "api/mammelsSpecies")
       .then (rest => rest.json())
       .then (endangeredMammelsRecords => {
       this.setState({
@@ -96,7 +97,7 @@ export class Mammels extends Component {
 
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               The IUCN states that 26% of mammels are endangered and faces extinction soon if action are not taken.
-              Animals like land mammels are important because they play cructial rule in the foodchain and losing one animal species can have disastrous impacts on the rest of the ecosystem.
+              Animals like land mammels are important because they play crucial rule in the foodchain and losing one animal species can have disastrous impacts on the rest of the ecosystem.
               For example, tiger species population are decreasing recently and most times, tigers are an apex preditor and is at the top of the foodchain.
               When the top preditor dies off, the prey like deers will start to over populate. More herbivores mean fewer plants, fewer plants mean less food and oxygen for other species, and so on.
               {/* https://www.greenmatters.com/p/why-endangered-species-matter */}

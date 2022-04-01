@@ -29,6 +29,7 @@ import whiteFerula from '../images/endFungus/whiteFerula.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
+import config from '../config';
 
 //Text To Voices
 import {FungusPara1Voice} from "../textToVoice/endFungusPageVoice";
@@ -52,7 +53,7 @@ export class Fungus extends Component {
 
   
   componentDidMount(){
-      fetch("http://localhost:5000/api/fungiSpecies")
+      fetch(config.backendUrl + "api/fungiSpecies")
       .then (rest => rest.json())
       .then (endangeredFungusRecords => {
       this.setState({

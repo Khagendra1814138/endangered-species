@@ -30,6 +30,7 @@ router.post("/mammelsSpecies", async (req, res) => {
     const newMammelSpecies = new mammelSpecies({
         name: req.body.mammelName,
         type: req.body.mammelType,
+        location: req.body.mammelLocation,
     })
     console.log(req.body);
     await newMammelSpecies.save()
@@ -44,7 +45,7 @@ router.get("/extinctSpecies", async (req, res) => {
     const posts = await extinctSpecies.find()
     res.send(posts)
 })
-//Endangered Species Uk
+//Extinct species
 router.post("/extinctSpecies", async (req, res) => {
     const newExtinctSpecies = new extinctSpecies({
         name: req.body.ExtinctSpeciesName,
@@ -70,6 +71,7 @@ router.post("/articSpecies", async (req, res) => {
     const newEndangeredArticSpecies = new endangeredArtic({
         name: req.body.ArticName,
         type: req.body.ArticType,
+        location: req.body.ArticLocation,
     })
     console.log(req.body);
     await newEndangeredArticSpecies.save()
@@ -86,11 +88,12 @@ router.get("/aquaticSpecies", async (req, res) => {
     const posts = await endangeredAquatic.find()
     res.send(posts)
 })
-//Endangered Species Uk
+//Allows the user to post data to the database
 router.post("/aquaticSpecies", async (req, res) => {
     const newEndangeredAquaticSpecies = new endangeredAquatic({
         name: req.body.AquaticName,
         type: req.body.AquaticType,
+        location: req.body.AquaticLocation,
     })
     console.log(req.body);
     await newEndangeredAquaticSpecies.save()
@@ -111,6 +114,7 @@ router.post("/plantSpecies", async (req, res) => {
     const newEndangeredPlantsSpecies = new endangeredPlants({
         name: req.body.PlantName,
         type: req.body.PlantType,
+        location: req.body.PlantLocation,
     })
     console.log(req.body);
     await newEndangeredPlantsSpecies.save()
@@ -132,6 +136,7 @@ router.post("/fungiSpecies", async (req, res) => {
     const newEndangeredFungusSpecies = new endangeredFungus({
         name: req.body.FungusName,
         type: req.body.FungusType,
+        location: req.body.FungusLocation,
     })
     console.log(req.body);
     await newEndangeredFungusSpecies.save()
@@ -147,11 +152,12 @@ router.get("/amphibianSpecies", async (req, res) => {
     const posts = await endangeredAmphibians.find()
     res.send(posts)
 })
-//Endangered Species Uk
+//Endangered Species Amphibian
 router.post("/amphibianSpecies", async (req, res) => {
     const newEndangeredAmphibianSpecies = new endangeredAmphibians({
         name: req.body.AmphibianName,
         type: req.body.AmphibianType,
+        location: req.body.AmphibianLocation,
     })
     console.log(req.body);
     await newEndangeredAmphibianSpecies.save()
@@ -173,6 +179,7 @@ router.post("/birdSpecies", async (req, res) => {
     const newEndangeredBirdSpecies = new endangeredBirds({
         name: req.body.BirdName,
         type: req.body.BirdType,
+        location: req.body.BirdsLocation,
     })
     console.log(req.body);
     await newEndangeredBirdSpecies.save()
@@ -194,6 +201,7 @@ router.post("/endAnimalsUk", async (req, res) => {
     const newEndangeredUkSpecies = new endangeredSpeciesUk({
         name: req.body.UKname,
         speciesType: req.body.UKspeciesType,
+        location: req.body.UkLocation,
     })
     console.log(req.body);
     await newEndangeredUkSpecies.save()

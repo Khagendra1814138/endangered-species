@@ -37,7 +37,8 @@ import {OverFishingParagraphVoice} from "../textToVoice/causesPageVoice";
 import {DiseaseParagraphVoice} from "../textToVoice/causesPageVoice";
 import {OilGasDevelopmentParagraphVoice} from "../textToVoice/causesPageVoice";
 
-
+//Sources
+//https://ourworldindata.org/threats-to-wildlife
 export class Causes extends Component {
   
   constructor(props) {

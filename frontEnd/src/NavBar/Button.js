@@ -13,7 +13,7 @@ export function SignUpButton (){
 export function LogInButton (){
     return(
         <Link exact to="./logIn">
-            <button className="btn">Log-In</button>
+            <button className="btn">Log In</button>
         </Link>
     )
 }

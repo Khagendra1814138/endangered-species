@@ -11,7 +11,7 @@ import {BiPointer} from 'react-icons/bi';
 import "./readingGuideFeature.css";
 
 export const LargeCursorFeature = () => {
-  function Bla(){
+  function LargeCurser(){
       const mainCursor = useRef();
   
       const transformCursor = (event) => {
@@ -44,7 +44,7 @@ export const LargeCursorFeature = () => {
     const [show,setShow]=useState(false)
     
     return (
-      <div>{show?<div><Bla/></div>:null}
+      <div>{show?<div><LargeCurser/></div>:null}
         <button className = "readingBtn3" onClick={()=>setShow(!show)}>
           <div className="buttonIcon"><BiPointer size="3.2em" color="orange"/></div>
           <div className="buttonLabel"> Big Cursor</div>

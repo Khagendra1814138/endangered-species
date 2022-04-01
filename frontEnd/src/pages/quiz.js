@@ -113,7 +113,7 @@ export const QuizPage = () => {
 	const [showScore, setShowScore] = useState(false);
 	const [score, setScore] = useState(0);
 
-	const handleAnswerOptionClick = (isCorrect) => {
+	const checkAnswerOptionClick = (isCorrect) => {
 		if (isCorrect) {
 			setScore(score + 1);
 		}
@@ -166,7 +166,7 @@ export const QuizPage = () => {
 								</div>
 								<div className='answer-frame'>
 									{questions[currentQuestion].answerOptions.map((answerOption) => (
-										<button className="quizButton" onClick={() => handleAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
+										<button className="quizButton" onClick={() => checkAnswerOptionClick(answerOption.isCorrect)}>{answerOption.answerText}</button>
 									))}
 								</div>
 							</>

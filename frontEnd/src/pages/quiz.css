@@ -169,7 +169,7 @@
     #000 10px,
     #000 20px
   );
-    text-decoration: underline wavy;
+    /* text-decoration: underline wavy; */
   }
   
   .correct {

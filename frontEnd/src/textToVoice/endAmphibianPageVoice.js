@@ -85,7 +85,7 @@ export const AmphibianPara4Voice = () => {
     const [text] = useState
     (
     `One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
-    This ablility is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
+    This ability is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
     `
     );
 

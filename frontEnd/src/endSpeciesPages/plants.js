@@ -28,6 +28,7 @@ import euphorbiaObesa from '../images/endPlant/strangePlants/euphorbiaObesa.png'
 import flyingVenusTrap from '../images/endPlant/strangePlants/flyingVenusTrap.png';
 import Rafflesia from '../images/endPlant/strangePlants/Rafflesia.png';
 import taccaChantrieri from '../images/endPlant/strangePlants/taccaChantrieri.png';
+import config from '../config';
 
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
@@ -42,6 +43,11 @@ import {PlantsPara4Voice} from "../textToVoice/endPlantsPageVoice";
 import {PlantsPara5Voice} from "../textToVoice/endPlantsPageVoice";
 import {PlantsPara6Voice} from "../textToVoice/endPlantsPageVoice";
 
+// sources
+// https://theimportantsite.com/10-reasons-why-plants-are-important/
+// https://www.woodlandtrust.org.uk/blog/2018/04/why-plants-are-important/
+
+
 export class Plants extends Component {
   
   constructor(props) {
@@ -54,7 +60,7 @@ export class Plants extends Component {
   }
 
   componentDidMount(){
-      fetch("http://localhost:5000/api/plantSpecies")
+      fetch(config.backendUrl + "api/plantSpecies")
       .then (rest => rest.json())
       .then (endangeredPlantsRecords => {
       this.setState({

@@ -53,6 +53,7 @@
     align-items: center;
     background: rgb(35,47,62);
     border-bottom: 6px solid #37475A;
+    /* border-top: 1px solid black; */
   }
   .darmodeLabel{
     font-size: 24px;

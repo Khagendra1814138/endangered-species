@@ -1,22 +1,16 @@
 import React from 'react';
 import { useState } from "react";
 import { useSpeechSynthesis } from 'react-webspeech';
-
 import './textToVoice.css';
-
 import {AiFillSound} from 'react-icons/ai';
-
 export const MammelsParagraph1Voice = () => {
-    // const [text, setText] = useState
     const [text] = useState
-    (
-    `
+    (`
         The IUCN states that 26% of mammels are endangered and faces extinction soon if action are not taken.
-        Animals like land mammels are important because they play cructial rule in the foodchain and losing one animal species can have disastrous impacts on the rest of the ecosystem.
+        Animals like land mammels are important because they play crucial rule in the foodchain and losing one animal species can have disastrous impacts on the rest of the ecosystem.
         For example, tiger species population are decreasing recently and most times, tigers are an apex preditor and is at the top of the foodchain.
         When the top preditor dies off, the prey like deers will start to over populate. More herbivores mean fewer plants, fewer plants mean less food and oxygen for other species, and so on.
-    `
-    );
+    `);
   
     const { speak, voices} = useSpeechSynthesis();
     return (

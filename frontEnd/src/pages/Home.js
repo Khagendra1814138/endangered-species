@@ -27,10 +27,12 @@ import medical from '../images/medical.jpg';
 import balanceEco from '../images/balanceEco.png';
 import research from '../images/research.png';
 import ecosystemService from '../images/ecosystemService.png';
+import config from '../config';
 
 //Sources for the information used:
 // https://www.fws.gov/nativeamerican/pdf/why-save-endangered-species.pdf
 // https://www.endangered.org/importance-of-the-endangered-species-act/
+// https://edis.ifas.ufl.edu/pdf/UW/UW06400.pdf
 
 export class Home extends Component {
   
@@ -44,7 +46,7 @@ export class Home extends Component {
   }
 
   componentDidMount(){
-    fetch("http://localhost:5000/api/extinctSpecies")
+    fetch(config.backendUrl + "api/extinctSpecies")
     .then (rest => rest.json())
     .then (extinctSpeciesRecord => {
     this.setState({
@@ -98,6 +100,7 @@ export class Home extends Component {
                 And more than 70 species are now considered as extinct in the wild! stated by the IUCN. 
                 Extinct in the wild means that the species is the only living members kept in captivity or as a naturalized population outside its historic range due to massive habitat loss.
                 The UN report states that around 1 million animal and plant species are now threatened with extinction, many within decades.
+                {/* https://ourworldindata.org/extinctions#:~:text=Extinctions%20have%20been%20a%20natural,in%20the%20last%20five%20centuries. */}
               </paragragraph>
               <HomeParagraphOneVoice/>
             </box>
@@ -134,11 +137,7 @@ export class Home extends Component {
                 </image>
 
                 <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                  {this.state.ExtinctSpeciesItems.length > 0 && (
-                    <div>
-                      {this.state.ExtinctSpeciesItems[4].name}
-                    </div>
-                  )}
+                  {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[4].name}</div>)}
                 </label>
               </box>
             </box>

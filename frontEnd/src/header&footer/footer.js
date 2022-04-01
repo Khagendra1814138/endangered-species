@@ -23,17 +23,23 @@ export const Footer = () => {
               <Link to='/individualAction' className='footer-nav-links'> Individual Action </Link>
               <Link to='/takeAction' className='footer-nav-links'> Take Action </Link>
               <Link to='/signUp' className='footer-nav-links'> Sign Up </Link>
-              <Link to='/endSpeciesUk' className='footer-nav-links'> Endangered Species UK </Link>
+              <Link to='/logIn' className='footer-nav-links'> Log In</Link>
             </li>
             <line className = "lineDown"></line>
             <li className='footerNavlink'>
-              <Link to='/amphibians' className='footer-nav-links'> Amphibians </Link>
-              <Link to='/birds' className='footer-nav-links'> Birds </Link>
-              <Link to='/artic' className='footer-nav-links'> Artic </Link>
-              <Link to='/aquatic' className='footer-nav-links'> Aquatic </Link>
-              <Link to='/fungus' className='footer-nav-links'> Fungi </Link>
-              <Link to='/plants' className='footer-nav-links'> Plants </Link>
-              <Link to='/mammels' className='footer-nav-links'> Mammels </Link>
+              <Link to='/quiz' className='footer-nav-links'> Take Quiz </Link>
+              <Link to='/worldMap' className='footer-nav-links'> World Map </Link>
+              <Link to='/amphibians' className='footer-nav-links'> Endangered Amphibians </Link>
+              <Link to='/birds' className='footer-nav-links'> Endangered Birds </Link>
+              <Link to='/artic' className='footer-nav-links'> Endangered Artic </Link>
+              <Link to='/aquatic' className='footer-nav-links'> Endangered Aquatic </Link>
+              <Link to='/fungus' className='footer-nav-links'> Endangered Fungi </Link>
+            </li>
+            <line className = "lineDown"></line>
+            <li className='footerNavlink'>
+              <Link to='/plants' className='footer-nav-links'> Endangered Plants </Link>
+              <Link to='/mammels' className='footer-nav-links'> Endangered Mammels </Link>
+              <Link to='/endSpeciesUk' className='footer-nav-links'> Endangered Species UK </Link>
             </li>
           </box>
           <box className = "socialLinkBox">
