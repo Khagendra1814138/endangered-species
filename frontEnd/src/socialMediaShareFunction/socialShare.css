@@ -1,66 +1,44 @@
 .socialShareContainer{
     height: auto;
-    width: auto;
-    background-color: transparent;
-    display: block;
+    width:  auto;
     position: fixed;
     bottom: 40px;
     left: 0px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    display: grid;
+    grid-template-rows: auto auto auto;
 }
 .socialLogoFacebook{
-    height: 52px;
-    width: 56;
-    background-color: transparent;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    grid-row-start: 1;
+    height: 50px;
+    width: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .socialLogoFacebook:hover{
-    height: 52px;
-    width: 80px;
+    width: 70px;
     background-color: #3B5998;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
 }
 
 .socialLogoTwitter{
-    height: 52px;
-    width: 56;
-    background-color: transparent;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    grid-row-start: 2;
+    height: 50px;
+    width: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .socialLogoTwitter:hover{
-    height: 52px;
-    width: 80px;
+    width: 70px;
     background-color: #00ACED;
-    display: block;
-    margin: auto;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
 }
 
 .socialLogoWhatsapp{
-    height: 52px;
-    width: 56;
-    background-color: transparent;
-    display: block;
-    justify-content: center;
-    align-items: center;
+    grid-row-start: 3;
+    height: 50px;
+    width: 50px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
 }
 .socialLogoWhatsapp:hover{
-    height: 52px;
-    width: 80px;
+    width: 70px;
     background-color: #25D366;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
 }

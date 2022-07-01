@@ -12,12 +12,14 @@
     padding-bottom: 2px;
     padding-left: 8px;
     padding-right: 8px;
-    box-shadow: -3px -3px 3px rgba(44, 44, 46, 0.228), 6px 6px 6px grey;
+    z-index: 3;
+    box-shadow: -3px -3px 3px rgb(94, 104, 121, .228), 6px 6px 6px rgba(37, 41, 48, 0.301);
+    transition: 0.5s ease;
+    position: relative;
 }
 .textToVoiceBtn:hover{
     cursor: pointer;
-    border: 4px dashed orange;
-    transition: 200ms ease-in-out;
+    border: 4px solid orange;
 }
 
 
@@ -46,4 +48,8 @@
     font-weight: bold;
     font-family: var(--font-family);
     color: white;
+    transition: 0.4s ease;
+}
+.textToVoiceBtn:hover .paraBtnLabel{
+    color: orange;
 }

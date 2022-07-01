@@ -1,28 +1,43 @@
 .scrollTop {
-    height: 60px;
-    width: 60px;
-    position: fixed;
-    bottom: 0px;
-    right: 0px;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    background-color: #37475A;
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    border: none;
-  }
- 
-  .scrollTop:hover{
-    border: 4px dashed orange;
-    transition: 100ms ease-in-out;
-  }
-  
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 0.5;
-    }
-  }
+  height: 36px;
+  width: 160px;
+  position: fixed;
+  bottom: 0px;
+  right: 45.55%;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #37475A;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: none;
+  border-left: 4px solid #37475A;
+  border-right: 4px solid #37475A;
+  border-top: 4px solid #37475A;
+  z-index: 3;
+  transition: 0.5s ease;
+}
+
+.scrollTop:hover{
+  border-left: 4px solid orange;
+  border-right: 4px solid orange;
+  border-top: 4px solid orange;
+}
+
+
+.backToTop-label{
+  height: auto;
+  width: auto;
+  background-color: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.4s ease;
+}
+
+
+.scrollTop:hover .backToTop-label{
+  color: orange;
+}

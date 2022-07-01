@@ -1,0 +1,260 @@
+.button-underline{
+    height: 300px;
+    width: 300px;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: 300px;
+    padding-top: 10px;
+    border-radius: 50%;
+}
+.button-underline::after{
+    content: '';
+    height: 4px;
+    width: 0%;
+    background-color: wheat;
+    display: block;
+    transition: width 0.5s;
+    margin: auto;
+    margin-top: 10px;
+}
+.button-underline:hover::after{
+    content: '';
+    width: 100%;
+}
+
+
+
+
+
+
+.button-slide{
+    height: 100px;
+    width: 300px;
+    background-color: aliceblue;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: 300px;
+    position: relative;
+    z-index: 1;
+    transition: color 300ms ease;
+    color: black;
+}
+.button-slide::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background-color: aquamarine;
+    transform: scaleX(0);
+    transition: 0.5s ease;
+    /* makes it start from the LEFT / RIGHT */
+    transform-origin: right; 
+}
+.button-slide:hover::before,
+.button-slide:focus::before{
+    transform: scaleX(1);
+}
+.button-slide:hover,
+.button-slide:focus{
+    color: yellow;
+}
+
+
+
+
+
+
+
+.button-border{
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+    border: none;
+    outline: none;
+    font-size: 30px;
+    font-weight: 300px;
+    position: relative;
+}
+
+.button-border::before,
+.button-border::after{
+    content: '';
+    position: absolute;
+    height: 0%;
+    width: 0%;
+    box-sizing: border-box;
+    transition: all 0.8s ease;
+}   
+.button-border::before{
+    left: 0;
+    bottom: 0;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.button-border::after{
+    right: 0;
+    top: 0;
+    border-top: 4px solid transparent;
+    border-right: 4px solid transparent;
+}
+
+.button-border:hover::after,
+.button-border:hover::before{
+    border-color: aqua;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+.buttonCoolBorder{
+    height: 400px;
+    width: 400px;
+    position: relative;
+    background-color: aliceblue;
+    z-index: 1;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonCoolBorder::before,
+.buttonCoolBorder::after{
+    position: absolute;
+    content: '';
+    border-style: solid;
+    border-color: rebeccapurple;
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.buttonCoolBorder::before{
+    width: 100%;
+    height: 0%;
+    top: 50%;
+    left: 0%;
+    transform: translate(-1%, -50%);
+    border-width: 0px 4px;
+}
+
+.buttonCoolBorder::after{
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -1%);
+    border-width: 4px 0px;
+    margin: auto;
+}
+
+.buttonCoolBorder:hover::before{
+    height: 102%;
+}
+.buttonCoolBorder:hover::after{
+    width: 102%;
+}
+
+
+
+
+
+
+
+
+.buttonAnimation{
+    height: 200px;
+    width: 200px;
+    position: relative;
+    background-color: black;
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.buttonAnimation::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.buttonAnimation::after{
+    content: 'Animation';
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background: black;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    color: white;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.buttonAnimation:hover::before{
+    background: conic-gradient(from 90deg, rgb(0 0 0 / 0%) 70%, rgb(255 0 106)100%);
+    animation: rotate 2s linear infinite;
+}
+
+
+
+
+.buttonAnimation2{
+    height: 100px;
+    width: 200px;
+    background-color: aliceblue;
+    display: block;
+    border: none;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+.buttonAnimation2::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(193, 239, 255);
+    border-radius: 50%;
+    padding: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+}
+button:active::before{
+    transition: 0s;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+}
+.buttonAnimation2:hover{
+    width: 500px;
+}

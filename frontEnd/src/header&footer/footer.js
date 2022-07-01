@@ -39,6 +39,8 @@ export const Footer = () => {
             <li className='footerNavlink'>
               <Link to='/plants' className='footer-nav-links'> Endangered Plants </Link>
               <Link to='/mammels' className='footer-nav-links'> Endangered Mammels </Link>
+              <Link to='/insectsMain' className='footer-nav-links'> Endangered Insects </Link>
+              <Link to='/reptiles' className='footer-nav-links'> Endangered Reptiles </Link>
               <Link to='/endSpeciesUk' className='footer-nav-links'> Endangered Species UK </Link>
             </li>
           </box>

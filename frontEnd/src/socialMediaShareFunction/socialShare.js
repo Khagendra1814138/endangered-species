@@ -35,19 +35,19 @@ export const SocialShareFunction = () => {
         <div className="socialShareContainer">
             <div className='socialLogoFacebook'>
                 <FacebookShareButton url={shareUrl} quote={"Learn about endangered species all around the world?"} hashtag={"#EndageredSpecies"}> 
-                    <FacebookIcon size={52}/> 
+                    <FacebookIcon size={50}/> 
                 </FacebookShareButton>
             </div>
 
             <div className='socialLogoTwitter'>
                 <TwitterShareButton url={shareUrl}>
-                    <TwitterIcon size={52}/>
+                    <TwitterIcon size={50}/>
                 </TwitterShareButton>
             </div>
 
             <div className='socialLogoWhatsapp'>
                 <WhatsappShareButton url={shareUrl}>
-                    <WhatsappIcon size={52}/>
+                    <WhatsappIcon size={50}/>
                 </WhatsappShareButton>
             </div>
         </div>

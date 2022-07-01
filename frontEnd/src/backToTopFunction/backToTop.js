@@ -27,7 +27,8 @@ export const ScrollToTopArrow = () =>{
 
   return (
     <button className= "scrollTop" onClick={scrollTop} style={{color: "orange", display: showScroll ? 'flex' : 'none'}} >
-      <FaArrowUp size="3em" color="orange"/>
+      <FaArrowUp size="2em" color="orange"/>
+      <label className='backToTop-label'>Back to Top</label>
     </button>
     
   );

@@ -10,11 +10,11 @@ export default function FontSizeIncreaser({ fontSize, setFontSize }){
 		<div className='buttonsContainer'>
 			<div className="fontSizeIncreasebuttonLabel"> Font Size </div>
 			<button className="paraButton" onClick={() => setFontSize(fontSize = 18)}>
-				<FaMinusSquare size="3em" color="orange"/>
+				<FaMinusSquare size="2.5em" color="orange"/>
 			</button>
 				<div className='fontSizeDisplay'>{Math.floor((fontSize/18) * 100)}%</div>
 			<button className="paraButton" onClick={() => setFontSize(fontSize + 2)}>
-				<FaPlusSquare size="3em" color="orange"/>
+				<FaPlusSquare size="2.5em" color="orange"/>
 			</button>
 		</div>
 	)

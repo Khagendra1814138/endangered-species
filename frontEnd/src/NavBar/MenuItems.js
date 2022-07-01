@@ -36,8 +36,18 @@ export const MenuItems = [
       cName: 'dropdown-link'
     },
     {
+      title: 'Insects',
+      path: '/insectsMain',
+      cName: 'dropdown-link'
+    },
+    {
+      title: 'Reptiles',
+      path: '/reptiles',
+      cName: 'dropdown-link'
+    },
+    {
       title: 'UK',
       path: '/endSpeciesUk',
       cName: 'dropdown-link'
-    }
+    },
   ];

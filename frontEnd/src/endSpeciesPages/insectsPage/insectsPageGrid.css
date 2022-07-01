@@ -1,0 +1,22 @@
+.insects-grid-3columns-2rows {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    background-color: none;
+    margin: auto;
+    margin-top: 100px;
+    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    justify-content: center;
+    width: 1002px;
+    height: auto;
+}
+
+
+.item{
+    background-color: none;
+    font-size: 30px;
+    height: auto;
+    width: auto;
+    /* border: 1px solid black; */
+}

@@ -2,9 +2,9 @@ import React from 'react';
 import { useState } from "react";
 
 import './quiz.css';
-import './publicMain.css';
+import '../publicMain.css';
 
-import {QuizSuvNav} from "../subNav/subNavigation";
+import {QuizSuvNav} from "../../subNav/subNavigation";
 
 import {BsBookHalf} from 'react-icons/bs';
 import {RiRestartFill} from 'react-icons/ri';

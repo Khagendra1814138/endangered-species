@@ -17,6 +17,7 @@
     display: block;
     margin: auto;
     position: fixed;
+    z-index: 2;
 }
 
 .triangle{
@@ -60,6 +61,7 @@
     background-color: transparent;
     display: block;
     position: fixed;
+    z-index: 2;
 }
 .upper{
     height: 3000px;
@@ -98,21 +100,24 @@
     width: 180px;
     display: flex;
     margin: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     position: fixed;
-    bottom: 128px;
+    bottom: 100px;
     right: 0px;
     align-items: center;
     justify-content: center;
     background-color: var(--color-darkBorder);
     border: none;
     color: white;
+    z-index: 3;
+    transition: 0.2s ease;
 }
 .readingBtn:hover{
     cursor: pointer;
-    border: 4px dashed orange;
-    transition: 200ms ease-in-out;
+    border-left: 4px solid orange;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
 }
 
 .readingBtn2{
@@ -120,21 +125,24 @@
     width: 180px;
     display: flex;
     margin: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     position: fixed;
-    bottom: 64px;
+    bottom: 40px;
     right: 0px;
     align-items: center;
     justify-content: center;
     background-color: var(--color-darkBorder);
     border: none;
     color: white;
+    z-index: 3;
+    transition: 0.2s ease;
 }
 .readingBtn2:hover{
     cursor: pointer;
-    border: 4px dashed orange;
-    transition: 200ms ease-in-out;
+    border-left: 4px solid orange;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
 }
 
 .readingBtn3{
@@ -142,10 +150,10 @@
     width: 180px;
     display: flex;
     margin: auto;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
     position: fixed;
-    bottom: 192px;
+    bottom: 160px;
     right: 0px;
     align-items: center;
     justify-content: center;
@@ -153,11 +161,14 @@
     border: none;
     color: white;
     padding: 6px;
+    z-index: 3;
+    transition: 0.2s ease;
 }
 .readingBtn3:hover{
     cursor: pointer;
-    border: 4px dashed orange;
-    transition: 200ms ease-in-out;
+    border-left: 4px solid orange;
+    border-top: 4px solid orange;
+    border-bottom: 4px solid orange;
 }
 
 .buttonIcon{
@@ -176,13 +187,23 @@
     background-color: none;
     justify-content: center;
     align-items: center;
-    font-size: 22px;
+    font-size: 20px;
     margin: auto;
     margin-left: -4px;
     font-weight: bold;
     font-family: var(--font-family);
+    transition: 0.4s ease;
 }
 
+.readingBtn:hover .buttonLabel{
+    color: orange;
+}
+.readingBtn2:hover .buttonLabel{
+    color: orange;
+}
+.readingBtn3:hover .buttonLabel{
+    color: orange;
+}
 
 
 .customPointerFrame{
@@ -194,26 +215,11 @@
     justify-content: center;
     align-items: center;
     position: fixed;
+    z-index: 2;
 }
 .customPointer{
     height: auto;
     width: auto;
     background-color: transparent;
     margin: auto;
-}
-@keyframes cursorAnim3 {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(3);
-    }
-    100% {
-        transform: scale(1);
-        opacity: 0;
-    }
-}
-.expand{
-    animation: cursorAnim3 .5s forwards;
-    border: 1px solid red;
 }

@@ -1,0 +1,43 @@
+:root {
+    --primary: #1888ff;
+    --secondary: #5cabff;
+}
+
+#loginNavbar{
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.900);
+    display: flex;
+    padding: 4px;
+    justify-content: right;
+    align-items: center;
+    /* border-bottom: 1px solid #37475A; */
+}
+
+.navbar-logo {
+    height: auto;
+    width: auto;
+    padding: 4px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-left: 4px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#logoLabel{
+    font-weight: bold;
+    font-size: 16px;
+    margin-left: 4px;
+    color: var(--primary);
+    height: auto;
+    width: auto;
+    font-family: 'Manrope', sans-serif;
+    transition: 0.4s ease;
+}
+#logoLabel:hover{
+    color: white;
+}

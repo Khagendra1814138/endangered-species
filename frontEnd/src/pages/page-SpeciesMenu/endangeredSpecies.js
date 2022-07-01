@@ -2,24 +2,24 @@ import React from "react";
 import { Component } from "react";
 import {Link} from 'react-router-dom';
 
-import './publicMain.css';
+import '../publicMain.css';
 import './endangeredSpecies.css';
-import './darkmodeFunction.css';
+import '../darkmodeFunction.css';
 
-import {EndangeredSpeciesSuvNav} from "../subNav/subNavigation";
+import {EndangeredSpeciesSuvNav} from "../../subNav/subNavigation";
 
-import header2 from '../images/header2.png';
+import header2 from '../../images/header2.png';
 
-import amphibian from '../images/amphibian.jpg';
-import artic from '../images/artic.jpg';
-import birds from '../images/birds.jpg';
-import fungus from '../images/fungus.jpg';
-import mammels from '../images/mammels.jpg';
-import marine from '../images/marine.jpg';
-import plant from '../images/plant.jpg';
-import Uk from '../images/Uk.jpg';
+import amphibian from '../../images/amphibian.jpg';
+import artic from '../../images/artic.jpg';
+import birds from '../../images/birds.jpg';
+import fungus from '../../images/fungus.jpg';
+import mammels from '../../images/mammels.jpg';
+import marine from '../../images/marine.jpg';
+import plant from '../../images/plant.jpg';
+import Uk from '../../images/Uk.jpg';
 
-import DarkModeFunction from '../darkMode/darkMode';
+import DarkModeFunction from '../../darkMode/darkMode';
 
 export class EndangeredSpecies extends Component {
   
@@ -111,8 +111,24 @@ export class EndangeredSpecies extends Component {
                 <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>F U N G U S</label>
               </Link>
               
-              <line className = "linedown"></line>
+              <Link exact to="./fungus" className='speciesMainFrame'>
+                <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fungus})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>R E P T I L E S</label>
+              </Link>
 
+              <Link exact to="./fungus" className='speciesMainFrame'>
+                <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fungus})`}}></div>
+                </image>
+                <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>I N S E C T S</label>
+              </Link>
+            </box>
+
+            <line className = "largeLine"></line>
+
+            <box className = "box">
               <Link exact to="./endSpeciesUk" className='speciesMainFrame'>
                 <box className = "speciesCardContainer">
                   <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>

@@ -11,25 +11,33 @@
     align-items: center;
     border-top: 10px solid #37475A;
 }
+
+
 .previousSubNav{
     height: 100%;
     width: 50%;
     display: flex;
     background-color: #657B83;
 
-    justify-content: right;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
 }
 .previousSubNav:hover{
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         90deg,
         #222,
         #222 10px,
         #000 10px,
         #000 20px
-    );
+    ); */
+    background-color: black;
+    transition: 0.4s ease;
 }
+.previousSubNav:hover .txt{
+    color: orange;
+} 
+
 
 .nextSubNav{
     height: 100%;
@@ -37,19 +45,25 @@
     display: flex;
     background-color: #678CB1;
 
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     text-decoration: none;
 }
 .nextSubNav:hover{
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
         45deg,
         #222,
         #222 10px,
         #000 10px,
         #000 20px
-    );
+    ); */
+    background-color: black;
+    transition: 0.4s ease;
 }
+.nextSubNav:hover .txt2{
+    color: orange;
+} 
+
 
 .logo1{
     height: auto;
@@ -76,10 +90,6 @@
     padding-right: 10px;
 }
 
-.txt:hover{
-    text-decoration: underline wavy;
-}
-
 .txt2{
     height: 100%; 
     width: 460px;
@@ -93,7 +103,4 @@
     cursor: pointer;
     color: white;
     padding-left: 10px;
-}
-.txt2:hover{
-    text-decoration: underline wavy;
 }

@@ -2,32 +2,32 @@ import React from 'react';
 import {Component} from "react";
 import ReactPlayer from 'react-player';
 
-import './publicMain.css';
+import '../publicMain.css';
 import './Home.css';
-import './darkmodeFunction.css';
+import '../darkmodeFunction.css';
 
-import {HomeSuvNav} from "../subNav/subNavigation";
+import {HomeSuvNav} from "../../subNav/subNavigation";
 
-import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
-import DarkModeFunction from '../darkMode/darkMode';
+import FontSizeIncreaser from '../../readAccessibilityGuideFunctions/fontSizeIncrease';
+import DarkModeFunction from '../../darkMode/darkMode';
 
 //Text To Voices
-import {HomeParagraphOneVoice} from "../textToVoice/paragraphs";
+import {HomeParagraphOneVoice} from "../../textToVoice/paragraphs";
 
-import headerImg from '../images/headerImg.png';
-import splendedFrog from '../images/extinctSpecies/splendedFrog.jpg';
-import goldenToad from '../images/extinctSpecies/goldenToad.jpg';
-import PintaGiantTortise from '../images/extinctSpecies/PintaGiantTortise.jpg';
-import PyreneanIbex from '../images/extinctSpecies/PyreneanIbex.jpg';
-import WesternBlackRhinoceros from '../images/extinctSpecies/WesternBlackRhinoceros.jpg';
+import headerImg from '../../images/headerImg.png';
+import splendedFrog from '../../images/extinctSpecies/splendedFrog.jpg';
+import goldenToad from '../../images/extinctSpecies/goldenToad.jpg';
+import PintaGiantTortise from '../../images/extinctSpecies/PintaGiantTortise.jpg';
+import PyreneanIbex from '../../images/extinctSpecies/PyreneanIbex.jpg';
+import WesternBlackRhinoceros from '../../images/extinctSpecies/WesternBlackRhinoceros.jpg';
 
-import futureGeneration from '../images/futureGeneration.jpg';
-import agriculture from '../images/agriculture.png';
-import medical from '../images/medical.jpg';
-import balanceEco from '../images/balanceEco.png';
-import research from '../images/research.png';
-import ecosystemService from '../images/ecosystemService.png';
-import config from '../config';
+import futureGeneration from '../../images/futureGeneration.jpg';
+import agriculture from '../../images/agriculture.png';
+import medical from '../../images/medical.jpg';
+import balanceEco from '../../images/balanceEco.png';
+import research from '../../images/research.png';
+import ecosystemService from '../../images/ecosystemService.png';
+import config from '../../config';
 
 //Sources for the information used:
 // https://www.fws.gov/nativeamerican/pdf/why-save-endangered-species.pdf

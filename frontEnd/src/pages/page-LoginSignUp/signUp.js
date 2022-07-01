@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './publicMain.css';
+import '../publicMain.css';
 import './signUp.css';
 
 import {FaAddressBook} from 'react-icons/fa';
 
-import {SignUpSuvNav} from "../subNav/subNavigation";
+import {SignUpSuvNav} from "../../subNav/subNavigation";
 
 export const SignUp = () => {
   return( 

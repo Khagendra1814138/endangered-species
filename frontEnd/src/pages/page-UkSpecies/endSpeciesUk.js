@@ -2,67 +2,67 @@ import React from 'react';
 import { Component } from "react";
 import ReactPlayer from 'react-player';
 
-import '../pages/publicMain.css';
+import '../../pages/publicMain.css';
 import './endSpeciesUk.css';
 
-import {UkPageSuvNav} from "../subNav/subNavigation";
-import headerUk from '../images/headerUk.png';
+import {UkPageSuvNav} from "../../subNav/subNavigation";
+import headerUk from '../../images/headerUk.png';
 
 //Reptiles
-import adderViper from '../images/endSpeciesUk/reptiles/adderViper.png';
-import grassSnake from '../images/endSpeciesUk/reptiles/grassSnake.png';
-import sandLizard from '../images/endSpeciesUk/reptiles/sandLizard.png';
-import smoothSnake from '../images/endSpeciesUk/reptiles/smoothSnake.png';
+import adderViper from '../../images/endSpeciesUk/reptiles/adderViper.png';
+import grassSnake from '../../images/endSpeciesUk/reptiles/grassSnake.png';
+import sandLizard from '../../images/endSpeciesUk/reptiles/sandLizard.png';
+import smoothSnake from '../../images/endSpeciesUk/reptiles/smoothSnake.png';
 
 //Marine
-import allisShad from '../images/endSpeciesUk/marine/allisShad.png';
-import brownTrout from '../images/endSpeciesUk/marine/brownTrout.png';
-import pollan from '../images/endSpeciesUk/marine/pollan.png';
-import vendance from '../images/endSpeciesUk/marine/vendance.png';
+import allisShad from '../../images/endSpeciesUk/marine/allisShad.png';
+import brownTrout from '../../images/endSpeciesUk/marine/brownTrout.png';
+import pollan from '../../images/endSpeciesUk/marine/pollan.png';
+import vendance from '../../images/endSpeciesUk/marine/vendance.png';
 
 //Amphibians
-import greatCrestedNewt from '../images/endSpeciesUk/amphibians/greatCrestedNewt.png';
-import netterJackFrog from '../images/endSpeciesUk/amphibians/netterJackFrog.png';
-import northernPoolFrog from '../images/endSpeciesUk/amphibians/northernPoolFrog.png';
-import palmateNewet from '../images/endSpeciesUk/amphibians/palmateNewet.png';
+import greatCrestedNewt from '../../images/endSpeciesUk/amphibians/greatCrestedNewt.png';
+import netterJackFrog from '../../images/endSpeciesUk/amphibians/netterJackFrog.png';
+import northernPoolFrog from '../../images/endSpeciesUk/amphibians/northernPoolFrog.png';
+import palmateNewet from '../../images/endSpeciesUk/amphibians/palmateNewet.png';
 
 //Mammels
-import europeanHedgehog from '../images/endSpeciesUk/mammels/europeanHedgehog.png';
-import greyLongEaredBat from '../images/endSpeciesUk/mammels/greyLongEaredBat.png';
-import redSquirrel from '../images/endSpeciesUk/mammels/redSquirrel.png';
-import waterVole from '../images/endSpeciesUk/mammels/waterVole.png';
-import wildCats from '../images/endSpeciesUk/mammels/wildCats.png';
+import europeanHedgehog from '../../images/endSpeciesUk/mammels/europeanHedgehog.png';
+import greyLongEaredBat from '../../images/endSpeciesUk/mammels/greyLongEaredBat.png';
+import redSquirrel from '../../images/endSpeciesUk/mammels/redSquirrel.png';
+import waterVole from '../../images/endSpeciesUk/mammels/waterVole.png';
+import wildCats from '../../images/endSpeciesUk/mammels/wildCats.png';
 
 //Birds
-import cuckoos from '../images/endSpeciesUk/birds/cuckoos.png';
-import songThrush from '../images/endSpeciesUk/birds/songThrush.png';
-import starling from '../images/endSpeciesUk/birds/starling.png';
-import turtleDove from '../images/endSpeciesUk/birds/turtleDove.png';
-import westernCapercaillie from '../images/endSpeciesUk/birds/westernCapercaillie.png';
+import cuckoos from '../../images/endSpeciesUk/birds/cuckoos.png';
+import songThrush from '../../images/endSpeciesUk/birds/songThrush.png';
+import starling from '../../images/endSpeciesUk/birds/starling.png';
+import turtleDove from '../../images/endSpeciesUk/birds/turtleDove.png';
+import westernCapercaillie from '../../images/endSpeciesUk/birds/westernCapercaillie.png';
 
 //Plants
-import crestedCowWheat from '../images/endSpeciesUk/plants/crestedCowWheat.png';
-import ghostOrchid from '../images/endSpeciesUk/plants/ghostOrchid.png';
-import ladyOrchid from '../images/endSpeciesUk/plants/ladyOrchid.png';
-import redHelleborine from '../images/endSpeciesUk/plants/redHelleborine.png';
-import spreadingBellflower from '../images/endSpeciesUk/plants/spreadingBellflower.png';
+import crestedCowWheat from '../../images/endSpeciesUk/plants/crestedCowWheat.png';
+import ghostOrchid from '../../images/endSpeciesUk/plants/ghostOrchid.png';
+import ladyOrchid from '../../images/endSpeciesUk/plants/ladyOrchid.png';
+import redHelleborine from '../../images/endSpeciesUk/plants/redHelleborine.png';
+import spreadingBellflower from '../../images/endSpeciesUk/plants/spreadingBellflower.png';
 
 //Fungus
-import amanitaVittadinii from '../images/endSpeciesUk/fungus/amanitaVittadinii.png';
-import boletusRegius from '../images/endSpeciesUk/fungus/boletusRegius.png';
-import clitocybeAlexandri from '../images/endSpeciesUk/fungus/clitocybeAlexandri.png';
-import geoglossumElongatum from '../images/endSpeciesUk/fungus/geoglossumElongatum.png';
-import pholiotaAstragalina from '../images/endSpeciesUk/fungus/pholiotaAstragalina.png';
-import config from '../config';
+import amanitaVittadinii from '../../images/endSpeciesUk/fungus/amanitaVittadinii.png';
+import boletusRegius from '../../images/endSpeciesUk/fungus/boletusRegius.png';
+import clitocybeAlexandri from '../../images/endSpeciesUk/fungus/clitocybeAlexandri.png';
+import geoglossumElongatum from '../../images/endSpeciesUk/fungus/geoglossumElongatum.png';
+import pholiotaAstragalina from '../../images/endSpeciesUk/fungus/pholiotaAstragalina.png';
+import config from '../../config';
 
 
-import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
-import DarkModeFunction from '../darkMode/darkMode';
+import FontSizeIncreaser from '../../readAccessibilityGuideFunctions/fontSizeIncrease';
+import DarkModeFunction from '../../darkMode/darkMode';
 
 
 //Text To Voices
-import {UkSpeciesParagraph1Voice} from "../textToVoice/endUkSpeciesPageVoice";
-import {UkSpeciesParagraph2Voice} from "../textToVoice/endUkSpeciesPageVoice";
+import {UkSpeciesParagraph1Voice} from "../../textToVoice/endUkSpeciesPageVoice";
+import {UkSpeciesParagraph2Voice} from "../../textToVoice/endUkSpeciesPageVoice";
 
 
 export class EndnageredSpeciesUk extends Component {

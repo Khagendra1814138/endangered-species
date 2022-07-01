@@ -16,44 +16,47 @@
     height: 100%;
   }
   
-  html,
+  /* html,
   body {
     min-height: 100vh;
     height: 100%;
   
-  }
+  } */
   
   span {
     font-size: 40px;
     display: inline-flex;
     font-family: 'Manrope', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
   }
   
-  .dark-modeFrame {
+  /* .dark-modeFrame {
     background-color: #1a1919;
     color: #999;
     height: 100%;
     transition: background-color 0.25s ease-in-out;
+
   }
   
   .light-modeFrame {
-    background-color: #fff;
+    background-color: green;
     color: #333;
     height: 100%;
     transition: background-color 0.25s ease-in-out;
-  }
+  } */
   
   .darkModeSwitchContainer {
     height: 100%;
     width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+ 
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgb(35,47,62);
     border-bottom: 6px solid #37475A;
-    /* border-top: 1px solid black; */
+    border-top: 2px solid #405268;
   }
   .darmodeLabel{
     font-size: 24px;
@@ -98,6 +101,7 @@
     background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    z-index: 3;
   }
   
   .slider:before {
@@ -142,4 +146,9 @@
     height: 300px;
     width: auto;
     display: block;
+  }
+
+  .darmodeLabel{
+    display: block;
+    font-size: 20px;
   }

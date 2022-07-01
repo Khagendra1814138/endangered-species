@@ -1,11 +1,11 @@
 import React from 'react';
 
-import './publicMain.css';
+import '../publicMain.css';
 import './logIn.css';
 
 import {RiLoginBoxFill} from 'react-icons/ri';
 
-import {SignInSuvNav} from "../subNav/subNavigation";
+import {SignInSuvNav} from "../../subNav/subNavigation";
 
 export const LogInPage = () => {
     return( 
