@@ -82,12 +82,12 @@ export class Amphibians extends Component {
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
                 
                 <body className='pageBodyFrame'>
+    
+                    <div className = "mainSubHeadFrame">
+                        <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Amphibians</subhead>
+                    </div>
+
                     <div className='container'>
-                        
-                        <div className = "mainSubHeadFrame">
-                            <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Amphibians</subhead>
-                        </div>
-                
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                             Did you know that Amphibians were the first vertebrates to colonise the land evolving around 370 million years ago.
                             They have already survived four mass extinction events.
@@ -101,8 +101,7 @@ export class Amphibians extends Component {
                             They eat insects like musquitos, helping to reduce the spread of diseases like malaria.
                         </paragragraph>
                         <AmphibianPara1Voice/>
-
-                    <div className='container'>
+                   
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
                                 <box className = "speciesCardContainer">
@@ -185,27 +184,29 @@ export class Amphibians extends Component {
                                 </box>
                             </box>
                         </box>
-
-                        
                     </div>
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                        <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                            <paragragraph className="video-Discription">A video of Axolotel.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=lL87xhk63FM"/>
-                        </div> 
+                   
+                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                         <line className = "thinLine"></line> 
-                    </div>
-
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                       Amphibians have moist, permeable skin, which makes them vulnerable to drought and toxic substances, 
-                       meaning they can be used as an indicator of the ecosystem health. For example, the health of important ecosystems such as forests and wetlands.
-                       Amphibians skin contains different types of peptides, which can perhaps offer possible medical cures for many varities of human diseases.
-                    </paragragraph>
-                    <AmphibianPara2Voice/>
+                            <paragragraph className="video-Discription">A video of about Axolotel species and how they are endnagered.</paragragraph>
+                            <ReactPlayer  className='videoFrame' 
+                                controls={true} 
+                                url="https://www.youtube.com/watch?v=lL87xhk63FM"
+                                height="450px" 
+                                width="800px" 
+                            />
+                        <line className = "thinLine"></line> 
+                    </div> 
 
 
                     <div className='container'>
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            Amphibians have moist, permeable skin, which makes them vulnerable to drought and toxic substances, 
+                            meaning they can be used as an indicator of the ecosystem health. For example, the health of important ecosystems such as forests and wetlands.
+                            Amphibians skin contains different types of peptides, which can perhaps offer possible medical cures for many varities of human diseases.
+                        </paragragraph>
+                        <AmphibianPara2Voice/>
+
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
                                 <box className = "speciesCardContainer">
@@ -294,25 +295,29 @@ export class Amphibians extends Component {
                         </box>
                     </div>
 
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+    
+                        
+                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                         <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                             <paragragraph className="video-Discription">A video of Endangered Frogs Species.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uja_QE4cZV0"/>
-                        </div> 
-                        <line className = "thinLine"></line> 
-                    </div>
-
-                    
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Amphibians species are already used in medicines to treat humans. For example, medicines like painkillers, high blood pressure medication and 
-                        even to block deadly disease like HIV transmission and treat anti-biotic resistant bacterial strains.
-                        Therefore, as this special species starts to disappear, so do the potential treatments and cures to human diseases.
-                    </paragragraph>
-                    <AmphibianPara3Voice/>
-
+                            <ReactPlayer  className='videoFrame' 
+                                controls={true} 
+                                url="https://www.youtube.com/watch?v=Uja_QE4cZV0"
+                                height="450px"
+                                width="800px"
+                            />
+                        <line className = "thinLine"></line>
+                    </div> 
+              
 
                     <div className='container'>
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            Amphibians species are already used in medicines to treat humans. For example, medicines like painkillers, high blood pressure medication and 
+                            even to block deadly disease like HIV transmission and treat anti-biotic resistant bacterial strains.
+                            Therefore, as this special species starts to disappear, so do the potential treatments and cures to human diseases.
+                        </paragragraph>
+                        <AmphibianPara3Voice/>
+                        
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
                                 <box className = "speciesCardContainer">
@@ -402,23 +407,24 @@ export class Amphibians extends Component {
                         </box>
                     </div>
                     
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+             
+                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                         <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                             <paragragraph className="video-Discription">A video of Gliding Leaf Frogs.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=tf1bytsDDho"/>
-                        </div> 
-                        <line className = "thinLine"></line> 
-                    </div>
-
+                            <ReactPlayer  className='videoFrame' controls={true} 
+                                url="https://www.youtube.com/watch?v=tf1bytsDDho"
+                                height="450px" 
+                                width="800px"
+                            />
+                        <line className = "thinLine"></line>
+                    </div> 
+        
                           
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                         One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
                         This ability is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
                     </paragragraph>
                     <AmphibianPara4Voice/>
-                </div>
-
             </body>
             <AmphibianPageSuvNav/>
         </div>

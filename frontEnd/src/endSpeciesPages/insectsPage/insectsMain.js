@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactPlayer from 'react-player';
 import {Component} from "react";
 
 import '../../pages/publicMain.css';
@@ -6,14 +7,32 @@ import './insects.css';
 import './insectsPageGrid.css';
 
 
-import {HomeSuvNav} from "../../subNav/subNavigation";
+import {InsectsPageSuvNav} from "../../subNav/subNavigation";
 import headerInsects from '../../images/headerInsects2.png';
 
 import FontSizeIncreaser from '../../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../../darkMode/darkMode';
 
+//Beetles Card
+import {BeetlesCardsSet} from "./beetles"
+//Grasshoppers Card
+import {GrasshoppersCardsSet} from "./grasshoppers"
+//Stick Insects and Crickets Cards
+import {StickInsectsAndCricketsCardsSet} from "./stickInsectsAndCrickets"
+//Bees Cards
+import {BeesCardsSet} from "./bees"
+//Butterflies and Moths Cards
+import {ButterflysAndMothsCardsSet} from "./butterflysAndMoths"
+
+import {DragonflyAndDamselflyCardsSet} from "./dragonflyAndDamselfly"
+
+import {SpidersCardsSet} from "./spiders"
+
+
+//Paragraphs
+import {InsectsTopParagraph} from "./insectsParagraphs"
 //Text To Voices
-import {HomeParagraphOneVoice} from "../../textToVoice/paragraphs";
+import {InsectMainParagraphVOICE} from "./insectsParagraphVOICE";
 
 
 
@@ -46,147 +65,9 @@ export class Insects extends Component {
 
           <div className='container'>
             <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Insects Page</subhead>
+              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Insects Species</subhead>
             </div>
           </div>
-
-          <div className='container'>
-            <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Extinct Species!</subhead>
-            </div>
-            <box className="paragraphContainer">
-              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                Did you know that over 900+ species of plants and animals have gone extinct over the five centuries.
-                And more than 70 species are now considered as extinct in the wild! stated by the IUCN. 
-                Extinct in the wild means that the species is the only living members kept in captivity or as a naturalized population outside its historic range due to massive habitat loss.
-                The UN report states that around 1 million animal and plant species are now threatened with extinction, many within decades.
-                {/* https://ourworldindata.org/extinctions#:~:text=Extinctions%20have%20been%20a%20natural,in%20the%20last%20five%20centuries. */}
-              </paragragraph>
-              <HomeParagraphOneVoice/>
-            </box>
-          </div>
-
-
-  {/* //this is the (1st ROW 2 column) large Grid diaplay*/}
-          <div class="insects-grid-3columns-2rows">
-            <div class="item-firtRowTwoColumnTopLeft-long">
-              <div class="twoColumn-longImagFrame">1nd row and 2 column long TOP LEFT</div>
-              <div class="endSpecies-name"></div>
-            </div>
-            
-            <div class="item">
-              <div class="medImagFrame">2</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">3</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">4</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">5</div>
-              <div class="endSpecies-name"></div>
-            </div>  
-          </div>
-
-
-
-  {/* //this is the (1st ROW 2 column) large Grid diaplay*/}
-          <div class="insects-grid-3columns-2rows">
-            <div class="item-firtRowTwoColumnTopLeft-long">
-              <div class="twoColumn-longImagFrame">1nd row and 2 column long TOP LEFT</div>
-              <div class="endSpecies-name"></div>
-            </div>
-            
-            <div class="item">
-              <div class="medImagFrame">2</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">3</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">4</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">5</div>
-              <div class="endSpecies-name"></div>
-            </div>  
-          </div>
-
-  
-
-
-  {/* //this is the (1nd ROW 2 column BOTTOM LEFT) large Grid diaplay*/}
-          <div class="insects-grid-3columns-2rows">
-            <div class="item">
-              <div class="medImagFrame">1</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">2</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">3</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">4</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item-secondRowTwoColumnBottomRIGHT-long">
-              <div class="twoColumn-longImagFrame">2st row and 2 column long BOTTOM RIGHT</div>
-              <div class="endSpecies-name"></div>
-            </div>
-          </div>
-
-
-
-
-  {/* //this is the (1nd ROW 2 column BOTTOM LEFT) large Grid diaplay*/}
-          <div class="insects-grid-3columns-2rows">
-            <div class="item">
-              <div class="medImagFrame">1</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">2</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">3</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item">
-              <div class="medImagFrame">4</div>
-              <div class="endSpecies-name"></div>
-            </div>
-
-            <div class="item-secondRowTwoColumnBottomRIGHT-long">
-              <div class="twoColumn-longImagFrame">2st row and 2 column long BOTTOM RIGHT</div>
-              <div class="endSpecies-name"></div>
-            </div>
-          </div>
-
 
 
           <div className='blockFrame'>
@@ -208,10 +89,89 @@ export class Insects extends Component {
             </box> 
           </div>
 
+          <box className="paragraphContainer">
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <InsectsTopParagraph/>
+            </paragragraph>
+            <InsectMainParagraphVOICE/>
+          </box>
+
+          <BeetlesCardsSet/>
+
+    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line> 
+                <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+            <line className="thinLine"></line> 
+          </div> 
+    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+          <GrasshoppersCardsSet/>
+
+          <box className="paragraphContainer">
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <InsectsTopParagraph/>
+            </paragragraph>
+            <InsectMainParagraphVOICE/>
+          </box>
+
+          <StickInsectsAndCricketsCardsSet/>
+
+    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line> 
+                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+              <line className="thinLine"></line> 
+          </div> 
+    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+          <BeesCardsSet/>
+
+          <box className="paragraphContainer">
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <InsectsTopParagraph/>
+            </paragragraph>
+            <InsectMainParagraphVOICE/>
+          </box>
+
+          <ButterflysAndMothsCardsSet/>
+
+    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line> 
+                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+              <line className="thinLine"></line> 
+          </div> 
+    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+          <DragonflyAndDamselflyCardsSet/>
+
+          <box className="paragraphContainer">
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <InsectsTopParagraph/>
+            </paragragraph>
+            <InsectMainParagraphVOICE/>
+          </box>
+
+          <SpidersCardsSet/>
+
+   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line> 
+                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+              <line className="thinLine"></line> 
+          </div> 
+    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+ 
 
 
         </body>
-        <HomeSuvNav/>
+        <InsectsPageSuvNav/>
       </div>    
     );
   }

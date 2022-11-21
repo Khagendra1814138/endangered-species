@@ -5,6 +5,7 @@ import ReactPlayer from 'react-player';
 
 import './../publicMain.css';
 import '../page-SpeciesCauses/causesPage.css'
+import '../page-TakeAction/takeAction.css'
 
 import iucn from '../../images/pagesImages/iucn.png';
 import wwf from '../../images/pagesImages/wwf.png';
@@ -68,16 +69,22 @@ export class TakeAction extends Component {
   {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <body className='pageBodyFrame'>
+          
+          <div className = "mainSubHeadFrame">
+            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take larger steps</subhead>
+          </div>
+
           <div className='container'>
             
-            <div className = "mainSubHeadFrame">
-              <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take larger actions</subhead>
-            </div>
-
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               <TakeActionParagraph1/>
             </paragragraph>
             <TakeActionParaVoice/>
+
+            <div className = {this.state.darkMode ? "pageDiscriptionTitle-Dark" : "pageDiscriptionTitle"}>
+              Below we have listed many trustworthy organisations that are supporting the enangered species and their habitats.
+              Learn who they are, what they do and join their battle.
+            </div>
 
             <box className = "box">
               <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
@@ -96,14 +103,19 @@ export class TakeAction extends Component {
             </box>
             <WWFParaVoice/>
                     
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame-White"}>
-                <line className = "thinLine"></line>
-                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <paragragraph className="video-Discription">A video about the World Wildlife Fund.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Tss6HtHlLuw"/>
-                </div> 
-                <line className = "thinLine"></line>
-            </div>
+        
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className = "thinLine"></line>
+                <paragragraph className="video-Discription">A video about the World Wildlife Fund.</paragragraph>
+                <ReactPlayer className='videoFrame'
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=Tss6HtHlLuw"
+                  height="450px" 
+                  width="800px" 
+                />
+              <line className = "thinLine"></line>
+            </div> 
+   
 
           </div>  
 
@@ -185,14 +197,17 @@ export class TakeAction extends Component {
             </box>
             <TOCParaVoice/>
             
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame-White"}>
-                <line className = "thinLine"></line>
-                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <paragragraph className="video-Discription">A video about The Ocean Cleanup.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=pgxYHSFwQQU"/>
-                </div> 
-                <line className = "thinLine"></line>
-            </div>
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className = "thinLine"></line>
+                <paragragraph className="video-Discription">A video about The Ocean Cleanup.</paragragraph>
+                <ReactPlayer className='videoFrame' 
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=pgxYHSFwQQU"
+                  height="450px" 
+                  width="800px"
+                />
+              <line className = "thinLine"></line>
+            </div> 
 
           </div>
 

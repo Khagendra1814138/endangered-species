@@ -1,11 +1,11 @@
 export const TakeActionParagraph1 = () => {
     return (
         <div>
-            You can help the endangered species from your house with just a click of a button. 
+            You can take further action that can directly and immediately help the endnagered species.
+            And you can do this from your house with just a click of a button on your electronic device. 
             There are already many different reliable organizations out there working to conserve and protect the endangered species and their ecosystem.
-            From organisations that plants trees, save endangered animals to cleaning plastic on the oceans and many more.
-            Do your research and find the one that suits your interests and join them to continue supporting their work to support the endangered species.
-            Below, there are list of trustworthy organisations recommendation.
+            From organisations that plants trees to organisations that saves endangered animals or cleaning plastic on the oceans.
+            Do your research and find the right organisation that suits your interests and join them to continue supporting their work to help the endangered species.
         </div>  
     );
 }

@@ -79,11 +79,15 @@ export class Causes extends Component {
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <body className='pageBodyFrame'>
-          <div className='container'>
 
+          <div className='container'>
             <div className = "mainSubHeadFrame">
               <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Causes threatning the species</subhead>
             </div>
+          </div>
+
+
+          <div className='container'>
 
             <box className="paragraphContainer">
               <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
@@ -91,6 +95,10 @@ export class Causes extends Component {
               </paragragraph>
               <CausesPageParagraphVoice/>
             </box>
+
+            <div className = {this.state.darkMode ? "pageDiscriptionTitle-Dark" : "pageDiscriptionTitle"}>
+              Below we have listed some of the most common threats faced by the endangered spcies and how it effects them.
+            </div>
       
 
             <box className = "box">
@@ -107,12 +115,15 @@ export class Causes extends Component {
             </box>
             <PlasticPollutionVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
               <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                 <paragragraph className="video-Discription">A video of plastic pollution effects.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=IA9O9YUbQew"/>
-              </div>
+                <ReactPlayer className='videoFrame' 
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=IA9O9YUbQew"
+                  height="450px" 
+                  width="800px"
+                />
               <line className = "thinLine"></line>
             </div>
 
@@ -170,12 +181,16 @@ export class Causes extends Component {
             </box>
             <ClimateChangeParagraphVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}> 
               <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                 <paragragraph className="video-Discription">A video of how climate change is effecting our planet.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dIsjcG7hTmo"/>
-              </div> 
+                <ReactPlayer className="videoFrame" 
+                  controls={true}
+                  url="https://www.youtube.com/watch?v=dIsjcG7hTmo"
+                  height="450px"
+                  width="800px" 
+                />
               <line className = "thinLine"></line>
             </div>
 
@@ -218,14 +233,20 @@ export class Causes extends Component {
             </box>
             <HabitatDistructionParagraphVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
               <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video of how deforestation effects out planet.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Ic-J6hcSKa8"/>
-              </div> 
+                <paragragraph className="video-Discription">A video of how deforestation effects out planet.</paragragraph>       
+                <ReactPlayer className='videoFrame' 
+                  controls 
+                  url="https://www.youtube.com/watch?v=Ic-J6hcSKa8"
+                  height="450px"
+                  width="800px" 
+                />
               <line className = "thinLine"></line>
-            </div>
+            </div> 
+              
+            
   {/* 
             <line className = "largeLine"></line> */}
 
@@ -259,12 +280,15 @@ export class Causes extends Component {
             </box>
             <OverFishingParagraphVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
               <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video of over fishing.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q1EcQQsJrmg"/>
-              </div> 
+                <paragragraph className="video-Discription">A video of over fishing and how that is effecting the ocean.</paragragraph>
+                <ReactPlayer className='videoFrame'
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=Q1EcQQsJrmg"
+                  height="450px" 
+                  width="800px"
+                 />
               <line className = "thinLine"></line>
             </div>
 

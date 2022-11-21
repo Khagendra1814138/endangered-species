@@ -1,0 +1,127 @@
+#turtles1Name{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #9AC1AA;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+#turtles2Name{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #BFAB75;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+
+
+
+#lizardsName1{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    background-color: #AE9E12;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+#lizardsName2{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #DB9797;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+
+
+
+#reptileName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    background-color: #867878;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+
+
+
+#snakeName1{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    background-color: #CADE94;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+#snakeName2{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    background-color: #F3D297;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}

@@ -9,6 +9,10 @@ const endangeredFungus = require("./models/fungiSpecies") // new
 const endangeredPlants = require("./models/plantSpecies") // new
 const endangeredAquatic = require("./models/aquaticSpecies") // new
 const endangeredArtic = require("./models/articSpecies") // new
+
+const endangeredReptiles = require("./models/reptilesSpecies") // new
+const endangeredInsects = require("./models/insectSpecies") // new
+
 const extinctSpecies = require("./models/extinctSpecies") // new
 
 const router = express.Router()
@@ -184,6 +188,50 @@ router.post("/birdSpecies", async (req, res) => {
     console.log(req.body);
     await newEndangeredBirdSpecies.save()
     res.send(newEndangeredBirdSpecies)
+})
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////Reptiles_Database//////////////////////////////////////////////////////////////////
+// Get all posts
+router.get("/reptilesSpecies", async (req, res) => {
+    const posts = await endangeredReptiles.find()
+    res.send(posts)
+})
+//Endangered Species Uk
+router.post("/reptilesSpecies", async (req, res) => {
+    const newEndangeredReptileSpecies = new endangeredReptiles({
+        name: req.body.ReptileName,
+        type: req.body.ReptileType,
+        location: req.body.ReptileLocation,
+    })
+    console.log(req.body);
+    await newEndangeredReptileSpecies.save()
+    res.send(newEndangeredReptileSpecies)
+})
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+////////////////////////////////INSECTs_Database//////////////////////////////////////////////////////////////////
+// Get all posts
+router.get("/insectSpecies", async (req, res) => {
+    const posts = await endangeredInsects.find()
+    res.send(posts)
+})
+//Endangered Species Uk
+router.post("/insectSpecies", async (req, res) => {
+    const newEndangeredInsectSpecies = new endangeredInsects({
+        name: req.body.InsectName,
+        type: req.body.InsectType,
+        location: req.body.InsectLocation,
+    })
+    console.log(req.body);
+    await newEndangeredInsectSpecies.save()
+    res.send(newEndangeredInsectSpecies)
 })
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 

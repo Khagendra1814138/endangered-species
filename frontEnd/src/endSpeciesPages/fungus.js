@@ -163,14 +163,14 @@ export class Fungus extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about why Fungus are Important.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=BlcKBKJ8uro"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+     
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about why Fungus are Important.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=BlcKBKJ8uro"/>
+            <line className="thinLine"></line>
+          </div> 
+      
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Provides food:
@@ -257,14 +257,14 @@ export class Fungus extends Component {
           </paragragraph>
           <FungusPara3Voice/>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about how Mycelium Fungus can replace plastic in the future.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=cApVVuuqLFY"/>
-              </div>
-              <line className = "thinLine"></line>  
+    
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about how Mycelium Fungus can replace plastic in the future.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=cApVVuuqLFY"/>
+            <line className="thinLine"></line>
           </div>
+  
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               Recycle & Plant growth:
@@ -354,14 +354,14 @@ export class Fungus extends Component {
           </paragragraph>
           <FungusPara5Voice/>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about how Killer Fungus can control pests.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=ROQrbWkV4HI"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about how Killer Fungus can control pests.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=ROQrbWkV4HI"/>
+            <line className="thinLine"></line>
+          </div> 
+  
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               Water Filter:

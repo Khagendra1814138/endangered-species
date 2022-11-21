@@ -139,14 +139,14 @@ export class Mammels extends Component {
           </div> 
 
   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Pangolins.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=DqC3ieJJlFM"/>
-              </div> 
-              <line className = "thinLine"></line> 
+      
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about Pangolins.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls url="https://www.youtube.com/watch?v=DqC3ieJJlFM"/>
+            <line className="thinLine"></line>
           </div> 
+
   {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
@@ -236,14 +236,14 @@ export class Mammels extends Component {
           </div>
 
   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about two Northern White Rhino.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q8eh58Z249o"/>
-              </div>
-              <line className = "thinLine"></line>  
-          </div> 
+   
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about two Northern White Rhino.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Q8eh58Z249o"/>
+            <line className="thinLine"></line>
+          </div>
+
   {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
@@ -318,14 +318,15 @@ export class Mammels extends Component {
           </div>
 
   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Amur Leopard.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dXAmEDFFero"/>
-              </div> 
-            <line className = "thinLine"></line> 
+      
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about Amur Leopard.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dXAmEDFFero"/>
+            <line className="thinLine"></line>
           </div> 
+       
+        
   {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         </body>

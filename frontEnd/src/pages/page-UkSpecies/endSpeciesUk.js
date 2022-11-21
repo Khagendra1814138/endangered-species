@@ -180,15 +180,13 @@ export class EndnageredSpeciesUk extends Component {
                         </paragragraph>
                     </div>
 
-    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                        <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                            <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
-                        </div> 
-                        <line className = "thinLine"></line> 
-                    </div> 
+    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                    <line className="thinLine"></line> 
+                        <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+                        <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
+                    <line className="thinLine"></line> 
+                </div> 
     {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
@@ -311,14 +309,12 @@ export class EndnageredSpeciesUk extends Component {
                 </div>
 
     {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-                <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                    <line className="thinLine"></line> 
                         <paragragraph className="video-Discription">A video about the Endangered Red Squirrel.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=vRmPQGq88Kk"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
-                </div> 
+                        <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=vRmPQGq88Kk"/>
+                    <line className="thinLine"></line> 
+                </div>  
     {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
@@ -476,13 +472,11 @@ export class EndnageredSpeciesUk extends Component {
                 </div>
 
     {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-                <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                    <line className="thinLine"></line> 
                         <paragragraph className="video-Discription">A video about the Western Capercaillie.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=XtU7zmXRe_A"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
+                        <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=XtU7zmXRe_A"/>
+                    <line className="thinLine"></line> 
                 </div> 
     {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}       
 
@@ -620,13 +614,11 @@ export class EndnageredSpeciesUk extends Component {
 
                 
     {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-                <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                    <line className = "thinLine"></line>
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                    <line className="thinLine"></line> 
                         <paragragraph className="video-Discription">A video about saving the Endnagered UK Water Vole.</paragragraph>
-                        <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=qCzUrWw_Nk8"/>
-                    </div> 
-                    <line className = "thinLine"></line> 
+                        <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=qCzUrWw_Nk8"/>
+                    <line className="thinLine"></line> 
                 </div> 
     {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
                     

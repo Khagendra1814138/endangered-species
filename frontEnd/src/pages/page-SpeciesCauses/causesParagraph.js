@@ -1,8 +1,11 @@
 export const CausesParagaph1 = () => {
     return (
         <div>
-            Wildlife in our planet is under threat from all sides, from facing down habitat loss and the impact of climate change. 
-            Some of the biggest threats that the endangered species faces includes illegal wildlife trade, habitat destruction, invasive species, pollution, and climate change.
+            Wildlife, plants and fungi species are under threat from all direction.
+            As our population rises and our modern society gets more resource-intensive, natural spaces are shrinking due to human expansion, and the planet temperature is increasing every year.
+            This is leading to the loss of habitats for the endanged species as their homes and their food source are being destroyed.
+            Since the 1970's, the global wildlife populations have plummeted by 69% on average. 
+            The endangered species faces many other threats such as illegal wildlife trade like hunting/poaching, overfishing, pollutions and many more.
         </div>  
     );
 }

@@ -255,6 +255,38 @@ export const MammelsPageSuvNav = () => {
                 <label className= 'txt'>  Endangered Plants Species</label>
             </Link>
 
+            <Link exact to="./insectsMAIN" className='nextSubNav'>
+                <label className= 'txt2'> Endangered Insects Species</label>
+                <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
+            </Link>
+        </div>
+    );
+}
+
+export const InsectsPageSuvNav = () => {
+    return( 
+        <div className="subNavFrame">
+            <Link exact to="./mammels" className='previousSubNav'>
+                <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
+                <label className= 'txt'>  Endangered Mammels Species</label>
+            </Link>
+
+            <Link exact to="./reptiles" className='nextSubNav'>
+                <label className= 'txt2'> Endangered Reptiles Species</label>
+                <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
+            </Link>
+        </div>
+    );
+}
+
+export const ReptilesPageSuvNav = () => {
+    return( 
+        <div className="subNavFrame">
+            <Link exact to="./insectsMAIN" className='previousSubNav'>
+                <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
+                <label className= 'txt'>  Endangered Insects Species</label>
+            </Link>
+
             <Link exact to="./endSpeciesUK" className='nextSubNav'>
                 <label className= 'txt2'> Endangered Species in UK</label>
                 <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
@@ -266,9 +298,9 @@ export const MammelsPageSuvNav = () => {
 export const UkPageSuvNav = () => {
     return( 
         <div className="subNavFrame">
-            <Link exact to="./mammels" className='previousSubNav'>
+            <Link exact to="./reptiles" className='previousSubNav'>
                 <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
-                <label className= 'txt'>  Endangered Mammels Species</label>
+                <label className= 'txt'>  Endangered Reptiles Species</label>
             </Link>
 
             <Link exact to="./amphibians" className='nextSubNav'>

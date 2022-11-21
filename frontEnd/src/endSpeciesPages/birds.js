@@ -198,14 +198,14 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
+            
+                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                         <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
                             <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
-                        </div> 
-                        <line className = "thinLine"></line> 
-                    </div>
+                            <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
+                        <line className="thinLine"></line>
+                    </div> 
+            
 
                     
 
@@ -386,15 +386,14 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                        <line className = "thinLine"></line>
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+               
+                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                        <line className="thinLine"></line>
                             <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
-                        </div> 
-                        <line className = "thinLine"></line> 
-                    </div>
-                    
+                            <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
+                        <line className="thinLine"></line>
+                    </div> 
+              
         
 
 
@@ -578,14 +577,14 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-                    <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                        <line className = "thinLine"></line>
+  
                         <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                            <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
-                            <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
+                            <line className="thinLine"></line>
+                                <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
+                                <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
+                            <line className="thinLine"></line>
                         </div> 
-                        <line className = "thinLine"></line> 
-                    </div>
+          
 
                     <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                         Spread seeds, helps coral reef and cleans nature:

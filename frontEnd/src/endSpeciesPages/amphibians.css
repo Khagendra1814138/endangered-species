@@ -1,7 +1,7 @@
 :root{
-    --color-amphibian: #A8CBEC;
-    --color-amphibian2: #FCED71;
-    --color-amphibian3: #E7FBBE;
+    --color-amphibian: #93c0eb;
+    --color-amphibian2: #fcee71c9;
+    --color-amphibian3: #dcfc9e;
     --color-darkBorder: #37475A;
     --color-textColor: rgb(35,47,62);
 }
@@ -73,6 +73,6 @@
     font-size: 24px;
     text-align: center;
     color: white;
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid #37475A;
+    border-bottom: 1px solid #37475A;
 }

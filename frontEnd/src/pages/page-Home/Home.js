@@ -6,10 +6,35 @@ import '../publicMain.css';
 import './Home.css';
 import '../darkmodeFunction.css';
 
+//Icons
+import {GiFrog} from 'react-icons/gi';
+import {GiSadCrab} from 'react-icons/gi';
+import {GiSpottedBug} from 'react-icons/gi';
+import {GiPalmTree} from 'react-icons/gi';
+import {GiMantaRay} from 'react-icons/gi';
+import {GiReptileTail} from 'react-icons/gi';
+import {GiCoral} from 'react-icons/gi';
+import {GiMammoth} from 'react-icons/gi';
+import {GiHummingbird} from 'react-icons/gi';
+import {GiPineTree} from 'react-icons/gi';
+
+import {FaShieldAlt} from 'react-icons/fa';
+import {GiOpenBook} from 'react-icons/gi';
+import {FaHandHoldingHeart} from 'react-icons/fa';
+
+//Suv navigation
 import {HomeSuvNav} from "../../subNav/subNavigation";
 
 import FontSizeIncreaser from '../../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../../darkMode/darkMode';
+
+//Paragraphs
+import {AgriculturePARAGRAPH} from "./homeParagraph";
+import {ForFutureGenerationPARAGRAPH} from "./homeParagraph";
+import {MedicalPurposePARAGRAPH} from "./homeParagraph";
+import {BalanceEcosystemPARAGRAPH} from "./homeParagraph";
+import {MonitorEnvironmentPARAGRAPH} from "./homeParagraph";
+import {EcosystemServicePARAGRAPH} from "./homeParagraph";
 
 //Text To Voices
 import {HomeParagraphOneVoice} from "../../textToVoice/paragraphs";
@@ -21,12 +46,19 @@ import PintaGiantTortise from '../../images/extinctSpecies/PintaGiantTortise.jpg
 import PyreneanIbex from '../../images/extinctSpecies/PyreneanIbex.jpg';
 import WesternBlackRhinoceros from '../../images/extinctSpecies/WesternBlackRhinoceros.jpg';
 
-import futureGeneration from '../../images/futureGeneration.jpg';
-import agriculture from '../../images/agriculture.png';
-import medical from '../../images/medical.jpg';
-import balanceEco from '../../images/balanceEco.png';
-import research from '../../images/research.png';
-import ecosystemService from '../../images/ecosystemService.png';
+import extSpecies from '../../images/extinctSpecies/extSpecies.png';
+import chaingingHabit from '../../images/home/chaingingHabit.png';
+import supportOrganisation from '../../images/home/supportOrganisation.png';
+import threatsToSpecies from '../../images/home/threatsToSpecies.png';
+import endangeredSpecies from '../../images/home/endangeredSpecies.png';
+import takeQuiz from '../../images/home/takeQuiz.png';
+
+import futureGeneration from '../../images/home/futureGeneration2.png';
+import agriculture from '../../images/home/agriculture3.png';
+import medical from '../../images/home/medical2.png';
+import balanceEco from '../../images/home/balanceEco2.png';
+import research from '../../images/home/research2.png';
+import ecosystemService from '../../images/home/ecosystemService2.png';
 import config from '../../config';
 
 //Sources for the information used:
@@ -67,33 +99,19 @@ export class Home extends Component {
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 
         <box className = "landingImageBox" style={{ backgroundImage: `url(${headerImg})`}}>
-          <h1>40,000+ Species are in danger of extinction!</h1>
+          <h1>Thousands of Animal, Fungi and Plant species are in danger</h1>
+          <div className='headerImageParagraph'>Learn about the different types of endangered species around the world and how to protect them.</div> 
         </box>
 
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 
         <body className='pageBodyFrame'>
-          <div className='container'>
-
-            <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>What are Endangered Species?</subhead>
-            </div>
-
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-                <line className = "thinLine"></line>
-                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <paragragraph className="video-Discription">A video guide on what are Endangered Species.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=6tjDCZrGnxc"/>
-                </div>
-                <line className = "thinLine"></line> 
-            </div>
-
-          </div>
 
           <div className='container'>
-            <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Extinct Species!</subhead>
-            </div>
+            <title className = {this.state.darkMode ? "largeTitle-Light" : "largeTitle-Dark"}> 
+              More than 41,000+ species of plants and animals are in danger of extinction!
+            </title>
+
             <box className="paragraphContainer">
               <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                 Did you know that over 900+ species of plants and animals have gone extinct over the five centuries.
@@ -104,206 +122,434 @@ export class Home extends Component {
               </paragragraph>
               <HomeParagraphOneVoice/>
             </box>
-          
-      
-            <box className = "box">
-              <box className = "speciesMainFrame">
-                <box className = "speciesCardContainer">
-                  <image className= {this.state.darkMode ? "extSpeciesImageLrgDark" : "extSpeciesImageLrgLight"}>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${splendedFrog})`}}></div>
-                  </image>
-                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Pete Oxford</label></div>
-                    
-                  <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                    {/* {this.state.items.map((item) => (
-                      <div>
-                        {item.name}
-                      </div
-                    >))} */}
-                    {this.state.ExtinctSpeciesItems.length > 0 && (
-                      <div>
-                        {/* <a href={`/${this.state.items[5]._id}`}> */}
-                          {this.state.ExtinctSpeciesItems[5].name}
-                        {/* </a> */}
-                      </div>
-                    )}
-                  </label>
-                </box>
-              </box>
-
-              <box className = "speciesMainFrame">
-                <image className= {this.state.darkMode ? "extSpeciesImageLrgDark" : "extSpeciesImageLrgLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${goldenToad})`}}></div>
-                </image>
-
-                <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                  {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[4].name}</div>)}
-                </label>
-              </box>
-            </box>
-
-            <box className = "box">
-              <box className = "speciesMainFrame">
-                <box className = "speciesCardContainer">
-                  <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${PintaGiantTortise})`}}></div>
-                  </image>
-                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Christopher Klassen</label></div>
-
-                  <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                    {this.state.ExtinctSpeciesItems.length > 0 && (
-                      <div>
-                        {this.state.ExtinctSpeciesItems[3].name}
-                      </div>
-                    )}
-                  </label>
-                </box>
-              </box>
-
-              <box className = "speciesMainFrame"> 
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${PyreneanIbex})`}}></div>
-                </image>
-                <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                  {this.state.ExtinctSpeciesItems.length > 0 && (
-                    <div>
-                      {this.state.ExtinctSpeciesItems[1].name}
-                    </div>
-                  )}
-                </label>
-              </box>
-
-              <box className = "speciesMainFrame"> 
-                <box className = "speciesCardContainer">
-                  <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}> 
-                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${WesternBlackRhinoceros})`}}></div> 
-                  </image>
-                  <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Dr Richard Emslie</label></div>
-
-                  <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                    {this.state.ExtinctSpeciesItems.length > 0 && (
-                      <div>
-                        {this.state.ExtinctSpeciesItems[2].name}
-                      </div>
-                    )}
-                  </label>
-                </box>
-              </box>
-            </box>
-
-
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video of extinct species.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s"/>
-              </div> 
-              <line className = "thinLine"></line>
-            </div>
           </div>
+
+          <div className='container'>
+            <box id= {this.state.darkMode ? "endPercentage_GRID-Dark" : "endPercentage_GRID"}>
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>AMPHIBIANS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>41%</div>
+                  <div id='speciesGroupIcon'><GiFrog size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>REPTILES</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>21%</div>
+                  <div id='speciesGroupIcon'><GiReptileTail size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+              
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>INSECTS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>33%</div>
+                  <div id='speciesGroupIcon'><GiSpottedBug size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>MAMMALS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>27%</div>
+                  <div id='speciesGroupIcon'><GiMammoth size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>BIRDS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>13%</div>
+                  <div id='speciesGroupIcon'><GiHummingbird size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>SHARKS & RAYS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>37%</div>
+                  <div id='speciesGroupIcon'><GiMantaRay size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>REEF CORALS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>33%</div>
+                  <div id='speciesGroupIcon'><GiCoral size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>SELECTED CRUSTACEANS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>28%</div>
+                  <div id='speciesGroupIcon'><GiSadCrab size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>CONIFERS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>34%</div>
+                  <div id='speciesGroupIcon'><GiPineTree size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+
+              <div id='endPercentage_FRAME'>
+                <div id='speciesGroupLabel'>CYCADS</div>
+                <div className = "box-noshadow">
+                  <div id='percentageDisplay'>69%</div>
+                  <div id='speciesGroupIcon'><GiPalmTree size="6em" color="#12836E"/></div>
+                </div>
+              </div>
+            </box>
+          </div>  
+
+
+
+
+          <div className='container'>
+            <box className = "shadow_block_box">
+              <box className='box-noshadow'>
+                <subhead id = {this.state.darkMode ? "recentlyExtinctSubhead-Dark" : "recentlyExtinctSubhead"}>These are the recently extinc species</subhead>
+                <paragragraph id = {this.state.darkMode ? "recentlyExtinctParagraph-Dark" : "recentlyExtinctParagraph"}>
+                  The animals deplayed below are some of the most recently extinct species.
+                  The splended posion frog was declared extinct on 2020.
+                  The Giant Pinta Island tortoise was declared extinct on 2012,
+                  and the Western Black Rhinoceros was declared extinct on 2006.
+                </paragragraph>
+              </box>
+
+              <box className = "box-noshadow">
+                <box id = "extinct_speciesMainFrame">
+                  <box className = "speciesCardContainer">
+                    <image className= {this.state.darkMode ? "extSpeciesImageLrgDark" : "extSpeciesImageLrgLight"}>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${splendedFrog})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Pete Oxford</label></div>
+                      
+                    <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
+                      {/* {this.state.items.map((item) => (
+                        <div>
+                          {item.name}
+                        </div
+                      >))} */}
+                      {this.state.ExtinctSpeciesItems.length > 0 && (
+                        <div>
+                          {/* <a href={`/${this.state.items[5]._id}`}> */}
+                            {this.state.ExtinctSpeciesItems[5].name}
+                          {/* </a> */}
+                        </div>
+                      )}
+                    </label>
+                  </box>
+                </box>
+
+                <box id = "extinct_speciesMainFrame">
+                  <image className= {this.state.darkMode ? "extSpeciesImageLrgDark" : "extSpeciesImageLrgLight"}>
+                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${goldenToad})`}}></div>
+                  </image>
+
+                  <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
+                    {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[4].name}</div>)}
+                  </label>
+                </box>
+              </box>
+
+              <box className = "box-noshadow">
+                <box id = "extinct_speciesMainFrame">
+                  <box className = "speciesCardContainer">
+                    <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${PintaGiantTortise})`}}></div>
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Christopher Klassen</label></div>
+
+                    <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
+                      {this.state.ExtinctSpeciesItems.length > 0 && (
+                        <div>
+                          {this.state.ExtinctSpeciesItems[3].name}
+                        </div>
+                      )}
+                    </label>
+                  </box>
+                </box>
+
+                <box id = "extinct_speciesMainFrame"> 
+                  <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
+                    <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${PyreneanIbex})`}}></div>
+                  </image>
+                  <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
+                    {this.state.ExtinctSpeciesItems.length > 0 && (
+                      <div>
+                        {this.state.ExtinctSpeciesItems[1].name}
+                      </div>
+                    )}
+                  </label>
+                </box>
+
+                <box id = "extinct_speciesMainFrame"> 
+                  <box className = "speciesCardContainer">
+                    <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}> 
+                      <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${WesternBlackRhinoceros})`}}></div> 
+                    </image>
+                    <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Dr Richard Emslie</label></div>
+
+                    <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
+                      {this.state.ExtinctSpeciesItems.length > 0 && (
+                        <div>
+                          {this.state.ExtinctSpeciesItems[2].name}
+                        </div>
+                      )}
+                    </label>
+                  </box>
+                </box>
+              </box>
+            </box>
+          </div>
+          
 
       
         
           <div className='container'>
+
             <div className = "mainSubHeadFrame">
               <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Why protect these species?</subhead>
             </div>
+            <box className = "guideIcon"><FaShieldAlt size="6em" color="#12836E"/></box>
+            
 
-            <box className = "box">
-              <box className = "whyProtectFrame"> 
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${agriculture})`}}></div> 
+            <box className = "box_long">
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}> 
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${agriculture})`}}></div> 
                 </image>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                  There are insects and other animals species that prey on certain crop and rice paddy pests. Cetrian plants species contain natural-toxins,
-                  which can repel harmful insects. These are called “biological controls,” and are a safe, effective,
-                  and less expensive alternative to synthetic chemicals.
+                  <AgriculturePARAGRAPH/>
                 </paragragraph>
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Agriculture</label>
               </box>
 
-              <box className = "whyProtectFrame">
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${futureGeneration})`}}></div> 
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}>
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${futureGeneration})`}}></div> 
                 </image>
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                  People get a lot of pleasure out of seeing and interacting with animals species. 
-                  so species that go extinct now are no longer around for us or future generations to see and enjoy.
-                  They can only learn about them in books and on the internet.  And, that is heartbreaking.
+                  <ForFutureGenerationPARAGRAPH/>
                 </paragragraph>
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>For Future Generation</label>
               </box>
 
-              <box className = "whyProtectFrame"> 
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${medical})`}}></div> 
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}> 
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${medical})`}}></div> 
                 </image>
       
-                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                    Over 50% of the 150 most prescribed medicines were originally derived from a plant or other natural product. 
-                    The cures for many diseases may eventually come from plants, therefore,
-                    we must protect all species before they are lost forever from nature’s medicine cabinet.
-                  </paragragraph>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                  <MedicalPurposePARAGRAPH/>
+                </paragragraph>
                 
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Medical Purpose</label>
               </box>
             </box>
 
-            <box className = "box">
-              <box className = "whyProtectFrame">
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${balanceEco})`}}></div> 
+            <box className = "box_long">
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}>
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${balanceEco})`}}></div> 
                 </image>
                 
-                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                    Animals and plant species are the key foundation of a Healthy ecosystems. 
-                    When a species becomes endangered, then it indicates that the ecosystem is slowly falling apart. 
-                    Healthy ecosystem ensures that human beings have access to clean air and water, and fertile land for agriculture. 
-                  </paragragraph>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                  <BalanceEcosystemPARAGRAPH/>
+                </paragragraph>
               
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Balance Ecosystem</label>
               </box>
 
-              <box className = "whyProtectFrame"> 
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${research})`}}></div> 
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}> 
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${research})`}}></div> 
                 </image>
       
-                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                    Many individual species are uniquely important as indicators of
-                    environmental quality. Such as, freshwater fishes are indication of a healthy water.
-                    So if a ntive species starts to rapidly decline, then its a sign of threat/danger,
-                    allowing us to step-in find a solution to resolve that threat. 
-                  </paragragraph>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                  <MonitorEnvironmentPARAGRAPH/>
+                </paragragraph>
         
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Monitor Environment</label>
               </box>
               
-              <box className = "whyProtectFrame"> 
-                <image className= {this.state.darkMode ? "extSpeciesImageMidDark" : "extSpeciesImageMidLight"}>
-                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${ecosystemService})`}}></div> 
+              <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}> 
+                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                  <div className='whyProtectImage' style={{ backgroundImage: `url(${ecosystemService})`}}></div> 
                 </image>
         
-                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                    This include air & water purification, detoxification and decomposition of wastes,
-                    climate regulation, regeneration of soil fertility, and the production and maintenance of biological diversity.
-                    Phytoremediation is an example of the ecosystem services provided by plants.
-                  </paragragraph>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
+                  <EcosystemServicePARAGRAPH/>
+                </paragragraph>
               
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Ecosystem Service</label>
               </box>
             </box>
+          </div>
+          
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s"/>
-              </div> 
-              <line className = "thinLine"></line>
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className = "thinLine"></line>
+              <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
+              <ReactPlayer className = "videoFrame"
+                controls={true} 
+                url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s"
+                height="450px" 
+                width="800px"
+              />
+            <line className = "thinLine"></line>
+          </div> 
+        
+
+
+          <div className='container'>
+
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>What are you going to learn</subhead>
+            </div>
+            <box className = "guideIcon"><GiOpenBook size="6em" color="#12836E"/></box>
+
+            <div id="twoCol-Box">
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${extSpecies})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>So many species have gone extinct over the decades</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  More than 99% of the four billion species that have evolved on Earth are now gone.
+                  The IUCH states that at least 900 species have gone extinct in the past five centuries.
+                  Watch videos and Learn amazing facts and information about some of the recently extinct species.
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+            </div>
+
+            <div id="twoCol-Box">
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>Currently there are more than 41 thousnd of species in danger</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  You can learn about the different types of endangered animals, plants and fungi species.
+                  For example, animals such as large mammels, insects, ambphibans and plants such as flowers and large trees.
+                  Also, learn about endnagered fungi species such as mushrooms and watch videos.
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${endangeredSpecies})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+            </div>
+
+            <div id="twoCol-Box">
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${threatsToSpecies})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>There are many different threats effecting these species</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  Human activities like pollution and climate change are one of the main cause that is threathing these endangered species.
+                  But there also exists other natural threats like diseases.
+                  Learn more about the different types of threats effecting these endangered species.
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
             </div>
           </div>
 
+
+
+
+          <div className='container'>
+            <div className = "mainSubHeadFrame">
+              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>How can you contribute</subhead>
+            </div>
+            <box className = "guideIcon"><FaHandHoldingHeart size="6em" color="#12836E"/></box>
+
+            <div id="twoCol-Box">
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>You can helpe these endangered species by your daily action</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  We human are the main contributors toward endangering these species.
+                  Just by changing our daily life habits will have a huge positive impact on protecting these endangered species.
+                  For example, reducing our daily electric energy consuption and burning less fossil fules. 
+
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${chaingingHabit})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+            </div>
+
+            <div id="twoCol-Box">
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${supportOrganisation})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>Support organisations that is helping to save the endangered species</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  There are many organisations like the WWF, that are already healping to save these endangered species.
+                  From cleaning ocean, planting trees and saving specific species of animals.
+                  You can join the battle by supporing these organisation and their causes.
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+            </div>
+
+            <div id="twoCol-Box">
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>Wanna test how much you have learned about endangered species</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
+                  From vising this web application, you may have leanred lots of new information. 
+                  Such as, why these endangered species are important to the environment and how they benifit us directly.
+                  You can test your knowledge about the endangered and extinct species by taking a quiz.
+                </paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage" style={{ backgroundImage: `url(${takeQuiz})`}}></image>
+                <line className = "thinLine"></line>
+              </div>
+            </div>
+
+            <div id="twoCol-Box">
+              <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
+                <line className = "thinLine"></line>
+                  <image id="getStartedImage">Image</image>
+                <line className = "thinLine"></line>
+              </div>
+              
+              <div id='paragraphBox'>
+                <title className = {this.state.darkMode ? "getStartedTitle-Dark" : "getStartedTitle"}>Play games</title>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>Paragraph</paragragraph>
+                <button className='getStartedButton'>Get Started</button>
+              </div>
+            </div>
+          </div>
         </body>
         <HomeSuvNav/>
       </div>    

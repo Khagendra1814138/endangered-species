@@ -26,8 +26,8 @@ import { Birds } from './endSpeciesPages/birds';
 import { Fungus } from './endSpeciesPages/fungus';
 import { Mammels } from './endSpeciesPages/mammels';
 import { Plants } from './endSpeciesPages/plants';
-import { Reptiles } from './endSpeciesPages/reptilesPage/reptiles';
-import { Insects } from './endSpeciesPages/insectsPage/insectsMain';
+import { Reptiles } from './endSpeciesPages/reptilesPage/reptilesMAIN';
+import { Insects } from './endSpeciesPages/insectsPage/insectsMAIN';
 
 
 import {ScrollToTopArrow} from "./backToTopFunction/backToTop";

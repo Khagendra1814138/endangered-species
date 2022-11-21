@@ -203,15 +203,14 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
+     
               <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about the Amazon river dolphins.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Yty9Zf8ie2g"/>
+                <line className="thinLine"></line>
+                  <paragragraph className="video-Discription">A video about the Amazon river dolphins.</paragragraph>
+                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=Yty9Zf8ie2g"/>
+                <line className="thinLine"></line>
               </div> 
-              <line className = "thinLine"></line> 
-          </div>
-
+   
 
 
 
@@ -348,14 +347,12 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about the Whale Sharks.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=E9tpPWK7sag"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about the Whale Sharks.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=E9tpPWK7sag"/>
+            <line className="thinLine"></line>
+          </div> 
 
 
 
@@ -497,15 +494,14 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Sea Turtles.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=5Rmv3nliwCs"/>
-            </div> 
-            <line className = "thinLine"></line> 
-          </div>
-
+    
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video about Sea Turtles.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=5Rmv3nliwCs"/>
+            <line className="thinLine"></line>
+          </div> 
+         
 
 
 
@@ -642,14 +638,14 @@ export class Aquatic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video of Giant Manta Ray.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=dCfBQfBiovA"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video of Giant Manta Ray.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=dCfBQfBiovA"/>
+              <line className="thinLine"></line>
+          </div> 
+      
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
             Provides Jobs & Economy:

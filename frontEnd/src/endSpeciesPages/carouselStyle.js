@@ -4,7 +4,7 @@ export default styled.div`
   display: flex;
   flex-direction: column;
   height: auto;
-  width: 880px;
+  width: auto;
   background-color: none;
   margin-top: 20px;
   color: black;

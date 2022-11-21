@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Dropdown from './Dropdown';
 
+//Icons
 import {FaAngleDown} from 'react-icons/fa';
-
 
 
 function Navbar() {
@@ -31,7 +31,7 @@ function Navbar() {
               <Link to='/' className='nav-links'> Home </Link>
             </li>
             <li className='nav-item'onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              <Link to='/endangeredSpecies' className='nav-links'> Endangered Species <FaAngleDown size="1.5em" color="orange"/> </Link>
+              <Link to='/endangeredSpecies' className='nav-links'> Endangered Species <FaAngleDown size="1.5em" color="orange"/></Link>
               {dropdown && <Dropdown />}
             </li>
 

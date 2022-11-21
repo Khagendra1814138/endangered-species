@@ -81,25 +81,38 @@ export class IndividualAction extends Component {
   {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <body className='pageBodyFrame'>
+          
+          <div className = "mainSubHeadFrame">
+            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take daily individual actions</subhead>
+          </div>
+            
           <div className='container'>
-      
-            <div className = "mainSubHeadFrame">
-              <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take daily individual actions</subhead>
-            </div>
-
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               <IndividualActionParagaph1/>
             </paragragraph>
             <IndividualActionParagraph/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video of how the endangered species can be saved.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=0Puv0Pss33M"/>
-              </div> 
-              <line className = "thinLine"></line>
+            <div className = {this.state.darkMode ? "pageDiscriptionTitle-Dark" : "pageDiscriptionTitle"}>
+              Below we have listed daily stepe you can take everyday to reduct your carbon footprint.
+              And individual action you can take to protect the endangered species.
+            
             </div>
+          </div>
+            
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line>
+                <paragragraph className="video-Discription">A video of how the endangered species can be saved.</paragragraph>
+                <ReactPlayer className='videoFrame' 
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=0Puv0Pss33M"
+                  height="450px" 
+                  width="800px" 
+                />
+              <line className="thinLine"></line>
+            </div> 
+            
+
+          <div className='container'>
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -151,15 +164,19 @@ export class IndividualAction extends Component {
             </box>
             <RecycleReuseDisposeParagraphVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video guide on how to recycle properly at you home.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=BnwdpR_2idA"/>
-              </div> 
-              <line className = "thinLine"></line>
-            </div>
-
+           
+                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                  <line className="thinLine"></line>
+                    <paragragraph className="video-Discription">A video guide on how to recycle properly at you home.</paragragraph>
+                    <ReactPlayer className='videoFrame' 
+                      controls={true} 
+                      url="https://www.youtube.com/watch?v=BnwdpR_2idA"
+                      height="450px" 
+                      width="800px" 
+                    />
+                  <line className="thinLine"></line>
+                </div> 
+       
 
             {/* <line className = "largeLine"></line> */}
 
@@ -197,14 +214,19 @@ export class IndividualAction extends Component {
             <ReduceDairyMeatProductsParagraphVoice/>
 
             
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+     
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line>
                 <paragragraph className="video-Discription">A video of meat product effects our planet.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=3lrJYTsKdUM"/>
-              </div> 
-              <line className = "thinLine"></line>
-            </div>
+                <ReactPlayer className='videoFrame' 
+                  controls={true}
+                  url="https://www.youtube.com/watch?v=3lrJYTsKdUM"
+                  height="450px" 
+                  width="800px" 
+                />
+              <line className="thinLine"></line>
+            </div> 
+        
 
             
             {/* <line className = "largeLine"></line> */}
@@ -260,14 +282,19 @@ export class IndividualAction extends Component {
             </box>
             <KeepGardenHealthyParagraphVoice/>
 
-            <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    
+            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+              <line className="thinLine"></line>
                 <paragragraph className="video-Discription">A video guide on how to help species in your garden.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=Y8_--YV4inE"/>
-              </div> 
-              <line className = "thinLine"></line>
-            </div>
+                <ReactPlayer className='videoFrame' 
+                  controls={true} 
+                  url="https://www.youtube.com/watch?v=Y8_--YV4inE"
+                  height="450px" 
+                  width="800px" 
+                />
+              <line className="thinLine"></line>
+            </div> 
+       
             
             
             {/* <line className = "largeLine"></line> */}

@@ -1,0 +1,124 @@
+#beetlesName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #DDC07F;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+#grasshoppersName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #907F6C;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+#stickInsectsAndCricketsName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #CDA288;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+#beesName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #d68f15c7;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+#butterflyAndMothsName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #9DC7C6;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+#dragonflyAndDamselflyName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #CADE94;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62);
+}
+
+#spiderName{
+    height: 36px;
+    width: 100%;
+    padding: 6px;
+    /* background-color: #AADED7; */
+    background-color: #BEB68A;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    display: flex;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+    overflow: hidden;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    color: rgb(35,47,62); 
+}

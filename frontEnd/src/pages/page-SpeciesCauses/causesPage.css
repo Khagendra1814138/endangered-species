@@ -123,7 +123,7 @@
     background-color: transparent;
     min-height: 152px;
     width: auto;
-    padding: 6px;
+    padding: 10px;
     display: block;
     font-size: 16px;
     margin: auto;
@@ -137,7 +137,7 @@
     background: transparent;
     min-height: 152px;
     width: auto;
-    padding: 6px;
+    padding: 10px;
     display: block;
     font-size: 16px;
     margin: auto;
@@ -146,71 +146,4 @@
     color: white;
     /* border-top: 1px solid var(--color-darkBorder);
     border-bottom: 1px solid var(--color-darkBorder); */
-}
-
-
-
-.takeActionBtn-Light{
-    background: #1888ff;
-    height: 50px;
-    width: 200px;
-    padding: 6px;
-    display: block;
-    margin: auto;
-    position: absolute;
-    left: 36.5%;
-    bottom: -25px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
-    border: 6px solid #003357;
-    border-radius: 50px;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
-}
-.takeActionBtn-Light:hover{
-    background: repeating-linear-gradient(
-    45deg,
-    #003357,
-    #003357 10px,
-    #000 10px,
-    #000 20px
-    );
-    transition: 300ms ease-in-out;
-    text-decoration: underline wavy;
-    /* border: 6px solid #1888ff; */
-}
-
-.takeActionBtn-Dark{
-    background: var(--color-footer);
-    height: 50px;
-    width: 200px;
-    padding: 6px;
-    display: block;
-    margin: auto;
-    position: absolute;
-    left: 36.5%;
-    bottom: -26.5px;
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
-    border: 6px solid var(--color-darkBorder);
-    border-radius: 50px;
-    cursor: pointer;
-    color: white;
-    text-decoration: none;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
-}
-.takeActionBtn-Dark:hover{
-    transition: 300ms ease-in-out;
-    text-decoration: underline wavy;
-    background: repeating-linear-gradient(
-        45deg,
-        #003357,
-        #003357 10px,
-        #1888ff 10px,
-        #1888ff 20px
-        );
 }

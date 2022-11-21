@@ -11,8 +11,10 @@ export const IndividualActionParagraph = () => {
     const [text] = useState
     ("There are already existing organizations like WWF, NRDC, Endangered, IUCN and many more... that are doing their part to protect endangered species. Their" +
     "mission is to find solutions that save the endangered species by applying the best science available and working closely with local communities. But" +
-    "we should do our part as well to keep them from going extinct in order to protect the ecosystem. There" +
-    "are many individual actions that you can take in order to make a positive impact on these endangered species");
+    "we should do our part as well to protect the endangered species from extinction and doing so can protect our ecosystem. There" +
+    "are many individual actions that we can take everyday to make a positive impact on these endangered species. We" + 
+    "can take small steps everyday that can reduce our carbon footprint such as reducing your fossil fuel emmission and electric enengy consumption"
+    );
   
     const { speak, voices} = useSpeechSynthesis();
  

@@ -175,14 +175,13 @@ export class Artic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
+
               <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+                <line className="thinLine"></line>
                   <paragragraph className="video-Discription">A video about Beluga Whale.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=iZ808Z-2uFI"/>
+                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=iZ808Z-2uFI"/>
+                <line className="thinLine"></line>
               </div> 
-              <line className = "thinLine"></line> 
-          </div>
 
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
@@ -274,14 +273,14 @@ export class Artic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <paragragraph className="video-Discription">A video of Orca Hunting.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=9TLg-YlDog0"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video of Orca Hunting.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=9TLg-YlDog0"/>
+            <line className="thinLine"></line>
+          </div> 
+
           
 
           <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
@@ -376,14 +375,14 @@ export class Artic extends Component {
             </box>
           </div>
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <paragragraph className="video-Discription">A video of Polar Bear Hunting.</paragragraph>
-                  <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=zNO0kxTClYo"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
+
+          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
+            <line className="thinLine"></line>
+              <paragragraph className="video-Discription">A video of Polar Bear Hunting.</paragragraph>
+              <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=zNO0kxTClYo"/>
+            <line className="thinLine"></line>
+          </div> 
+
 
         </body>
         <ArticPageSuvNav/>
