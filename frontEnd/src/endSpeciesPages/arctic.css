@@ -7,6 +7,46 @@
     
 }
 
+.mapFrame{
+    height: 730px;
+    width: auto;
+    background-color: #F7F7F7;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.mapFrame-Dark{
+    height: 730px;
+    width: auto;
+    background-color: #37475A;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#articLine{
+    height: 2px;
+    width: 100%;
+    background-color: #CCCCCC;
+    margin: auto;
+    margin-top: 326px;
+    display: block;
+    z-index: -0;
+}
+.articMap{
+    height: 650px;
+    width: 650px;
+    margin: auto;
+    margin-top: -327px;;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    border: 6px solid #DCDCDC;
+    z-index: 1;
+}
 
 .articLargeImage{
     height: 462px;
@@ -78,3 +118,4 @@
     border-top: 1px solid #37475A;
     border-bottom: 1px solid #37475A;
 }
+

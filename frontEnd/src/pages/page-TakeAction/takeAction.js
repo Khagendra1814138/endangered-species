@@ -71,7 +71,7 @@ export class TakeAction extends Component {
         <body className='pageBodyFrame'>
           
           <div className = "mainSubHeadFrame">
-            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take larger steps</subhead>
+            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take larger steps for Immediate Impact</subhead>
           </div>
 
           <div className='container'>
@@ -102,45 +102,39 @@ export class TakeAction extends Component {
               </box>
             </box>
             <WWFParaVoice/>
-                    
-        
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video about the World Wildlife Fund.</paragragraph>
-                <ReactPlayer className='videoFrame'
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=Tss6HtHlLuw"
-                  height="450px" 
-                  width="800px" 
-                />
-              <line className = "thinLine"></line>
-            </div> 
-   
-
-          </div>  
+          </div>            
 
 
-          <div className={this.state.darkMode ? "container" : "container2"}>
-            <box className = "box">
-              <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${iucn})`}}></div>
-              </image>
-
-              <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
-                <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}> Support IUCN </label>
-                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
-                 <IUCNsupportPARAGRAPH/>
-                </paragragraph>
-                <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
-                  to={{ pathname: "https://www.iucn.org/" }} target="_blank">Visit IUCN
-                </Link>
-              </box>
-            </box>
-            <IUCNParaVoice/>
-          </div>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video about the World Wildlife Fund.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Tss6HtHlLuw" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}   
 
 
           <div className='container'>
+            <div className={this.state.darkMode ? "container" : "container2"}>
+              <box className = "box">
+                <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${iucn})`}}></div>
+                </image>
+
+                <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
+                  <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}> Support IUCN </label>
+                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
+                  <IUCNsupportPARAGRAPH/>
+                  </paragragraph>
+                  <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
+                    to={{ pathname: "https://www.iucn.org/" }} target="_blank">Visit IUCN
+                  </Link>
+                </box>
+              </box>
+              <IUCNParaVoice/>
+            </div>
+
             <box className = "box"> 
               <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${otp})`}}></div>
@@ -157,29 +151,26 @@ export class TakeAction extends Component {
               </box>
             </box>
             <OTPParaVoice/>
-          </div>
-            
+          
+            <div className={this.state.darkMode ? "container" : "container2"}>
+              <box className = "box">
+                <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${ecosia})`}}></div>
+                </image>
 
-          <div className={this.state.darkMode ? "container" : "container2"}>
-            <box className = "box">
-              <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${ecosia})`}}></div>
-              </image>
-
-              <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
-                <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>Use Ecosia Search Engine</label>
-                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
-                  <ECOSIAsupportPARAGRAPH/>
-                </paragragraph>
-                <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
-                  to={{ pathname: "https://www.ecosia.org/.org/" }} target="_blank">Visit Ecosia
-                </Link>
+                <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
+                  <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>Use Ecosia Search Engine</label>
+                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
+                    <ECOSIAsupportPARAGRAPH/>
+                  </paragragraph>
+                  <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
+                    to={{ pathname: "https://www.ecosia.org/.org/" }} target="_blank">Visit Ecosia
+                  </Link>
+                </box>
               </box>
-            </box>
-            <UseEcosiaParaVoice/>
-          </div>
-
-          <div className='container'>
+              <UseEcosiaParaVoice/>
+            </div>
+         
             <box className = "box">
               <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${toc})`}}></div>
@@ -196,39 +187,39 @@ export class TakeAction extends Component {
               </box>
             </box>
             <TOCParaVoice/>
-            
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video about The Ocean Cleanup.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=pgxYHSFwQQU"
-                  height="450px" 
-                  width="800px"
-                />
-              <line className = "thinLine"></line>
-            </div> 
+          </div> 
 
-          </div>
 
-          <div className={this.state.darkMode ? "container" : "container2"}>
-            <box className = "box">
-              <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
-                <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${oc})`}}></div>
-              </image>
-              
-              <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
-                <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>Support Ocean Conservancy (OC)</label>
-                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
-                  <OCsupportPARAGRAPH/>
-                </paragragraph>
-                <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
-                  to={{ pathname: "https://www.ecosia.org/.org/" }} target="_blank">Visit OC
-                </Link>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video about The Ocean Cleanup.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=pgxYHSFwQQU" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <div className={this.state.darkMode ? "container" : "container2"}>
+              <box className = "box">
+                <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
+                  <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${oc})`}}></div>
+                </image>
+                
+                <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
+                  <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>Support Ocean Conservancy (OC)</label>
+                  <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className={this.state.darkMode ? "actionParagraph-Dark" : "actionParagraph-Light"}>
+                    <OCsupportPARAGRAPH/>
+                  </paragragraph>
+                  <Link className={this.state.darkMode ? "takeActionBtn-Dark" : "takeActionBtn-Light"} 
+                    to={{ pathname: "https://www.ecosia.org/.org/" }} target="_blank">Visit OC
+                  </Link>
+                </box>
               </box>
-            </box>
-            <OCParaVoice/>
-          </div>
+              <OCParaVoice/>
+           </div>
+          </div> 
         
         </body>
         <TakeActonSuvNav/>

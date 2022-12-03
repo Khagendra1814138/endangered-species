@@ -7,19 +7,29 @@
 
     --color-darkBorder: #37475A;
     --color-textColor: rgb(35,47,62);
+
+    --smallImg-height: 230px;
+    --smallImg-width: 490px;
+
+    --border-size: 0px;
 }
 
+.mammelsImageFrame{
+    height: auto;
+    width: auto;
+    margin: auto;
+}
 
 .mammelsSmallImage-Dark{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-darkBorder);
-    border-left: 4px solid var(--color-darkBorder);
-    border-right: 4px solid var(--color-darkBorder);
+    border-top: var(--border-size) solid var(--color-darkBorder);
+    border-left: var(--border-size) solid var(--color-darkBorder);
+    border-right: var(--border-size) solid var(--color-darkBorder);
 }
 
 .mammelsName-Dark{
@@ -32,21 +42,21 @@
     font-size: 24px;
     text-align: center;
     color: white;
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    border-top: 1px solid var(--color-darkBorder);
+    border-bottom: 1px solid var(--color-darkBorder);
 }
 
 
 .smallMammelsImage{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-smallMammels);
-    border-left: 4px solid var(--color-smallMammels);
-    border-right: 4px solid var(--color-smallMammels);
+    border-top: var(--border-size) solid var(--color-smallMammels);
+    border-left: var(--border-size) solid var(--color-smallMammels);
+    border-right: var(--border-size) solid var(--color-smallMammels);
 }
 
 .smallMammelsName{
@@ -68,14 +78,14 @@
 
 .largeMammelsImage{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-largeMammels);
-    border-left: 4px solid var(--color-largeMammels);
-    border-right: 4px solid var(--color-largeMammels);
+    border-top: var(--border-size) solid var(--color-largeMammels);
+    border-left: var(--border-size) solid var(--color-largeMammels);
+    border-right: var(--border-size) solid var(--color-largeMammels);
 }
 
 .largeMammelsName{
@@ -96,14 +106,14 @@
 
 .smallRhinoImage{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-rhino);
-    border-left: 4px solid var(--color-rhino);;
-    border-right: 4px solid var(--color-rhino);;
+    border-top: var(--border-size) solid var(--color-rhino);
+    border-left: var(--border-size) solid var(--color-rhino);;
+    border-right: var(--border-size) solid var(--color-rhino);;
 }
 .rhinoName{
     height: 36px;
@@ -124,14 +134,14 @@
 
 .bigCatsImage{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-bigCats);
-    border-left: 4px solid var(--color-bigCats);
-    border-right: 4px solid var(--color-bigCats);
+    border-top: var(--border-size) solid var(--color-bigCats);
+    border-left: var(--border-size) solid var(--color-bigCats);
+    border-right: var(--border-size) solid var(--color-bigCats);
 }
 
 .bigCatsName{
@@ -153,14 +163,14 @@
 
 .primatesImage{
     background: none;
-    height: 210px;
-    width: 470px;
+    height: var(--smallImg-height);
+    width: var(--smallImg-width);
     display: block;
     margin: auto;
     overflow: hidden;
-    border-top: 4px solid var(--color-primates);
-    border-left: 4px solid var(--color-primates);
-    border-right: 4px solid var(--color-primates);
+    border-top: var(--border-size) solid var(--color-primates);
+    border-left: var(--border-size) solid var(--color-primates);
+    border-right: var(--border-size) solid var(--color-primates);
 }
 
 .primatesName{

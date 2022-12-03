@@ -39,7 +39,7 @@
 .QuizBox{
   height: 740px;
   width: 1020px;
-  background-color: none;
+  background-color: #7FC8A9;
   display: flex;
   margin: auto;
   margin-top: 6vh;
@@ -52,7 +52,7 @@
     font-size: 44px;
     align-items: center;
     font-family: 'Rubik', sans-serif;
-    font-weight: bolder;
+    font-weight: bold;
   }
   
   /* QUESTION/TIMER/LEFT SECTION */
@@ -66,19 +66,19 @@
     height: 80px;
     width: 500px;
     margin: auto;
-    background-color: #C7E2E2;
+    background-color: #CEE5D0;
     text-align: center;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     font-weight: bold;
     border-radius: 50px;
     display: flex;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    /* box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228); */
   }
   .leftFrame {
     height: 50px;
     width: 150px;
-    font-size: 36px;
+    font-size: 40px;
     font-family: 'Rubik', sans-serif;
     font-weight: bold;
     display: inline flex;
@@ -87,15 +87,16 @@
     margin: auto;
     background-color: none;
     color: rgb(35,47,62);
+    text-shadow:  1px 1px 1px rgb(35,47,62);
   }
   .timer-count{
     height: 100px;
     width: 100px;
     background-color: whitesmoke;
-    border-radius: 50%;
+    border-radius: 10px;
     display: flex;
     margin: auto;
-    margin-top: -10px;
+    margin-top: -14px;
     justify-content: center;
     align-items: center;
     box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
@@ -104,15 +105,15 @@
   .question-text {
     height: 140px;
     margin-top: -10px;
-    background-color: lightblue;
+    background-color: #97DFC1;
     padding: 6px;
     padding-top: 40px;
     text-align: center;
-    font-family: var(--font-family);
-    font-size: 28px;
+    font-family: var(--font-paragraphStyle);
+    font-size: 30px;
     font-weight: bold;
     border-radius: 20px;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    /* box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228); */
     color: rgb(35,47,62);
   }
   
@@ -133,11 +134,11 @@
     padding: 10px;
     display: flex;
     flex-direction: column;
-    background-color: #C7E2E2;
+    background-color: #97DFC1;
     margin: auto;
     margin-top: 40px;
     border-radius: 20px;
-    box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228);
+    /* box-shadow: -2px -2px 2px rgb(94, 104, 121, .228), 5px 5px 5px rgba(94, 104, 121, .228); */
   }
   
   .quizButton {

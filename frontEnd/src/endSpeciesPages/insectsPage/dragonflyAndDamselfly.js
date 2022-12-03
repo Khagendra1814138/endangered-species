@@ -14,34 +14,39 @@ export const DragonflyAndDamselflyCardsSet = () => {
     <container id="two-row">
         <grid id="two-column">
           <div id="boxLong">
-            <box className = "speciesCardContainer">
-              <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${LibellulaAngelina})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="dragonflyAndDamselflyName"> Name sss</name>
-            </box>
+            <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${LibellulaAngelina})`}}></image></div>
+            <name id="dragonflyAndDamselflyName">Libellula Angelina </name>
           </div>
 
           <div id="boxLong">
             <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${BwindiJunglewatcher})`}}></image></div>
-            <name id="dragonflyAndDamselflyName"> Name </name>
+            <name id="dragonflyAndDamselflyName"> Bwindi Junglewatcher </name>
           </div>
         </grid>
 
 
         <grid id="three-column">
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${TogoRedJewel})`}}></image></div>
-            <name id="dragonflyAndDamselflyName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${TogoRedJewel})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ronan A</label></div>
+
+              <name id="dragonflyAndDamselflyName"> Togo Red Jewel </name>
+            </box>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${TeinobasisPonapensis})`}}></image></div>
-            <name id="dragonflyAndDamselflyName"> Name </name>
+            <name id="dragonflyAndDamselflyName"> Teinobasis Ponapensis </name>
           </div>
 
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${MinagrionFranciscoi})`}}></image></div>
-            <name id="dragonflyAndDamselflyName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${MinagrionFranciscoi})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Rhainer Guillermo</label></div>
+
+              <name id="dragonflyAndDamselflyName"> Minagrion Franciscoi </name>
+            </box>
           </div>
         </grid>
     </container>

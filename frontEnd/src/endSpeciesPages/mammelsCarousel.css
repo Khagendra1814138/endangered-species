@@ -1,13 +1,15 @@
 
   .carouselFrame{
     height: auto;
-    width: 56%;
+    width: 1020px;
     margin: auto;
     margin-top: 40px;
     padding: 20px;
     background-color: none;
     border-radius: 10px;
     display: flex;
+    border-left: 4px solid gainsboro;
+    border-right: 4px solid gainsboro;
   }
 
   .mainImageFrame{
@@ -18,7 +20,7 @@
   }
 
   .largeCarouselMammelImage{
-    height: 400px;
+    height: 440px;
     width: 800px;
     display: block;
     background-color: none;

@@ -82,13 +82,12 @@ export class Causes extends Component {
 
           <div className='container'>
             <div className = "mainSubHeadFrame">
-              <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Causes threatning the species</subhead>
+              <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Threats to the Endangered Species</subhead>
             </div>
           </div>
 
 
           <div className='container'>
-
             <box className="paragraphContainer">
               <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                 <CausesParagaph1/>
@@ -114,21 +113,20 @@ export class Causes extends Component {
               </box>
             </box>
             <PlasticPollutionVoice/>
+          </div>
 
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video of plastic pollution effects.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=IA9O9YUbQew"
-                  height="450px" 
-                  width="800px"
-                />
-              <line className = "thinLine"></line>
-            </div>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video of plastic pollution effects.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=IA9O9YUbQew" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
 
             {/* <line className = "largeLine"></line> */}
-
+          <div className='container'>
             <box className = "box">
               <box className = "speciesCardContainer">
                 <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
@@ -180,22 +178,21 @@ export class Causes extends Component {
               </box>
             </box>
             <ClimateChangeParagraphVoice/>
+          </div>
 
-            
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}> 
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video of how climate change is effecting our planet.</paragragraph>
-                <ReactPlayer className="videoFrame" 
-                  controls={true}
-                  url="https://www.youtube.com/watch?v=dIsjcG7hTmo"
-                  height="450px"
-                  width="800px" 
-                />
-              <line className = "thinLine"></line>
-            </div>
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}> 
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video of how climate change is effecting our planet.</paragragraph>
+    <ReactPlayer className="videoFrame" controls={true} url="https://www.youtube.com/watch?v=dIsjcG7hTmo" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
 
             {/* <line className = "largeLine"></line> */}
-
+          <div className='container'>
             <box className = "box">
               <box className = "speciesCardContainer">
                 <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
@@ -232,24 +229,21 @@ export class Causes extends Component {
               </box>
             </box>
             <HabitatDistructionParagraphVoice/>
+          </div>
 
-            
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video of how deforestation effects out planet.</paragragraph>       
-                <ReactPlayer className='videoFrame' 
-                  controls 
-                  url="https://www.youtube.com/watch?v=Ic-J6hcSKa8"
-                  height="450px"
-                  width="800px" 
-                />
-              <line className = "thinLine"></line>
-            </div> 
-              
-            
-  {/* 
-            <line className = "largeLine"></line> */}
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video of how deforestation effects out planet.</paragragraph>       
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Ic-J6hcSKa8" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}              
+
+
+  {/* <line className = "largeLine"></line> */}
+          <div className='container'>
             <box className = "box">
               <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
                 <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${InvasiveSpecies})`}}></div>
@@ -279,21 +273,21 @@ export class Causes extends Component {
               </box>
             </box>
             <OverFishingParagraphVoice/>
+          </div>
 
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className = "thinLine"></line>
-                <paragragraph className="video-Discription">A video of over fishing and how that is effecting the ocean.</paragragraph>
-                <ReactPlayer className='videoFrame'
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=Q1EcQQsJrmg"
-                  height="450px" 
-                  width="800px"
-                 />
-              <line className = "thinLine"></line>
-            </div>
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}     
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video of over fishing and how that is effecting the ocean.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Q1EcQQsJrmg" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
 
             {/* <line className = "largeLine"></line> */}
-
+          <div className='container'>
             <box className = "box">
               <box className = "speciesCardContainer">
                 <image className={this.state.darkMode ? "imageMedium-Dark" : "imageMedium-Light"}>
@@ -327,7 +321,6 @@ export class Causes extends Component {
               </box>
             </box>
             <OilGasDevelopmentParagraphVoice/>
-
           </div>
         
         </body>

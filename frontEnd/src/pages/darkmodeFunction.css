@@ -18,25 +18,67 @@
   span {
     font-size: 40px;
     display: inline-flex;
+    font-family: 'Manrope', sans-serif;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
   }
   
+  /* .darkModeSwitchContainer {
+    height: 64;
+    width: 180px;
+    margin: auto;
+ 
+    display: flex;
+    position: fixed;
+    bottom: 300px;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #37475A;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border: none;
+    padding-bottom: 4px;
+
+    transition: 300ms ease;
+    border-left: 4px solid #37475A;
+    border-bottom: 4px solid #37475A;
+    border-top: 4px solid #37475A;
+    cursor: pointer;
+    z-index: 3;
+  } */
+
   .darkModeSwitchContainer {
     height: auto;
     width: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+    margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgb(35,47,62);
+    background-color: #232F3E;
+    padding-bottom: 4px;
+    cursor: pointer;
+    z-index: 3;
     border-bottom: 6px solid #37475A;
+  }
+  /* .darkModeSwitchContainer:hover{
+    border-left: 4px solid orange;
+    border-bottom: 4px solid orange;
+    border-top: 4px solid orange;
+  } */
+  .darmodeLabel{
+    font-size: 26px;
+    margin: auto;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   
   
   .switch {
     position: relative;
     top: 2px;
-    display: inline-block;
+    display: flex;
     width: 60px;
     height: 34px;
   }
@@ -54,7 +96,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: gainsboro;
+    background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -66,7 +108,7 @@
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: rgb(35,47,62);
+    background-color: white;
     -webkit-transition: .4s;
     transition: .4s;
   }

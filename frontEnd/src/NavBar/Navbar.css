@@ -37,20 +37,41 @@
   color: white;
   text-decoration: none;
   padding: 0.6rem 1rem;
-  display: flex;
-  align-items: left;
+ 
+ 
   font-family: 'Manrope', sans-serif;
   font-size: 20px;
-  border-radius: 10px;
-  transition: 0.4s ease;
+  transition: 0.3s ease;
+
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+
+  border: none;
+  outline: none;
 }
 
-.nav-links:hover {
-  background-color: #1888ff;
+.nav-links::after{
+  content: '';
+  height: 4px;
   border-radius: 10px;
+  width: 0%;
+  background-color: #1787FD;
+  display: block;
+  transition: width 0.5s;
+  margin: auto;
+  margin-top: 10px;
 }
+.nav-links:hover::after{
+  content: '';
+  width: 100%;
+}
+
+.nav-links:hover{
+  color: #1787FD;
+}
+
+
   
  
 

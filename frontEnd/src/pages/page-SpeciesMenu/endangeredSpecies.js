@@ -137,23 +137,16 @@ export class EndangeredSpecies extends Component {
               </Carousel>
             </div>
           </div>
-          
 
 
-
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-            <line className = "thinLine"></line>
-              <paragragraph className="video-Discription">A video guide on what are Endangered Species.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=6tjDCZrGnxc"
-                  height='574px' 
-                  width='1020px' 
-                />
-            <line className = "thinLine"></line>
-          </div>
-
-
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className="video-Discription">A video guide on what are Endangered Species.</paragragraph>
+      <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=6tjDCZrGnxc" height='574px' width='1020px'/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
           <div className='container'>
@@ -249,7 +242,7 @@ export class EndangeredSpecies extends Component {
             <line className = "largeLine"></line>
 
             <box id = "long_Box">
-              <Link exact to="./endSpeciesUk" className='speciesMainFrame'>
+              <Link exact to="./endSpeciesUk" className='speciesCardContainer'>
                 <box className = "speciesCardContainer">
                   <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${Uk})`}}></div>

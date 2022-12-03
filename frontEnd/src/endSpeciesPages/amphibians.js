@@ -5,6 +5,8 @@ import ReactPlayer from 'react-player';
 import '../pages/publicMain.css';
 import './amphibians.css';
 
+import {AmphibiansSideBarPageNav} from "../sideBarPagesNav/EnAmphibiansBarPageNav";
+
 import {AmphibianPageSuvNav} from "../subNav/subNavigation";
 
 
@@ -38,7 +40,7 @@ import {AmphibianPara1Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara2Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara3Voice} from "../textToVoice/endAmphibianPageVoice";
 import {AmphibianPara4Voice} from "../textToVoice/endAmphibianPageVoice";
-import config from '../config';
+// import config from '../config';
 
 
 //Information sources
@@ -50,21 +52,21 @@ export class Amphibians extends Component {
       this.state = {
         darkMode: false,
         fontSize: 18,
-        endangeredAmphibiansItems: [],
+        // endangeredAmphibiansItems: [],
       };
     }
 
-    componentDidMount(){
-        fetch(config.backendUrl + "api/amphibianSpecies")
-        .then (rest => rest.json())
-        .then (endangeredAmphibiansRecords => {
-        this.setState({
-            isLoaded: true,
-            endangeredAmphibiansItems: endangeredAmphibiansRecords,
-          })
-        console.log(endangeredAmphibiansRecords)
-        });
-    }
+    // componentDidMount(){
+    //     fetch(config.backendUrl + "api/amphibianSpecies")
+    //     .then (rest => rest.json())
+    //     .then (endangeredAmphibiansRecords => {
+    //     this.setState({
+    //         isLoaded: true,
+    //         endangeredAmphibiansItems: endangeredAmphibiansRecords,
+    //       })
+    //     console.log(endangeredAmphibiansRecords)
+    //     });
+    // }
 
     render(){
 
@@ -75,30 +77,27 @@ export class Amphibians extends Component {
             <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-                <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerAmphibian})`}}></box>
+            <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerAmphibian})`}}></box>
 
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
-                <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
+            <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
                 
                 <body className='pageBodyFrame'>
-    
+                    <AmphibiansSideBarPageNav/>
+
                     <div className = "mainSubHeadFrame">
-                        <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Amphibians</subhead>
+                        <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Some of the Endangered Amphibians species</subhead>
                     </div>
 
                     <div className='container'>
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                             Did you know that Amphibians were the first vertebrates to colonise the land evolving around 370 million years ago.
                             They have already survived four mass extinction events.
-                            <br></br>
-                            <br></br>
                             The IUCN Red List states that around 40% of Amphibians species are already threatned with Extinction.
                             It is very important to stop this extinction because Amphibians like frogs, toad and salamander are critical part of the nature as they are both predetor and prey.
-                            <br></br>
-                            <br></br>
-                            Apmhibians species mainly eats insects pests, which can benifit Agriculture around the world.
-                            They eat insects like musquitos, helping to reduce the spread of diseases like malaria.
+                            Amphibians species mainly eats insects pests, which can benifit Agriculture around the world.
+                            They eat insects like mosquitoes, helping to reduce the spread of diseases like malaria.
                         </paragragraph>
                         <AmphibianPara1Voice/>
                    
@@ -111,11 +110,12 @@ export class Amphibians extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by John Cancalosi</label></div>
 
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[0].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Axolotl
                                     </label>
                                 </box>
                             </box>
@@ -126,11 +126,12 @@ export class Amphibians extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${chineseGiantSalamander})`}}></div>
                                     </image>
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[1].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Chinese Giant Salamander
                                     </label>
                                 </box>
 
@@ -142,11 +143,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Sean M. Rovito</label></div>
                                         
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[4].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Flatwoods Salamander
                                         </label>
                                     </box>
                                 </box>
@@ -161,11 +163,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Stephen Friedt</label></div>
 
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[3].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Slender Salamander
                                         </label>
                                     </box>
                                 </box>
@@ -175,28 +178,27 @@ export class Amphibians extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${splayfootSalamanders})`}}></div>
                                     </image>
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[2].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Splayfoot Salamanders
                                     </label>
                                 </box>
                             </box>
                         </box>
                     </div>
-                   
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                        <line className = "thinLine"></line> 
-                            <paragragraph className="video-Discription">A video of about Axolotel species and how they are endnagered.</paragragraph>
-                            <ReactPlayer  className='videoFrame' 
-                                controls={true} 
-                                url="https://www.youtube.com/watch?v=lL87xhk63FM"
-                                height="450px" 
-                                width="800px" 
-                            />
-                        <line className = "thinLine"></line> 
-                    </div> 
+
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className = "thinLine"></line> 
+        <paragragraph className="video-Discription">A video of about Axolotel species and how they are endnagered.</paragragraph>
+        <ReactPlayer  className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=lL87xhk63FM" height="450px" width="800px"/>
+    <line className = "thinLine"></line> 
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
 
 
                     <div className='container'>
@@ -216,11 +218,12 @@ export class Amphibians extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Frogmana</label></div>
                                     
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName2"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[5].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Lemur Leaf Frog
                                     </label>
                                 </box>
                             </box>
@@ -234,11 +237,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Miguel Vences</label></div>
 
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName2"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[11].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Anodonthyla Vallani Frog
                                         </label>
                                     </box>
                                 </box>
@@ -248,11 +252,12 @@ export class Amphibians extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baleMountainsTreeFrog})`}}></div>
                                     </image>
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName2"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[12].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Bale Mountains TreeFrog
                                     </label>
                                 </box>
                             </box>
@@ -266,11 +271,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Critter Man</label></div>
                                         
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName2"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[13].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Corroboree Frog
                                         </label>
                                     </box>
                                 </box>
@@ -283,11 +289,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by John A. Tupy</label></div>
                                         
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName2"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[10].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Dusky Gopher Frog
                                         </label>
                                     </box>
                                 </box>
@@ -295,20 +302,16 @@ export class Amphibians extends Component {
                         </box>
                     </div>
 
-    
-                        
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                        <line className = "thinLine"></line>
-                            <paragragraph className="video-Discription">A video of Endangered Frogs Species.</paragragraph>
-                            <ReactPlayer  className='videoFrame' 
-                                controls={true} 
-                                url="https://www.youtube.com/watch?v=Uja_QE4cZV0"
-                                height="450px"
-                                width="800px"
-                            />
-                        <line className = "thinLine"></line>
-                    </div> 
-              
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}                        
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className = "thinLine"></line>
+        <paragragraph className="video-Discription">A video of Endangered Frogs Species.</paragragraph>
+        <ReactPlayer  className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Uja_QE4cZV0" height="450px" width="800px"/>
+    <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
+
 
                     <div className='container'>
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
@@ -327,11 +330,12 @@ export class Amphibians extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Kikker Dirk</label></div>
                                     
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName3"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[7].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Poison Dart Frog
                                     </label>
                                 </box>
                             </box>
@@ -345,11 +349,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Thai National Park</label></div>
 
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName3"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[8].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Flying Frog
                                         </label>
                                     </box>
                                 </box>
@@ -363,11 +368,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Frank Vassen</label></div>
 
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName3"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[14].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Mantella Frog
                                         </label>
                                     </box>
                                 </box>
@@ -382,11 +388,12 @@ export class Amphibians extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Brian Gratwicke</label></div>
 
                                         <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName3"}>
-                                            {this.state.endangeredAmphibiansItems.length > 0 && (
+                                            {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredAmphibiansItems[9].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Panamanian Golden Frog
                                         </label>
                                     </box>
                                 </box>
@@ -396,38 +403,40 @@ export class Amphibians extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${variableHarlequinFrog})`}}></div>
                                     </image>
                                     <label className= {this.state.darkMode ? "amphibianName-Dark" : "amphibianName3"}>
-                                        {this.state.endangeredAmphibiansItems.length > 0 && (
+                                        {/* {this.state.endangeredAmphibiansItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredAmphibiansItems[6].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Variable Harlequin Frog
                                     </label>
                                 </box>
                             </box>
                         </box>
                     </div>
-                    
-             
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                        <line className = "thinLine"></line>
-                            <paragragraph className="video-Discription">A video of Gliding Leaf Frogs.</paragragraph>
-                            <ReactPlayer  className='videoFrame' controls={true} 
-                                url="https://www.youtube.com/watch?v=tf1bytsDDho"
-                                height="450px" 
-                                width="800px"
-                            />
-                        <line className = "thinLine"></line>
-                    </div> 
-        
-                          
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
-                        This ability is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
-                    </paragragraph>
-                    <AmphibianPara4Voice/>
-            </body>
-            <AmphibianPageSuvNav/>
-        </div>
+
+                   
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}            
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className = "thinLine"></line>
+        <paragragraph className="video-Discription">A video of Gliding Leaf Frogs.</paragragraph>
+        <ReactPlayer  className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=tf1bytsDDho" height="450px" width="800px"/>
+    <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+                    <div className='container'>
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            One of the most fascinating thing about Amphibians are that most of them have ability to regrow their limbs.
+                            This ability is currently being studied by scientists around the world to gain new knowledge on how to improve tissue regeneration and growth.
+                        </paragragraph>
+                        <AmphibianPara4Voice/>
+                    </div>
+
+                </body>
+                <AmphibianPageSuvNav/>
+            </div>
         );
     }
 }

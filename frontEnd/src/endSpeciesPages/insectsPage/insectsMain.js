@@ -6,6 +6,8 @@ import '../../pages/publicMain.css';
 import './insects.css';
 import './insectsPageGrid.css';
 
+//SideBarPageNav
+import {InsectsSideBarPageNav} from "../../sideBarPagesNav/EnInsectsSideBarPageNav";
 
 import {InsectsPageSuvNav} from "../../subNav/subNavigation";
 import headerInsects from '../../images/headerInsects2.png';
@@ -30,10 +32,18 @@ import {SpidersCardsSet} from "./spiders"
 
 
 //Paragraphs
-import {InsectsTopParagraph} from "./insectsParagraphs"
-//Text To Voices
-import {InsectMainParagraphVOICE} from "./insectsParagraphVOICE";
+import {InsectsMainParagraph} from "./insectsParagraphs"
+import {DietParagraph} from "./insectsParagraphs"
+import {PollinatorParagraph} from "./insectsParagraphs"
+import {CleaningFertelisingPestcontrolParagraph} from "./insectsParagraphs"
+import {EconomyParagraph} from "./insectsParagraphs"
 
+//Text To Voices
+import {InsectMainParagraphVOICE} from "./insectsVOICE";
+import {InsectsDietVOICE} from "./insectsVOICE";
+import {InsectsPollinatorVOICE} from "./insectsVOICE";
+import {InsectsCleanFertelPestContVOICE} from "./insectsVOICE";
+import {InsectsEconomyVOICE} from "./insectsVOICE";
 
 
 export class Insects extends Component {
@@ -56,120 +66,120 @@ export class Insects extends Component {
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 
         <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerInsects})`}}>
-          
-        </box>
 
+        </box>
+        <InsectsSideBarPageNav/>
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 
         <body className='pageBodyFrame'>
 
+          <div className = "mainSubHeadFrame">
+            <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Insects Species</subhead>
+          </div>
+    
+
           <div className='container'>
-            <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Insects Species</subhead>
-            </div>
-          </div>
-
-
-          <div className='blockFrame'>
-            <h3> title </h3>
-            <image> Image </image>
-            <p> Paragraph </p>
-          </div>
-
-          
-          <div className='flexFrame'>
-            <box className="twoHolder">
-            <image> Image </image>
+            <box className="paragraphContainer">
+              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                <InsectsMainParagraph/>
+              </paragragraph>
+              <InsectMainParagraphVOICE/>
             </box>
 
-            <box className="twoHolder">
-            <h3> This is the title </h3>
-            <p> This is the Paragraph </p>
-            <button id='linkBtn'> This is button </button>
-            </box> 
+            <BeetlesCardsSet/>
           </div>
 
-          <box className="paragraphContainer">
-            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              <InsectsTopParagraph/>
-            </paragragraph>
-            <InsectMainParagraphVOICE/>
-          </box>
 
-          <BeetlesCardsSet/>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line> 
+      <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+      <ReactPlayer className='videoFrame'  controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s" height="450px" width="800px"/>
+  <line className="thinLine"></line> 
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          
 
-    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-            <line className="thinLine"></line> 
-                <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
-                <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
-            <line className="thinLine"></line> 
-          </div> 
-    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          <div className='container'>
+            <GrasshoppersCardsSet/>
 
-          <GrasshoppersCardsSet/>
+            <box className="paragraphContainer">
+              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                <DietParagraph/>
+              </paragragraph>
+              <InsectsDietVOICE/>
+            </box>
 
-          <box className="paragraphContainer">
-            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              <InsectsTopParagraph/>
-            </paragragraph>
-            <InsectMainParagraphVOICE/>
-          </box>
-
-          <StickInsectsAndCricketsCardsSet/>
-
-    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line> 
-                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
-                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
-              <line className="thinLine"></line> 
-          </div> 
-    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-          <BeesCardsSet/>
-
-          <box className="paragraphContainer">
-            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              <InsectsTopParagraph/>
-            </paragragraph>
-            <InsectMainParagraphVOICE/>
-          </box>
-
-          <ButterflysAndMothsCardsSet/>
-
-    {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line> 
-                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
-                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
-              <line className="thinLine"></line> 
-          </div> 
-    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-          <DragonflyAndDamselflyCardsSet/>
-
-          <box className="paragraphContainer">
-            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-              <InsectsTopParagraph/>
-            </paragragraph>
-            <InsectMainParagraphVOICE/>
-          </box>
-
-          <SpidersCardsSet/>
-
-   {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line> 
-                  <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
-                  <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s"/>
-              <line className="thinLine"></line> 
-          </div> 
-    {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
- 
+            <StickInsectsAndCricketsCardsSet/>
+          </div>
 
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line> 
+    <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s" height="450px" width="800px"/>
+  <line className="thinLine"></line> 
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+          
+
+          <div className='container'>
+            <BeesCardsSet/>
+
+            <box className="paragraphContainer">
+              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                <PollinatorParagraph/>
+              </paragragraph>
+              <InsectsPollinatorVOICE/>
+            </box>
+
+            <ButterflysAndMothsCardsSet/>
+          </div>
+
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line> 
+    <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s" height="450px" width="800px"/>
+  <line className="thinLine"></line> 
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <DragonflyAndDamselflyCardsSet/>
+
+            <box className="paragraphContainer">
+              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                <CleaningFertelisingPestcontrolParagraph/>
+              </paragragraph>
+              <InsectsCleanFertelPestContVOICE/>
+            </box>
+
+            <SpidersCardsSet/>
+          </div>
+
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}          
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line> 
+    <paragragraph className="video-Discription">A video about the Critically endangered Scottish wildcats.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=g3W3yr8NopU&t=93s" height="450px" width="800px"/>
+  <line className="thinLine"></line> 
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <box className="paragraphContainer">
+              <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                <EconomyParagraph/>
+              </paragragraph>
+              <InsectsEconomyVOICE/>
+            </box>
+          </div>
         </body>
         <InsectsPageSuvNav/>
       </div>    

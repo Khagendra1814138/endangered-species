@@ -300,13 +300,30 @@ h1{
 
 .box_long{
     height: auto;
-    max-width: 1500px;
+    width: 1500px;
     background-color: none;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 40px;
     margin: auto;
     margin-top: 40px;
     padding: 20px;
 }
+
+@media only screen and (max-width: 1500px) {
+    #endPercentage_GRID{
+        grid-template-columns: auto auto;
+    }
+    #endPercentage_GRID-Dark{
+        grid-template-columns: auto auto;
+    }
+    .box_long {
+        width: 1000px;
+        grid-template-columns: auto auto;
+    }
+}
+
 .whyProtectFrame-light{
     height: auto;
     width: auto;
@@ -579,6 +596,9 @@ h1{
     color: white;
 }
 
+.linkStyle{
+    text-decoration: none;
+}
 .getStartedButton{
     height: 50px;
     width: 200px;
@@ -598,6 +618,7 @@ h1{
     overflow: hidden;
     cursor: pointer;
     transition: 0.5s ease;
+    text-decoration: none;
 }
 .getStartedButton::before{
     content: '';

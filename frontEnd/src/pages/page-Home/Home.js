@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {Component} from "react";
 import ReactPlayer from 'react-player';
 
 import '../publicMain.css';
 import './Home.css';
-import '../darkmodeFunction.css';
+
 
 //Icons
 import {GiFrog} from 'react-icons/gi';
@@ -21,6 +22,8 @@ import {GiPineTree} from 'react-icons/gi';
 import {FaShieldAlt} from 'react-icons/fa';
 import {GiOpenBook} from 'react-icons/gi';
 import {FaHandHoldingHeart} from 'react-icons/fa';
+
+import {HomeSideBarPageNav} from "../../sideBarPagesNav/HOMEsideBarPageNav";
 
 //Suv navigation
 import {HomeSuvNav} from "../../subNav/subNavigation";
@@ -59,7 +62,7 @@ import medical from '../../images/home/medical2.png';
 import balanceEco from '../../images/home/balanceEco2.png';
 import research from '../../images/home/research2.png';
 import ecosystemService from '../../images/home/ecosystemService2.png';
-import config from '../../config';
+// import config from '../../config';
 
 //Sources for the information used:
 // https://www.fws.gov/nativeamerican/pdf/why-save-endangered-species.pdf
@@ -77,17 +80,17 @@ export class Home extends Component {
     };
   }
 
-  componentDidMount(){
-    fetch(config.backendUrl + "api/extinctSpecies")
-    .then (rest => rest.json())
-    .then (extinctSpeciesRecord => {
-    this.setState({
-        isLoaded: true,
-        ExtinctSpeciesItems: extinctSpeciesRecord,
-      })
-    console.log(extinctSpeciesRecord)
-    });
-  }
+  // componentDidMount(){
+  //   fetch(config.backendUrl + "api/extinctSpecies")
+  //   .then (rest => rest.json())
+  //   .then (extinctSpeciesRecord => {
+  //   this.setState({
+  //       isLoaded: true,
+  //       ExtinctSpeciesItems: extinctSpeciesRecord,
+  //     })
+  //   console.log(extinctSpeciesRecord)
+  //   });
+  // }
 
 
   render(){
@@ -106,7 +109,7 @@ export class Home extends Component {
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 
         <body className='pageBodyFrame'>
-
+        <HomeSideBarPageNav/>
           <div className='container'>
             <title className = {this.state.darkMode ? "largeTitle-Light" : "largeTitle-Dark"}> 
               More than 41,000+ species of plants and animals are in danger of extinction!
@@ -123,6 +126,7 @@ export class Home extends Component {
               <HomeParagraphOneVoice/>
             </box>
           </div>
+
 
           <div className='container'>
             <box id= {this.state.darkMode ? "endPercentage_GRID-Dark" : "endPercentage_GRID"}>
@@ -238,13 +242,11 @@ export class Home extends Component {
                           {item.name}
                         </div
                       >))} */}
-                      {this.state.ExtinctSpeciesItems.length > 0 && (
-                        <div>
-                          {/* <a href={`/${this.state.items[5]._id}`}> */}
-                            {this.state.ExtinctSpeciesItems[5].name}
-                          {/* </a> */}
-                        </div>
-                      )}
+
+             
+
+                      {/* {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[5].name}</div>)} */}
+                      Splended Frog
                     </label>
                   </box>
                 </box>
@@ -255,7 +257,8 @@ export class Home extends Component {
                   </image>
 
                   <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                    {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[4].name}</div>)}
+                    {/* {this.state.ExtinctSpeciesItems.length > 0 && (<div>{this.state.ExtinctSpeciesItems[4].name}</div>)} */}
+                    Golden Toad
                   </label>
                 </box>
               </box>
@@ -269,11 +272,12 @@ export class Home extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Christopher Klassen</label></div>
 
                     <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                      {this.state.ExtinctSpeciesItems.length > 0 && (
+                      {/* {this.state.ExtinctSpeciesItems.length > 0 && (
                         <div>
                           {this.state.ExtinctSpeciesItems[3].name}
                         </div>
-                      )}
+                      )} */}
+                      Pinta Giant Tortise
                     </label>
                   </box>
                 </box>
@@ -283,11 +287,12 @@ export class Home extends Component {
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${PyreneanIbex})`}}></div>
                   </image>
                   <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                    {this.state.ExtinctSpeciesItems.length > 0 && (
+                    {/* {this.state.ExtinctSpeciesItems.length > 0 && (
                       <div>
                         {this.state.ExtinctSpeciesItems[1].name}
                       </div>
-                    )}
+                    )} */}
+                    Pyrenean Ibex
                   </label>
                 </box>
 
@@ -299,11 +304,12 @@ export class Home extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Dr Richard Emslie</label></div>
 
                     <label className= {this.state.darkMode ? "extinctSpeciesName-Dark" : "extinctSpeciesName-Light"}>
-                      {this.state.ExtinctSpeciesItems.length > 0 && (
+                      {/* {this.state.ExtinctSpeciesItems.length > 0 && (
                         <div>
                           {this.state.ExtinctSpeciesItems[2].name}
                         </div>
-                      )}
+                      )} */}
+                      Western Black Rhinoceros
                     </label>
                   </box>
                 </box>
@@ -315,10 +321,10 @@ export class Home extends Component {
       
         
           <div className='container'>
-
             <div className = "mainSubHeadFrame">
               <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Why protect these species?</subhead>
             </div>
+
             <box className = "guideIcon"><FaShieldAlt size="6em" color="#12836E"/></box>
             
 
@@ -354,9 +360,10 @@ export class Home extends Component {
                 
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Medical Purpose</label>
               </box>
-            </box>
+           
 
-            <box className = "box_long">
+           
+           
               <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}>
                 <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
                   <div className='whyProtectImage' style={{ backgroundImage: `url(${balanceEco})`}}></div> 
@@ -394,24 +401,19 @@ export class Home extends Component {
               </box>
             </box>
           </div>
-          
 
-          <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-            <line className = "thinLine"></line>
-              <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
-              <ReactPlayer className = "videoFrame"
-                controls={true} 
-                url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s"
-                height="450px" 
-                width="800px"
-              />
-            <line className = "thinLine"></line>
-          </div> 
-        
+       
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
+    <ReactPlayer className = "videoFrame" controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}        
 
 
           <div className='container'>
-
             <div className = "mainSubHeadFrame">
               <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>What are you going to learn</subhead>
             </div>
@@ -431,7 +433,10 @@ export class Home extends Component {
                   The IUCH states that at least 900 species have gone extinct in the past five centuries.
                   Watch videos and Learn amazing facts and information about some of the recently extinct species.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+
+                <Link className='linkStyle' to="/extinctSpecies"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
             </div>
 
@@ -443,7 +448,10 @@ export class Home extends Component {
                   For example, animals such as large mammels, insects, ambphibans and plants such as flowers and large trees.
                   Also, learn about endnagered fungi species such as mushrooms and watch videos.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+
+                <Link className='linkStyle' to="/endangeredSpecies"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
 
               <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
@@ -467,7 +475,10 @@ export class Home extends Component {
                   But there also exists other natural threats like diseases.
                   Learn more about the different types of threats effecting these endangered species.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+
+                <Link className='linkStyle' to="/causes"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
             </div>
           </div>
@@ -487,10 +498,12 @@ export class Home extends Component {
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "getStartedParagraph-Dark" : "getStartedParagraph"}>
                   We human are the main contributors toward endangering these species.
                   Just by changing our daily life habits will have a huge positive impact on protecting these endangered species.
-                  For example, reducing our daily electric energy consuption and burning less fossil fules. 
-
+                  For example, reducing our daily electric energy consuption and burning less fossil fules.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+                
+                <Link className='linkStyle' to="/individualAction"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
 
               <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>
@@ -514,7 +527,10 @@ export class Home extends Component {
                   From cleaning ocean, planting trees and saving specific species of animals.
                   You can join the battle by supporing these organisation and their causes.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+
+                <Link className='linkStyle' to="/takeAction"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
             </div>
 
@@ -526,7 +542,10 @@ export class Home extends Component {
                   Such as, why these endangered species are important to the environment and how they benifit us directly.
                   You can test your knowledge about the endangered and extinct species by taking a quiz.
                 </paragragraph>
-                <button className='getStartedButton'>Get Started</button>
+
+                <Link className='linkStyle' to="/quiz"> 
+                  <button className='getStartedButton'>Get Started</button>
+                </Link> 
               </div>
 
               <div id = {this.state.darkMode ? "imageBox-Dark" : "imageBox"}>

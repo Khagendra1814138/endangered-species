@@ -4,6 +4,8 @@ import { useState } from "react";
 import './quiz.css';
 import '../publicMain.css';
 
+
+
 import {QuizSuvNav} from "../../subNav/subNavigation";
 
 import {BsBookHalf} from 'react-icons/bs';
@@ -11,6 +13,7 @@ import {RiRestartFill} from 'react-icons/ri';
 
 
 export const QuizPage = () => {
+	
 	const refreshPage = ()=>{
 		window.location.reload();
 	}
@@ -159,7 +162,7 @@ export const QuizPage = () => {
 								<div className='question-frame'>
 									<div className='question-count'>
 										<span className='leftFrame'> {currentQuestion} Done </span>
-										<box className='timer-count'> Timer </box>
+										{/* <box className='timer-count'> Timer </box> */}
 										<span className='leftFrame'> {questions.length - currentQuestion} Left</span> 
 									</div>
 									<div className='question-text'>{questions[currentQuestion].questionText}</div>

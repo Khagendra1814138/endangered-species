@@ -83,7 +83,7 @@ export class IndividualAction extends Component {
         <body className='pageBodyFrame'>
           
           <div className = "mainSubHeadFrame">
-            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Take daily individual actions</subhead>
+            <subhead className={this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Daily individual actions you can take</subhead>
           </div>
             
           <div className='container'>
@@ -95,25 +95,21 @@ export class IndividualAction extends Component {
             <div className = {this.state.darkMode ? "pageDiscriptionTitle-Dark" : "pageDiscriptionTitle"}>
               Below we have listed daily stepe you can take everyday to reduct your carbon footprint.
               And individual action you can take to protect the endangered species.
-            
             </div>
           </div>
-            
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line>
-                <paragragraph className="video-Discription">A video of how the endangered species can be saved.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=0Puv0Pss33M"
-                  height="450px" 
-                  width="800px" 
-                />
-              <line className="thinLine"></line>
-            </div> 
-            
+
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}             
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line>
+    <paragragraph className="video-Discription">A video of how the endangered species can be saved.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=0Puv0Pss33M" height="450px" width="800px"/>
+  <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}            
+
 
           <div className='container'>
-
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>S h a r e - I n f o r m a t i o n</label>
@@ -128,9 +124,7 @@ export class IndividualAction extends Component {
             </box>
             <ShareInformationParagraphVoice/>
 
-
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -145,10 +139,8 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <PurchasingHabitParagraphVoice/>
-            
 
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -163,24 +155,21 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <RecycleReuseDisposeParagraphVoice/>
+          </div>
 
-           
-                <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                  <line className="thinLine"></line>
-                    <paragragraph className="video-Discription">A video guide on how to recycle properly at you home.</paragragraph>
-                    <ReactPlayer className='videoFrame' 
-                      controls={true} 
-                      url="https://www.youtube.com/watch?v=BnwdpR_2idA"
-                      height="450px" 
-                      width="800px" 
-                    />
-                  <line className="thinLine"></line>
-                </div> 
-       
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}              
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line>
+    <paragragraph className="video-Discription">A video guide on how to recycle properly at you home.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=BnwdpR_2idA" height="450px" width="800px"/>
+  <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}       
+
 
             {/* <line className = "largeLine"></line> */}
-
-
+          <div className='container'>
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>S u p p o r t - O r g a n i s a t i o n 's</label>
@@ -195,9 +184,7 @@ export class IndividualAction extends Component {
             </box>
             <SupportOrganisationParagraphVoice/>
 
-            
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -212,26 +199,21 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <ReduceDairyMeatProductsParagraphVoice/>
+          </div>
 
-            
-     
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line>
-                <paragragraph className="video-Discription">A video of meat product effects our planet.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true}
-                  url="https://www.youtube.com/watch?v=3lrJYTsKdUM"
-                  height="450px" 
-                  width="800px" 
-                />
-              <line className="thinLine"></line>
-            </div> 
-        
 
-            
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}     
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line>
+    <paragragraph className="video-Discription">A video of meat product effects our planet.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=3lrJYTsKdUM" height="450px" width="800px"/>
+  <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}        
+
+
             {/* <line className = "largeLine"></line> */}
-
-
+          <div className='container'>
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>S m a r t - T r a n s p o r t</label>
@@ -246,9 +228,7 @@ export class IndividualAction extends Component {
             </box>
             <SmartTransportParagraphVoice/>
 
-            
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -263,10 +243,8 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <ReduceEnergyConsumptionParagraphVoice/>
-
             
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -281,25 +259,22 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <KeepGardenHealthyParagraphVoice/>
+          </div>
 
-    
-            <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-              <line className="thinLine"></line>
-                <paragragraph className="video-Discription">A video guide on how to help species in your garden.</paragragraph>
-                <ReactPlayer className='videoFrame' 
-                  controls={true} 
-                  url="https://www.youtube.com/watch?v=Y8_--YV4inE"
-                  height="450px" 
-                  width="800px" 
-                />
-              <line className="thinLine"></line>
-            </div> 
-       
-            
-            
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}     
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className="thinLine"></line>
+    <paragragraph className="video-Discription">A video guide on how to help species in your garden.</paragragraph>
+    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Y8_--YV4inE" height="450px" width="800px" 
+    />
+  <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}       
+
+
             {/* <line className = "largeLine"></line> */}
-
-
+          <div className='container'>
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
                 <label className={this.state.darkMode ? "threatTitle-Dark" : "threatTitle-Light"}>U s e Y o u r - V o i c e</label>
@@ -314,9 +289,7 @@ export class IndividualAction extends Component {
             </box>
             <UseYourVoiceParagraphVoice/>
 
-            
             <line className = "largeLine"></line>
-
 
             <box className = "box">
               <box className={this.state.darkMode ? "threatParagraphFrame-Dark" : "threatParagraphFrame-Light"}>
@@ -331,8 +304,8 @@ export class IndividualAction extends Component {
               </image>
             </box>
             <TravelCompassionatlyParagraphVoice/>
-            
           </div>
+          
         </body>
         <IndividualActonSuvNav/>
       </div>

@@ -11,40 +11,63 @@
 }
 
 
-#twoColumnGridContainer{
+#EXtwoColumnGridContainer{
     height: auto;
     width: auto;
     background-color: #F7F7F7;
     margin: auto;
     display: flex;
-    /* grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-gap: 20px; */
+
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin: auto;
     margin-top: 40px;
     border-radius: 10px;
 }
-#twoColumnGridContainer-Dark{
+
+#EXtwoColumnGridContainer-Dark{
     height: auto;
     width: auto;
     background-color: #283039;
     margin: auto;
     display: flex;
-    /* grid-template-columns: auto auto;
-    grid-template-rows: auto;
-    grid-gap: 20px; */
+
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     margin: auto;
     margin-top: 40px;
     border-radius: 10px;
 }
+
+#extSpecieslinedown{
+    height: 270px;
+    width: 2px;
+    background-color: gainsboro;
+    display: block;
+}
+
+@media only screen and (max-width: 1600px) {
+    #EXtwoColumnGridContainer{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 40px;
+    }
+    
+    #EXtwoColumnGridContainer-Dark{
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 40px;
+    }
+
+    #extSpecieslinedown{
+        display: none;
+    }
+}
+
 
 /* ------------------------------------------------------------//Artist-Credit-Overlay-Effect//------------------------------------------------------------ */
 #extImgFrame{
@@ -182,7 +205,7 @@
     background-color: #CEE5D0;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
+    font-size: 24px;
     color: var(--textColour);
     font-weight: bold;
     font-family: 'Rubik', sans-serif;
@@ -198,7 +221,7 @@
     background-color: #37475A;
     justify-content: center;
     align-items: center;
-    font-size: 26px;
+    font-size: 24px;
     color: white;
     font-weight: bold;
     font-family: 'Rubik', sans-serif;

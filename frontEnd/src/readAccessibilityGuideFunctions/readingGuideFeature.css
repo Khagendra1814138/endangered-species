@@ -112,9 +112,28 @@
     color: white;
     z-index: 3;
     transition: 0.2s ease;
-}
-.readingBtn:hover{
+    overflow: hidden;
     cursor: pointer;
+}
+.readingBtn::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(245, 180, 60);
+    border-radius: 50%;
+    padding: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+  button:active::before{
+    transition: 0s;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
+
+.readingBtn:hover{
     border-left: 4px solid orange;
     border-top: 4px solid orange;
     border-bottom: 4px solid orange;
@@ -137,13 +156,33 @@
     color: white;
     z-index: 3;
     transition: 0.2s ease;
+    overflow: hidden;
+    cursor: pointer;
 }
+.readingBtn2::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(245, 180, 60);
+    border-radius: 50%;
+    padding: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+  button:active::before{
+    transition: 0s;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
 .readingBtn2:hover{
     cursor: pointer;
     border-left: 4px solid orange;
     border-top: 4px solid orange;
     border-bottom: 4px solid orange;
 }
+
 
 .readingBtn3{
     height: 60px;
@@ -163,13 +202,33 @@
     padding: 6px;
     z-index: 3;
     transition: 0.2s ease;
+    overflow: hidden;
+    cursor: pointer;
 }
+.readingBtn3::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(245, 180, 60);
+    border-radius: 50%;
+    padding: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0;
+    transition: transform 0.5s, opacity 1s;
+  }
+  button:active::before{
+    transition: 0s;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 1;
+  }
 .readingBtn3:hover{
     cursor: pointer;
     border-left: 4px solid orange;
     border-top: 4px solid orange;
     border-bottom: 4px solid orange;
 }
+
 
 .buttonIcon{
     height: auto;
@@ -204,6 +263,17 @@
 .readingBtn3:hover .buttonLabel{
     color: orange;
 }
+
+/* .readingBtn:focus .buttonLabel{
+    color: orange;
+}
+.readingBtn2:focus .buttonLabel{
+    color: orange;
+}
+.readingBtn3:focus .buttonLabel{
+    color: orange;
+} */
+
 
 
 .customPointerFrame{

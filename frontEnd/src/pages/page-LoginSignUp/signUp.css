@@ -24,8 +24,10 @@
     /* border: 1px solid #1888ff; */
     border-radius: 50px;
     border: 10px solid #003357;
+    transition: ease 0.5s;
 }
 .signUp-In-Btn:hover{
+    width: 300px;
     background: rgb(35,47,62);
     transition: 300ms ease-in-out;
     text-decoration: underline dashed;
@@ -41,6 +43,7 @@
     display: block;
     text-align: left;
     font-size: 20px;
+    font-weight: bold;
     font-family: 'Manrope', sans-serif;
     margin: auto;
     margin-top: 10px;
@@ -53,8 +56,7 @@
     padding: 4px;
     display: block;
     text-align: left;
-    font-size: 20px;
-    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
     margin: auto;
     color: rgb(35,47,62);
     border: none;

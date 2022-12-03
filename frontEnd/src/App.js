@@ -21,7 +21,7 @@ import { PracticePage } from './pages/practiceStuff/practice';
 
 import { Amphibians } from './endSpeciesPages/amphibians';
 import { Aquatic } from './endSpeciesPages/aquatic';
-import { Artic } from './endSpeciesPages/artic';
+import { Arctic } from './endSpeciesPages/arctic';
 import { Birds } from './endSpeciesPages/birds';
 import { Fungus } from './endSpeciesPages/fungus';
 import { Mammels } from './endSpeciesPages/mammels';
@@ -40,6 +40,8 @@ import {ReadingMaskFeature} from "./readAccessibilityGuideFunctions/readingMaskF
 import {LargeCursorFeature} from "./readAccessibilityGuideFunctions/largeCursorFeature";
 
 import {SocialShareFunction} from "./socialMediaShareFunction/socialShare";
+
+
 
 function App() {
   return (
@@ -67,7 +69,7 @@ function App() {
 
           <Route path="/amphibians" render={() => <Amphibians/>}/>
           <Route path="/aquatic" render={() => <Aquatic/>}/>
-          <Route path="/artic" render={() => <Artic/>}/>
+          <Route path="/artic" render={() => <Arctic/>}/>
           <Route path="/birds" render={() => <Birds/>}/>
           <Route path="/fungus" render={() => <Fungus/>}/>
           <Route path="/mammels" render={() => <Mammels/>}/>

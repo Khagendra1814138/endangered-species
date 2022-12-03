@@ -5,6 +5,8 @@ import ReactPlayer from 'react-player';
 import '../pages/publicMain.css';
 import './plants.css';
 
+import {PlantsSideBarPageNav} from "../sideBarPagesNav/EnPlantsSideBarPageNav";
+
 import {PlantPageSuvNav} from "../subNav/subNavigation";
 import headerPlants from '../images/headerPlants.png';
 
@@ -28,7 +30,7 @@ import euphorbiaObesa from '../images/endPlant/strangePlants/euphorbiaObesa.png'
 import flyingVenusTrap from '../images/endPlant/strangePlants/flyingVenusTrap.png';
 import Rafflesia from '../images/endPlant/strangePlants/Rafflesia.png';
 import taccaChantrieri from '../images/endPlant/strangePlants/taccaChantrieri.png';
-import config from '../config';
+// import config from '../config';
 
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
@@ -55,21 +57,21 @@ export class Plants extends Component {
     this.state = {
       darkMode: false,
       fontSize: 18,
-      endangeredPlantsItems: [],
+      // endangeredPlantsItems: [],
     };
   }
 
-  componentDidMount(){
-      fetch(config.backendUrl + "api/plantSpecies")
-      .then (rest => rest.json())
-      .then (endangeredPlantsRecords => {
-      this.setState({
-          isLoaded: true,
-          endangeredPlantsItems: endangeredPlantsRecords,
-        })
-      console.log(endangeredPlantsRecords)
-      });
-  }
+  // componentDidMount(){
+  //     fetch(config.backendUrl + "api/plantSpecies")
+  //     .then (rest => rest.json())
+  //     .then (endangeredPlantsRecords => {
+  //     this.setState({
+  //         isLoaded: true,
+  //         endangeredPlantsItems: endangeredPlantsRecords,
+  //       })
+  //     console.log(endangeredPlantsRecords)
+  //     });
+  // }
 
   render(){
 
@@ -87,12 +89,13 @@ export class Plants extends Component {
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
         <body className='pageBodyFrame'>
+          <PlantsSideBarPageNav/>
+
+          <div className = "mainSubHeadFrame">
+            <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Plant Species</subhead>
+          </div>
 
           <div className='container'>
-            <div className = "mainSubHeadFrame">
-              <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Plant Species</subhead>
-            </div>
-
             <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
               Did you know that more than 15 Billions of plants are chopped down each year! And a single tree can absorbe up to
               48 Pounds of carbon dioxide (Co2) every year, making them the best natural carbon scrubber machine.
@@ -100,7 +103,6 @@ export class Plants extends Component {
               From photosynthis, plants releases Oxygen and trees reduces and filters 7-24% particulate matters making the air fresh and clean for us.
             </paragragraph>
             <PlantsPara1Voice/>
-
 
             <box className = "box4">
               <box className = "mediumSpeciesImgFrame">
@@ -112,7 +114,8 @@ export class Plants extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ken Hennell</label></div>
 
                     <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName"}>
-                      {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[2].name} </div>)}
+                      {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[2].name} </div>)} */}
+                      Encephalartos Latifrons
                     </label>
                   </box>
                 </box>
@@ -122,7 +125,8 @@ export class Plants extends Component {
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${lillieCycad})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[4].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[4].name} </div>)} */}
+                    Lillie Cycad
                   </label>
                 </box>
               </box>
@@ -133,7 +137,8 @@ export class Plants extends Component {
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${palmaCorcho})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[1].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[1].name} </div>)} */}
+                    Palma Corcho
                   </label>
                 </box>
 
@@ -142,7 +147,8 @@ export class Plants extends Component {
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${vendaCycad})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[0].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[0].name} </div>)} */}
+                    Venda Cycad
                   </label>
                 </box>
               </box>
@@ -155,7 +161,8 @@ export class Plants extends Component {
                   <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Maria Langner</label></div>
 
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[3].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[3].name} </div>)} */}
+                    Middelburg Cycad
                   </label>
                 </box>
               </box>
@@ -163,26 +170,28 @@ export class Plants extends Component {
           </div>
 
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Cycads Plants.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=VtziMzq-nnk"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
-
-          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Materials:
-            <br></br>
-            <br></br>
-            Plants provides many material that is essential for us and are used everyday. 
-            For example, most used materials include wood, paper, toilet paper, cotton, rubber, cosmetics, soap, shampoo and more...
-          </paragragraph>
-          <PlantsPara2Voice/>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className = "video-Discription">A video about Cycads Plants.</paragragraph>
+    <ReactPlayer className = "videoFrame" controls={true} url="https://www.youtube.com/watch?v=VtziMzq-nnk"   height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 
           <div className='container'>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <div>
+                <b>Provides us with Materials:</b>
+                <br></br>
+                <br></br>
+                Plants provides many material that is essential for us and are used everyday. 
+                For example, most used materials include wood, paper, toilet paper, cotton, rubber, cosmetics, soap, shampoo and more...
+              </div>
+            </paragragraph>
+            <PlantsPara2Voice/>
+
             <box className = "box4">
               <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
@@ -190,7 +199,8 @@ export class Plants extends Component {
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${corkTree})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName2"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[9].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[9].name} </div>)} */}
+                    Cork Tree
                   </label>
                 </box>
 
@@ -199,7 +209,8 @@ export class Plants extends Component {
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${dragonTree})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName2"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[6].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[6].name} </div>)} */}
+                    Dragon Tree
                   </label>
                 </box>
               </box>
@@ -213,7 +224,8 @@ export class Plants extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Linda Crampton </label></div>
 
                     <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName2"}>
-                      {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[8].name} </div>)}
+                      {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[8].name} </div>)} */}
+                      Monkey Tree
                     </label>
                   </box>
                 </box>
@@ -226,7 +238,8 @@ export class Plants extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Bjørn Christian Tørrissen</label></div>
 
                     <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName2"}>
-                      {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[5].name} </div>)}
+                      {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[5].name} </div>)} */}
+                      Quiver Tree
                     </label>
                   </box>
                 </box>
@@ -237,51 +250,60 @@ export class Plants extends Component {
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baobabTree})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName2"}>
-                  {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[7].name} </div>)}
+                  {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[7].name} </div>)} */}
+                  Baobab Tree
                 </label>
               </box>
             </box>
           </div>
 
-          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Medicine:
-            <br></br>
-            <br></br>
-            As you may already know, plants are the main source of medicines and plays important role in the discovery and reasearch of new drugs.
-            Plants like neem tree, sandalwood tree, basil plant are used in most of the medicines.
-            It is estimated that between 50,000 - 80,000 flowering plants are used in medicine worldwide.
-            Some of the most common medicine and drugs that comes from plants are aspirin, morphine, chemotherapy, and there are many more.
-            Not only health but plants also has economic benifit.
-            Therefore, loss of plants means loss of medicines and drugs.
-            {/* https://www.biologicaldiversity.org/publications/papers/Medicinal_Plants_042008_lores.pdf */}
-          </paragragraph>
-          <PlantsPara3Voice/>
-
-
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Dragon Trees.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=tyJU4e5Tyjo"/>
-              </div> 
-              <line className = "thinLine"></line> 
-          </div>
-
-          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Provides foods and Shelter:
-            <br></br>
-            <br></br>
-            Plants are the main source of food for us and other species. 
-            Without plants there will be not food because all carbon in proteins, fats and carbohydrates is made from photosynthesis in plants.
-            Even meat products are from animals are because of plants.
-            Furthermore, large trees provides shelter for many endangered animals species like birds and mammels.
-            And small plant provides shelter for insects and other small species.
-          </paragragraph>
-          <PlantsPara4Voice/>
 
 
 
           <div className='container'>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <div>
+                <b>Provides us with Medicine:</b>
+                <br></br>
+                <br></br>
+                As you may already know, plants are the main source of medicines and plays important role in the discovery and reasearch of new drugs.
+                Plants like neem tree, sandalwood tree, basil plant are used in most of the medicines.
+                It is estimated that between 50,000 - 80,000 flowering plants are used in medicine worldwide.
+                Some of the most common medicine and drugs that comes from plants are aspirin, morphine, chemotherapy, and there are many more.
+                Not only health but plants also has economic benifit.
+                Therefore, loss of plants means loss of medicines and drugs.
+              </div>
+              {/* https://www.biologicaldiversity.org/publications/papers/Medicinal_Plants_042008_lores.pdf */}
+            </paragragraph>
+            <PlantsPara3Voice/>
+          </div>
+
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className = "video-Discription">A video about Endangered Rafflesia Flower.</paragragraph>
+    <ReactPlayer className = "videoFrame" controls={true} url="https://www.youtube.com/watch?v=tyJU4e5Tyjo" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div>
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <div>
+                <b>Provides Foods and Shelter:</b>
+                <br></br>
+                <br></br>
+                Plants are the main source of food for us and other species. 
+                Without plants there will be not food because all carbon in proteins, fats and carbohydrates is made from photosynthesis in plants.
+                Even meat products are from animals are because of plants.
+                Furthermore, large trees provides shelter for many endangered animals species like birds and mammels.
+                And small plant provides shelter for insects and other small species.
+              </div>
+            </paragragraph>
+            <PlantsPara4Voice/>
+
             <box className = "box4">
               <box className = "mediumSpeciesImgFrame">
                 <box className = "MedBox">
@@ -292,7 +314,8 @@ export class Plants extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Pterosaur Whisperer</label></div>
 
                     <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName3"}>
-                      {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[12].name} </div>)}
+                      {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[12].name} </div>)} */}
+                      Euphorbia Obesa
                     </label>
                   </box>
                 </box>
@@ -302,7 +325,8 @@ export class Plants extends Component {
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${flyingVenusTrap})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName3"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[10].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[10].name} </div>)} */}
+                    FlyingVenus Trap
                   </label>
                 </box>
               </box>
@@ -313,7 +337,8 @@ export class Plants extends Component {
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${Rafflesia})`}}></div>
                   </image>
                   <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName3"}>
-                    {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[13].name} </div>)}
+                    {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[13].name} </div>)} */}
+                    Rafflesia (Actually Fungi)
                   </label>
                 </box>
 
@@ -325,7 +350,8 @@ export class Plants extends Component {
                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Meneerke bloem</label></div>
 
                     <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName3"}>
-                      {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[14].name} </div>)}
+                      {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[14].name} </div>)} */}
+                      Tacca Chantrieri
                     </label>
                   </box>
                 </box>
@@ -336,43 +362,56 @@ export class Plants extends Component {
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${titanArum})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "plantsName-Dark" : "plantsName3"}>
-                  {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[11].name} </div>)}
+                  {/* {this.state.endangeredPlantsItems.length > 0 && (<div> {this.state.endangeredPlantsItems[11].name} </div>)} */}
+                  Titan Arum
                 </label>
               </box>
             </box>
           </div>
 
-          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Filters water & Regulate Water cycle:
-            <br></br>
-            <br></br>
-            Plants plays important role in filtering water. They filter out minerals, carbon dioxide, ammonia, nitrates and nitrites, 
-            which helps to keep the water clear and clean. This is benifical for aquatic species like fish as it keeps the pond clean.
-            In addition, plants are responisble for keeping the water cycle running by cleaning and distributing the water supply. 
-            Through the transpiration process, the water is moved from the soil to the roots, up their bodies, 
-            and back into the atmosphere. The water is collected on the cloud and then returns to the earth through rain.
-          </paragragraph>
-          <PlantsPara5Voice/>
 
 
-          <div className= {this.state.darkMode ? "videoFrame-Dark" : "videoFrame"}>
-              <line className = "thinLine"></line>
-              <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                <paragragraph className="video-Discription">A video about Rafflesia Flower.</paragragraph>
-                <ReactPlayer height="450px" width="800px" controls url="https://www.youtube.com/watch?v=YxIpl38rsMo"/>
-              </div> 
-              <line className = "thinLine"></line> 
+
+          <div className='container'>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <div>
+                <b>Filters water & Regulate Water cycle:</b>
+                <br></br>
+                <br></br>
+                Plants plays important role in filtering water. They filter out minerals, carbon dioxide, ammonia, nitrates and nitrites, 
+                which helps to keep the water clear and clean. This is benifical for aquatic species like fish as it keeps the pond clean.
+                In addition, plants are responisble for keeping the water cycle running by cleaning and distributing the water supply. 
+                Through the transpiration process, the water is moved from the soil to the roots, up their bodies, 
+                and back into the atmosphere. The water is collected on the cloud and then returns to the earth through rain.
+              </div>
+            </paragragraph>
+            <PlantsPara5Voice/>
           </div>
 
-          <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-            Helps the environment & Soil improves soil quality:
-            <br></br>
-            <br></br>
-            Plants protects the land and soil from washing asway because of their roots and the micro organism that lives around them.
-            When a plant leaf falls on the ground or when a plant dies, it decomposes, fertilising the soil.
-            Meaning plants helps to improve the soil quality and can prevent landslide, flood and soil erosion.
-          </paragragraph>
-          <PlantsPara6Voice/>
+
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+  <line className = "thinLine"></line>
+    <paragragraph className = "video-Discription">A video about Endangered Rafflesia Flower.</paragragraph>
+    <ReactPlayer className = "videoFrame" controls={true} url="https://www.youtube.com/watch?v=YxIpl38rsMo" height="450px" width="800px"/>
+  <line className = "thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+
+
+          <div className='container'>
+            <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+              <div>
+                <b>Helps the environment & Soil improves soil quality:</b>
+                <br></br>
+                <br></br>
+                Plants protects the land and soil from washing asway because of their roots and the micro organism that lives around them.
+                When a plant leaf falls on the ground or when a plant dies, it decomposes, fertilising the soil.
+                Meaning plants helps to improve the soil quality and can prevent landslide, flood and soil erosion.
+              </div>
+            </paragragraph>
+            <PlantsPara6Voice/>
+          </div>
 
         </body>
         <PlantPageSuvNav/>

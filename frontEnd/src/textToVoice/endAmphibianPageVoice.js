@@ -10,9 +10,11 @@ export const AmphibianPara1Voice = () => {
     // const [text, setText] = useState
     const [text] = useState
     (
-    `Did you know that Amphibians were the first vertebrates to colonise the land evolving around 370 million years ago. They have already survived four mass extinction events. The IUCN Red List states that around 40% of Amphibians species are already threatned with Extinction. 
-    It is very important to stop this extinction because Amphibians like frogs, toad and salamander are critical part of the nature as they are both predetor and prey. Apmhibians species mainly eats insects pests, which can benifit Agriculture around the world. 
-    They eat insects like musquitos, helping to reduce the spread of diseases like malaria.
+    `Did you know that Amphibians were the first vertebrates to colonise the land evolving around 370 million years ago. 
+    They have already survived four mass extinction events. The IUCN Red List states that around 40% of Amphibians species are already threatned with Extinction. 
+    It is very important to stop this extinction because Amphibians like frogs, toad and salamander are critical part of the nature as they are both predetor and prey. 
+    Amphibians species mainly eats insects pests, which can benifit Agriculture around the world. 
+    They eat insects like mosquitoes, helping to reduce the spread of diseases like malaria.
     `
     );
   

@@ -21,17 +21,17 @@ export const LizardsSet1 = () => {
         <grid id="three-column">
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${CalummaTarzan})`}}></image></div>
-            <name id="lizardsName1"> Name </name>
+            <name id="lizardsName1"> Calumma Tarzan </name>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${LesserAntilleanIguana})`}}></image></div>
-            <name id="lizardsName1"> Name </name>
+            <name id="lizardsName1"> Lesser Antillean Iguana </name>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${PhelsumaAntanosy})`}}></image></div>
-            <name id="lizardsName1"> Name </name>
+            <name id="lizardsName1"> Phelsuma Antanosy </name>
           </div>
         </grid>
 
@@ -40,14 +40,19 @@ export const LizardsSet1 = () => {
           <div id="boxLong">
             <box className = "speciesCardContainer">
               <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${LaGomeraGiantLizard})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="lizardsName1"> Name sss</name>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Linné's Nightmare</label></div>
+
+              <name id="lizardsName1">LaGomera Giant Lizard </name>
             </box>
           </div>
 
           <div id="boxLong">
-            <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${MitchellsWaterMonitor})`}}></image></div>
-            <name id="lizardsName1"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${MitchellsWaterMonitor})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by William Riddell</label></div>
+              
+              <name id="lizardsName1"> Mitchells Water Monitor </name>
+            </box>
           </div>
         </grid>
       </container>
@@ -63,34 +68,35 @@ export const LizardsSet2 = () => {
         <container id="two-row">
         <grid id="three-column">
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${JamaicanRockIguana})`}}></image></div>
-            <name id="lizardsName2"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${JamaicanRockIguana})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Rick Van Veen</label></div>
+
+              <name id="lizardsName2"> Jamaican Rock Iguana </name>
+            </box>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${SeychellesBronzeGecko})`}}></image></div>
-            <name id="lizardsName2"> Name </name>
+            <name id="lizardsName2"> Seychelles Bronze Gecko </name>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${UtilaSpinyTailedIguana})`}}></image></div>
-            <name id="lizardsName2"> Name </name>
+            <name id="lizardsName2"> Utila Spiny Tailed Iguana </name>
           </div>
         </grid>
 
 
         <grid id="two-column">
           <div id="boxLong">
-            <box className = "speciesCardContainer">
-              <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${AnegadaRockIguana})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="lizardsName2"> Name sss</name>
-            </box>
+            <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${AnegadaRockIguana})`}}></image></div>  
+            <name id="lizardsName2"> Anegada Rock Iguana</name>
           </div>
 
           <div id="boxLong">
             <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${GalápagosPinkLandIguana})`}}></image></div>
-            <name id="lizardsName2"> Name </name>
+            <name id="lizardsName2"> Galápagos Pink Land Iguana </name>
           </div>
         </grid>
       </container>

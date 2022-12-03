@@ -16,32 +16,45 @@ export const BeetlesCardsSet = () => {
           <div id="boxLong">
             <box className = "speciesCardContainer">
               <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${GiantFijianLonghornBeetle})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="beetlesName"> Name sss</name>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Oleg Doroshenko</label></div>
+
+              <name id="beetlesName"> Giant Fijian Longhorn Beetle</name>
             </box>
           </div>
 
           <div id="boxLong">
-            <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${PhoturisPyralomima})`}}></image></div>
-            <name id="beetlesName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${PhoturisPyralomima})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Katja Schulz</label></div>
+
+              <name id="beetlesName"> Photuris Pyralomima </name>
+            </box>
           </div>
         </grid>
 
 
         <grid id="three-column">
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${AmericanBuryingBeetle})`}}></image></div>
-            <name id="beetlesName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${AmericanBuryingBeetle})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ray Meibaum</label></div>
+
+              <name id="beetlesName"> American Burying Beetle </name>
+            </box>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${DeltaGreenGrounBeetle})`}}></image></div>
-            <name id="beetlesName"> Name </name>
+            <name id="beetlesName"> Delta Green Ground Beetle </name>
           </div>
 
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${CoralPinkSandDunesTigerBeetle})`}}></image></div>
-            <name id="beetlesName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${CoralPinkSandDunesTigerBeetle})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ben Yandell</label></div>
+
+              <name id="beetlesName"> Coral Pink Sand Dunes Tiger</name>
+            </box>
           </div>
         </grid>
     </container>

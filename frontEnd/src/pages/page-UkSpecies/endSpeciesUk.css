@@ -1,5 +1,5 @@
 :root{
-    --color-reptilesUk: #FFF89A;
+    --color-reptilesUk: #E6C563;
     --color-marineUk: #DFEEEA;
     --color-amphibianUk: #F7D08A;
     --color-mammelsUk: #FFC286;
@@ -7,15 +7,15 @@
     --color-plantsUk: #EDD2F3;
     --color-fungusUk: #FEE3EC;
 
-    --heightSmall: 210px;
-    --widthSmall: 310px;
+    --heightSmall: 220px;
+    --widthSmall: 336px;
 
-    --largeHeight:210px;
-    --largeWidth:490px;
+    --largeHeight:220px;
+    --largeWidth:504px;
 
-    --mediumWidth:478px;
+    --mediumWidth:504px;
 
-    --border: 4px;
+    --border: 0px;
 
     --fontStyle-speciesNameLabel: 'Manrope', sans-serif;
     --fontSize-speciesNameLabel: 22px;
@@ -38,6 +38,66 @@
     border-radius: 6px;
     border: 4px solid #F3F0D7;
 } */
+#flexbox{
+    height: auto;
+    width: auto;
+    display: flex;  
+    margin: auto; 
+    margin-top: 0px;
+}
+#blockbox{
+    height: auto;
+    width: 1008px;
+    background-color: none;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    padding: 0px;
+    box-shadow: -5px -5px 5px rgb(94, 104, 121, .228), 8px 8px 8px rgba(94, 104, 121, .228);
+    /* border-radius: 10px; */
+}
+#ukSpeciesImageFrame{
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+.ukSpeciesParagraph{
+    height: 258px;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    background-color: #CEE5D0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #F3F0D7;
+    border-bottom: 1px solid #F3F0D7;
+    /* border-radius: 6px; */
+    color: rgb(35,47,62);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ukSpeciesParagraph-Dark{
+    height: 258px;
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    background-color: transparent;
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    border-right: 1px solid #37475A;
+    border-bottom: 1px solid #37475A;
+    /* border-radius: 6px; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .smallImageUk-Dark{
     background: none;
     height: var(--heightSmall);
@@ -244,8 +304,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    /* border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro; */
 }
 
 
@@ -285,8 +345,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    /* border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro; */
 }
 
 
@@ -326,8 +386,8 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    /* border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro; */
 }
 
 
@@ -367,6 +427,6 @@
     font-family: var(--fontStyle-speciesNameLabel);
     font-weight: var(--fontWeight-speciesNameLabel);
     color: var(--fontColor-speciesNameLabel);
-    border-top: 1px solid gainsboro;
-    border-bottom: 1px solid gainsboro;
+    /* border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro; */
 }

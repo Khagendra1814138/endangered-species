@@ -121,8 +121,11 @@ export const MammelsParagraph5Voice = () => {
     const [text] = useState
     (
     `
-        Most of the mammels species are in endangered because of their habitat loss like deforestation; population growth, hunting for meat/skin and illegal wildlife trades.
-        And now, climate change is another huge issue that is started to effect the mammels species.
+        Most of the mammels species are in endangered because of their habitat losses due to deforestation, climate change and human growth.
+        For large cat species, hunting for this skin and pelts and illegal wildlife trades are the main threats.
+        Nearly every large cats species such as tigers, leopards, snow leopards, clouded leopards, jaguars, lynxs, and cheetahs are endangered.
+        Amur leopards are listed as critically endangered and it is estimated that only about 100 individuals of them left in the wild and 180-200 live in captivity.
+        There are less than 50 Balkan Lynx left and around 100 southern china tigers only in captivity.
     `
     );
   
@@ -138,4 +141,27 @@ export const MammelsParagraph5Voice = () => {
     );
 }
 
+
+///////////////////  ///////////////////////////////////////////////////////
+export const MammelsPrimateParagraphVoice = () => {
+    const [text] = useState
+    (`
+        Primates, which are the third most diverse order of mammals, are under the highest level of threat of any larger group of mammals.
+        Around 63% of the worlds primate species are currently threatened with extinction and 43% of all primates (298 species) are 
+        listed Critically Endangered and Endangered based on the IUCN study.
+        The main reasons for this it is due to the loss of their natural ecosystems. 
+        Mostly, for commercial purposes, like oil palm, commercial logging,  soy plantations, livestock ranching, wood harvesting and fuelwood production.
+    `);
+  
+    const { speak, voices} = useSpeechSynthesis();
+    return (
+        <div>
+            {/* <textarea value={text} onChange={(event) => setText(event.target.value)}/> */}
+            <button className="textToVoiceBtn" onClick={() => speak({ text, voice:voices[2] })}>
+                <div className="paraBtnIcon"><AiFillSound size="3em" color="orange"/></div>
+                <div className="paraBtnLabel">Voice</div>
+            </button>
+        </div>
+    );
+}
 

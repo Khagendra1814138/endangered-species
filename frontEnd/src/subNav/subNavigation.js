@@ -17,7 +17,7 @@ export const HomeSuvNav = () => {
             </Link>
 
             <Link exact to="./endangeredSpecies" className='nextSubNav'>
-                <label className= 'txt2'> Go to Endnagered Species</label>
+                <label className= 'txt2'> Go to Endnagered Species Menu</label>
                 <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
             </Link>
         </div>
@@ -32,8 +32,24 @@ export const EndangeredSpeciesSuvNav = () => {
                 <label className= 'txt'> Go to Home </label>
             </Link>
 
+            <Link exact to="./extinctSpecies" className='nextSubNav'>
+                <label className= 'txt2'> Learn about extinct species</label>
+                <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
+            </Link>
+        </div>
+    );
+}
+
+export const ExtinctSpeciesSuvNav = () => {
+    return( 
+        <div className="subNavFrame">
+            <Link exact to="endangeredSpecies" className='previousSubNav'>
+            <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
+                <label className= 'txt'> Go to Endnagered Species Menu </label>
+            </Link>
+
             <Link exact to="./causes" className='nextSubNav'>
-                <label className= 'txt2'> Causes Threatning the Species </label>
+                <label className= 'txt2'> Threats to the Species</label>
                 <logo className='logo1'> <FaArrowRight size="4em" color="orange"/> </logo>
             </Link>
         </div>
@@ -43,9 +59,9 @@ export const EndangeredSpeciesSuvNav = () => {
 export const CausesSuvNav = () => {
     return( 
         <div className="subNavFrame">
-            <Link exact to="./endangeredSpecies" className='previousSubNav'>
+            <Link exact to="./extinctSpecies" className='previousSubNav'>
                 <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
-                <label className= 'txt'>  Go to Endangered Species </label>
+                <label className= 'txt'>  Learn about Extinct Species </label>
             </Link>
 
             <Link exact to="./individualAction" className='nextSubNav'>
@@ -61,7 +77,7 @@ export const IndividualActonSuvNav = () => {
         <div className="subNavFrame">
             <Link exact to="./causes" className='previousSubNav'>
                 <logo className='logo1'> <FaArrowLeft size="4em" color="orange"/> </logo> 
-                <label className= 'txt'>  Causes Threatning the Species </label>
+                <label className= 'txt'> Threats to the Species </label>
             </Link>
 
             <Link exact to="./takeAction" className='nextSubNav'>

@@ -33,7 +33,7 @@ export const SignUp = () => {
               </box>
               
               <button type="submit" value="SIGN UP" className='signUp-In-Btn'>
-                <box className="restartButtonIcon"><FaAddressBook size="2em" color="white"/></box>
+                <box className="restartButtonIcon"><FaAddressBook size="1.7em" color="white"/></box>
                 <label className='restartButtonLabel'>Sign-Up</label>
               </button>
             </box>

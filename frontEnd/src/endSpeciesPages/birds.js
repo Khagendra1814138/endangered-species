@@ -5,6 +5,9 @@ import ReactPlayer from 'react-player';
 import '../pages/publicMain.css';
 import './birds.css';
 
+
+import {BirdsSideBarPageNav} from "../sideBarPagesNav/EnBirdsSideBarPageNav";
+
 import {BirdsPageSuvNav} from "../subNav/subNavigation";
 import headerBirds from '../images/headerBirds.png';
 
@@ -45,7 +48,7 @@ import spottedOwl from '../images/endBirds/owl/spottedOwl.png';
 
 import FontSizeIncreaser from '../readAccessibilityGuideFunctions/fontSizeIncrease';
 import DarkModeFunction from '../darkMode/darkMode';
-import config from '../config';
+// import config from '../config';
 
 
 //Text To Voices
@@ -63,22 +66,22 @@ export class Birds extends Component {
       this.state = {
         darkMode: false,
         fontSize: 18,
-        endangeredBirdsItems: [],
+        // endangeredBirdsItems: [],
       };
     }
 
     
-    componentDidMount(){
-        fetch(config.backendUrl + "api/birdSpecies")
-        .then (rest => rest.json())
-        .then (endangeredBirdsRecords => {
-        this.setState({
-            isLoaded: true,
-            endangeredBirdsItems: endangeredBirdsRecords,
-          })
-        console.log(endangeredBirdsRecords)
-        });
-    }
+    // componentDidMount(){
+    //     fetch(config.backendUrl + "api/birdSpecies")
+    //     .then (rest => rest.json())
+    //     .then (endangeredBirdsRecords => {
+    //     this.setState({
+    //         isLoaded: true,
+    //         endangeredBirdsItems: endangeredBirdsRecords,
+    //       })
+    //     console.log(endangeredBirdsRecords)
+    //     });
+    // }
   
     render(){
 
@@ -96,11 +99,13 @@ export class Birds extends Component {
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
                 <body className='pageBodyFrame'>
-                    <div className='container'>
-                        <div className = "mainSubHeadFrame">
-                            <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Endangered Birds Species</subhead>
-                        </div>
+                    <BirdsSideBarPageNav/>
 
+                    <div className = "mainSubHeadFrame">
+                        <subhead className = {this.state.darkMode ? "subheadLrgDrk" : "subheadLrg"}>Some of the Endangered Birds Species</subhead>
+                    </div>
+
+                    <div className='container'>
                         <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
                             The IUCN states that 13% of birds are endangered with extinction.
                             You may not know but the bird species are one of the most important animals to the environment.
@@ -119,11 +124,12 @@ export class Birds extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ondrej Prosický</label></div>
 
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[3].name}
                                             </div>
-                                        )}
+                                        )} */} 
+                                        Great Curassow
                                     </label>
                                 </box>
                             </box>
@@ -137,11 +143,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Nikita Khamparia</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[2].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Bengal Florican
                                         </label>
                                     </box>
                                 </box>
@@ -154,11 +161,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ken Bohn</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[1].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            California Condor
                                         </label>
                                     </box>
                                 </box>
@@ -170,11 +178,12 @@ export class Birds extends Component {
                                     <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${giantIbis})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[0].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Giant Ibis
                                     </label>
                                 </box>
 
@@ -186,11 +195,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Derek Hameister</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[4].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Whooping Crane
                                         </label>
                                     </box>
                                 </box>
@@ -198,17 +208,17 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-            
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                        <line className = "thinLine"></line>
-                            <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
-                            <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=GAe_04vmNRQ"/>
-                        <line className="thinLine"></line>
-                    </div> 
-            
 
-                    
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}            
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className = "thinLine"></line>
+        <paragragraph className="video-Discription">A video of Hornbill Hunting.</paragragraph>
+        <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=GAe_04vmNRQ" height="450px" width="800px"/>
+    <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}           
 
+                
                     <div className='container'>
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
@@ -219,11 +229,12 @@ export class Birds extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Dave Irving</label></div>
 
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[10].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Kagu
                                     </label>
                                 </box>
                             </box>
@@ -237,11 +248,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Peter Cavanagh</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[11].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Frigate Bird
                                         </label>
                                     </box>
                                 </box>
@@ -254,11 +266,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Mat Gilfedder</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[13].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Fruit Dove
                                         </label>
                                     </box>
                                 </box>
@@ -273,11 +286,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by World Animal Protection</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[14].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Grey Parrot
                                         </label>
                                     </box>
                                 </box>
@@ -287,40 +301,46 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${puffin})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName2"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[12].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Puffin
                                     </label>
                                 </box>
                             </box>
                         </box>
                     </div>
 
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Pest Control:
-                        <br></br>
-                        <br></br>
-                        One of the best natural pest controllers are birds as their diet mainly consists of bugs and insects.
-                        This can be very benifical to agriculture around the world. Recent study shown that birds eats 400-500 million tons of insects per year.
-                        In china, 2/3 of House Swift birds diet consists of agricultural pests.
-                        In forests accross America, Evening Grosbeak are the main birds that controls Spruce Budworm outbrakes.
-                    </paragragraph>
-                    <BirdsPara2Voice/>
+               
 
-                    <div className='container'>
+                    <div className='container'>     
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            <div>
+                                <b>Pests Control:</b>
+                                <br></br>
+                                <br></br>
+                                One of the best natural pest controllers are birds as their diet mainly consists of bugs and insects.
+                                This can be very benifical to agriculture around the world. Recent study shown that birds eats 400-500 million tons of insects per year.
+                                In china, 2/3 of House Swift birds diet consists of agricultural pests.
+                                In forests accross America, Evening Grosbeak are the main birds that controls Spruce Budworm outbrakes.
+                            </div>
+                        </paragragraph>
+                        <BirdsPara2Voice/>
+
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
                                 <image className= 'birdLargeImage'>
                                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${baldEagle})`}}></div>
                                 </image>
                                 <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
-                                    {this.state.endangeredBirdsItems.length > 0 && (
+                                    {/* {this.state.endangeredBirdsItems.length > 0 && (
                                         <div>
                                             {this.state.endangeredBirdsItems[17].name}
                                         </div>
-                                    )}
+                                    )} */}
+                                    Bald Eagle (Not)
                                 </label>
                             </box>
 
@@ -330,11 +350,12 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${peregrineFalcon})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[16].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Peregrine Falcon
                                     </label>
                                 </box>
 
@@ -346,11 +367,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Alain Pascua</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[15].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Philippine Eagle
                                         </label>
                                     </box>
                                 </box>
@@ -362,11 +384,12 @@ export class Birds extends Component {
                                     <   div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whiteBackedVultures})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[19].name}
                                             </div>
-                                        )}
+                                        )} */}                                        
+                                        White Backed Vultures
                                     </label>
                                 </box>
 
@@ -375,28 +398,29 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${whitetailedEagle})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName3"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[18].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        White Tailed Eagle (Not)
                                     </label>
                                 </box>
                             </box>
                         </box>
                     </div>
 
-               
-                    <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                        <line className="thinLine"></line>
-                            <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
-                            <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=-JP-zoBLyWE"/>
-                        <line className="thinLine"></line>
-                    </div> 
-              
-        
 
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}               
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className="thinLine"></line>
+        <paragragraph className="video-Discription">A video of Philippine Eagle.</paragragraph>
+        <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=-JP-zoBLyWE" height="450px" width="800px"/>
+    <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}              
 
+ 
                     <div className='container'>
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
@@ -407,11 +431,12 @@ export class Birds extends Component {
                                     <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Shutterstock</label></div>
 
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[24].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Resplendent Quetzal
                                     </label>
                                 </box>
                             </box>
@@ -422,11 +447,12 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hornbill})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[21].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Horn Bill
                                     </label>
                                 </box>
 
@@ -435,11 +461,12 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${hyacinthMacaw})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[22].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Hyacinth Macaw
                                     </label>
                                 </box>
                             </box>
@@ -453,11 +480,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Megan Leslie</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[20].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Kakapo
                                         </label>
                                     </box>
                                 </box>
@@ -470,11 +498,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Gettyimage</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName4"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[23].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Toucans
                                         </label>
                                     </box>
                                 </box>
@@ -482,28 +511,33 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Pollinators:
-                        <br></br>
-                        <br></br>
-                        Not only bees and butterflies, but birds are also great pollinators. For example, hummingbirds and honeyeaters birds makes big contribution, espically in high altitudes or hot climates area.
-                        Quarter of Salivia species in South Africa are pollinated by birds. Not only plants but bird pollinators also benifit us directly.
-                        Around 5% of plants that are used for medicines or foods are pollinated by birds.
-                    </paragragraph>
-                    <BirdsPara3Voice/>
+           
 
-                    <div className='container'>
+                    <div className='container'>         
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            <div>
+                                <b>Pollinators:</b>
+                                <br></br>
+                                <br></br>
+                                Not only bees and butterflies, but birds are also great pollinators. For example, hummingbirds and honeyeaters birds makes big contribution, espically in high altitudes or hot climates area.
+                                Quarter of Salivia species in South Africa are pollinated by birds. Not only plants but bird pollinators also benifit us directly.
+                                Around 5% of plants that are used for medicines or foods are pollinated by birds.
+                            </div>
+                        </paragragraph>
+                        <BirdsPara3Voice/>
+
                         <box className = "box4">
                             <box className = "largeSpeciesImgFrame">
                                 <image className= 'birdLargeImage'>
                                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${snowyOwl})`}}></div>
                                 </image>
                                 <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
-                                    {this.state.endangeredBirdsItems.length > 0 && (
+                                    {/* {this.state.endangeredBirdsItems.length > 0 && (
                                         <div>
                                             {this.state.endangeredBirdsItems[8].name}
                                         </div>
-                                    )}
+                                    )} */}
+                                    Snowy Owl
                                 </label>
                             </box>
 
@@ -516,11 +550,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Zahoor Salmi</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[9].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Barn Owl (Not)
                                         </label>
                                     </box>
                                 </box>
@@ -530,11 +565,12 @@ export class Birds extends Component {
                                         <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${caledonianOwletNightjar})`}}></div>
                                     </image>
                                     <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
-                                        {this.state.endangeredBirdsItems.length > 0 && (
+                                        {/* {this.state.endangeredBirdsItems.length > 0 && (
                                             <div>
                                                 {this.state.endangeredBirdsItems[5].name}
                                             </div>
-                                        )}
+                                        )} */}
+                                        Caledonian Owlet-Nightjar
                                     </label>
                                 </box>
                             </box>
@@ -548,11 +584,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Rahul Kumar</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[6].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Forest Owlet
                                         </label>
                                     </box>
                                 </box>
@@ -565,11 +602,12 @@ export class Birds extends Component {
                                         <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Sylvia Hunt</label></div>
 
                                         <label className={this.state.darkMode ? "birdName-Dark" : "birdName5"}>
-                                            {this.state.endangeredBirdsItems.length > 0 && (
+                                            {/* {this.state.endangeredBirdsItems.length > 0 && (
                                                 <div>
                                                     {this.state.endangeredBirdsItems[7].name}
                                                 </div>
-                                            )}
+                                            )} */}
+                                            Spotted Owl
                                         </label>
                                     </box>
                                 </box>
@@ -577,29 +615,34 @@ export class Birds extends Component {
                         </box>
                     </div>
 
-  
-                        <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-                            <line className="thinLine"></line>
-                                <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
-                                <ReactPlayer className='videoFrame' height="450px" width="800px" controls={true} url="https://www.youtube.com/watch?v=Uf5IQiLOQK0"/>
-                            <line className="thinLine"></line>
-                        </div> 
-          
 
-                    <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
-                        Spread seeds, helps coral reef and cleans nature:
-                        <br></br>
-                        <br></br>
-                        Plants seed are one of the main food source for birds. When birds travel, they take the eaten seed with them and spreads them through their droppings.
-                        Bringing plants back to perhaps destroyed ecosystem, and even carry plants acrross the ocean to new land.
-                        Vultures are the best and most efficent scavengers that takes care of the dead animals, preventing the spread of diseases like rabies and tuberculosis.
-                        Seabirds plays an important role in cycling nutrients and helping to fertilise marine ecosystems such as coral reefs.
-                    </paragragraph>
-                    <BirdsPara4Voice/>
+{/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
+<div className= {this.state.darkMode ? "video-Dark" : "video"}>
+    <line className="thinLine"></line>
+        <paragragraph className="video-Discription">A video of Snow Owl Hunting.</paragragraph>
+        <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Uf5IQiLOQK0" height="450px" width="800px"/>
+    <line className="thinLine"></line>
+</div> 
+{/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
-            </body>
-            <BirdsPageSuvNav/>
-        </div>
+
+                    <div className='container'> 
+                        <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className = {this.state.darkMode ? "paragpaphLrg-Dark" : "paragpaphLrg-Light"}>
+                            <div>
+                                <b>Spread seeds, helps coral reef and cleans nature:</b>
+                                <br></br>
+                                <br></br>
+                                Plants seed are one of the main food source for birds. When birds travel, they take the eaten seed with them and spreads them through their droppings.
+                                Bringing plants back to perhaps destroyed ecosystem, and even carry plants acrross the ocean to new land.
+                                Vultures are the best and most efficent scavengers that takes care of the dead animals, preventing the spread of diseases like rabies and tuberculosis.
+                                Seabirds plays an important role in cycling nutrients and helping to fertilise marine ecosystems such as coral reefs.
+                            </div> 
+                        </paragragraph>
+                        <BirdsPara4Voice/>
+                    </div> 
+                </body>
+                <BirdsPageSuvNav/>
+            </div>
         );
     }
 }

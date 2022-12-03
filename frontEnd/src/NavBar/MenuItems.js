@@ -11,7 +11,7 @@ export const MenuItems = [
       cName: 'dropdown-link'
     },
     {
-      title: 'Artic',
+      title: 'Arctic',
       path: '/artic',
       cName: 'dropdown-link'
     },

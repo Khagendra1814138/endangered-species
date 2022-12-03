@@ -16,33 +16,38 @@ export const CrocodilesAndAlligatorsCardSet = () => {
         <grid id="three-column">
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${ChineseAlligator})`}}></image></div>
-            <name id="reptileName"> Name </name>
+            <name id="reptileName"> Chinese Alligator </name>
           </div>
 
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${OrinocoCrocodile})`}}></image></div>
-            <name id="reptileName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${OrinocoCrocodile})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Nagel</label></div>
+
+              <name id="reptileName"> Orinoco Crocodile </name>
+            </box>
           </div>
 
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${SiameseCrocodile})`}}></image></div>
-            <name id="reptileName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${SiameseCrocodile})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Ton Smiths</label></div>
+
+              <name id="reptileName"> Siamese Crocodile </name>
+            </box>
           </div>
         </grid>
 
 
         <grid id="two-column">
           <div id="boxLong">
-            <box className = "speciesCardContainer">
               <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${PhilippineCrocodile})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="reptileName"> Name sss</name>
-            </box>
+              <name id="reptileName">Philippine Crocodile</name>
           </div>
 
           <div id="boxLong">
             <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${SlenderSnoutedCrocodile})`}}></image></div>
-            <name id="reptileName"> Name </name>
+            <name id="reptileName"> Slender Snouted Crocodile </name>
           </div>
         </grid>
     </container>

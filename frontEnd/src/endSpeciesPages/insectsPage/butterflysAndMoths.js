@@ -14,34 +14,46 @@ export const ButterflysAndMothsCardsSet = () => {
     <container id="two-row">
         <grid id="two-column">
           <div id="boxLong">
-            <box className = "speciesCardContainer">
+ 
               <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${EnigmaMoth})`}}></image></div>
-              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Wye & Usk Foundation</label></div>
-              <name id="butterflyAndMothsName"> Name sss</name>
-            </box>
+             
+              <name id="butterflyAndMothsName"> Enigma Moth </name>
+           
           </div>
 
           <div id="boxLong">
-            <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${LudlowsBhutanGlory})`}}></image></div>
-            <name id="butterflyAndMothsName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="largeReptileImage" style={{ backgroundImage: `url(${LudlowsBhutanGlory})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Sreedharan Gopalsamy</label></div>
+
+              <name id="butterflyAndMothsName"> Ludlows Bhutan Glory </name>
+            </box>
           </div>
         </grid>
 
 
         <grid id="three-column">
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${SinaiBatonBlue})`}}></image></div>
-            <name id="butterflyAndMothsName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${SinaiBatonBlue})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Mike James</label></div>
+              
+              <name id="butterflyAndMothsName"> Sinai Baton Blue </name>
+            </box>
           </div>
 
           <div id="box">
-            <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${DicksonsHillsideBrown})`}}></image></div>
-            <name id="butterflyAndMothsName"> Name </name>
+            <box className = "speciesCardContainer">
+              <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${DicksonsHillsideBrown})`}}></image></div>
+              <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Tony Rebelo</label></div>
+              
+              <name id="butterflyAndMothsName"> Dicksons Hillside Brown </name>
+            </box>
           </div>
 
           <div id="box">
             <div id="imageOverflowHider"><image id="mediumReptileImage" style={{ backgroundImage: `url(${MarionsPlumeMoth})`}}></image></div>
-            <name id="butterflyAndMothsName"> Name </name>
+            <name id="butterflyAndMothsName"> Marions Plume Moth </name>
           </div>
         </grid>
     </container>
