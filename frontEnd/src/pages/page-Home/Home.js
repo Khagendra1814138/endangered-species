@@ -406,10 +406,8 @@ export class Home extends Component {
        
 {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
-  <line className = "thinLine"></line>
-    <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
-    <ReactPlayer className = "videoFrame" light={true} controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height="450px" width="800px"/>
-  <line className = "thinLine"></line>
+  <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
+  <ReactPlayer className = "videoFrame" light={true} controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height='574px' width='1020px'/>
 </div> 
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}        
 
