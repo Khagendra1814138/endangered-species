@@ -1,4 +1,24 @@
 
+/* width */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #BEBFBF; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -12,7 +32,7 @@
   body {
     min-height: 100vh;
     height: 100%;
-  
+    scroll-behavior: smooth;
   }
   
   span {

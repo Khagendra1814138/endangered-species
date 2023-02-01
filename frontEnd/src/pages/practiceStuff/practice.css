@@ -192,27 +192,59 @@
 
 
   
-
+#flex_boxx{
+  height: auto;
+  width: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .card-grid-container{
   height: auto;
-  width: 320px;
-  background-color: white;
-  padding: 10px;
+  width: 380px;
+  background-color: salmon;
+  margin: auto;
+
+  clip-path: polygon(0% 0%, 100% 4%, 100% 96%, 0% 100%);
+  padding: 40px;
 
   display: grid;
   grid-template-rows: auto auto auto;
 
   margin-top: 20px;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }  
 .card-grid-container:hover{
   box-shadow: -4px -4px 4px rgb(94, 104, 121, .228), 6px 6px 8px rgba(94, 104, 121, .228);
+  clip-path: polygon(4% 4%, 94% 6%, 100% 100%, 0% 100%);
+}
+
+.card-grid-container2{
+  height: auto;
+  width: 380px;
+  background-color: yellowgreen;
+  margin: auto;
+  clip-path: polygon(0% 4%, 100% 0%, 100% 100%, 0% 96%);
+  padding: 40px;
+
+  display: grid;
+  grid-template-rows: auto auto auto;
+
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}  
+.card-grid-container2:hover{
+  box-shadow: -4px -4px 4px rgb(94, 104, 121, .228), 6px 6px 8px rgba(94, 104, 121, .228);
+  
+  clip-path: polygon(4% 4%, 94% 6%, 100% 100%, 0% 100%);
 }
 
 .card-image{
   grid-row-start: 1;
-  
   height: 200px;
   width: 300px;
   background-color: lightblue;
@@ -249,6 +281,7 @@
   margin-top: 10px;
   border: 4px solid plum;
   transition: width 0.5s;
+  cursor: pointer;
 }
 .card-button:hover{
   width: 250px;

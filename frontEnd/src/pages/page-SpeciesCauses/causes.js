@@ -71,9 +71,9 @@ export class Causes extends Component {
 {/* //////////////////////////////////////////////////////FontSizeFunction////////////////////////////////////////////////////// */}
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${header5})`}}></box>
-        
+        <div className='overflowHidden'>
+          <box className = "landingImageBox2" style={{ backgroundImage: `url(${header5})`}}></box>
+        </div>
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -119,7 +119,7 @@ export class Causes extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <paragragraph className="video-Discription">A video of plastic pollution effects.</paragragraph>
-    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=IA9O9YUbQew" height="450px" width="800px"/>
+    <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=IA9O9YUbQew" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -185,7 +185,7 @@ export class Causes extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}> 
   <line className = "thinLine"></line>
     <paragragraph className="video-Discription">A video of how climate change is effecting our planet.</paragragraph>
-    <ReactPlayer className="videoFrame" controls={true} url="https://www.youtube.com/watch?v=dIsjcG7hTmo" height="450px" width="800px"/>
+    <ReactPlayer className="videoFrame" light={true} controls={true} url="https://www.youtube.com/watch?v=dIsjcG7hTmo" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -236,7 +236,7 @@ export class Causes extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <paragragraph className="video-Discription">A video of how deforestation effects out planet.</paragragraph>       
-    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Ic-J6hcSKa8" height="450px" width="800px"/>
+    <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=Ic-J6hcSKa8" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div> 
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}              
@@ -280,7 +280,7 @@ export class Causes extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <paragragraph className="video-Discription">A video of over fishing and how that is effecting the ocean.</paragragraph>
-    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=Q1EcQQsJrmg" height="450px" width="800px"/>
+    <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=Q1EcQQsJrmg" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}

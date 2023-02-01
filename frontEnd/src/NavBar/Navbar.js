@@ -5,7 +5,7 @@ import './Navbar.css';
 import Dropdown from './Dropdown';
 
 //Icons
-import {FaAngleDown} from 'react-icons/fa';
+// import {FaAngleDown} from 'react-icons/fa';
 
 
 function Navbar() {
@@ -15,12 +15,14 @@ function Navbar() {
   const handleClick = () => setClick(!click);
 
   const onMouseEnter = () => {
-      setDropdown(true);
+    setDropdown(true);
   };
 
   const onMouseLeave = () => {
-      setDropdown(false);
+    setDropdown(false);
   };
+
+  // <FaAngleDown size="1.5em" color="orange"/>
 
   return (
     <div>
@@ -31,7 +33,7 @@ function Navbar() {
               <Link to='/' className='nav-links'> Home </Link>
             </li>
             <li className='nav-item'onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
-              <Link to='/endangeredSpecies' className='nav-links'> Endangered Species <FaAngleDown size="1.5em" color="orange"/></Link>
+              <Link to='/endangeredSpecies' className='nav-links'> Endangered Species </Link>
               {dropdown && <Dropdown />}
             </li>
 

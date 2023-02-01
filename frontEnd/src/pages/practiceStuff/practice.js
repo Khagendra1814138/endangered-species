@@ -301,15 +301,29 @@ export class PracticePage extends Component {
 
 
 
-
+          <div id="flex_boxx">
             <div class="card-grid-container">
-              
               <div class="card-image"> Image </div>
               <div class="card-name"> Name </div>
               <div class="card-paragraph">Paragraph</div>
               <button class="card-button">Button</button>
-
             </div>
+
+            <div class="card-grid-container2">
+              <div class="card-image"> Image </div>
+              <div class="card-name"> Name </div>
+              <div class="card-paragraph">Paragraph</div>
+              <button class="card-button">Button</button>
+            </div>
+
+            <div class="card-grid-container">
+              <div class="card-image"> Image </div>
+              <div class="card-name"> Name </div>
+              <div class="card-paragraph">Paragraph</div>
+              <button class="card-button">Button</button>
+            </div>
+          </div>
+   
 
             <button class="button-underline">Underline</button>
             <button class="button-slide">slide</button>
@@ -319,6 +333,8 @@ export class PracticePage extends Component {
 
             <button className="buttonAnimation2"> Ripple effect
             </button>
+
+            <iframe src="https://www.youtube.com/embed/xNRJwmlRBNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
 
           </body>
      

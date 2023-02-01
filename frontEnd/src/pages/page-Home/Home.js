@@ -100,11 +100,12 @@ export class Home extends Component {
       <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
 
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
-
-        <box className = "landingImageBox" style={{ backgroundImage: `url(${headerImg})`}}>
-          <h1>Thousands of Animal, Fungi and Plant species are in danger</h1>
-          <div className='headerImageParagraph'>Learn about the different types of endangered species around the world and how to protect them.</div> 
-        </box>
+        <div className='overflowHidden'>
+          <box className = "landingImageBox" style={{ backgroundImage: `url(${headerImg})`}}>
+            <h1>Thousands of Animal, Fungi and Plant species are in danger</h1>
+            <div className='headerImageParagraph'>Learn about the different types of endangered species around the world and how to protect them.</div>
+          </box>  
+        </div>
 
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 
@@ -407,7 +408,7 @@ export class Home extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
-    <ReactPlayer className = "videoFrame" controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height="450px" width="800px"/>
+    <ReactPlayer className = "videoFrame" light={true} controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div> 
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}        

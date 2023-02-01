@@ -68,8 +68,10 @@ export class Reptiles extends Component {
         <ReptilesSideBarPageNav/>
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerReptiles})`}}> </box>
-
+        <div className='overflowHidden'>
+          <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerReptiles})`}}> </box>
+        </div>
+        
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
         <body className='pageBodyFrame'>
 

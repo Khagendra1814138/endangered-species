@@ -14,7 +14,18 @@ h1{
     display: flex;
     margin: auto;
     margin-top: 100px;
+    /* animation: fadeIn 2s; */
 }
+@keyframes movedown {
+    from {top: -100px;}
+    to {top: 0px;}
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
 .headerImageParagraph{
     font-size: 26px;
     width: 45%;

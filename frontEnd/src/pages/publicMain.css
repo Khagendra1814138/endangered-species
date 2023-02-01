@@ -65,7 +65,9 @@
     padding-bottom: 0vh;
     border: 0px solid red;
 }
-
+.overflowHidden{
+    overflow: hidden;
+}
 .landingImageBox {
     background: none;
     height: 1000px;
@@ -76,7 +78,15 @@
     justify-content: center;
     align-items: center;
     /* border-bottom: 6px solid #37475A; */
+    /* animation: scales 2s ease-in-out infinite alternate; */
+    animation: scales 2s ease-in-out;
 }
+
+@keyframes scales {
+    0% { scale: 1.06; }
+    100% { scale: 1; }
+  }
+
 .landingImageBox2 {
     background: none;
     height: 500px;
@@ -87,6 +97,7 @@
     align-items: center;
     font-size: 100px;
     /* border-bottom: 6px solid #37475A; */
+    animation: scales 2s ease-in-out;
 }
 
 .box{
@@ -168,16 +179,17 @@
     background-color: none;
 }
 .mainSubHeadFrame{
-    height: 0px;
-    width: 100%;
+    height: auto;
+    width: auto;
+    margin: auto;
     margin-top: 160px;
     margin-bottom: 40px;
     background-color: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: 2px solid gainsboro;
-    border-bottom: 2px solid gainsboro;
+    /* border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro; */
 }
 .largeLine{
     height: 1px;
@@ -216,9 +228,9 @@
     font-weight: bold;
     justify-content: center;
     align-items: center;
-    border-left: 10px solid gainsboro;
+    /* border-left: 10px solid gainsboro;
     border-right: 10px solid gainsboro;
-    border-radius: 10px;
+    border-radius: 10px; */
     color: rgb(35,47,62);
     text-shadow:  1px 1px 1px rgb(35,47,62);
 }
@@ -233,9 +245,9 @@
     font-weight: bold;
     justify-content: center;
     align-items: center;
-    border-left: 10px solid gainsboro;
+    /* border-left: 10px solid gainsboro;
     border-right: 10px solid gainsboro;
-    border-radius: 10px;
+    border-radius: 10px; */
     color: white;
     text-shadow:  1px 1px 1px white;
 }
@@ -411,6 +423,7 @@
 .video-Discription{
     height: auto;
     width: 20%;
+    background-color: transparent;
 
     border-top: 1px solid #629b83;
     border-left: 1px solid #629b83;
@@ -421,7 +434,9 @@
 
     padding: 10px;
     font-size: 20px;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-paragraphStyle);
     color: white;
 }

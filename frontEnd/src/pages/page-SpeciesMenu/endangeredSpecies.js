@@ -47,8 +47,9 @@ export class EndangeredSpecies extends Component {
 
     return( 
       <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${header2})`}}></box>
-
+        <div className='overflowHidden'>
+          <box className = "landingImageBox2" style={{ backgroundImage: `url(${header2})`}}></box>
+        </div>
 {/* //////////////////////////////////////////////////////DarkModeFunction////////////////////////////////////////////////////// */}
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 {/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -143,7 +144,7 @@ export class EndangeredSpecies extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <paragragraph className="video-Discription">A video guide on what are Endangered Species.</paragragraph>
-      <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=6tjDCZrGnxc" height='574px' width='1020px'/>
+      <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=6tjDCZrGnxc" height='574px' width='1020px'/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}

@@ -3,7 +3,7 @@
 .SideNav_blockBox{
     height: auto;
     width: auto;
-    background-color: transparent;
+    background-color: white;
     display: grid;
     grid-gap: 10px;
     position: fixed;

@@ -65,9 +65,10 @@ export class Insects extends Component {
 
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
 
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerInsects})`}}>
+        <div className='overflowHidden'>
+          <box className = "landingImageBox2" style={{ backgroundImage: `url(${headerInsects})`}}></box>
+        </div>
 
-        </box>
         <InsectsSideBarPageNav/>
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 

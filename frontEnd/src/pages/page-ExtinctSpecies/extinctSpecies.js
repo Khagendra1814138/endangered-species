@@ -72,9 +72,9 @@ export class ExtinctSpecies extends Component {
       <div className={this.state.darkMode ? "pageMainFrameDark" : "pageMainFrameLight"}>
 
         <FontSizeIncreaser fontSize={this.state.fontSize} setFontSize={(size) => this.setState({ fontSize: size })} />
-
-        <box className = "landingImageBox2" style={{ backgroundImage: `url(${extinctHeader})`}}>  </box>
-
+        <div className='overflowHidden'>
+          <box className = "landingImageBox2" style={{ backgroundImage: `url(${extinctHeader})`}}>  </box>
+        </div>
         <DarkModeFunction darkMode={this.state.darkMode} setDarkmode={(darkMode) => this.setState({darkMode})} />
 
         <body className='pageBodyFrame'>
@@ -213,7 +213,7 @@ export class ExtinctSpecies extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <div className="video-Discription">A video footage of recently extinct species captured by camera.</div>
-    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
+    <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}  
@@ -331,7 +331,7 @@ export class ExtinctSpecies extends Component {
         <div className= {this.state.darkMode ? "video-Dark" : "video"}>
           <line className = "thinLine"></line>
             <div className="video-Discription">A video footage of recently extinct species captured by camera.</div>
-            <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
+            <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
           <line className = "thinLine"></line>
         </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -449,7 +449,7 @@ export class ExtinctSpecies extends Component {
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <line className = "thinLine"></line>
     <div className="video-Discription">A video footage of recently extinct species captured by camera.</div>
-    <ReactPlayer className='videoFrame' controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
+    <ReactPlayer className='videoFrame' light={true} controls={true} url="https://www.youtube.com/watch?v=nAzqGn-LHCw&t=388s" height="450px" width="800px"/>
   <line className = "thinLine"></line>
 </div>
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
