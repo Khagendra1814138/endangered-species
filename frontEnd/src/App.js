@@ -27,7 +27,7 @@ import { Fungus } from './endSpeciesPages/fungus';
 import { Mammels } from './endSpeciesPages/mammels';
 import { Plants } from './endSpeciesPages/plants';
 import { Reptiles } from './endSpeciesPages/reptilesPage/reptilesMAIN';
-import { Insects } from './endSpeciesPages/insectsPage/insectsMain';
+import { Insects } from './endSpeciesPages/insectsPage/insectsMAIN';
 
 
 import {ScrollToTopArrow} from "./backToTopFunction/backToTop";
