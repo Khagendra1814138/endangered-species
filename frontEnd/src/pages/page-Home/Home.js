@@ -221,7 +221,7 @@ export class Home extends Component {
             <box className = "shadow_block_box">
               <box className='box-noshadow'>
                 <subhead id = {this.state.darkMode ? "recentlyExtinctSubhead-Dark" : "recentlyExtinctSubhead"}>These are the recently extinc species</subhead>
-                <paragragraph id = {this.state.darkMode ? "recentlyExtinctParagraph-Dark" : "recentlyExtinctParagraph"}>
+                <paragragraph style={{fontSize: `${this.state.fontSize}px`}} id = {this.state.darkMode ? "recentlyExtinctParagraph-Dark" : "recentlyExtinctParagraph"}>
                   The animals deplayed below are some of the most recently extinct species.
                   The splended posion frog was declared extinct on 2020.
                   The Giant Pinta Island tortoise was declared extinct on 2012,
@@ -407,7 +407,7 @@ export class Home extends Component {
 {/* ///////// V I D E O ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */} 
 <div className= {this.state.darkMode ? "video-Dark" : "video"}>
   <paragragraph className = "video-Discription">A video warning why we must act now to prevent extinction of species.</paragragraph>
-  <ReactPlayer className = "videoFrame" light={true} controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height='574px' width='1020px'/>
+  <ReactPlayer className = "videoFrame" light={false} controls={true} url="https://www.youtube.com/watch?v=dbCR0KSU52g&t=155s" height='574px' width='1020px'/>
 </div> 
 {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}        
 

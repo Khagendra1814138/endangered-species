@@ -334,7 +334,10 @@ export class PracticePage extends Component {
             <button className="buttonAnimation2"> Ripple effect
             </button>
 
-            <iframe src="https://www.youtube.com/embed/xNRJwmlRBNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+           <div className="stickyTest">
+            <div className="sricky">this is the test</div>
+
+           </div>
 
           </body>
      

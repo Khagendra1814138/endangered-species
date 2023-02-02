@@ -1,15 +1,15 @@
 
 .subNavFrame{
-    height: 80px;
+    height: auto;
     width: 100%;
     display: flex;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 20vh;
     background-color: transparent;
-
     justify-content: center;
     align-items: center;
     border-top: 8px solid #37475A;
+    border-bottom: 8px solid #37475A;
 }
 
 
@@ -18,7 +18,7 @@
     width: 50%;
     display: flex;
     background-color: #657B83;
-
+    padding: 20px;
     justify-content: center;
     align-items: center;
     text-decoration: none;
@@ -44,7 +44,7 @@
     width: 50%;
     display: flex;
     background-color: #678CB1;
-
+    padding: 20px;
     justify-content: center;
     align-items: center;
     text-decoration: none;

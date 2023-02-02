@@ -6,6 +6,7 @@
     left: 0px;
     display: grid;
     grid-template-rows: auto auto auto;
+    z-index: 1000;
 }
 .socialLogoFacebook{
     grid-row-start: 1;

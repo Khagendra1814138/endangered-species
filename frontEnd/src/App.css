@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.navbarFrame{
+  height: auto;
+  width: auto;
+  background-color: #61dafb;
+  /* position: sticky;
+  top: 0;
+  z-index: 999; */
+}
+
+.accesabilityFrame{
+  height: auto;
+  width: auto;
+  display: grid;
+  background-color: #61dafb;
+  position: fixed;
+  bottom: 40px;
+  right: 0px;
+  padding: 20px;
+}

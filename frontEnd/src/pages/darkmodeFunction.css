@@ -76,11 +76,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #232F3E;
+    background-color: #0A1518;
     padding-bottom: 4px;
     cursor: pointer;
-    z-index: 3;
-    border-bottom: 6px solid #37475A;
+    z-index: 999;
+    border-bottom: 4px solid #37475A;
+    position: sticky;
+    top: 0;
   }
   /* .darkModeSwitchContainer:hover{
     border-left: 4px solid orange;

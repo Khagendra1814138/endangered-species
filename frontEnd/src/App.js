@@ -48,8 +48,10 @@ function App() {
     <BrowserRouter>
       <SocialShareFunction/>
       <ScrollToTopArrow/>
-      <LoginNavbar/>
-      <Navbar/>
+      <div className='navbarFrame'>
+        <LoginNavbar/>
+        <Navbar/>
+      </div>
       <ReadingMaskFeature/>
       <LargeCursorFeature/>
       <ReadingGuideFeature/>

@@ -75,7 +75,7 @@
     width: 400px;
     background-color: transparent;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 4px;
     border: 6px solid #529b83a9;
     display: flex;
     justify-content: center;
@@ -170,8 +170,6 @@
     width: auto;
     display: flex;
     background-color: #CEE5D0;
-    justify-content: center;
-    align-items: center;
     font-size: 24px;
     color: var(--textColour);
     font-weight: bold;
@@ -186,8 +184,6 @@
     width: auto;
     display: flex;
     background-color: #37475A;
-    justify-content: center;
-    align-items: center;
     font-size: 24px;
     color: white;
     font-weight: bold;
@@ -203,8 +199,6 @@
     width: auto;
     display: flex;
     background-color: #CEE5D0;
-    justify-content: center;
-    align-items: center;
     font-size: 24px;
     color: var(--textColour);
     font-weight: bold;
@@ -219,8 +213,6 @@
     width: auto;
     display: flex;
     background-color: #37475A;
-    justify-content: center;
-    align-items: center;
     font-size: 24px;
     color: white;
     font-weight: bold;
@@ -241,7 +233,7 @@
     background-color: #97DFC1;
     padding: 10px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     line-height: 1.4;
     font-family: 'Rubik', sans-serif;
     /* border-top-right-radius: 10px; */
@@ -261,7 +253,7 @@
     padding: 10px;
     font-size: 20px;
     color: white;
-    text-align: center;
+    text-align: left;
     line-height: 1.4;
     font-family: 'Rubik', sans-serif;
     /* border-top-right-radius: 10px; */
@@ -281,7 +273,7 @@
     background-color: #97DFC1;
     padding: 10px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     line-height: 1.4;
     font-family: 'Rubik', sans-serif;
     /* border-top-left-radius: 10px; */
@@ -300,7 +292,7 @@
     background-color: #405269;
     padding: 10px;
     font-size: 20px;
-    text-align: center;
+    text-align: left;
     color: white;
     line-height: 1.4;
     font-family: 'Rubik', sans-serif;

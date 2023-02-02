@@ -130,11 +130,14 @@
     height: auto;
     width: 1018px;
     background-color: transparent;
-    display: block;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     margin-top: 40px;
     padding: 20px;
     border-radius: 4px;
+    justify-content: center;
+    align-items: center;
     /* box-shadow: -5px -5px 5px rgb(94, 104, 121, .228), 8px 8px 8px rgba(94, 104, 121, .228); */
 }
 

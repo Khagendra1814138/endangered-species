@@ -3,16 +3,17 @@
 .SideNav_blockBox{
     height: auto;
     width: auto;
-    background-color: white;
+    background-color: transparent;
     display: grid;
     grid-gap: 10px;
     position: fixed;
     top: 200px;
     left: 0px;
-    padding: 10px;
-    border-top: 1px solid #DCDCDC;
-    border-bottom: 1px solid #DCDCDC;
-    border-right: 1px solid #DCDCDC;
+    padding: 4px;
+    /* border-top: 1px solid #36475A;
+    border-bottom: 1px solid #36475A;
+    border-right: 1px solid #36475A; */
+    z-index: 1000;
 
     border-top-right-radius: 6px;
     border-bottom-right-radius: 6px;
