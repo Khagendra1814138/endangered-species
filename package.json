@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "react-share": "^4.4.1",
+    "styled-components": "^5.3.6"
+  }
+}
