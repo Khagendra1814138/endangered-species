@@ -390,7 +390,7 @@ export class Home extends Component {
               </box>
               
               <box className = {this.state.darkMode ? "whyProtectFrame-Dark" : "whyProtectFrame-light"}> 
-                <image className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
+                <image loading="lazy" className = {this.state.darkMode ? "whyProtectImageFrame-Dark" : "whyProtectImageFrame-light"}>
                   <div className='whyProtectImage' style={{ backgroundImage: `url(${ecosystemService})`}}></div> 
                 </image>
         

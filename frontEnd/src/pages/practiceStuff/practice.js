@@ -328,7 +328,7 @@ export class PracticePage extends Component {
             <button class="button-underline">Underline</button>
             <button class="button-slide">slide</button>
             <button class="button-border">slide</button>
-            <button class="buttonCoolBorder">cool border</button>
+            <button class="buttonCoolBorder">cool this border</button>
             <button class="buttonAnimation">animation</button>
 
             <button className="buttonAnimation2"> Ripple effect
