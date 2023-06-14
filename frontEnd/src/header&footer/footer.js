@@ -12,9 +12,9 @@ import {FaTwitterSquare} from 'react-icons/fa';
 export const Footer = () => {
     return( 
         <footer className = "footerMainFrame">
-          <logo>
-            <Link to='/' className='footer-logo'> <FaBook size="3em" color="#1888ff"/> </Link>
-          </logo>
+          <div>
+            <Link to='/' className='footer-div'> <FaBook size="3em" color="#1888ff"/> </Link>
+          </div>
           <box className = "pageLinkBox">
             <li className='footerNavlink'>
               <Link to='/' className='footer-nav-links'> Home </Link>
@@ -46,21 +46,21 @@ export const Footer = () => {
           </box>
           <box className = "socialLinkBox">
             <label className='socailMediaLabel'>FOLLOW US</label>
-            <logo className = "socialMediaLogo">
+            <div className = "socialMediadiv">
               <Link to={{ pathname: "https://www.instagram.com/" }} target="_blank"> 
                 <FaInstagram size="2em" color="lightblue"/> 
               </Link>
-            </logo>
-            <logo className = "socialMediaLogo">
+            </div>
+            <div className = "socialMediadiv">
               <Link to={{ pathname: "https://www.facebook.com/" }} target="_blank"> 
                 <FaFacebookSquare size="2em" color="lightblue"/> 
               </Link>
-            </logo>
-            <logo className = "socialMediaLogo">
+            </div>
+            <div className = "socialMediadiv">
               <Link to={{ pathname: "https://twitter.com/home" }} target="_blank"> 
                 <FaTwitterSquare size="2em" color="lightblue"/> 
               </Link>
-            </logo>
+            </div>
           </box>
         </footer>
     );
