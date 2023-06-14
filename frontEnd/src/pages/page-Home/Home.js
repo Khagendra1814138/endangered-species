@@ -395,7 +395,7 @@ export class Home extends Component {
                 </image>
         
                 <paragragraph style={{fontSize: `${this.state.fontSize}px`}} className= {this.state.darkMode ? "verySmallPara-Dark" : "verySmallPara-Light"}>
-                  <EcosystemServicePARAGRAPH/>
+                  <EcosystemServicePARAGRAPH/> wassa
                 </paragragraph>
               
                 <label className= {this.state.darkMode ? "whyProtectLabel-Dark" : "whyProtectLabel-Light"}>Ecosystem Service</label>

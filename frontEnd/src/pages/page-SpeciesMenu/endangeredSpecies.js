@@ -161,14 +161,14 @@ export class EndangeredSpecies extends Component {
             </div>
 
             <box id = "long_Box">
-              <Link exact to="./amphibians" className='speciesMainFrame'>
+              <Link exact to="/amphibians" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${amphibian})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>A M P H I B I A N S</label>
               </Link>
 
-              <Link exact to="./birds" className='speciesMainFrame'>
+              <Link exact to="/birds" className='speciesMainFrame'>
                 <box className = "speciesCardContainer">
                   <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${birds})`}}></div>
@@ -178,7 +178,7 @@ export class EndangeredSpecies extends Component {
                 </box>
               </Link>
           
-              <Link exact to="./mammels" className='speciesMainFrame'>
+              <Link exact to="/mammels" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${mammels})`}}></div>
                 </image> 
@@ -189,14 +189,14 @@ export class EndangeredSpecies extends Component {
             <line className = "largeLine"></line>
 
             <box id = "long_Box">
-              <Link exact to="./aquatic" className='speciesMainFrame'>
+              <Link exact to="/aquatic" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${marine})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>A Q U A T I C</label>
               </Link>
 
-              <Link exact to="./artic" className='speciesMainFrame'>
+              <Link exact to="/artic" className='speciesMainFrame'>
                 <box className = "speciesCardContainer">
                   <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${artic})`}}></div>
@@ -207,7 +207,7 @@ export class EndangeredSpecies extends Component {
                 </box>
               </Link>
 
-              <Link exact to="./plants" className='speciesMainFrame'>
+              <Link exact to="/plants" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${plant})`}}></div>
                 </image> 
@@ -218,21 +218,21 @@ export class EndangeredSpecies extends Component {
             <line className = "largeLine"></line>
 
             <box id = "long_Box">
-              <Link exact to="./fungus" className='speciesMainFrame'>
+              <Link exact to="/fungus" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${fungus})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>F U N G U S</label>
               </Link>
               
-              <Link exact to="./fungus" className='speciesMainFrame'>
+              <Link exact to="/reptiles" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${reptiles})`}}></div>
                 </image>
                 <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>R E P T I L E S</label>
               </Link>
 
-              <Link exact to="./fungus" className='speciesMainFrame'>
+              <Link exact to="/insectsMain" className='speciesMainFrame'>
                 <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                   <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${insects})`}}></div>
                 </image>
@@ -243,14 +243,14 @@ export class EndangeredSpecies extends Component {
             <line className = "largeLine"></line>
 
             <box id = "long_Box">
-              <Link exact to="./endSpeciesUk" className='speciesCardContainer'>
-                <box className = "speciesCardContainer">
+              <Link exact to="/endSpeciesUk" className='speciesMainFrame'>
+              
                   <image className={this.state.darkMode ? "speciesImageMid-Dark" : "speciesImageMid-Light"}>
                     <div className='extinctSpeciesImage' style={{ backgroundImage: `url(${Uk})`}}></div>
                   </image>
                   <div class="overlay overlayLeft"><label class="photograpgerName">Photograph by Tony Cox</label></div>
                   <label className = {this.state.darkMode ? "speciesType-Dark" : "speciesType-Light"}>Endangered Species in UK</label>
-                </box>
+           
               </Link>
             </box>
           </div>

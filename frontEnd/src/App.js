@@ -3,7 +3,7 @@ import './App.css';
 // import DarkMode from './darkMode/darkMode';
 import Navbar from './NavBar/Navbar';
 import LoginNavbar from './NavBar/loginNavBar';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import { Home } from './pages/page-Home/Home';
 import { Causes } from './pages/page-SpeciesCauses/causes';
@@ -55,30 +55,30 @@ function App() {
       <ReadingMaskFeature/>
       <LargeCursorFeature/>
       <ReadingGuideFeature/>
-        <Switch>
-          <Route exact path="/" render={() => <Home/>}/>
-          <Route path="/endangeredSpecies" render={() => <EndangeredSpecies/>}/>
-          <Route path="/causes" render={() => <Causes/>}/>
-          <Route path="/individualAction" render={() => <IndividualAction/>}/>
-          <Route path="/takeAction" render={() => <TakeAction/>}/>
-          <Route path="/logIn" render={() => <LogInPage/>}/>
-          <Route path="/signUp" render={() => <SignUp/>}/>
-          <Route path="/endSpeciesUk" render={() => <EndnageredSpeciesUk/>}/>
-          <Route path="/extinctSpecies" render={() => <ExtinctSpecies/>}/>
-          <Route path="/quiz" render={() => <QuizPage/>}/>
-          <Route path="/worldMap" render={() => <WorldMap/>}/>
-          <Route path="/practice" render={() => <PracticePage/>}/>
+        <Routes>
+          <Route exact path="/" element={<Home/>}/>
+          <Route path="/endangeredSpecies" element={<EndangeredSpecies/>}/>
+          <Route path="/causes" element={<Causes/>}/>
+          <Route path="/individualAction" element={<IndividualAction/>}/>
+          <Route path="/takeAction" element={<TakeAction/>}/>
+          <Route path="/logIn" element={<LogInPage/>}/>
+          <Route path="/signUp" element={<SignUp/>}/>
+          <Route path="/endSpeciesUk" element={<EndnageredSpeciesUk/>}/>
+          <Route path="/extinctSpecies" element={<ExtinctSpecies/>}/>
+          <Route path="/quiz" element={<QuizPage/>}/>
+          <Route path="/worldMap" element={<WorldMap/>}/>
+          <Route path="/practice" element={<PracticePage/>}/>
 
-          <Route path="/amphibians" render={() => <Amphibians/>}/>
-          <Route path="/aquatic" render={() => <Aquatic/>}/>
-          <Route path="/artic" render={() => <Arctic/>}/>
-          <Route path="/birds" render={() => <Birds/>}/>
-          <Route path="/fungus" render={() => <Fungus/>}/>
-          <Route path="/mammels" render={() => <Mammels/>}/>
-          <Route path="/plants" render={() => <Plants/>}/>
-          <Route path="/reptiles" render={() => <Reptiles/>}/>
-          <Route path="/insectsMain" render={() => <Insects/>}/>
-        </Switch>
+          <Route path="/amphibians" element={<Amphibians/>}/>
+          <Route path="/aquatic" element={<Aquatic/>}/>
+          <Route path="/artic" element={<Arctic/>}/>
+          <Route path="/birds" element={<Birds/>}/>
+          <Route path="/fungus" element={<Fungus/>}/>
+          <Route path="/mammels" element={<Mammels/>}/>
+          <Route path="/plants" element={<Plants/>}/>
+          <Route path="/reptiles" element={<Reptiles/>}/>
+          <Route path="/insectsMain" element={<Insects/>}/>
+        </Routes>
       <Footer/>
     </BrowserRouter>
   );
